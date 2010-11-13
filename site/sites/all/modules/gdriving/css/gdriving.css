@@ -1,0 +1,42 @@
+/* $Id: gdriving.css,v 1.1.2.1 2010/02/05 18:40:25 tyabut Exp $ */
+.directionsBack {
+  visibility: hidden;
+}
+
+.directionsFrom {
+  display: none;
+}
+
+.directionsTo {
+  visibility: hidden;
+}
+
+.directionsExtended {
+  padding: 1em;
+}
+
+.gDirections {
+  display: none;
+}
+
+input.saddr,
+input.daddr {
+  width: 130px;
+}
+
+#facebox .content {
+  clear: both;
+}
+
+#facebox .footer {
+  border-bottom: none;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+input.gdriving_submit {
+  width: 90px;
+  font-size: 1.05em;
+}

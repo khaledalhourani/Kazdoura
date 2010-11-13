@@ -1,0 +1,293 @@
+# translation of general.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Alaa Abd El Fattah <alaa@manalaa.net>, 2010.
+# Khaled Hosny <khaledhosny@eglug.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: general\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-02-12 20:55+0300\n"
+"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.5.2\n"
+
+#: modules/upload/upload.admin.inc:10
+msgid ""
+"The maximum allowed image size expressed as WIDTHxHEIGHT (e.g. 640x480). Set "
+"to 0 for no restriction."
+msgstr ""
+"أقصى حجم مسموح به للصور معبرا عنه بالعرض×الارتفاع (640×480 مثلا). استخدم "
+"صفرا لترفع هذا القيد."
+
+#: modules/upload/upload.admin.inc:18
+msgid ""
+"Depending on your server environment, these settings may be changed in the "
+"system-wide php.ini file, a php.ini file in your Drupal root directory, in "
+"your Drupal site's settings.php file, or in the .htaccess file in your "
+"Drupal root directory."
+msgstr ""
+"يمكن أن تتغير تلك الإعدادات بتغير بيئة خادومك في ملف php.ini العام، أو في "
+"ملف php.ini في الدليل الجذر لدروبال، أو في ملف settings.php في موقعك، أو في "
+"ملف .htaccess في الدليل الجذر لدروبال."
+
+#: modules/upload/upload.admin.inc:21;24;39;42
+msgid "The %role file size limit must be a number and greater than zero."
+msgstr "يجب أن يكون الحد الأقصى لملفات دور %role رقما أكبر من الصفر."
+
+#: modules/upload/upload.admin.inc:21;24;31
+msgid "default"
+msgstr "المبدئي"
+
+#: modules/upload/upload.admin.inc:31;49
+msgid ""
+"The %role maximum file size per upload is greater than the total file size "
+"allowed per user"
+msgstr ""
+"الحد الأقصى للملف في دور %role أكبر من إجمالي حجوم الملفات المسموح للمستخدم "
+"الواحد"
+
+#: modules/upload/upload.admin.inc:64
+msgid "General settings"
+msgstr "الإعدادات العامة"
+
+#: modules/upload/upload.admin.inc:69
+msgid "Maximum resolution for uploaded images"
+msgstr "أقصى وضوح للصور المرفوعة"
+
+#: modules/upload/upload.admin.inc:73
+msgid ""
+"The maximum allowed image size (e.g. 640x480). Set to 0 for no restriction. "
+"If an <a href=\"!image-toolkit-link\">image toolkit</a> is installed, files "
+"exceeding this value will be scaled down to fit."
+msgstr ""
+"الأبعاد القصوى المسموح بها للصور (مثلا 640x480). ادخل 0 لاطلاق الأبعاد بلا "
+"حدود. ان أتيح <a href=\"!image-toolkit-link\">عدة معالجة صور</a> على الخادوم "
+"سيتم تقليص أبعاد أي صور تتعدى الحد المسموح به."
+
+#: modules/upload/upload.admin.inc:74
+msgid "WIDTHxHEIGHT"
+msgstr "العرض×الارتفاع"
+
+#: modules/upload/upload.admin.inc:78
+msgid "List files by default"
+msgstr "اسرد الملفات مبدئيا"
+
+#: modules/upload/upload.admin.inc:81
+msgid "Display attached files when viewing a post."
+msgstr "أعرض الملفات المرفقة عند عرض المحتوى."
+
+#: modules/upload/upload.admin.inc:97
+msgid ""
+"The default maximum file size a user can upload. If an image is uploaded and "
+"a maximum resolution is set, the size will be checked after the file has "
+"been resized."
+msgstr ""
+"الحد الأقصى المبدئي لحجم للملفات التي يسمح برفعها. مقارنة حجم ملفات الصور "
+"ستتم بعد تقليص أبعادها في حالة تحديد حد أقصى لأبعاد الصور."
+
+#: modules/upload/upload.admin.inc:135
+msgid ""
+"The maximum size of a file a user can upload. If an image is uploaded and a "
+"maximum resolution is set, the size will be checked after the file has been "
+"resized."
+msgstr ""
+"الحد الأقصى لحجم للملفات التي يسمح برفعها. اذا تم تحديد الحد الأقصى لأبعاد "
+"الصور، سيتم مراجعة أبعاد الصور المرفوعة و محاولة تقليصها."
+
+#: modules/upload/upload.admin.inc:144
+msgid "The maximum size of all files a user can have on the site."
+msgstr ""
+"الحجم الأقصى المبدئي لكل الملفات التي يستطيع المستخدم وضعها على الموقع."
+
+#: modules/upload/upload.module:16
+msgid ""
+"The upload module allows users to upload files to the site. The ability to "
+"upload files is important for members of a community who want to share work. "
+"It is also useful to administrators who want to keep uploaded files "
+"connected to posts."
+msgstr ""
+"تسمح وحدة الرفع للمستخدمين برفع ملفات إلى الموقع. تعتبر القدرة على رفع ملفات "
+"إلى الموقع مهمة بالنسبة لأعضاء موقع يريدون التشارك في العمل. هذه الوحدة "
+"مفيدة أيضا بالنسبة للإداريين الراغبين في ربط الملفات المرفوعة بمحتوى الموقع."
+
+#: modules/upload/upload.module:17
+msgid ""
+"Users with the upload files permission can upload attachments to posts. "
+"Uploads may be enabled for specific content types on the content types "
+"settings page. Each user role can be customized to limit or control the file "
+"size of uploads, or the maximum dimension of image files."
+msgstr ""
+"بإمكان المستخدمين الذين لديهم صلاحية رفع الملفات رفع المرفقات. بإمكانك تحديد "
+"نوع المحتوى الذي يقبل المرفقات في صفحة إعدادات نوع المحتوى. يمكن تطويع كل "
+"دور مستخدمين بتحديد حجم الملفات التي يمكنهم رفعها، و أبعاد ملفات الصور."
+
+#: modules/upload/upload.module:18
+msgid ""
+"For more information, see the online handbook entry for <a href=\"@upload"
+"\">Upload module</a>."
+msgstr ""
+"لمزيد من المعلومات، من فضلك طالع صفحة <a href=\"@upload\">وحدة الرفع</a> في "
+"كتيب الاستخدام."
+
+#: modules/upload/upload.module:21
+msgid ""
+"Users with the <a href=\"@permissions\">upload files permission</a> can "
+"upload attachments. Users with the <a href=\"@permissions\">view uploaded "
+"files permission</a> can view uploaded attachments. You can choose which "
+"post types can take attachments on the <a href=\"@types\">content types "
+"settings</a> page."
+msgstr ""
+"المستخدمون الذين لديهم <a href=\"@permissions\">صلاحية رفع الملفات</a> "
+"يمكنهم رفع مرفقات. المستخدمون الذين لديهم <a href=\"@permissions\">صلاحية "
+"استعراض الملفات المرفوعة</a> بإمكانهم استعراض المرفقات المرفوعة. بإمكانك "
+"تحديد أنواع المحتوى التي يمكن أن يرفق معها ملفات في صفحة <a href=\"@types"
+"\">إعدادات أنواع المحتوى</a>."
+
+#: modules/upload/upload.module:67
+msgid "Read full article to view attachments."
+msgstr "اقرأ المقال الكامل لتعرض المرفقات."
+
+#: modules/upload/upload.module:213
+msgid "Attachments"
+msgstr "المرفقات"
+
+#: modules/upload/upload.module:226
+msgid "File attachments"
+msgstr "الملفات المرفقة"
+
+#: modules/upload/upload.module:229
+msgid ""
+"Changes made to the attachments are not permanent until you save this post. "
+"The first \"listed\" file will be included in RSS feeds."
+msgstr ""
+"التعديلات على المرفقات لن تكون دائمة حتى تحفظ هذه الرسالة. يدرج أول ملف في "
+"القائمة في التلقيمات."
+
+#: modules/upload/upload.module:247
+msgid ""
+"File attachments are disabled. The file directories have not been properly "
+"configured."
+msgstr "المرفقات معطلة. لم يتم ضبط أدلة الملفات بشكل ملائم."
+
+#: modules/upload/upload.module:249
+msgid ""
+"Please visit the <a href=\"@admin-file-system\">file system configuration "
+"page</a>."
+msgstr "من فضلك زر <a href=\"@admin-file-system\">صفحة ضبط نظام الملفات</a>."
+
+#: modules/upload/upload.module:252
+msgid "Please contact the site administrator."
+msgstr "من فضلك راجع إداري الموقع."
+
+#: modules/upload/upload.module:344
+msgid "Attachment"
+msgstr "المرفق"
+
+#: modules/upload/upload.module:344;517
+msgid "Size"
+msgstr "الحجم"
+
+#: modules/upload/upload.module:491
+msgid "Attach new file"
+msgstr "أرفق ملفا جديدا"
+
+#: modules/upload/upload.module:493
+msgid "Images are larger than %resolution will be resized. "
+msgstr "أبعاد الصور أكبر من %resolution، سيتم تقليصها."
+
+#: modules/upload/upload.module:493
+msgid ""
+"The maximum upload size is %filesize. Only files with the following "
+"extensions may be uploaded: %extensions. "
+msgstr ""
+"الحد الأقصى لحجم الملفات المسموح برفعها %filesize. لا يسمح برفع ملفات ذات "
+"امتدادات خلاف: %extensions."
+
+#: modules/upload/upload.module:497
+msgid "Attach"
+msgstr "أرفق"
+
+#: modules/upload/upload.module:502
+msgid "Please wait..."
+msgstr "انتظر من فضلك..."
+
+#: modules/upload/upload.module:65;309
+msgid "1 attachment"
+msgid_plural "@count attachments"
+msgstr[0] "مرفق واحد"
+msgstr[1] "لا مرفقات"
+msgstr[2] "مرفقان"
+msgstr[3] "@count مرفقات"
+msgstr[4] "@count مرفقا"
+msgstr[5] "@count مرفق"
+
+#: modules/upload/upload.module:46
+msgid "upload files"
+msgstr "يرفع الملفات"
+
+#: modules/upload/upload.module:46
+msgid "view uploaded files"
+msgstr "يعرض الملفات المرفوعة"
+
+#: modules/upload/upload.module:86
+msgid "File uploads"
+msgstr "رفع الملفات"
+
+#: modules/upload/upload.module:87
+msgid "Control how files may be attached to content."
+msgstr "تسمح للمستخدمين برفع الملفات، و إرفاقها مع المحتوى."
+
+#~ msgid "upload"
+#~ msgstr "ارفع"
+
+#~ msgid "Your PHP settings limit the maximum file size per upload to %size."
+#~ msgstr "تحدد إعدادات بي.إتش.بي أقصى حجم للملفات المرفوعة ب %size."
+
+#~ msgid "Default permitted file extensions"
+#~ msgstr "امتدادات الملفات المسموح بها مبدئيا"
+
+#~ msgid ""
+#~ "Default extensions that users can upload. Separate extensions with a "
+#~ "space and do not include the leading dot."
+#~ msgstr ""
+#~ "الامتدادات التي يمكن أن يرفعها المستخدمون في هذا الدور. افصل الامتدادات "
+#~ "بمسافات، و لا تسبقها بنقاط."
+
+#~ msgid "Default maximum file size per upload"
+#~ msgstr "أقصى حجم للملف المرفوع مبدئيا"
+
+#~ msgid "Default total file size per user"
+#~ msgstr "الحجم الكلي لملفات المستخدم مبدئيا"
+
+#~ msgid "The default maximum size of all files a user can have on the site."
+#~ msgstr ""
+#~ "الحجم الأقصى المبدئي لكل الملفات التي يستطيع المستخدم وضعها على الموقع."
+
+#~ msgid "Settings for @role"
+#~ msgstr "إعدادات @role"
+
+#~ msgid "Permitted file extensions"
+#~ msgstr "امتدادات الملفات المسموح بها"
+
+#~ msgid ""
+#~ "Extensions that users in this role can upload. Separate extensions with a "
+#~ "space and do not include the leading dot."
+#~ msgstr ""
+#~ "الامتدادات التي يمكن أن يرفعها المستخدمون في هذا الدور. افصل الامتدادات "
+#~ "بمسافات، و لا تسبقها بنقاط."
+
+#~ msgid "Maximum file size per upload"
+#~ msgstr "أقصى حجم للملف المرفوع"
+
+#~ msgid "Total file size per user"
+#~ msgstr "الحجم الكلي لملفات المستخدم"

@@ -1,0 +1,239 @@
+# translation of general.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: general\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-02-18 23:42+0200\n"
+"Last-Translator: Alaa <alaa@manalaa.net>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Pootle 2.0.2\n"
+
+#: modules/php/php.module:16
+msgid ""
+"The PHP filter adds the ability to include PHP code in posts. PHP is a "
+"general-purpose scripting language widely-used for web development; the "
+"content management system used by this website has been developed using PHP."
+msgstr ""
+"مرشح PHP يضيف إمكانية إضافة كود PHP للمحتوى. لغة PHP هي لغة برمجة عامة "
+"تستخدم لتطوير برمجيات الويب. نظام إدارة المحتوى مطور بهذه اللغة."
+
+#: modules/php/php.module:17
+msgid ""
+"Through the PHP filter, users with the proper permission may include custom "
+"PHP code within a page of the site. While this is a powerful and flexible "
+"feature if used by a trusted user with PHP experience, it is a significant "
+"and dangerous security risk in the hands of a malicious user. Even a trusted "
+"user may accidentally compromise the site by entering malformed or incorrect "
+"PHP code. Only the most trusted users should be granted permission to use "
+"the PHP filter, and all PHP code added through the PHP filter should be "
+"carefully examined before use."
+msgstr ""
+"يمكن للمستخدمين إضافة كود برمجي بلغة PHP إلى أي صفحة إذا كان لديهم الصلاحيات "
+"الكافية. بالرغم من أن هذه الخاصية تعتبر مفيدة للغاية إذا استخدمها مستخدمين "
+"ذوي خبرة في لغة PHP إلا أتها في غاية الخطورة إذا استخدمها المخربين. حتى "
+"المستخدمين الموثوق فيهم يمكن أن يعرضوا الموقع بالخطأ للخطر إذا كتبوا كود PHP "
+"خاطئة. يجب أن لا يسمح إلا للمستخدمين الموثوق فيهم للغاية باستخدام هذه "
+"الخاصية و يجب مراجعة أي كود برمجي قبل استخدامه."
+
+#: modules/php/php.module:18;61
+msgid ""
+"<a href=\"@drupal\">Drupal.org</a> offers <a href=\"@php-snippets\">some "
+"example PHP snippets</a>, or you can create your own with some PHP "
+"experience and knowledge of the Drupal system."
+msgstr ""
+"يوجد بموقع <a href=\"@drupal\">Drupal.org</a> <a href=\"@php-snippets\">بعض "
+"الأمثلة بكود PHP</a> أو يمكنك كتابة الكود الخاص بك إذا كان لديك بعض الخبرة "
+"في لغة PHP و نظام دروبال."
+
+#: modules/php/php.module:19
+msgid ""
+"For more information, see the online handbook entry for <a href=\"@php\">PHP "
+"module</a>."
+msgstr ""
+"لمزيد من المعلومات، من فضلك طالع صفحة <a href=\"@php\">وحدة PHP</a> في دليل "
+"الضبط و التطويع."
+
+#: modules/php/php.module:32
+msgid "You may post PHP code. You should include &lt;?php ?&gt; tags."
+msgstr "يمكنك كتابة كود بلغة بي.إتش.بي. يجب أن تضيف أوسمة &lt;?php ?&gt;."
+
+#: modules/php/php.module:34
+msgid "Using custom PHP code"
+msgstr "استخدام كود PHP"
+
+#: modules/php/php.module:35
+msgid ""
+"Custom PHP code may be embedded in some types of site content, including "
+"posts and blocks. While embedding PHP code inside a post or block is a "
+"powerful and flexible feature when used by a trusted user with PHP "
+"experience, it is a significant and dangerous security risk when used "
+"improperly. Even a small mistake when posting PHP code may accidentally "
+"compromise your site."
+msgstr ""
+"يمكن كتابة كود PHP في المحتوى بالموقع و في الصناديق. بالرغم من أن إضافة كود "
+"PHP في المحتوى أو الصناديق قد يكون ذو فائدة كبيرة إذا أضافه مستخدمون موثوق "
+"بهم و ذوي خبرة في لغة PHP إلا أنه قد يكون في غاية الخطورة على أمن الموقع إذا "
+"ما استخدم بطريقة خاطئة. مجرد خطأ بسيط في كود PHP يمكن أن يؤدي إلى اختراق "
+"موقعك."
+
+#: modules/php/php.module:36
+msgid ""
+"If you are unfamiliar with PHP, SQL, or Drupal, avoid using custom PHP code "
+"within posts. Experimenting with PHP may corrupt your database, render your "
+"site inoperable, or significantly compromise security."
+msgstr ""
+"إذا لم يكن لديك معرفة كافية بدروبال و لغتي PHP و SQL ابتعد عن استخدام كود "
+"PHP في المحتوى. تجربة الكود قد يؤدي إلى تخريب قاعدة البيانات، إيقاف الموقع "
+"عن العمل، أو تعريضه للاختراق."
+
+#: modules/php/php.module:37
+msgid "Notes:"
+msgstr "ملاحظات:"
+
+#: modules/php/php.module:38
+msgid ""
+"Remember to double-check each line for syntax and logic errors "
+"<strong>before</strong> saving."
+msgstr ""
+"تذكر أن تراجع كل سطر أكثر من مرة لتتأكد من خلوه من أي أخطاء في نحو اللغة أو "
+"في المنطق الذي تريد تنفيذه <strong>قبل</strong> الحفظ."
+
+#: modules/php/php.module:39
+msgid "Statements must be correctly terminated with semicolons."
+msgstr "يجب أن تقفل كل جملة برمجية بفاصلة منقوطة."
+
+#: modules/php/php.module:40
+msgid ""
+"Global variables used within your PHP code retain their values after your "
+"script executes."
+msgstr ""
+"المتغيرات العامة المستخدمة في كود PHP سوف تعود إلى قيمتها الأولية بعد أن "
+"ينتهي تنفيذ النص البرمجي الخاص بك."
+
+#: modules/php/php.module:41
+msgid ""
+"<code>register_globals</code> is <strong>turned off</strong>. If you need to "
+"use forms, understand and use the functions in <a href=\"@formapi\">the "
+"Drupal Form API</a>."
+msgstr ""
+"خيار <code>register_globals</code> <strong>معطل</strong>. إذا كنت تريد أن "
+"تستخدم الاستمارات ادرس و استخدم الوظائف الموجودة في <a href=\"@formapi"
+"\">واجهة الاستمارات البرمجية بدروبال</a>."
+
+#: modules/php/php.module:42
+msgid ""
+"Use a <code>print</code> or <code>return</code> statement in your code to "
+"output content."
+msgstr ""
+"استخدم <code>print</code> أو <code>return</code> في شيفرتك لتقوم بعرض أي "
+"محتوى."
+
+#: modules/php/php.module:43
+msgid ""
+"Develop and test your PHP code using a separate test script and sample "
+"database before deploying on a production site."
+msgstr ""
+"قم بتطوير كود PHP التي تريد استخدامها في برمجية مستقلة و قاعدة بيانات أخرى "
+"بعيدة عن موقعك قبل أن تقوم بوضعها في الموقع."
+
+#: modules/php/php.module:44
+msgid ""
+"Consider including your custom PHP code within a site-specific module or "
+"<code>template.php</code> file rather than embedding it directly into a post "
+"or block."
+msgstr ""
+"فكر في كتابة كود PHP التي تريد استخدامه في وحدة مخصصة لذلك أو في ملف "
+"<code>template.php</code> بدل من وضعها مباشرة في صندوق أو في محتوى."
+
+#: modules/php/php.module:45
+msgid ""
+"Be aware that the ability to embed PHP code within content is provided by "
+"the PHP Filter module. If this module is disabled or deleted, then blocks "
+"and posts with embedded PHP may display, rather than execute, the PHP code."
+msgstr ""
+"احترس من أن إمكانية إضافة كود PHP في المحتوى توفرها وحدة مرشح PHP. إذا حذّفت "
+"عطّلت هذه الوحدة فإن الكود الذي أضفته إلى المحتوى سوف يظهر كما هو بدلا من "
+"تنفيذه."
+
+#: modules/php/php.module:46
+msgid ""
+"A basic example: <em>Creating a \"Welcome\" block that greets visitors with "
+"a simple message.</em>"
+msgstr "مثال بسيط: <em> عمل صندوق \"ترحيب\" بالزوار برسالة بسيطة. </em>"
+
+#: modules/php/php.module:47
+msgid ""
+"<p>Add a custom block to your site, named \"Welcome\". With its input format "
+"set to \"PHP code\" (or another format supporting PHP input), add the "
+"following in the Block body:</p>\n"
+"<pre>\n"
+"print t('Welcome visitor! Thank you for visiting.');\n"
+"</pre>"
+msgstr ""
+"<p>أضف صندوق جديد إلى موقعك باسم \"مرحبا\". و اجعل نسق الإدخال \"كود PHP"
+"\" (أو أي نسق آخر يدعم إدخال PHP) و من ثم أضف التالي إلى متن الصندوق: </p>\n"
+"<pre>\n"
+"print t('مرحبا أيها الزائر، شكرا لزيارتك.');\n"
+"</pre>"
+
+#: modules/php/php.module:51
+msgid ""
+"<p>To display the name of a registered user, use this instead:</p>\n"
+"<pre>\n"
+"global $user;\n"
+"if ($user->uid) {\n"
+"  print t('Welcome @name! Thank you for visiting.', array('@name' => $user-"
+">name));\n"
+"}\n"
+"else {\n"
+"  print t('Welcome visitor! Thank you for visiting.');\n"
+"}\n"
+"</pre>"
+msgstr ""
+"<p> لتقوم بعرض اسم مستخدم مشترك استخدم هذا الكود:</p>\n"
+"<pre>\n"
+"global $user;\n"
+"if ($user->uid) {\n"
+"  print t('مرحبا @name! شكرا على زيارتك', array('@name' => $user->name));\n"
+"}\n"
+"else {\n"
+"  print t('مرحبا أيها الزائر، شكرا على زيارتك.');\n"
+"}\n"
+"</pre>"
+
+#: modules/php/php.module:75
+msgid "PHP evaluator"
+msgstr "مقيم بي.إتش.بي"
+
+#: modules/php/php.module:80
+msgid ""
+"Executes a piece of PHP code. The usage of this filter should be restricted "
+"to administrators only!"
+msgstr "يشغل كود بي.إتش.بي. يجب أن يتاح استخدام هذا المرشح للإداريين فقط!"
+
+#: modules/php/php.install:20
+msgid "A !php-code input format has been created."
+msgstr "تم إنشاء نسق إدخال !php-code."
+
+#: modules/php/php.install:28
+msgid ""
+"The PHP module has been disabled. Please note that any existing content that "
+"was using the PHP filter will now be visible in plain text. This might pose "
+"a security risk by exposing sensitive information, if any, used in the PHP "
+"code."
+msgstr ""
+"تم تعطيل وحدة PHP. برجاء الانتباه إلى أن أي محتوى موجود الآن و يحتوي على كود "
+"PHP سوف يظهر الكود كنص عادي. قد يسبب هذا خطورة على أمن الموقع و يقوم بعرض "
+"بعض المعلومات الحساسة إذا ما تم استخدامها في كود PHP."

@@ -1,0 +1,228 @@
+# translation of general.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: general\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-01-30 20:46+0300\n"
+"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.5.1\n"
+
+#: modules/translation/translation.pages.inc:41
+msgid "outdated"
+msgstr "قديمة"
+
+#: modules/translation/translation.pages.inc:43
+msgid "<strong>@language_name</strong> (source)"
+msgstr "<strong>@language_name</strong> (الأصل)"
+
+#: modules/translation/translation.pages.inc:50
+msgid "add translation"
+msgstr "أضف ترجمة"
+
+#: modules/translation/translation.pages.inc:52
+msgid "Not translated"
+msgstr "غير مُتَرجَمة"
+
+#: modules/translation/translation.pages.inc:57
+msgid "Translations of %title"
+msgstr "ترجمات %title"
+
+#: modules/translation/translation.module:34
+msgid ""
+"The content translation module allows content to be translated into "
+"different languages. Working with the <a href=\"@locale\">locale module</a> "
+"(which manages enabled languages and provides translation for the site "
+"interface), the content translation module is key to creating and "
+"maintaining translated site content."
+msgstr ""
+"تتيح وحدة الترجمة ترجمة المحتوى إلى مختلف اللغات. بالتعاون مع <a href="
+"\"@locale\">وحدة المحلية</a> (التي تتولى تفعيل اللغات وتوفير ترجمة واجهة "
+"الموقع)، تشكل وحدة ترجمة المحتوى لبنة أساسية في إدامة محتوى الموقع المترجم."
+
+#: modules/translation/translation.module:35
+msgid "Configuring content translation and translation-enabled content types:"
+msgstr "ضبط ترجمة المحتوى وأنواع المحتوى التي يمكن ترجمتها:"
+
+#: modules/translation/translation.module:36
+msgid ""
+"Assign the <em>translate content</em> permission to the appropriate user "
+"roles at the <a href=\"@permissions\">Permissions configuration page</a>."
+msgstr ""
+"أسند صلاحية <em>ترجمة المحتوى</em> لأدوار المستخدمين المعنيين في <a href="
+"\"@permissions\">صفحة ضبط الصلاحيات</a>."
+
+#: modules/translation/translation.module:37
+msgid ""
+"Add and enable desired languages at the <a href=\"@languages\">Languages "
+"configuration page</a>."
+msgstr ""
+"أضف وفعّل اللغات المطلوبة في <a href=\"@languages\">صفحة ضبط اللغات</a>."
+
+#: modules/translation/translation.module:38
+msgid ""
+"Determine which <a href=\"@content-types\">content types</a> should support "
+"translation features. To enable translation support for a content type, edit "
+"the type and at the <em>Multilingual support</em> drop down, select "
+"<em>Enabled, with translation</em>. (<em>Multilingual support</em> is "
+"located within <em>Workflow settings</em>.) Be sure to save each content "
+"type after enabling multilingual support."
+msgstr ""
+"حدد أي <a href=\"@content-types\">أنواع المحتوى</a> تدعم خاصية الترجمة. "
+"لتفعيل دعم الترجمة في نوع محتوى معين، حرر النوع ومن قائمة <em>دعم تعدد "
+"اللغات</em> المنسدلة، اختر <em>مفعّل، مع الترجمة</em>. (<em>دعم تعدد اللغات</"
+"em> موجود في <em>إعدادات سير العمل</em>.) لا تنس حفظ كل نوع محتوى بعد تفعيل "
+"دعم اللغات المتعددة."
+
+#: modules/translation/translation.module:39
+msgid "Working with translation-enabled content types:"
+msgstr "العمل مع أنواع المحتوى التي تدعم الترجمة:"
+
+#: modules/translation/translation.module:40
+msgid ""
+"Use the <em>Language</em> drop down to select the appropriate language when "
+"creating or editing posts."
+msgstr ""
+"استخدم قائمة <em>اللغة</em> المنسدلة لاختيار اللغة المناسبة عند إنشاء أو "
+"تحرير المواضيع."
+
+#: modules/translation/translation.module:41
+msgid ""
+"Provide new or edit current translations for existing posts via the "
+"<em>Translation</em> tab. Only visible while viewing a post as a user with "
+"the <em>translate content</em> permission, this tab allows translations to "
+"be added or edited using a specialized editing form that also displays the "
+"content being translated."
+msgstr ""
+"أضف ترجمة جديدة أو حرر ترجمات المواضيع الموجودة عبر لسان <em>الترجمة</em>، "
+"والذي لا يظهر إلا إن كانت للمستخدم صلاحية <em>ترجمة المحتوى</em>. يتيح هذا "
+"اللسان ترجمة المحتوى باستخدام استمارة تحرير خاصة تعرض أيضا المحتوى الذي "
+"يُترجم."
+
+#: modules/translation/translation.module:42
+msgid ""
+"Update translations as needed, so that they accurately reflect changes in "
+"the content of the original post. The translation status flag provides a "
+"simple method for tracking outdated translations. After editing a post, for "
+"example, select the <em>Flag translations as outdated</em> check box to mark "
+"all of its translations as outdated and in need of revision. Individual "
+"translations may be marked for revision by selecting the <em>This "
+"translation needs to be updated</em> check box on the translation editing "
+"form."
+msgstr ""
+"حدّث الترجمات حسب الحاجة بحيث تعكس التغييرات في النص الأصلي. علم حالة الترجمة "
+"توفر وسيلة بسيطة لتتبع الترجمات القديمة. بعد تحرير موضوع -على سبيل المثال- "
+"اختر مربع التأشير <em>علّم الترجمات قديمة</em> لتشير إلى أن كل الترجمات قديمة "
+"وتحتاج مراجعة. ويمكن تعليم كل ترجمة على حدة باختيار مربع التأشير <em>تحتاج "
+"هذه الترجمة لتحديثها</em> من استمارة تحرير الترجمة."
+
+#: modules/translation/translation.module:43
+msgid ""
+"The <a href=\"@content-node\">Content management administration page</a> "
+"displays the language of each post, and also allows filtering by language or "
+"translation status."
+msgstr ""
+"تعرض <a href=\"@content-node\">صفحة إدارة المحتوى</a> لغة كل موضوع وتتيح "
+"الترشيح حسب اللغة أو حالة الترجمة."
+
+#: modules/translation/translation.module:44
+msgid ""
+"Use the <a href=\"@blocks\">language switcher block</a> provided by locale "
+"module to allow users to select a language. If available, both the site "
+"interface and site content are presented in the language selected."
+msgstr ""
+"استخدم <a href=\"@blocks\">صندوق تبديل اللغة</a> الذي توفره وحدة المحلية "
+"لتتيح للمستخدمين اختيار اللغة. سيُعرض كلا واجهة الموقع والمحتوى باللغة "
+"المحددة، إذا توفرت."
+
+#: modules/translation/translation.module:45
+msgid ""
+"For more information, see the online handbook entry for <a href="
+"\"@translation\">Translation module</a>."
+msgstr ""
+"لمزيد من المعلومات، من فضلك طالع <a href=\"@translation\">وحدة الترجمة</a> "
+"في كتيب الاستخدام."
+
+#: modules/translation/translation.module:48
+msgid ""
+"Translations of a piece of content are managed with translation sets. Each "
+"translation set has one source post and any number of translations in any of "
+"the <a href=\"!languages\">enabled languages</a>. All translations are "
+"tracked to be up to date or outdated based on whether the source post was "
+"modified significantly."
+msgstr ""
+"تدار ترجمات أي جزء من المحتوى عبر أطقم الترجمة. لكل طقم ترجمة موضوع أصل وأي "
+"عدد من الترجمات بأي من <a href=\"!languages\">اللغات المفعّلة</a>. يحدد ما "
+"إذا كانت الترجمة حديثة أو قديمة على حسب مدى تغير الموضوع الأصل."
+
+#: modules/translation/translation.module:99
+msgid "Enabled, with translation"
+msgstr "مفعّل، مع الترجمة"
+
+#: modules/translation/translation.module:101
+msgid ""
+"Enable multilingual support for this content type. If enabled, a language "
+"selection field will be added to the editing form, allowing you to select "
+"from one of the <a href=\"!languages\">enabled languages</a>. You can also "
+"turn on translation for this content type, which lets you have content "
+"translated to any of the enabled languages. If disabled, new posts are saved "
+"with the default language. Existing content will not be affected by changing "
+"this option."
+msgstr ""
+"فعّل دعم تعدد اللغات لنوع المحتوى هذا. عند تفعيله سيظهر حقل لاختيار اللغة في "
+"استمارة التحرير، يتيح لك اختيار واحدة من <a href=\"!languages\">اللغات "
+"المفعّلة</a>. يمكن أيضا تفعيل ترجمة نوع المحتوى هذا، ما سيتيح لك ترجمة "
+"المحتوى إلى أي من اللغات المفعّلة. عند تعطيله ستُحفظ المواضيع الجديدة باللغة "
+"المبدئية. لن يتأثر المحتوى الموجود بتغيير هذا الخيار."
+
+#: modules/translation/translation.module:124
+msgid "Translation settings"
+msgstr "إعدادات الترجمة"
+
+#: modules/translation/translation.module:135
+msgid "Flag translations as outdated"
+msgstr "علّم الترجمات قديمة"
+
+#: modules/translation/translation.module:137
+msgid ""
+"If you made a significant change, which means translations should be "
+"updated, you can flag all translations of this post as outdated. This will "
+"not change any other property of those posts, like whether they are "
+"published or not."
+msgstr ""
+"إذا كنت قد غيّرت كثيرا في الأصل بحيث تحتاج الترجمات إلى تحديث، فيمكنك تعليم "
+"كل ترجمات هذا الموضوع على أنها قديمة. لن يغير هذا أي من الخصائص الأخرى لهذه "
+"المواضيع كحالة النشر من عدمه."
+
+#: modules/translation/translation.module:144
+msgid "This translation needs to be updated"
+msgstr "تحتاج هذه الترجمة لتحديثها"
+
+#: modules/translation/translation.module:146
+msgid ""
+"When this option is checked, this translation needs to be updated because "
+"the source post has changed. Uncheck when the translation is up to date "
+"again."
+msgstr ""
+"عند تحديد هذا الخيار فستحتاج هذه الترجمة لتحديثها لأن الأصل تغير. ارفع تحديد "
+"هذا الخيار بعد تحديث الترجمة."
+
+#: modules/translation/translation.module:86
+msgid "translate content"
+msgstr "ترجمة المحتوى"
+
+#: modules/translation/translation.module:59
+msgid "Translate"
+msgstr "ترجم"

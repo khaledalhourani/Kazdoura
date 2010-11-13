@@ -1,0 +1,366 @@
+<?php
+// $Id: gdriving.module,v 1.1.2.1 2010/02/05 18:40:25 tyabut Exp $
+
+/**
+ * @file
+ * The GDriving module provides driving directions from GMap module's maps
+ *
+ * It allows customization of the marker form and provide maps in overlays
+ */
+
+/**
+ * Implementation of hook_perm().
+ */
+function gdriving_perm() {
+  return array('access gdriving');
+}// function gdriving_perm()
+
+/**
+ * Defines the administration form for gdriving
+ */
+function gdriving_admin() {
+  $form = array();
+  
+  $form['gdriving_show_direction_types'] = array(
+    '#type'           => 'radios',
+    '#title'          => 'Allow users to choose the type of directions retrieved',
+    '#default_value'  => variable_get('gdriving_show_direction_types', 0),
+    '#options'        => array('1' => t('Enabled'), '0' => t('Disabled')),
+    '#description'    => '',
+    '#required'       => TRUE,
+  );
+  
+  $form['gdriving_back_link'] = array(
+    '#type'           => 'textfield',
+    '#title'          => t('Back to node information link text'),
+    '#default_value'  => variable_get('gdriving_back_link', 'Back to node information'),
+    '#size'           => 50,
+    '#maxlength'      => 100,
+    '#description'    => t("The text to display for the link under the directions form in a marker's info window"),
+    '#required'       => TRUE,
+  );
+
+  $form['gdriving_tooltip'] = array(
+    '#type'           => 'textfield',
+    '#title'          => t('Tooltip text'),
+    '#default_value'  => variable_get('gdriving_tooltip', 'Combination of Address, City, State, Zip Code'),
+    '#size'           => 50,
+    '#maxlength'      => 100,
+    '#description'    => t('Tooltip text displayed on hover of End address in directions form'),
+    '#required'       => TRUE,
+  );
+
+  // create a fieldset for the sample gdriving address
+  $form['gdriving_address_example'] = array(
+    '#type'   => 'fieldset',
+    '#title'  => t("Example address to show above directions form in a marker's info window"),
+  );
+
+  $form['gdriving_address_example']['gdriving_address1'] = array(
+    '#type'   => 'textfield',
+    '#title'  => t('Example address line 1'),
+    '#default_value'  => variable_get('gdriving_address1', '1600 Pennsylvania Ave. NW'),
+    '#size'           => 50,
+    '#maxlength'      => 100,
+    '#description'    => t('Example address line 1'),
+    '#required'       => TRUE,
+  );
+
+  $form['gdriving_address_example']['gdriving_address2'] = array(
+    '#type'   => 'textfield',
+    '#title'  => t('Example address line 2'),
+    '#default_value'  => variable_get('gdriving_address2', ''),
+    '#size'           => 50,
+    '#maxlength'      => 100,
+    '#description'    => t('Example address line 2'),
+    '#required'       => FALSE,
+  );
+
+  $form['gdriving_address_example']['gdriving_city'] = array(
+    '#type'   => 'textfield',
+    '#title'  => t('Example city'),
+    '#default_value'  => variable_get('gdriving_city', 'Washington'),
+    '#size'           => 50,
+    '#maxlength'      => 100,
+    '#description'    => t('Example city'),
+    '#required'       => TRUE,
+  );
+
+  $form['gdriving_address_example']['gdriving_state'] = array(
+    '#type'   => 'textfield',
+    '#title'  => t('Example state or province'),
+    '#default_value'  => variable_get('gdriving_state', 'D.C.'),
+    '#size'           => 50,
+    '#maxlength'      => 100,
+    '#description'    => t('Example state or province'),
+    '#required'       => TRUE,
+  );
+
+  $form['gdriving_address_example']['gdriving_zip'] = array(
+    '#type'   => 'textfield',
+    '#title'  => t('Example postal code'),
+    '#default_value'  => variable_get('gdriving_zip', '20500'),
+    '#size'           => 50,
+    '#maxlength'      => 100,
+    '#description'    => t('Example postal code'),
+    '#required'       => TRUE,
+  );
+
+  $form['gdriving_address_example']['gdriving_separator'] = array(
+    '#type'   => 'textfield',
+    '#title'  => t('Separator punctuation mark for example address display'),
+    '#default_value'  => variable_get('gdriving_separator', ', '),
+    '#size'           => 50,
+    '#maxlength'      => 100,
+    '#description'    => t('Separator punctuation mark for example address display.'),
+    '#required'       => TRUE,
+  );
+
+  return system_settings_form($form);
+}// function gdriving_admin()
+
+/**
+ * Validates the administration form for gdriving
+ */
+function gdriving_admin_validate($form, &$form_state) {
+  foreach ($form_state['values'] as $key => $val) {
+    // never trust user input
+    if (!is_array($val)) {
+      if ($val != check_plain($val)) {
+        form_set_error($key, t('You may only enter plain text.'));
+      }
+    }
+    else {
+      foreach ($val as $value) {
+        if (!is_array($value)) {
+          if ($value != check_plain($value)) {
+            form_set_error($key, t('You may only enter plain text.'));
+          }
+        }
+      }
+    }
+  }
+}// function gdriving_admin_validate()
+
+/**
+ * Implementation of hook_menu().
+ */
+function gdriving_menu() {
+  $items = array();
+
+  $items['admin/settings/gdriving'] = array(
+    'title'             => 'GDriving module settings',
+    'description'       => 'Configure GDriving display',
+    'page callback'     => 'drupal_get_form',
+    'page arguments'    => array('gdriving_admin'),
+    'access arguments'  => array('access administration pages'),
+    'type'              => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}// function gdriving_menu()
+
+/**
+ * Implementation of hook_theme().
+ */
+function gdriving_theme() {
+  return array(
+    'gdriving_marker' => array(
+      'template'    => 'gdriving-marker',
+      'arguments'   => array(
+        'name'                 => '',
+        'key'                  => '0',
+        'latitude'             => '0',
+        'longitude'            => '0',
+        'show_direction_types' => variable_get('gdriving_show_direction_types', 0),
+        'back_text'            => variable_get('gdriving_back_link', 'Back to node information'),
+        'tooltip'              => variable_get('gdriving_tooltip', 'Combination of Address, City, State, Zip Code'),
+        'address1'             => variable_get('gdriving_address1', '1600 Pennsylvania Ave. NW'),
+        'address2'             => variable_get('gdriving_address2', ''),
+        'city'                 => variable_get('gdriving_city', 'Washington'),
+        'state'                => variable_get('gdriving_state', 'D.C.'),
+        'zip'                  => variable_get('gdriving_zip', '20500'),
+        'separator'            => variable_get('gdriving_separator', ', '),
+      ),
+    ),
+  'gdriving_block' => array(
+      'template'    => 'gdriving-block',
+      'arguments'   => array('gmap' => ''),
+    ),
+  );
+}// function gdriving_theme()
+
+/**
+ * Preprocesses the template variables for marker display
+ */
+function template_preprocess_gdriving_marker(&$variables) {
+  if (is_array($variables)) {
+    foreach ($variables as $key => &$val) {
+      if (!is_array($val) && is_string($val)) {
+        $val = check_plain($val);
+      }
+      else {
+        if (is_array($val)) {
+          foreach ($val as &$values) {
+            if (!is_array($values) && is_string($values)) {
+              $values = check_plain($values);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // make an address string
+  $variables['gdriving_example'] = $variables['address1'];
+  if (!empty($variables['address2'])) {
+    $variables['gdriving_example'] .= " {$variables['address2']}";
+  }
+  $variables['gdriving_example'] .= " {$variables['city']}{$variables['separator']}{$variables['state']}" .
+                  "{$variables['separator']}{$variables['zip']}";
+}// template_preprocess_gdriving_marker
+
+/**
+ * Preprocesses the template variables for the directions map display
+ */
+function template_preprocess_gdriving_block(&$variables) {
+
+}// template_preprocess_gdriving_block
+
+/**
+ * Implementation of hook_gmap().
+ */
+function gdriving_gmap($op, &$map) {
+  switch ($op) {
+    case 'pre_theme_map':
+      // add appropriate js or invoke js objects
+      $path = drupal_get_path('module', 'gdriving') .'/js/';
+
+      if (empty($map['shapes'])) {
+        $gmap_path = drupal_get_path('module', 'gmap');
+        drupal_add_js($gmap_path .'/js/' .'shapeloader_static.js');
+        drupal_add_js($gmap_path .'/js/'  .'gmap_shapes.js');
+      }
+
+      drupal_add_js($path .'gdriving.js');
+      jq_add('facebox');
+
+      // loop through markers and add driving direction prompts
+      if (count($map['markers']) > 0) {
+        foreach ($map['markers'] as $key => &$arr) {
+          $name = variable_get('site_name', '') . " $key";
+          $arr['text'] .= theme('gdriving_marker', $name, $key, $arr['latitude'], $arr['longitude']);
+        }
+      }
+      break;
+
+    default:
+      break;
+  }
+}// function gdriving_gmap
+
+/**
+ * Implementation of hook_block().
+ */
+function gdriving_block($op = 'list', $delta = 0, $edit = array()) {
+  switch ($op) {
+    case 'list':
+      // return a list of block descriptions
+      $blocks[0] = array(
+        'info'      => t('GDriving Map Directions Block'),
+        'status'    => TRUE,
+        'weight'    => 0,
+        'visibility'  => 1,
+        'region'    => 'content_bottom',
+        'pages'     => '',
+        'cache' =>    BLOCK_NO_CACHE, // As it injects JS.
+      );
+      return $blocks;
+
+    case 'configure':
+      // provide admin with config form
+      return $form;
+    case 'save':
+      // we don't want them to be able to save
+      break;
+
+    case 'view':
+    default:
+      // generate the block for display purposes
+      // delta tells us which block
+    drupal_add_css(drupal_get_path('module', 'gdriving') . '/css/gdriving.css', 'module', 'all', FALSE);
+      switch ($delta) {
+        case 0:
+          $block['subject'] = '<none>';
+          $block['content'] = gdriving_block_contents(1);
+          break;
+      }
+      return $block;
+  }
+}// function gdriving_block
+
+/**
+ * Generates the driving directions map block contents
+ */
+function gdriving_block_contents($which_block) {
+  switch ($which_block) {
+    case 1:
+      $map = gmap_parse_macro('[gmap zoom=6 |center=0,40 |width=350px |height=200px |control=Small |type=Map |behaviors=+autozoom ]');
+      $map['markers'] = array();
+      drupal_add_js(array('gdriving' => array(
+        'gdrivingMap' => $map['id'],
+      )), 'setting');
+      $mapContent = theme('gmap', array('#settings' => $map));
+      return theme('gdriving_block', $mapContent);
+  }
+}// function gdriving_block_contents
+
+/**
+ * Implementation of hook_jq() from jq dependency.
+ */
+function gdriving_jq($op, $plugin = NULL) {
+  switch ($op) {
+    case 'info':
+      return array(
+        'facebox' => array(
+            'name' => t('Facebox'),
+            'description' => t('This is the FaceBox jQuery plugin. It shows overlay windows.'),
+              'version' => '1.2 // 2008-05-05 // jQuery 1.2',
+              'url' => 'http:// plugins.jquery.com/project/facebox',
+            'files' => array(
+                'js' => array(
+                  drupal_get_path('module', 'gdriving') . '/js/jquery.facebox.js',
+                ),
+            ),
+        ),
+      );
+      break;
+
+    case 'add':
+      // any additional processing required when adding a plugin to a page.
+      switch ($plugin) {
+        case 'facebox':
+          drupal_add_css(drupal_get_path('module', 'gdriving') . '/css/facebox.css', 'module', 'all', FALSE);
+          break;
+
+        default:
+          break;
+      }
+      break;
+  }
+}// function gdriving_jq
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function gdriving_uninstall() {
+  variable_del('gdriving_back_link');
+  variable_del('gdriving_tooltip');
+  variable_del('gdriving_address1');
+  variable_del('gdriving_address2');
+  variable_del('gdriving_city');
+  variable_del('gdriving_state');
+  variable_del('gdriving_zip');
+  variable_del('gdriving_separator');
+  variable_del('gdriving_show_direction_types');
+}// function gdriving_uninstall

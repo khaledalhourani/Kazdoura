@@ -1,0 +1,399 @@
+# translation of general.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: general\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-02-18 21:01+0200\n"
+"Last-Translator: Alaa <alaa@manalaa.net>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Pootle 2.0.2\n"
+
+#: modules/contact/contact.admin.inc:18;47
+msgid "Recipients"
+msgstr "المتسلمون"
+
+#: modules/contact/contact.admin.inc:43
+msgid "Example: 'website feedback' or 'product information'."
+msgstr "مثلا: 'آراء عن الموقع' أو 'معلومات حول المنتج'."
+
+#: modules/contact/contact.admin.inc:49
+msgid ""
+"Example: 'webmaster@example.com' or 'sales@example.com,support@example.com'. "
+"To specify multiple recipients, separate each e-mail address with a comma."
+msgstr ""
+"مثلا: 'webmaster@example.com' أو 'sales@example.com,support@example.com'. "
+"لتحديد أكثر من مستلم، استخدم الفاصلة العشرية (فوق حرف الواو) بين عناوين "
+"البريد الإلكتروني."
+
+#: modules/contact/contact.admin.inc:53
+msgid "Auto-reply"
+msgstr "رد آلي"
+
+#: modules/contact/contact.admin.inc:55
+msgid ""
+"Optional auto-reply. Leave empty if you do not want to send the user an auto-"
+"reply message."
+msgstr ""
+"رد آلي اختياري. اتركه فارغا إذا لم تكن ترغب في إرسال ردود آلية للمستخدمين."
+
+#: modules/contact/contact.admin.inc:60
+msgid ""
+"When listing categories, those with lighter (smaller) weights get listed "
+"before categories with heavier (larger) weights. Categories with equal "
+"weights are sorted alphabetically."
+msgstr ""
+"عند سرد التصنيفات، تلك ذات الوزن الأخف (الأقل) ستعرض قبل الأثقل وزنا. "
+"التصنيفات المتساوية الأوزان سترتب أبجديا."
+
+#: modules/contact/contact.admin.inc:66
+msgid ""
+"Set this to <em>Yes</em> if you would like this category to be selected by "
+"default."
+msgstr "اختر <em>نعم</em> إذا كنت تود أن يتم اختيار هذا التصنيف مبدئيا."
+
+#: modules/contact/contact.admin.inc:86
+msgid "You must enter one or more recipients."
+msgstr "يجب أن تدخل متسلما أو أكثر."
+
+#: modules/contact/contact.admin.inc:92
+msgid "%recipient is an invalid e-mail address."
+msgstr "عنوان البريد الإلكتروني %recipient غير صحيح."
+
+#: modules/contact/contact.admin.inc:114
+msgid "Category %category has been added."
+msgstr "تمت إضافة التصنيف %category."
+
+#: modules/contact/contact.admin.inc:120
+msgid "Category %category has been updated."
+msgstr "تم تحديث التصنيف %category."
+
+#: modules/contact/contact.admin.inc:138
+msgid "Are you sure you want to delete %category?"
+msgstr "هل تود فعلا حذف التصنيف %category؟"
+
+#: modules/contact/contact.admin.inc:147
+msgid "Category %category has been deleted."
+msgstr "تم حذف تصنيف %category."
+
+#: modules/contact/contact.admin.inc:156
+msgid "Additional information"
+msgstr "معلومات إضافية"
+
+#: modules/contact/contact.admin.inc:157 modules/contact/contact.pages.inc:41
+msgid "You can leave a message using the contact form below."
+msgstr "بإمكانك أن تترك رسالة مستخدما استمارة الاتصال أدناه."
+
+#: modules/contact/contact.admin.inc:158
+msgid ""
+"Information to show on the <a href=\"@form\">contact page</a>. Can be "
+"anything from submission guidelines to your postal address or telephone "
+"number."
+msgstr ""
+"المعلومات التي ستظهر على <a href=\"@form\">صفحة الاتصال</a>. يمكن أن تكون "
+"إرشادات عامة، أو عنوانك البريدي، أو رقم هاتفك، أو أية معلومات أخرى."
+
+#: modules/contact/contact.admin.inc:161
+msgid "Hourly threshold"
+msgstr "الحد الأقصى في الساعة"
+
+#: modules/contact/contact.admin.inc:164
+msgid ""
+"The maximum number of contact form submissions a user can perform per hour."
+msgstr "العدد الأقصى للمراسلات التي يمكن أن يجريها مستخدم ما في الساعة."
+
+#: modules/contact/contact.admin.inc:168
+msgid "Enable personal contact form by default"
+msgstr "فَعِّل استمارة الاتصال الشخصية مبدئيا"
+
+#: modules/contact/contact.admin.inc:170
+msgid "Default status of the personal contact form for new users."
+msgstr "الحالة المبدئية لاستمارات الاتصال الشخصية للمستخدمين الجدد."
+
+#: modules/contact/contact.admin.inc:115
+msgid "Contact form: category %category added."
+msgstr "استمارة الاتصال: تمت إضافة التصنيف %category."
+
+#: modules/contact/contact.admin.inc:121
+msgid "Contact form: category %category updated."
+msgstr "استمارة الاتصال: تم تحديث التصنيف %category."
+
+#: modules/contact/contact.admin.inc:148
+msgid "Contact form: category %category deleted."
+msgstr "استمارة الاتصال: تم حذف تصنيف %category."
+
+#: modules/contact/contact.pages.inc:17
+msgid ""
+"You cannot send more than %number messages per hour. Please try again later."
+msgstr "لا يمكنك إرسال أكثر من %number رسالة في الساعة. حاول لاحقا."
+
+#: modules/contact/contact.pages.inc:49
+msgid "Your e-mail address"
+msgstr "عنوان بريدك الإلكتروني"
+
+#: modules/contact/contact.pages.inc:88;197
+msgid "Send yourself a copy."
+msgstr "أرسل نسخة إلى نفسك."
+
+#: modules/contact/contact.pages.inc:99
+msgid ""
+"The contact form has not been configured. <a href=\"@add\">Add one or more "
+"categories</a> to the form."
+msgstr ""
+"تم إعداد استمارة الاتصال. <a href=\"@add\">أضف تصنيفا أو أكثر</a> للاستمارة."
+
+#: modules/contact/contact.pages.inc:109
+msgid "You must select a valid category."
+msgstr "عليك أن تختار تصنيفا صحيحا."
+
+#: modules/contact/contact.pages.inc:112
+msgid "You must enter a valid e-mail address."
+msgstr "يجب أن تدخل عنوان بريد إلكتروني سليم."
+
+#: modules/contact/contact.pages.inc:147
+msgid "Your message has been sent."
+msgstr "أُرسلت رسالتك."
+
+#: modules/contact/contact.pages.inc:161
+msgid ""
+"You need to provide a valid e-mail address to contact other users. Please "
+"update your <a href=\"@url\">user information</a> and try again."
+msgstr ""
+"عليك إدخال عنوان بريد إلكتروني صحيح حتى تتمكن من مراسلة بقية المستخدمين. من "
+"فضلك حدث <a href=\"@url\">بياناتك</a> ثم حاول مرة أخرى."
+
+#: modules/contact/contact.pages.inc:164
+msgid ""
+"You cannot contact more than %number users per hour. Please try again later."
+msgstr ""
+"لا يمكنك الاتصال بأكثر من %number مستخدم في الساعة. من فضلك حاول لاحقا."
+
+#: modules/contact/contact.pages.inc:179
+msgid "From"
+msgstr "من"
+
+#: modules/contact/contact.pages.inc:183
+msgid "To"
+msgstr "إلى"
+
+#: modules/contact/contact.pages.inc:232
+msgid "The message has been sent."
+msgstr "تم إرسال الرسالة."
+
+#: modules/contact/contact.pages.inc:146
+msgid "%name-from sent an e-mail regarding %category."
+msgstr "%name-from أرسل بريدا بخصوص %category."
+
+#: modules/contact/contact.pages.inc:231
+msgid "%name-from sent %name-to an e-mail."
+msgstr "لقد أرسل %name-from بريدا إلى %name-to."
+
+#: modules/contact/contact.module:15
+msgid ""
+"The contact module facilitates communication via e-mail, by allowing your "
+"site's visitors to contact one another (personal contact forms), and by "
+"providing a simple way to direct messages to a set of administrator-defined "
+"recipients (the <a href=\"@contact\">contact page</a>). With either form, "
+"users specify a subject, write their message, and (optionally) have a copy "
+"of their message sent to their own e-mail address."
+msgstr ""
+"تسهّل وحدة الاتصال التواصل عبر البريد الإلكتروني، بإتاحة اتصال زوار الموقع "
+"ببعضهم (استمارات الاتصال الشخصية)، وبتوفير وسيلة بسيطة لإرسال الرسائل إلى "
+"متسلمون يحددهم الإداري (<a href=\"@contact\">صفحة الاتصال</a>). في أي من "
+"الاستمارتين يحدد المستخدم موضوعا ويكتب الرسالة و (اختياريا) يحصل على نسخة "
+"منها ترسل إلى بريده الإلكتروني."
+
+#: modules/contact/contact.module:16
+msgid ""
+"Personal contact forms allow users to be contacted via e-mail, while keeping "
+"recipient e-mail addresses private. Users may enable or disable their "
+"personal contact forms by editing their <em>My account</em> page. If "
+"enabled, a <em>Contact</em> tab leading to their personal contact form is "
+"available on their user profile. Site administrators have access to all "
+"personal contact forms (even if they have been disabled). The <em>Contact</"
+"em> tab is only visible when viewing another user's profile (users do not "
+"see their own <em>Contact</em> tab)."
+msgstr ""
+"تتيح استمارات الاتصال الشخصية للمستخدمين التواصل عبر البريد مع إبقاء عنوان "
+"المستلم سرا. يستطيع المستخدمون تفعيل أو تعطيل استمارات الاتصال الشخصية "
+"بتحرير صفحة <em>حسابي</em> الخاصة بهم. عند تفعيلها، سيظهر لسان <em>اتصل</em> "
+"-يذهب إلى استمارة الاتصال الشخصية- في صفحة المستخدم. يستطيع إداريو الموقع "
+"الوصول إلى كل الاستمارات الشخصية (حتى لو كانت معطلة). يظهر لسان <em>اتصل</"
+"em> فقط عند عرض صفحة مستخدم آخر (لا يظهر اللسان في صفحة المستخدم الخاصة)."
+
+#: modules/contact/contact.module:17
+msgid ""
+"The <a href=\"@contact\">contact page</a> provides a simple form for "
+"visitors to leave comments, feedback, or other requests. Messages are routed "
+"by selecting a category from a list of administrator-defined options; each "
+"category has its own set of e-mail recipients. Common categories for a "
+"business site include, for example, \"Website feedback\" (messages are "
+"forwarded to web site administrators) and \"Product information\" (messages "
+"are forwarded to members of the sales department). The actual e-mail "
+"addresses defined within a category are not displayed. Only users in roles "
+"with the <em>access site-wide contact form</em> permission may access the <a "
+"href=\"@contact\">contact page</a>."
+msgstr ""
+"توفر <a href=\"@contact\">صفحة الاتصال</a> وسيلة بسيطة ليترك الزوار "
+"تعليقاتهم أو انطباعاتهم أو أي طلبات أخرى. تمرر الرسائل عبر اختيار تصنيف من "
+"قائمة يحددها الإداريون ولكل تصنيف متسلمون مختلفون. التصنيفات الشائعة في "
+"مواقع الأعمال تشمل على سبيل المثال: \"انطباعات الموقع\" (تمرر إلى إداريي "
+"الموقع) و \"معلومات المنتجات\" (تمرر إلى قسم المبيعات). عناوين البريد "
+"الفعلية المحددة لكل تصنيف لا تُعرض. لا يستطيع الوصول إلى <a href=\"@contact"
+"\">صفحة الاتصال</a> إلا المستخدمون ذوي صلاحية <em>يصل لاستمارة الاتصال "
+"العامة</em>."
+
+#: modules/contact/contact.module:18
+msgid ""
+"A link to your site's <a href=\"@contact\">contact page</a> from the main "
+"<em>Navigation</em> menu is created, but is disabled by default. Create a "
+"similar link on another menu by adding a menu item pointing to the path "
+"\"contact\""
+msgstr ""
+"تُنشأ وصلة إلى <a href=\"@contact\">صفحة اتصال</a> موقعك في قائمة "
+"<em>الإبحار</em> الرئيسية لكن تكون معطلة مبدئيا. يمكنك إنشاء وصلة مماثلة في "
+"أي قائمة أخرى بربط عنصر القائمة إلى المسار \"contact\""
+
+#: modules/contact/contact.module:19
+msgid ""
+"Customize the <a href=\"@contact\">contact page</a> with additional "
+"information (like physical location, mailing address, and telephone number) "
+"using the <a href=\"@contact-settings\">contact form settings page</a>. The "
+"<a href=\"@contact-settings\">settings page</a> also provides configuration "
+"options for the maximum number of contact form submissions a user may "
+"perform per hour, and the default status of users' personal contact forms."
+msgstr ""
+"يمكنك تطويع <a href=\"@contact\">صفحة الاتصال</a> بمعلومات إضافية (مثل "
+"العنوان على الأرض، البريد الإلكتروني، رقم الهاتف) باستخدام <a href="
+"\"@contact-settings\">صفحة إعدادات استمارة الاتصال</a>. توفر <a href="
+"\"@contact-settings\">صفحة الإعدادات</a> أيضا خيارات لضبط أقصى عدد من "
+"استمارات الاتصال التي يستطيع المستخدم إرسالها في الساعة، والحالة المبدئية "
+"لاستمارات الاتصال الشخصية."
+
+#: modules/contact/contact.module:20
+msgid ""
+"For more information, see the online handbook entry for <a href=\"@contact"
+"\">Contact module</a>."
+msgstr ""
+"لمزيد من المعلومات، من فضلك طالع صفحة <a href=\"@contact\">وحدة الاتصال</a> "
+"في كتيب الاستخدام."
+
+#: modules/contact/contact.module:23
+msgid ""
+"This page lets you set up <a href=\"@form\">your site-wide contact form</a>. "
+"To do so, add one or more categories. You can associate different recipients "
+"with each category to route e-mails to different people. For example, you "
+"can route website feedback to the webmaster and direct product information "
+"requests to the sales department. On the <a href=\"@settings\">settings "
+"page</a>, you can customize the information shown above the contact form. "
+"This can be useful to provide additional contact information such as your "
+"postal address and telephone number."
+msgstr ""
+"تسمح لك هذه الصفحة بضبط <a href=\"@form\">استمارة الاتصال العام لموقعك</a>. "
+"كل ما عليك هو أن تضيف تصنيفا أو أكثر. يمكنك أن تحدد مستلما أو أكثر لكل تصنيف "
+"لتوجه الرسائل إلى أشخاص مختلفين. على سبيل المثال يمكنك توجيه رسائل آراء "
+"الناس إلى إداري الموقع، و رسائل الاستعلام عن المنتجات الجديدة إلى قسم "
+"المبيعات. يمكنك من من صفحة <a href=\"@settings\">الإعدادات</a> تطويع "
+"المعلومات التي تظهر أعلى استمارة الاتصال. هذه الميزة قد تكون مفيدة في تقديم "
+"معلومات إضافية مثل عنوانك البريدي أو رقم هاتفك."
+
+#: modules/contact/contact.module:25
+msgid ""
+"The menu item can be customized and configured only once the menu module has "
+"been <a href=\"@modules-page\">enabled</a>."
+msgstr ""
+"يمكن تطويع وضبط عنصر القائمة مباشرة بعد <a href=\"@modules-page\">تفعيل</a> "
+"وحدة القائمة."
+
+#: modules/contact/contact.module:30
+msgid ""
+"The contact module also adds a <a href=\"@menu-settings\">menu item</a> "
+"(disabled by default) to the navigation block."
+msgstr ""
+"تضيف وحدة الاتصال <a href=\"@menu-settings\">رابطا</a> (معطل مبدئيا) إلى "
+"صندوق الإبحار."
+
+#: modules/contact/contact.module:144
+msgid "Contact settings"
+msgstr "إعدادات الاتصال"
+
+#: modules/contact/contact.module:149
+msgid "Personal contact form"
+msgstr "استمارة الاتصال الشخصية"
+
+#: modules/contact/contact.module:151
+msgid ""
+"Allow other users to contact you by e-mail via <a href=\"@url\">your "
+"personal contact form</a>. Note that while your e-mail address is not made "
+"public to other members of the community, privileged users such as site "
+"administrators are able to contact you even if you choose not to enable this "
+"feature."
+msgstr ""
+"اسمح لباقي المستخدمين بمراسلتك بالبريد الالكتروني عبر <a href=\"@url\">نموذج "
+"الاتصال بك</a>. لن يعرض بريدك الالكتروني لعامة الأعضاء، و لكن يظل بمقدور "
+"إداريي الموقع مراسلتك حتى لو لم تفعل هذه الخاصية."
+
+#: modules/contact/contact.module:172;178
+msgid "[!category] !subject"
+msgstr "[!category] !subject"
+
+#: modules/contact/contact.module:173
+msgid "!name sent a message using the contact form at !form."
+msgstr "أرسل لك !name رسالة عبر استمارة الاتصال: !form."
+
+#: modules/contact/contact.module:187
+msgid ""
+"!name (!name-url) has sent you a message via your contact form (!form-url) "
+"at !site."
+msgstr ""
+"لقد أرسل !name ‏(!name-url) إليك رسالة من خلال استمارة الاتصال (!form-url) "
+"على !site."
+
+#: modules/contact/contact.module:188
+msgid ""
+"If you don't want to receive such e-mails, you can change your settings at !"
+"url."
+msgstr ""
+"إذا كنت لا ترغب في استقبال رسائل مثل هذه، بإمكانك تغيير إعداداتك في !url."
+
+#: modules/contact/contact.module:189
+msgid "Message:"
+msgstr "الرسالة:"
+
+#: modules/contact/contact.module:39
+msgid "access site-wide contact form"
+msgstr "يصل لاستمارة الاتصال العامة"
+
+#: modules/contact/contact.module:39
+msgid "administer site-wide contact form"
+msgstr "يدير استمارة الاتصال العامة"
+
+#: modules/contact/contact.module:46
+msgid "Contact form"
+msgstr "استمارة الاتصال"
+
+#: modules/contact/contact.module:47
+msgid "Create a system contact form and set up categories for the form to use."
+msgstr "تنشئ استمارة اتصال عامة، و تعد تصنيفات لتستخدمها هذه الاستمارة."
+
+#: modules/contact/contact.module:68
+msgid "Edit contact category"
+msgstr "حرر تصنيف الاتصال"
+
+#: modules/contact/contact.module:76
+msgid "Delete contact"
+msgstr "احذف الاتصال"
+
+#~ msgid "contact"
+#~ msgstr "اتصل"

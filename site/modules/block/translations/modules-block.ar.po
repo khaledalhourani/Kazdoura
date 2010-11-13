@@ -1,0 +1,484 @@
+# translation of general.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: modules-block\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-02-18 23:33+0200\n"
+"Last-Translator: Alaa <alaa@manalaa.net>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Pootle 2.0.2\n"
+
+#: modules/block/block-admin-display-form.tpl.php:42
+msgid "Region"
+msgstr "المنطقة"
+
+#: modules/block/block-admin-display-form.tpl.php:57
+msgid "No blocks in this region"
+msgstr "لا صناديق في هذه المنطقة"
+
+#: modules/block/block.admin.inc:91
+msgid "Save blocks"
+msgstr "احفظ الصناديق"
+
+#: modules/block/block.admin.inc:106
+msgid "The block settings have been updated."
+msgstr "تم تحديث إعدادات الصندوق."
+
+#: modules/block/block.admin.inc:156
+msgid "Block specific settings"
+msgstr "إعدادات خاصة بالصندوق"
+
+#: modules/block/block.admin.inc:161
+msgid "Block title"
+msgstr "عنوان الصندوق"
+
+#: modules/block/block.admin.inc:163
+msgid "The title of the block as shown to the user."
+msgstr "عنوان الصندوق كما يظهر للمستخدم."
+
+#: modules/block/block.admin.inc:163
+msgid ""
+"Override the default title for the block. Use <em>&lt;none&gt;</em> to "
+"display no title, or leave blank to use the default block title."
+msgstr ""
+"تجاوز العنوان المبدئي للصندوق. استخدم <em>&lt;none&gt;</em> كي لا تعرض أي "
+"عنوان، أو اتركه فارغا لتستخدم عنوان الصندوق المبدئي."
+
+#: modules/block/block.admin.inc:179
+msgid "'%name' block"
+msgstr "صندوق '%name'"
+
+#: modules/block/block.admin.inc:185
+msgid "User specific visibility settings"
+msgstr "إعدادات عرض خاصة بالمستخدم"
+
+#: modules/block/block.admin.inc:190
+msgid "Custom visibility settings"
+msgstr "إعدادات العرض الطيعة"
+
+#: modules/block/block.admin.inc:192
+msgid "Users cannot control whether or not they see this block."
+msgstr "لا يمكن للمستخدمين التحكم في إظهار أو إخفاء هذا الصندوق."
+
+#: modules/block/block.admin.inc:193
+msgid "Show this block by default, but let individual users hide it."
+msgstr "أظهر هذا الصندوق مبدئيا، لكن اسمح للمستخدمين الأفراد بإخفائه."
+
+#: modules/block/block.admin.inc:194
+msgid "Hide this block by default but let individual users show it."
+msgstr "أخف هذا الصندوق مبدئيا، لكن اسمح للمستخدمين الأفراد بإظهاره."
+
+#: modules/block/block.admin.inc:196
+msgid ""
+"Allow individual users to customize the visibility of this block in their "
+"account settings."
+msgstr "اسمح للمستخدمين الأفراد بتفصيل عرض هذا الصندوق أثناء ضبطهم حساباتهم."
+
+#: modules/block/block.admin.inc:213
+msgid "Role specific visibility settings"
+msgstr "إعدادات عرض خاصة بأدوار المستخدمين"
+
+#: modules/block/block.admin.inc:218
+msgid "Show block for specific roles"
+msgstr "أظهر الصندوق لأدوار محددة"
+
+#: modules/block/block.admin.inc:221
+msgid ""
+"Show this block only for the selected role(s). If you select no roles, the "
+"block will be visible to all users."
+msgstr ""
+"لا تعرض هذا الصندوق إلا للأدوار المختارة. إذا لم تختر أية أدوار، سيظهر "
+"الصندوق لكل المستخدمين."
+
+#: modules/block/block.admin.inc:226
+msgid "Page specific visibility settings"
+msgstr "إعدادات عرض خاصة بالصفحة"
+
+#: modules/block/block.admin.inc:237
+msgid "Show on every page except the listed pages."
+msgstr "أظهره في كل الصفحات إلا المحددة."
+
+#: modules/block/block.admin.inc:237
+msgid "Show on only the listed pages."
+msgstr "لا تظهره إلا في الصفحات المحددة."
+
+#: modules/block/block.admin.inc:238
+msgid ""
+"Enter one page per line as Drupal paths. The '*' character is a wildcard. "
+"Example paths are %blog for the blog page and %blog-wildcard for every "
+"personal blog. %front is the front page."
+msgstr ""
+"أدخل مسارات دروبال: عنوان صفحة واحد في كل سطر. علامة '*' تحل محل أي سلسلة "
+"حرفية. على سبيل المثال %blog هو مسار المدونات، %blog-wildcard لمدونة كل "
+"مستخدم. %front هي الصفحة الرئيسية."
+
+#: modules/block/block.admin.inc:241
+msgid ""
+"Show if the following PHP code returns <code>TRUE</code> (PHP-mode, experts "
+"only)."
+msgstr ""
+"حدد ما إذا كان كود بي.إتش.بي التالي سيرجع <code>TRUE</code> (نمط بي.إتش.بي، "
+"للخبراء فقط)."
+
+#: modules/block/block.admin.inc:242
+msgid ""
+"If the PHP-mode is chosen, enter PHP code between %php. Note that executing "
+"incorrect PHP-code can break your Drupal site."
+msgstr ""
+"أدخل الكود بين %php إذا اخترت نمط بي.إتش.بي. لاحظ أن تنفيذ كود بي.إتش.بي غير "
+"صحيح سيؤدي إلى تعطل موقعك المبني على دروبال."
+
+#: modules/block/block.admin.inc:246
+msgid "Show block on specific pages"
+msgstr "أظهر الصندوق في صفحات محددة"
+
+#: modules/block/block.admin.inc:252
+msgid "Pages"
+msgstr "الصفحات"
+
+#: modules/block/block.admin.inc:260
+msgid "Save block"
+msgstr "احفظ الصندوق"
+
+#: modules/block/block.admin.inc:269;298
+msgid "Please ensure that each block description is unique."
+msgstr "من فضلك تأكد من أن لكل صندوق وصفا مميزا."
+
+#: modules/block/block.admin.inc:282
+msgid "The block configuration has been saved."
+msgstr "تم حفظ إعدادات الصندوق."
+
+#: modules/block/block.admin.inc:319
+msgid "The block has been created."
+msgstr "تم إنشاء الصندوق."
+
+#: modules/block/block.admin.inc:334
+msgid "Are you sure you want to delete the block %name?"
+msgstr "هل أنت متأكد أنك راغب في حذف صندوق %name؟"
+
+#: modules/block/block.admin.inc:343
+msgid "The block %name has been removed."
+msgstr "تم حذف الصندوق %name."
+
+#: modules/block/block.module:70
+msgid ""
+"Blocks are boxes of content rendered into an area, or region, of a web page. "
+"The default theme Garland, for example, implements the regions \"left sidebar"
+"\", \"right sidebar\", \"content\", \"header\", and \"footer\", and a block "
+"may appear in any one of these areas. The <a href=\"@blocks\">blocks "
+"administration page</a> provides a drag-and-drop interface for assigning a "
+"block to a region, and for controlling the order of blocks within regions."
+msgstr ""
+"الصناديق هي مربعات محتوى تعرض في منطقة محددة من صفحة الوب. مثلا، السمة "
+"المبدئية جارلاند تحتوي على مناطق \"الشريط الجانبي الأيمن\" و \"الشريط "
+"الجانبي الأيسر\"، و \"المحتوى\"، و \"الرأس\" و \"التذييل\"، ويمكن أن يظهر "
+"الصندوق في أي من هذه المناطق. تحتوي <a href=\"@blocks\">صفحة إدارة الصناديق</"
+"a> على واجهة سحب وإفلات لإضافة الصناديق إلى منطقة معينة والتحكم في ترتيبها "
+"داخل تلك المنطقة."
+
+#: modules/block/block.module:71
+msgid ""
+"Although blocks are usually generated automatically by modules (like the "
+"<em>User login</em> block, for example), administrators can also define "
+"custom blocks. Custom blocks have a title, description, and body. The body "
+"of the block can be as long as necessary, and can contain content supported "
+"by any available <a href=\"@input-format\">input format</a>."
+msgstr ""
+"مع أن الصناديق عادة ما تولدها الوحدات آليا (مثل صندوق <em>ولوج المستخدم</em>)"
+"، إلا أن المدير يستطيع بناء صناديق طيّعة. للصناديق الطيّعة عنوان ووصف ومتن. "
+"يمكن أن يكون متن الصندوق بأي طول، وأي محتوى يدعمه أي من <a href=\"@input-"
+"format\">أنساق الإدخال</a> المتوفرة."
+
+#: modules/block/block.module:72
+msgid "When working with blocks, remember that:"
+msgstr "عند التعامل مع الصناديق، تذكر أن:"
+
+#: modules/block/block.module:73
+msgid ""
+"since not all themes implement the same regions, or display regions in the "
+"same way, blocks are positioned on a per-theme basis."
+msgstr ""
+"بما أنه ليست كل السمات تنفذ نفس المناطق، أو تعرض المناطق بنفس الطريقة فإن "
+"موقع الصناديق سيحدد حسب كل سمة."
+
+#: modules/block/block.module:74
+msgid "disabled blocks, or blocks not in a region, are never shown."
+msgstr "الصناديق غير المفعلة أو التي ليست بالمنطقة لا تظهر."
+
+#: modules/block/block.module:75
+msgid ""
+"when throttle module is enabled, throttled blocks (blocks with the "
+"<em>Throttle</em> checkbox selected) are hidden during high server loads."
+msgstr ""
+"عند تفعيل وحدة الصمام فستُخفى الصناديق المكبوحة (الصناديق التي تم التأشير "
+"<em>الصمام</em> أمامها) عند ارتفاع حمل النظام."
+
+#: modules/block/block.module:76
+msgid "blocks can be configured to be visible only on certain pages."
+msgstr "يمكن إعداد الصناديق لتصبح مرئية فقط في صفحات محددة."
+
+#: modules/block/block.module:77
+msgid ""
+"blocks can be configured to be visible only when specific conditions are "
+"true."
+msgstr "يمكن إعداد الصناديق لتصبح مرئية فقط عند شروط معينة."
+
+#: modules/block/block.module:78
+msgid "blocks can be configured to be visible only for certain user roles."
+msgstr "يمكن إعداد الصناديق لتصبح مرئية فقط لأدوار مستخدم معينة."
+
+#: modules/block/block.module:79
+msgid ""
+"when allowed by an administrator, specific blocks may be enabled or disabled "
+"on a per-user basis using the <em>My account</em> page."
+msgstr ""
+"عندما يسمح بها المدير، فسيمكن تفعيل أو تعطيل صناديق معينة لكل مستخدم "
+"باستخدام صفحة <em>حسابي</em>."
+
+#: modules/block/block.module:80
+msgid ""
+"some dynamic blocks, such as those generated by modules, will be displayed "
+"only on certain pages."
+msgstr ""
+"بعض الصناديق الديناميكية -كتلك التي تولّدها الوحدات- لن تُعرض إلا في صفحات "
+"معينة."
+
+#: modules/block/block.module:81
+msgid ""
+"For more information, see the online handbook entry for <a href=\"@block"
+"\">Block module</a>."
+msgstr ""
+"لمزيد من المعلومات راجع صفحة <a href=\"@block\">وحدة الصناديق</a> في كتيب "
+"الاستخدام."
+
+#: modules/block/block.module:85
+msgid ""
+"This page provides a drag-and-drop interface for assigning a block to a "
+"region, and for controlling the order of blocks within regions. To change "
+"the region or order of a block, grab a drag-and-drop handle under the "
+"<em>Block</em> column and drag the block to a new location in the list. "
+"(Grab a handle by clicking and holding the mouse while hovering over a "
+"handle icon.) Since not all themes implement the same regions, or display "
+"regions in the same way, blocks are positioned on a per-theme basis. "
+"Remember that your changes will not be saved until you click the <em>Save "
+"blocks</em> button at the bottom of the page."
+msgstr ""
+"توفر هذه الصفحة واجهة سحب وإفلات لوضع الصناديق في المناطق المرادة، والتحكم "
+"في ترتيب الصناديق داخل كل منطقة. لتغيير منطقة أو ترتيب الصندوق اسحب مؤشر "
+"السحب الإفلات تحت عمود <em>الصندوق</em> واسحب الصندوق إلى مكانه الجديد في "
+"القائمة. (اسحب المؤشر بالنقر وإمساك الفأرة فوق أيقونته). حيث أن المناطق "
+"تختلف من سمة لأخرى، توضع الصناديق حسب كل سمة. تذكر أن تغييراتك لن تحفظ قبل "
+"النقر على زر <em>احفظ الصناديق</em> في نهاية الصفحة."
+
+#: modules/block/block.module:87
+msgid ""
+"To reduce CPU usage, database traffic or bandwidth, blocks may be "
+"automatically disabled during high server loads by selecting their "
+"<em>Throttle</em> checkbox. Adjust throttle thresholds on the <a href="
+"\"@throttleconfig\">throttle configuration page</a>."
+msgstr ""
+"لتقليل استخدام المعالج، أو الضغط على قاعدة البيانات أو استهلاك الإنترنت، "
+"يمكن تعطيل الوحدات تلقائيا أثناء الضغط العالي على الخادوم بالتأشير على مربع "
+"<em>الصمام</em> المقابل لها. يمكن ضبط عتبة الصمام في <a href="
+"\"@throttleconfig\">صفحة ضبط الصمام</a>."
+
+#: modules/block/block.module:89
+msgid ""
+"Click the <em>configure</em> link next to each block to configure its "
+"specific title and visibility settings. Use the <a href=\"@add-block\">add "
+"block page</a> to create a custom block."
+msgstr ""
+"انقر على رابط <em>اضبط</em> بجوار كل صندوق لضبط عنوانه وإعدادات الظهور. "
+"استخدم <a href=\"@add-block\">صفحة أضف صندوقا</a> لإنشاء صندوق طيّع."
+
+#: modules/block/block.module:92
+msgid ""
+"Use this page to create a new custom block. New blocks are disabled by "
+"default, and must be moved to a region on the <a href=\"@blocks\">blocks "
+"administration page</a> to be visible."
+msgstr ""
+"استخدم هذه الصفحة لإنشاء صندوق طيع جديد. تُعطّل الصناديق الجديدة مبدئيا، لذا "
+"يجب نقلها إلى منطقة في <a href=\"@blocks\">صفحة إدارة الصناديق</a> لتكون "
+"مرئية."
+
+#: modules/block/block.module:276
+msgid ""
+"The block %info was assigned to the invalid region %region and has been "
+"disabled."
+msgstr "الصندوق %info كان مسندا إلى منطقة غير صالحة (%region) ولذا تم تعطيله."
+
+#: modules/block/block.module:315
+msgid "Block description"
+msgstr "وصف الصندوق"
+
+#: modules/block/block.module:318
+msgid ""
+"A brief description of your block. Used on the <a href=\"@overview\">block "
+"overview page</a>."
+msgstr ""
+"وصف ملخص لصندوقك. يستخدم في <a href=\"@overview\">صفحة العرض العام للصناديق</"
+"a>."
+
+#: modules/block/block.module:325
+msgid "Block body"
+msgstr "متن الصندوق"
+
+#: modules/block/block.module:328
+msgid "The content of the block as shown to the user."
+msgstr "محتوى الصندوق كما يظهر للمستخدم."
+
+#: modules/block/block.module:361
+msgid "Block configuration"
+msgstr "إعدادات الصندوق"
+
+#: modules/block/block.module:113
+msgid "administer blocks"
+msgstr "يدير الصناديق"
+
+#: modules/block/block.module:113
+msgid "use PHP for block visibility"
+msgstr "يستخدم بي.إتش.بي في عرض الصناديق"
+
+#: modules/block/block.module:121
+msgid "Blocks"
+msgstr "الصناديق"
+
+#: modules/block/block.module:122
+msgid ""
+"Configure what block content appears in your site's sidebars and other "
+"regions."
+msgstr ""
+"اضبط محتويات الصناديق التي تظهر في الأعمدة الجانبية و في المناطق الأخرى من "
+"موقعك."
+
+#: modules/block/block.module:133
+msgid "JavaScript List Form"
+msgstr "استمارة قائمة جافا سكربت"
+
+#: modules/block/block.module:140
+msgid "Configure block"
+msgstr "اضبط الصندوق"
+
+#: modules/block/block.module:148
+msgid "Delete block"
+msgstr "احذف الصندوق"
+
+#: modules/block/block.module:156
+msgid "Add block"
+msgstr "أضف صندوقا"
+
+#: modules/block/block.js:0
+msgid ""
+"The changes to these blocks will not be saved until the <em>Save blocks</em> "
+"button is clicked."
+msgstr ""
+"لن تُحفظ التغييرات في هذه الصناديق قبل النقر على زر <em>احفظ الصناديق</em>."
+
+#~ msgid "block"
+#~ msgstr "صندوق"
+
+#~ msgid "Stores block settings, such as region and visibility settings."
+#~ msgstr "يحفظ إعدادات الصناديق، مثل المنطقة وإعدادات الظهور."
+
+#~ msgid "Primary Key: Unique block ID."
+#~ msgstr "المفتاح الأساسي: معرّف الصندوق الفريد."
+
+#~ msgid "Unique ID for block within a module."
+#~ msgstr "المعرف الفريد للصندوق داخل الوحدة."
+
+#~ msgid "The theme under which the block settings apply."
+#~ msgstr "السمة التي تنطبق تحتها إعدادات الوحدة."
+
+#~ msgid "Block enabled status. (1 = enabled, 0 = disabled)"
+#~ msgstr "حالة تفعيل الصندوق (1 = مفعّل، 0 = معطّل)"
+
+#~ msgid "Block weight within region."
+#~ msgstr "وزن الصندوق داخل المنطقة."
+
+#~ msgid "Theme region within which the block is set."
+#~ msgstr "منطقة السمة التي يظهر فيها الصندوق."
+
+#~ msgid ""
+#~ "Flag to indicate how users may control visibility of the block. (0 = "
+#~ "Users cannot control, 1 = On by default, but can be hidden, 2 = Hidden by "
+#~ "default, but can be shown)"
+#~ msgstr ""
+#~ "علم يوضح كيف يستطيع المستخدمون التحكم في ظهور الصندوق. (0 = لا يستطيع "
+#~ "المستخدمون التحكم فيه،  1 = مفعل مبدئيا، لكن يمكن أن يكون خفيا، 2 = خفي "
+#~ "مبدئيا، لكن يمكن عرضه)"
+
+#~ msgid ""
+#~ "Flag to indicate whether or not to remove block when website traffic is "
+#~ "high. (1 = throttle, 0 = do not throttle)"
+#~ msgstr ""
+#~ "علم يوضح إذا كان سيزال الصندوق عند زيادة الضغط على الموقع أم لا. (1 = "
+#~ "تفعيل الصمام، 0 = تعطيل الصمام)"
+
+#~ msgid ""
+#~ "Flag to indicate how to show blocks on pages. (0 = Show on all pages "
+#~ "except listed pages, 1 = Show only on listed pages, 2 = Use custom PHP "
+#~ "code to determine visibility)"
+#~ msgstr ""
+#~ "علم لتحديد كيف تظهر الصناديق في الصفحات. (0 = أظهر في كل الصفحات عدا "
+#~ "المذكورة، 1 = أظعر في الصفحات المذكورة فقط، 2 = استخدم كود PHP مخصص "
+#~ "لتحديد الظهور)"
+
+#~ msgid ""
+#~ "Contents of the \"Pages\" block; contains either a list of paths on which "
+#~ "to include/exclude the block or PHP code, depending on \"visibility\" "
+#~ "setting."
+#~ msgstr ""
+#~ "محتويات صندوق \"الصفحات\"؛ تحتوي إما قائمة بالصفحات التي تحتوي\\لا تحتوي "
+#~ "الصندوق أو كود PHP، حسب إعدادات \"الظهور\"."
+
+#~ msgid ""
+#~ "Custom title for the block. (Empty string will use block default title, "
+#~ "<none> will remove the title, text will cause block to use specified "
+#~ "title.)"
+#~ msgstr ""
+#~ "تفصيل عنوان الصندوق حسب الحاجة. (سلسلة المحارف الفارغة سوف تستخدم عنوان "
+#~ "الصندوق الاعتيادي، <none> سوف يزيل العنوان، النص سوف يجعل الصندوق يستخدم "
+#~ "العنوان المحدد.)"
+
+#~ msgid ""
+#~ "Binary flag to indicate block cache mode. (-1: Do not cache, 1: Cache per "
+#~ "role, 2: Cache per user, 4: Cache per page, 8: Block cache global) See "
+#~ "BLOCK_CACHE_* constants in block.module for more detailed information."
+#~ msgstr ""
+#~ "علم ثنائي يوضح نمط خبيئة الصندوق (-1: لا تحفظ في الخبيئة، 1: احفظ حسب "
+#~ "الدور، 2: احفظ حسب المستخدم، 4: احفظ حسب الصفحة، 8: خبيئة الصندوق عامة). "
+#~ "راجع ثوابت BLOCK_CACHE_* في block.module لمزيد من المعلومات التفصيلية."
+
+#~ msgid "Sets up access permissions for blocks based on user roles"
+#~ msgstr "يضبط صلاحيات الوصول للصناديق بالاعتماد على أدوار المستخدم"
+
+#~ msgid "The block's origin module, from {blocks}.module."
+#~ msgstr "وحدة الصندوق الأصلية من  {blocks}.module."
+
+#~ msgid "Stores contents of custom-made blocks."
+#~ msgstr "يخزّن محتوى الصناديق الطيعة."
+
+#~ msgid "The block's {blocks}.bid."
+#~ msgstr "{blocks}.bid للصندوق"
+
+#~ msgid "Block contents."
+#~ msgstr "محتويات الصندوق"
+
+#~ msgid "Block description."
+#~ msgstr "وصف الصندوق"
+
+#~ msgid ""
+#~ "Block body's {filter_formats}.format; for example, 1 = Filtered HTML."
+#~ msgstr "‏{filter_formats}.format متن الصندوق، مثلا 1 = HTML مرشّح."

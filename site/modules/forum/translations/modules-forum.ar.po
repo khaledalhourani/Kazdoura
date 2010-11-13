@@ -1,0 +1,446 @@
+# translation of general.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: general\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-02-11 00:25+0300\n"
+"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.5.2\n"
+
+#: modules/forum/forum-list.tpl.php:38
+msgid "Topics"
+msgstr "المناقشات"
+
+#: modules/forum/forum-list.tpl.php:39
+msgid "Posts"
+msgstr "المواضيع"
+
+#: modules/forum/forum-list.tpl.php:40
+msgid "Last post"
+msgstr "آخر موضوع"
+
+#: modules/forum/forum-submitted.tpl.php:21
+msgid "@time ago<br />by !author"
+msgstr "كتبه !author <br /> منذ @time"
+
+#: modules/forum/forum-topic-navigation.tpl.php:29
+msgid "Go to previous forum topic"
+msgstr "اذهب للمناقشة السابقة"
+
+#: modules/forum/forum-topic-navigation.tpl.php:32
+msgid "Go to next forum topic"
+msgstr "اذهب للمناقشة التالية"
+
+#: modules/forum/forum.admin.inc:38
+msgid "Forum name"
+msgstr "اسم المنتدى"
+
+#: modules/forum/forum.admin.inc:41
+msgid "Short but meaningful name for this collection of threaded discussions."
+msgstr "اسم مختصر لكن ذو مغزى لهذه المجموعة من النقاشات المتفرعة."
+
+#: modules/forum/forum.admin.inc:47
+msgid "Description and guidelines for discussions within this forum."
+msgstr "وصف عام و قواعد النقاش لهذا المنتدى."
+
+#: modules/forum/forum.admin.inc:54
+msgid ""
+"Forums are displayed in ascending order by weight (forums with equal weights "
+"are displayed alphabetically)."
+msgstr ""
+"تُعرض المنتديات بترتيب تصاعدي حسب الوزن (المنتديات المتساوية في الوزن ترتب "
+"أبجديا)."
+
+#: modules/forum/forum.admin.inc:75
+msgid "forum container"
+msgstr "حاوية منتدى"
+
+#: modules/forum/forum.admin.inc:79
+msgid "forum"
+msgstr "منتدى"
+
+#: modules/forum/forum.admin.inc:90
+msgid "Created new @type %term."
+msgstr "أنشئ @type %term جديد."
+
+#: modules/forum/forum.admin.inc:93
+msgid "The @type %term has been updated."
+msgstr "تم تحديث @type %term."
+
+#: modules/forum/forum.admin.inc:116
+msgid "Container name"
+msgstr "اسم الحاوية"
+
+#: modules/forum/forum.admin.inc:120
+msgid "Short but meaningful name for this collection of related forums."
+msgstr "اسم مختصر لكن ذو مغزى لهذه المجموعة من المنتديات المتقاربة."
+
+#: modules/forum/forum.admin.inc:128
+msgid "Description and guidelines for forums within this container."
+msgstr "وصف عام و قواعد المنتديات في هذه الحاوية."
+
+#: modules/forum/forum.admin.inc:136
+msgid ""
+"Containers are displayed in ascending order by weight (containers with equal "
+"weights are displayed alphabetically)."
+msgstr ""
+"تُعرض الحاويات بترتيب تصاعدي حسب الوزن (الحاويات المتساوية في الوزن ترتب "
+"أبجديا)."
+
+#: modules/forum/forum.admin.inc:168
+msgid "Are you sure you want to delete the forum %name?"
+msgstr "هل أنت متأكد أنك راغب في حذف منتدى %name؟"
+
+#: modules/forum/forum.admin.inc:168
+msgid ""
+"Deleting a forum or container will also delete its sub-forums, if any. To "
+"delete posts in this forum, visit <a href=\"@content\">content "
+"administration</a> first. This action cannot be undone."
+msgstr ""
+"حذف منتدى أو حاوية سيحذف أيضا كل المنتديات الفرعية والمناقشات التابعة له. ان "
+"كنت تريد فقط حذف مواضيع من المنتدى استخدم صفحة <a href=\"content\">إدارة "
+"المحتوى</a>. لا يمكن التراجع عن هذا الفعل."
+
+#: modules/forum/forum.admin.inc:176
+msgid ""
+"The forum %term and all sub-forums and associated posts have been deleted."
+msgstr "تم حذف المنتدى %term و كافة المنتديات الفرعية والمواضيع التابعة له."
+
+#: modules/forum/forum.admin.inc:192
+msgid "Hot topic threshold"
+msgstr "عتبة المناقشات الساخنة"
+
+#: modules/forum/forum.admin.inc:195
+msgid "The number of posts a topic must have to be considered \"hot\"."
+msgstr "عدد المشاركات التي تجعل المناقشة ساخنة."
+
+#: modules/forum/forum.admin.inc:199
+msgid "Topics per page"
+msgstr "عدد المناقشات في الصفحة"
+
+#: modules/forum/forum.admin.inc:202
+msgid "Default number of forum topics displayed per page."
+msgstr "العدد المبدئي للمناقشات التي ستعرض في صفحة واحدة."
+
+#: modules/forum/forum.admin.inc:204
+msgid "Posts - most active first"
+msgstr "المواضيع - الأكثر نشاطا أولا"
+
+#: modules/forum/forum.admin.inc:204
+msgid "Posts - least active first"
+msgstr "المواضيع - الأقل نشاطا أولا"
+
+#: modules/forum/forum.admin.inc:206
+msgid "Default order"
+msgstr "الترتيب المبدئي"
+
+#: modules/forum/forum.admin.inc:209
+msgid "Default display order for topics."
+msgstr "الترتيب المبدئي لعرض المناقشات."
+
+#: modules/forum/forum.admin.inc:229
+msgid "edit container"
+msgstr "حرر الحاوية"
+
+#: modules/forum/forum.admin.inc:232
+msgid "edit forum"
+msgstr "حرر المنتدى"
+
+#: modules/forum/forum.admin.inc:244
+msgid ""
+"There are no existing containers or forums. Containers and forums may be "
+"added using the <a href=\"@container\">add container</a> and <a href=\"@forum"
+"\">add forum</a> pages."
+msgstr ""
+"لا توجد أي حاويات أو منتديات. بإمكانك <a href=\"@container\">إضافة حاوية</a> "
+"أو <a href=\"@forum\">منتدى</a>."
+
+#: modules/forum/forum.admin.inc:285
+msgid ""
+"Containers are usually placed at the top (root) level, but may also be "
+"placed inside another container or forum."
+msgstr ""
+"عادة ما توضع الحاويات في المستوى الأعلى (الجذر) من المنتدى. ولكن يظل "
+"بالإمكان وضع حاوية داخل حاوية أخرى أو منتدى."
+
+#: modules/forum/forum.admin.inc:288
+msgid ""
+"Forums may be placed at the top (root) level, or inside another container or "
+"forum."
+msgstr "يمكن وضع المنتديات بالمستوى الأعلى (الجذر)، أو بداخل حاوية."
+
+#: modules/forum/forum.admin.inc:177
+msgid "forum: deleted %term and all its sub-forums and associated posts."
+msgstr "منتدى: تم حذف %term و كافة المنتديات الفرعية والعقد التابعة له."
+
+#: modules/forum/forum.module:15
+msgid ""
+"The forum module lets you create threaded discussion forums with "
+"functionality similar to other message board systems. Forums are useful "
+"because they allow community members to discuss topics with one another "
+"while ensuring those conversations are archived for later reference. The <a "
+"href=\"@create-topic\">forum topic</a> menu item (under <em>Create content</"
+"em> on the Navigation menu) creates the initial post of a new threaded "
+"discussion, or thread."
+msgstr ""
+"تسمح لك وحدة المنتدى بإنشاء منبر للمناقشات المتفرعة حول موضوع محدد في موقعك. "
+"المنتدى يشبه إلى حد ما أنظمة المنديات و لوحات الرسائل. تسمح المنتديات لأعضاء "
+"بمناقشة موضوعات مختلفة مع بعضهم البعض. تتم أرشفة هذه المنقاشات للرجوع إليها "
+"لاحقا. يمكن استخدام رابط <a href=\"@create-topic\">موضوع نقاش</a> تحت "
+"<em>أضف محتوى</em> لبدئ نقاش جديد."
+
+#: modules/forum/forum.module:16
+msgid ""
+"A threaded discussion occurs as people leave comments on a forum topic (or "
+"on other comments within that topic). A forum topic is contained within a "
+"forum, which may hold many similar or related forum topics. Forums are "
+"(optionally) nested within a container, which may hold many similar or "
+"related forums. Both containers and forums may be nested within other "
+"containers and forums, and provide structure for your message board. By "
+"carefully planning this structure, you make it easier for users to find and "
+"comment on a specific forum topic."
+msgstr ""
+"تحدث النقاشات المتفرعة عندما يعلق الناس على مناقشة في المنتدى (أو على "
+"تعليقات أخرى في هذه المناقشة). توجد مناقشة المنتدى داخل منتدى قد يحتوي "
+"العديد من المناقشات المماثلة أو المرتبطة. تكون المنتديات (اختياريا) محتضنة "
+"في حاوية، والتي قد تحتوي العديد من المنتديات المماثلة أو المرتبطة. كلا "
+"الحاويات والمنتديات يمكن أن تُحتضن في حاويات أو منتديات أخرى، وتكون هيكلية "
+"صالونك النقاشي. بتخطيط هذه الهيكلية بعناية تسهل على المستخدمين العثور "
+"والتعليق على نقاش منتدى بعينه."
+
+#: modules/forum/forum.module:17
+msgid "When administering a forum, note that:"
+msgstr "عند إدارة منتدى، لاحظ ما يلي:"
+
+#: modules/forum/forum.module:18
+msgid ""
+"a forum topic (and all of its comments) may be moved between forums by "
+"selecting a different forum while editing a forum topic."
+msgstr ""
+"يمكنك نقل مناقشة منتدى (وكل التعليقات عليها) من منتدى إلى آخر باختيار منتدى "
+"مختلف عند تحرير النقاش."
+
+#: modules/forum/forum.module:19
+msgid ""
+"when moving a forum topic between forums, the <em>Leave shadow copy</em> "
+"option creates a link in the original forum pointing to the new location."
+msgstr ""
+"عند نقل مناقشة منتدى ينشئ خيار <em>اترك نسخة</em> وصلة في المنتدى الأصلي "
+"تشير إلى المكان الجديد."
+
+#: modules/forum/forum.module:20
+msgid ""
+"selecting <em>Read only</em> under <em>Comment settings</em> while editing a "
+"forum topic will lock (prevent new comments) on the thread."
+msgstr ""
+"اختر <em>للقراءة فقط</em> في <em>إعدادات التعليق</em> أثناء تحرير نقاش منتدى "
+"سيغلق النقاش (سيمنع التعليقات الجديدة)."
+
+#: modules/forum/forum.module:21
+msgid ""
+"selecting <em>Disabled</em> under <em>Comment settings</em> while editing a "
+"forum topic will hide all existing comments on the thread, and prevent new "
+"ones."
+msgstr ""
+"اختر <em>معطّل</em> في <em>إعدادات التعليق</em> أثناء تحرير نقاش منتدى سيخفي "
+"كل التعليقات الموجودة ويمنع التعليقات الجديدة."
+
+#: modules/forum/forum.module:22
+msgid ""
+"For more information, see the online handbook entry for <a href=\"@forum"
+"\">Forum module</a>."
+msgstr ""
+"لمزيد من المعلومات، طالع صفحة <a href=\"@forum\">وحدة المنتديات</a> في كتيب "
+"الاستخدام."
+
+#: modules/forum/forum.module:25
+msgid ""
+"This page displays a list of existing forums and containers. Containers "
+"(optionally) hold forums, and forums hold forum topics (a forum topic is the "
+"initial post to a threaded discussion). To provide structure, both "
+"containers and forums may be placed inside other containers and forums. To "
+"rearrange forums and containers, grab a drag-and-drop handle under the "
+"<em>Name</em> column and drag the forum or container to a new location in "
+"the list. (Grab a handle by clicking and holding the mouse while hovering "
+"over a handle icon.) Remember that your changes will not be saved until you "
+"click the <em>Save</em> button at the bottom of the page."
+msgstr ""
+"تسرد هذه الصفحة المنتديات والحاويات الموجودة. تحتوي الحاويات (اختياريا) على "
+"منتديات، وتحتوي المنتديات على نقاشات (نقاش المنتدى هو الموضوع الأولي في "
+"النقاش المتفرع). لتنظيم الهيكلية، يمكن وضع المنتديات والحاويات داخل منتديات "
+"و حاويات أخرى، أمسك المتحكم في عمود <em>الاسم</em> واسحب المنتدى أو الحاوية "
+"إلى المكان الجديد في القائمة. (أمسك المتحكم بالنقر وإمساك الفأرة فوق أيقونة "
+"التحكم.) تذكر أن تغييراتك لن تحفظ قبل أن تنقر على زر <em>احفظ</em> أدنى "
+"الصفحة."
+
+#: modules/forum/forum.module:27
+msgid ""
+"By grouping related or similar forums, containers help organize forums. For "
+"example, a container named \"Food\" may hold two forums named \"Fruit\" and "
+"\"Vegetables\", respectively."
+msgstr ""
+"تسمح لك الحاويات بتنظيم منتدياتك. الوظيفة الأساسية للحاوية هي ضم مجموعة من "
+"المنتديات المتقاربة. على سبيل المثال: الحاوية المسماة \"أطعمة\" يمكن أن "
+"تحتوي على منتديي \"الفواكه\" و \"الخضار\"."
+
+#: modules/forum/forum.module:29
+msgid ""
+"A forum holds related or similar forum topics (a forum topic is the initial "
+"post to a threaded discussion). For example, a forum named \"Fruit\" may "
+"contain forum topics titled \"Apples\" and \"Bananas\", respectively."
+msgstr ""
+"يحتوي المنتدى على مجموعة من المناقشات المتقاربة. مثلا: منتدى \"الفواكه\" "
+"يمكن أن يحتوي مناقشات حول \"التفاح\" أو \"الموز\"."
+
+#: modules/forum/forum.module:31
+msgid ""
+"These settings allow you to adjust the display of your forum topics. The "
+"content types available for use within a forum may be selected by editing "
+"the <em>Content types</em> on the <a href=\"@forum-vocabulary\">forum "
+"vocabulary page</a>."
+msgstr ""
+"تتيح لك هذه الإعدادات ضبط وعرض نقاشات المنتديات. يمكن تحديد أنواع المحتوى "
+"المتوفرة للاستخدام في المنتدى بتحرير <em>أنواع المحتوى</em> في صفحة <a href="
+"\"@forum-vocabulary\">معجم مفردات المنتدى</a>."
+
+#: modules/forum/forum.module:236
+msgid ""
+"The item %forum is only a container for forums. Please select one of the "
+"forums below it."
+msgstr ""
+"‏%forum مجرد حاوية للمنتديات. من فضلك اختر واحدا من المنتديات الموجودة تحته."
+
+#: modules/forum/forum.module:302
+msgid "Forum topic"
+msgstr "مناقشة منتدى"
+
+#: modules/forum/forum.module:304
+msgid ""
+"A <em>forum topic</em> is the initial post to a new discussion thread within "
+"a forum."
+msgstr "<em>مناقشة المنتدى</em> هي أول رسالة في نقاش جديد في منتدى."
+
+#: modules/forum/forum.module:367
+msgid ""
+"This is the designated forum vocabulary. Some of the normal vocabulary "
+"options have been removed."
+msgstr "هذا معجم مفردات المنتدى. تم إزالة بعض المفردات الطبيعية."
+
+#: modules/forum/forum.module:409;425
+msgid "Active forum topics"
+msgstr "المناقشات النشطة"
+
+#: modules/forum/forum.module:410;432
+msgid "New forum topics"
+msgstr "المناقشات الجديدة"
+
+#: modules/forum/forum.module:414
+msgid "Number of topics"
+msgstr "عدد المناقشات"
+
+#: modules/forum/forum.module:441
+msgid "Read the latest forum topics."
+msgstr "اقرأ أحدث المناقشات."
+
+#: modules/forum/forum.module:460
+msgid "Leave shadow copy"
+msgstr "اترك نسخة ظل"
+
+#: modules/forum/forum.module:460
+msgid ""
+"If you move this topic, you can leave a link in the old forum to the new "
+"forum."
+msgstr "إذا نقلت المناقشة، يمكنك ترك رابط في المنتدى القديم يشير إلى الجديد."
+
+#: modules/forum/forum.module:559
+msgid "Topic"
+msgstr "المناقشة"
+
+#: modules/forum/forum.module:561
+msgid "Created"
+msgstr "أُنشئ"
+
+#: modules/forum/forum.module:562
+msgid "Last reply"
+msgstr "آخر رد"
+
+#: modules/forum/forum.module:675
+msgid "Post new @node_type"
+msgstr "أرسل @node_type جديد"
+
+#: modules/forum/forum.module:682
+msgid "You are not allowed to post new content in the forum."
+msgstr "غير مسموح لك بإنشاء نقاشات جديدة في المنتدى."
+
+#: modules/forum/forum.module:686
+msgid "<a href=\"@login\">Login</a> to post new content in the forum."
+msgstr "<a href=\"@login\">لُج</a> لإضافة مناقشة جديدة."
+
+#: modules/forum/forum.module:724
+msgid "No forums defined"
+msgstr "لا منتديات معرفة"
+
+#: modules/forum/forum.module:810
+msgid "This topic has been moved"
+msgstr "تم نقل المناقشة"
+
+#: modules/forum/forum.module:328
+msgid "create forum topics"
+msgstr "ينشئ مناقشات في منتدى"
+
+#: modules/forum/forum.module:328
+msgid "delete own forum topics"
+msgstr "يحذف مناقشاته"
+
+#: modules/forum/forum.module:328
+msgid "delete any forum topic"
+msgstr "يحذف أي مناقشة"
+
+#: modules/forum/forum.module:328
+msgid "edit own forum topics"
+msgstr "يحرر مناقشاته"
+
+#: modules/forum/forum.module:328
+msgid "edit any forum topic"
+msgstr "يحرر أي مناقشة"
+
+#: modules/forum/forum.module:328
+msgid "administer forums"
+msgstr "يدير المنتديات"
+
+#: modules/forum/forum.module:86;93 modules/forum/forum.install:27;115
+msgid "Forums"
+msgstr "المنتديات"
+
+#: modules/forum/forum.module:94
+msgid "Control forums and their hierarchy and change forum settings."
+msgstr "تحكم في المنتديات و هرميتها و غيّر إعدادات المنتديات."
+
+#: modules/forum/forum.module:106
+msgid "Add container"
+msgstr "أضف حاوية"
+
+#: modules/forum/forum.module:115
+msgid "Add forum"
+msgstr "أضف منتدى"
+
+#: modules/forum/forum.module:140
+msgid "Edit container"
+msgstr "حرر الحاوية"
+
+#: modules/forum/forum.module:148
+msgid "Edit forum"
+msgstr "حرر المنتدى"

@@ -1,0 +1,2021 @@
+# translation of includes.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: includes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-02-18 23:32+0200\n"
+"Last-Translator: Alaa <alaa@manalaa.net>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Pootle 2.0.2\n"
+
+#: includes/actions.inc:303
+msgid "Remove orphaned actions"
+msgstr "احذف الإجراءات اليتيمة"
+
+#: includes/actions.inc:47
+msgid ""
+"Stack overflow: too many calls to actions_do(). Aborting to prevent infinite "
+"recursion."
+msgstr ""
+"فيض المكدّس: استدعاءات كثيرة جدا لدالة ‪actions_do()‬. ستُجهض لمنع التكرار لمالا "
+"نهاية."
+
+#: includes/actions.inc:277
+msgid "Action '%action' added."
+msgstr "أُضيف الإجراء '%action'."
+
+#: includes/actions.inc:299
+msgid "Removed orphaned action '%action' from database."
+msgstr "حُذف الإجراء اليتيم '%action' من قاعدة البيانات."
+
+#: includes/actions.inc:331
+msgid "Action %action saved."
+msgstr "حُفظ الإجراء '%action'."
+
+#: includes/actions.inc:339
+msgid "Action %action created."
+msgstr "أُنشئ الإجراء %action."
+
+#: includes/actions.inc:305
+msgid "One orphaned action (%orphans) exists in the actions table. !link"
+msgid_plural ""
+"@count orphaned actions (%orphans) exist in the actions table. !link"
+msgstr[0] "يوجد إجراء يتيم واحد (%orphans) في جدول الإجراءات. !link"
+msgstr[1] "لا توجد إجراءات يتيمة (%orphans) في جدول الإجراءات. !link"
+msgstr[2] "يوجد إجراءان يتيمان (%orphans) في جدول الإجراءات. !link"
+msgstr[3] "يوجد @count إجراءات يتيمة (%orphans) في جدول الإجراءات. !link"
+msgstr[4] "يوجد @count إجراءا يتيما (%orphans) في جدول الإجراءات. !link"
+msgstr[5] "يوجد @count إجراء يتيم (%orphans) في جدول الإجراءات. !link"
+
+#: includes/batch.inc:100
+msgid "HTTP POST is required."
+msgstr "‏HTTP POST ضروري."
+
+#: (duplicate) includes/batch.inc:101 includes/unicode.inc:86
+msgid "Error"
+msgstr "خطأ"
+
+#: includes/common.inc:342
+msgid "Site off-line"
+msgstr "الموقع خارج الخط"
+
+#: includes/common.inc:364
+msgid "Page not found"
+msgstr "الصفحة غير موجودة"
+
+#: includes/common.inc:365
+msgid "The requested page could not be found."
+msgstr "تعذّر العثور على الصفحة المطلوبة."
+
+#: includes/common.inc:389
+msgid "Access denied"
+msgstr "الوصول ممنوع"
+
+#: includes/common.inc:390
+msgid "You are not authorized to access this page."
+msgstr "غير مسموح لك بالوصول إلى هذه الصفحة."
+
+#: includes/common.inc:1208
+msgid "KB"
+msgstr "ك.بايت"
+
+#: includes/common.inc:1213
+msgid "@size @suffix"
+msgstr "‏@size @suffix"
+
+#: includes/common.inc:1245
+msgid "0 sec"
+msgstr "0 ثانية"
+
+#: includes/common.inc:3593
+msgid "notice"
+msgstr "إخطار"
+
+#: includes/common.inc:3594
+msgid "info"
+msgstr "معلومات"
+
+#: includes/common.inc:3595
+msgid "debug"
+msgstr "تنقيح"
+
+#: includes/common.inc:619 includes/image.inc:95 includes/menu.inc:2322
+#: includes/unicode.inc:151;184
+msgid "php"
+msgstr "بي.إتش.بي"
+
+#: includes/common.inc:619
+msgid "%message in %file on line %line."
+msgstr "‏%message في %file في السطر %line."
+
+#: includes/common.inc:2643;2650;2665;2681
+msgid "cron"
+msgstr "دورية"
+
+#: includes/common.inc:2643
+msgid "Cron has been running for more than an hour and is most likely stuck."
+msgstr "ظلت الدورية تشتغل لمدة تزيد عن الساعة. في الغالب هي معطلة."
+
+#: includes/common.inc:2650
+msgid "Attempting to re-run cron while it is already running."
+msgstr "محاولة تشغيل دورية مشغلة بالفعل."
+
+#: includes/common.inc:2665
+msgid "Cron run completed."
+msgstr "الدورية تمت."
+
+#: includes/common.inc:2681
+msgid "Cron run exceeded the time limit and was aborted."
+msgstr "تعدى زمن الدورية الحد الزمني و تم إجهاضها."
+
+#: includes/common.inc:1204
+msgid "1 byte"
+msgid_plural "@count bytes"
+msgstr[0] "بايت واحد"
+msgstr[1] "0 بايت"
+msgstr[2] "بايتان"
+msgstr[3] "@count بايتات"
+msgstr[4] "@count بايت"
+msgstr[5] "@count بايت"
+
+#: includes/common.inc:0
+msgid "1 year"
+msgid_plural "@count years"
+msgstr[0] "سنة واحدة"
+msgstr[1] "أقل من سنة"
+msgstr[2] "سنتان"
+msgstr[3] "@count سنوات"
+msgstr[4] "@count سنة"
+msgstr[5] "@count سنة"
+
+#: includes/common.inc:0
+msgid "1 week"
+msgid_plural "@count weeks"
+msgstr[0] "أسبوع واحد"
+msgstr[1] "أقل من أسبوع"
+msgstr[2] "أسبوعين"
+msgstr[3] "@count أسابيع"
+msgstr[4] "@count أسبوعا"
+msgstr[5] "@count أسبوع"
+
+#: includes/common.inc:0
+msgid "1 day"
+msgid_plural "@count days"
+msgstr[0] "يوم واحد"
+msgstr[1] "أقل من يوم"
+msgstr[2] "يومين"
+msgstr[3] "@count أيام"
+msgstr[4] "@count يوما"
+msgstr[5] "@count يوم"
+
+#: includes/common.inc:0
+msgid "1 hour"
+msgid_plural "@count hours"
+msgstr[0] "ساعة واحدة"
+msgstr[1] "أقل من ساعة"
+msgstr[2] "ساعتين"
+msgstr[3] "@count ساعات"
+msgstr[4] "@count ساعة"
+msgstr[5] "@count ساعة"
+
+#: includes/common.inc:0
+msgid "1 min"
+msgid_plural "@count min"
+msgstr[0] "دقيقة واحدة"
+msgstr[1] "أقل من دقيقة"
+msgstr[2] "دقيقتين"
+msgstr[3] "@count دقائق"
+msgstr[4] "@count دقيقة"
+msgstr[5] "@count دقيقة"
+
+#: includes/common.inc:0
+msgid "1 sec"
+msgid_plural "@count sec"
+msgstr[0] "ثانية واحدة"
+msgstr[1] "أقل من ثانية"
+msgstr[2] "ثانيتين"
+msgstr[3] "@count ثوان"
+msgstr[4] "@count ثانية"
+msgstr[5] "@count ثانية"
+
+#: (duplicate) includes/database.mysql.inc:26 includes/database.mysqli.inc:29
+msgid "MySQL database"
+msgstr "قاعدة بيانات ماي.إس.كيو.إل"
+
+#: (duplicate) includes/database.mysql.inc:32 includes/database.mysqli.inc:35
+msgid "Your MySQL Server is too old. Drupal requires at least MySQL %version."
+msgstr ""
+"خادوم ماي.إس.كيو.إل قديم جدا. يحتاج دروبال إلى نسخة ماي.إس.كيو.إل %version "
+"على الأقل."
+
+#: (duplicate) includes/database.pgsql.inc:23
+msgid "PostgreSQL database"
+msgstr "قاعدة بيانات بوستجر.إس.كيو.إل"
+
+#: (duplicate) includes/database.pgsql.inc:29
+msgid ""
+"Your PostgreSQL Server is too old. Drupal requires at least PostgreSQL %"
+"version."
+msgstr ""
+"خادوم بوستجر.إس.كيو.إل قديم جدا. يحتاج دروبال إلى نسخة بوستجر.إس.كيو.إل %"
+"version على الأقل."
+
+#: (duplicate) includes/database.pgsql.inc:406
+msgid ""
+"Your PostgreSQL database is set up with the wrong character encoding (%"
+"encoding). It is possible it will not work as expected. It is advised to "
+"recreate it with UTF-8/Unicode encoding. More information can be found in "
+"the <a href=\"@url\">PostgreSQL documentation</a>."
+msgstr ""
+"قاعدة بيانات بوستجر.إس.كيو.إل مضبوطة على ترميز خطأ (%encoding). من المحتمل "
+"ألا تعمل كما هو متوقع. ينصح بإعادة إنشائها باستخدام ترميز UTF-8/يونيكود. "
+"المزيد من المعلومات في <a href=\"@url\">مستندات بوستجر إس.كيو.إل</a>."
+
+#: includes/file.inc:104
+msgid "The directory %directory has been created."
+msgstr "تم إنشاء الدليل %directory."
+
+#: includes/file.inc:118
+msgid ""
+"The permissions of directory %directory have been changed to make it "
+"writable."
+msgstr "تم تغيير صلاحيات الدليل %directory ليسمح بالكتابة."
+
+#: includes/file.inc:121
+msgid "The directory %directory is not writable"
+msgstr "لا يمكن الكتابة في الدليل %directory"
+
+#: includes/file.inc:135;136
+msgid ""
+"Security warning: Couldn't write .htaccess file. Please create a .htaccess "
+"file in your %directory directory which contains the following lines: <code>!"
+"htaccess</code>"
+msgstr ""
+"تحذير أمني: لا يمكن الكتابة على ملف \"‪.htaccess‬\". من فضلك أنشئ ملف ‪."
+"htaccess‬ في الدليل %directory، على أن يحتوى الملف على السطر التالي: <code>!"
+"htaccess</code>"
+
+#: includes/file.inc:225
+msgid ""
+"The selected file %file could not be uploaded, because the destination %"
+"directory is not properly configured."
+msgstr ""
+"الملف المحدد (%file) لا يمكن رفعه لأن الدليل الوجهة %directory لم يتم إعداده "
+"بصورة صحيحة."
+
+#: includes/file.inc:241
+msgid ""
+"The selected file %file could not be copied, because no file by that name "
+"exists. Please check that you supplied the correct filename."
+msgstr ""
+"الملف %file لا يمكن نسخه. لا يوجد ملف بذلك الاسم. من فضلك تأكد أن اسم الملف "
+"صحيح."
+
+#: includes/file.inc:254;305
+msgid ""
+"The selected file %file could not be copied, because a file by that name "
+"already exists in the destination."
+msgstr "الملف %file لا يمكن نسخه. يوجد ملف بنفس الاسم في الوجهة."
+
+#: includes/file.inc:259
+msgid "The selected file %file could not be copied."
+msgstr "الملف %file لا يمكن نسخه."
+
+#: includes/file.inc:339
+msgid "The removal of the original file %file has failed."
+msgstr "فشل حذف الملف %file."
+
+#: includes/file.inc:380
+msgid "For security reasons, your upload has been renamed to %filename."
+msgstr "لأسباب أمنية تم تغيير اسم الملف المرفوع إلى %filename."
+
+#: includes/file.inc:504
+msgid ""
+"The file %file could not be saved, because it exceeds %maxsize, the maximum "
+"allowed size for uploads."
+msgstr ""
+"لا يمكن حفظ الملف %file. لأنه يتجاوز %maxsize، الحجم الأقصى المسموح به "
+"للملفات المرفوعة."
+
+#: includes/file.inc:509
+msgid "The file %file could not be saved, because the upload did not complete."
+msgstr "لا يمكن حفظ الملف %file. لأن عملية التحميل لم تكتمل."
+
+#: includes/file.inc:514
+msgid "The file %file could not be saved. An unknown error has occurred."
+msgstr "لا يمكن حفظ الملف %file. لسبب مجهول."
+
+#: includes/file.inc:558
+msgid "The selected file %name could not be uploaded."
+msgstr "الملف المختار %name لا يمكن رفعه."
+
+#: includes/file.inc:573
+msgid "File upload error. Could not move uploaded file."
+msgstr "خطأ في رفع الملف. لم يمكن نقل الملف الذي تم رفعه."
+
+#: includes/file.inc:603
+msgid ""
+"Its name exceeds the 255 characters limit. Please rename the file and try "
+"again."
+msgstr "يتخطى اسمه حدّ 255 خانة. من فضلك غير الاسم وأعد المحاولة."
+
+#: includes/file.inc:628
+msgid "Only files with the following extensions are allowed: %files-allowed."
+msgstr "يُسمح بالملفات التي تحمل هذه الامتدادات فقط: %files-allowed."
+
+#: includes/file.inc:657
+msgid "The file is %filesize exceeding the maximum file size of %maxsize."
+msgstr "حجم الملف %filesize يتجاوز الحجم الأقصى للملفات %maxsize."
+
+#: includes/file.inc:662
+msgid "The file is %filesize which would exceed your disk quota of %quota."
+msgstr "حجم الملف %filesize وهو ما قد يتجاوز حصتك من القرص (%quota)."
+
+#: includes/file.inc:681
+msgid "Only JPEG, PNG and GIF images are allowed."
+msgstr "يسمح بالصور من امتدادات JPEG و PNG و GIF فقط."
+
+#: includes/file.inc:716
+msgid ""
+"The image was resized to fit within the maximum allowed dimensions of %"
+"dimensions pixels."
+msgstr ""
+"تم تغيير أبعاد الصورة حتى تلائم أكبر أبعاد مسموح بها، و هو %dimensions بكسل."
+
+#: includes/file.inc:724
+msgid "The image is too large; the maximum dimensions are %dimensions pixels."
+msgstr "الصورة كبيرة جدا؛ الحد الأقصى هو %dimensions بكسل."
+
+#: includes/file.inc:733
+msgid "The image is too small; the minimum dimensions are %dimensions pixels."
+msgstr "الصورة كبيرة جدا؛ الحد الأقصى هو %dimensions بكسل."
+
+#: includes/file.inc:758
+msgid "The file could not be created."
+msgstr "لم يتم إنشاء الملف."
+
+#: includes/file.inc:122
+msgid ""
+"The directory %directory is not writable, because it does not have the "
+"correct permissions set."
+msgstr "الدليل %directory لا يمكن الكتابة فيه؛ إذ ليست له الصلاحيات الصحيحة."
+
+#: includes/file.inc:226
+msgid ""
+"The selected file %file could not be uploaded, because the destination %"
+"directory could not be found, or because its permissions do not allow the "
+"file to be written."
+msgstr ""
+"الملف %file لا يمكن رفعه، لأن دليل الوجهة %directory لا يمكن إيجاده أو لأن "
+"صلاحياته لا تسمح بالكتابة."
+
+#: includes/file.inc:574
+msgid "file"
+msgstr "ملف"
+
+#: includes/file.inc:574
+msgid ""
+"Upload error. Could not move uploaded file %file to destination %destination."
+msgstr "خطأ في رفع الملف. لم يمكن نقل الملف %file إلى الوجهة %destination."
+
+#: includes/form.inc:1605
+msgid "Confirm password"
+msgstr "أكِّد كلمة السر"
+
+#: includes/form.inc:1628
+msgid "The specified passwords do not match."
+msgstr "كلمتا السر غير متطابقين."
+
+#: includes/form.inc:1632
+msgid "Password field is required."
+msgstr "حقل كلمة السر ضروري."
+
+#: includes/form.inc:1713
+msgid "The specified date is invalid."
+msgstr "التاريخ المحدد باطل."
+
+#: (duplicate) includes/form.inc:679
+msgid "!name field is required."
+msgstr "حقل \"!name\" ضروري."
+
+#: (duplicate) includes/form.inc:684
+msgid ""
+"!name cannot be longer than %max characters but is currently %length "
+"characters long."
+msgstr "لا يمكن أن يتجاوز !name‏ %max حرفا إلا أن طوله الحالي %length حرفا."
+
+#: (duplicate) includes/form.inc:2200
+msgid "This field is required."
+msgstr "هذا الحقل ضروري."
+
+#: (duplicate) includes/form.inc:2205 ;2208
+msgid "!title: !required"
+msgstr "‏!title: ‏!required"
+
+#: (duplicate) includes/form.inc:2446
+msgid "Initializing."
+msgstr "الاستبداء."
+
+#: (duplicate) includes/form.inc:2447
+msgid "Remaining @remaining of @total."
+msgstr "بقى @remaining من @total."
+
+#: (duplicate) includes/form.inc:2448
+msgid "An error has occurred."
+msgstr "حدث خطأ."
+
+#: (duplicate) includes/form.inc:2521
+msgid "Please continue to <a href=\"@error_url\">the error page</a>"
+msgstr "من فضلك انتقل إلى <a href=\"@error_url\">صفحة الخطأ</a>"
+
+#: includes/form.inc:699
+msgid "Illegal choice %choice in !name element."
+msgstr "اختيار %choice غير مسموح به في حقل !name."
+
+#: includes/image.gd.inc:18
+msgid "GD2 image manipulation toolkit"
+msgstr "طقم الأدوات GD2 لمناولة الصور"
+
+#: includes/image.gd.inc:28
+msgid "The GD toolkit is installed and working properly."
+msgstr "طقم أدوات جي.دي مركب ويعمل بشكل صحيح."
+
+#: includes/image.gd.inc:33
+msgid "JPEG quality"
+msgstr "جودة JPEG"
+
+#: includes/image.gd.inc:34
+msgid ""
+"Define the image quality for JPEG manipulations. Ranges from 0 to 100. "
+"Higher values mean better image quality but bigger files."
+msgstr ""
+"حدد جودة الصور لمناولة JPEG. تتراوح بين 0 و 100. القيم الأعلى تعني جودة صور "
+"أفضل، و ملفات أكبر حجما."
+
+#: includes/image.gd.inc:38
+msgid "%"
+msgstr "%"
+
+#: includes/image.gd.inc:45
+msgid ""
+"The GD image toolkit requires that the GD module for PHP be installed and "
+"configured properly. For more information see <a href=\"@url\">PHP's image "
+"documentation</a>."
+msgstr ""
+"طقم أدوات جي.دي يحتاج أن تكون وحدة جي.دي لبي.إتش.بي مركبة و معدة. بشكل صحيح. "
+"لمزيد من المعلومات طالع <a href=\"@url\">توثيق بي.إش.بي للصور</a>."
+
+#: includes/image.gd.inc:57
+msgid "JPEG quality must be a number between 0 and 100."
+msgstr "يجب أن تكون جودة JPEG رقما بين 0 و 100."
+
+#: includes/image.inc:95
+msgid ""
+"The selected image handling toolkit %toolkit can not correctly process %"
+"function."
+msgstr "طقم أدوات مناولة الصور '%toolkit' لا يستطيع معالجة '%function'."
+
+#: includes/install.inc:728
+msgid "Currently using !item !version"
+msgstr "يستخدم الآن !item‏ !version"
+
+#: includes/locale.inc:48;279
+msgid "Right to left"
+msgstr "من اليمين لليسار"
+
+#: includes/locale.inc:48;279
+msgid "Left to right"
+msgstr "من اليسار لليمين"
+
+#: includes/locale.inc:90
+msgid "Code"
+msgstr "الرمز"
+
+#: includes/locale.inc:90
+msgid "English name"
+msgstr "الاسم بالإنجليزية"
+
+#: includes/locale.inc:90
+msgid "Native name"
+msgstr "الاسم الأصلي"
+
+#: includes/locale.inc:90;275
+msgid "Direction"
+msgstr "الاتجاه"
+
+#: includes/locale.inc:122
+msgid "Configuration saved."
+msgstr "حُفظت الإعدادات."
+
+#: includes/locale.inc:157
+msgid "Predefined language"
+msgstr "اللغات المعرفة مسبقا"
+
+#: includes/locale.inc:161;711
+msgid "Language name"
+msgstr "اسم اللغة"
+
+#: includes/locale.inc:164
+msgid ""
+"Select the desired language and click the <em>Add language</em> button. (Use "
+"the <em>Custom language</em> options if your desired language does not "
+"appear in this list.)"
+msgstr ""
+"اختر اللغة المرادة ثم انقر على زر <em>أضف اللغة</em>. (استخدم خيار <em>لغة "
+"طيعة</em> إذا لم تظهر اللغة التي تريد في القائمة.)"
+
+#: includes/locale.inc:176
+msgid "Custom language"
+msgstr "لغة طيعة"
+
+#: includes/locale.inc:183
+msgid "Add custom language"
+msgstr "أضف لغة طيعة"
+
+#: includes/locale.inc:203
+msgid "Save language"
+msgstr "احفظ اللغة"
+
+#: includes/locale.inc:229;239
+msgid "Language code"
+msgstr "رمز اللغة"
+
+#: includes/locale.inc:245
+msgid ""
+"<a href=\"@rfc4646\">RFC 4646</a> compliant language identifier. Language "
+"codes typically use a country code, and optionally, a script or regional "
+"variant name. <em>Examples: \"en\", \"en-US\" and \"zh-Hant\".</em>"
+msgstr ""
+"معرّف لغة متوافق مع معيار <a href=\"@rfc4646\">RFC 4646</a>. رموز اللغات "
+"تتكون عادة من رمز الدولة و -اختياريا- اسم نظام الكتابة أو التنويعة المحلية. "
+"<em>مثلا: \"en\"، \"en-US\" و \"zh-Hant\".</em>"
+
+#: includes/locale.inc:249
+msgid "Language name in English"
+msgstr "اسم اللغة بالإنجليزية"
+
+#: includes/locale.inc:253
+msgid ""
+"Name of the language in English. Will be available for translation in all "
+"languages."
+msgstr "اسم اللغة بالإنجليزية. سيكون متوفرا للترجمة في جميع اللغات."
+
+#: includes/locale.inc:256
+msgid "Native language name"
+msgstr "اسم اللغة الأصلي"
+
+#: includes/locale.inc:260
+msgid "Name of the language in the language being added."
+msgstr "اسم اللغة باللغة نفسها."
+
+#: includes/locale.inc:263
+msgid "Path prefix"
+msgstr "سابقة المسار"
+
+#: includes/locale.inc:266
+msgid ""
+"Language code or other custom string for pattern matching within the path. "
+"With language negotiation set to <em>Path prefix only</em> or <em>Path "
+"prefix with language fallback</em>, this site is presented in this language "
+"when the Path prefix value matches an element in the path. For the default "
+"language, this value may be left blank. <strong>Modifying this value will "
+"break existing URLs and should be used with caution in a production "
+"environment.</strong> <em>Example: Specifying \"deutsch\" as the path prefix "
+"for German results in URLs in the form \"www.example.com/deutsch/node\".</em>"
+msgstr ""
+"رمز اللغة أو أي مقطع نصّي آخر ليُلتمس في المسار. عند ضبط انتقاء اللغة إلى "
+"<em>سابقة المسار فقط</em> أو <em>سابقة المسار واحتياط اللغة</em>، سيُعرض هذا "
+"الموقع بهذه اللغة عندما تطابق قيمة سابقة المسار عنصرا في المسار. يمكن ترك "
+"هذه القيمة خالية للغة المبدئية. <strong>تعديل هذه القيمة سيُعطِب المسارات "
+"الموجودة سلفا، لذا يجب استخدامها بحذر.</strong> <em>مثال: تحديد \"arabic\" "
+"سابقة مسار للغة العربية سينتج عنه مسارات على الشكل \"www.example.com/arabic/"
+"node\".</em>"
+
+#: includes/locale.inc:269
+msgid "Language domain"
+msgstr "نطاق اللغة"
+
+#: includes/locale.inc:272
+msgid ""
+"Language-specific URL, with protocol. With language negotiation set to "
+"<em>Domain name only</em>, the site is presented in this language when the "
+"URL accessing the site references this domain. For the default language, "
+"this value may be left blank. <strong>This value must include a protocol as "
+"part of the string.</strong> <em>Example: Specifying \"http://example.de\" "
+"or \"http://de.example.com\" as language domains for German results in URLs "
+"in the forms \"http://example.de/node\" and \"http://de.example.com/node\", "
+"respectively.</em>"
+msgstr ""
+"مسار خاص باللغة مع بروتوكول. عند ضبط انتقاء اللغة إلى <em>اسم النطاق فقط</"
+"em>، سيُعرض هذا الموقع بهذه اللغة عندما يشير المسار المستخدم للوصول إلى "
+"الموقع إلى هذا النطاق. يمكن ترك هذه القيمة خالية للغة المبدئية. <strong>يجب "
+"أن تشتمل القيمة على بروتوكول.</strong> <em>مثال: تحديد \"http://example.de\" "
+"كنطاق للغة الألمانية أو \"http://ar.example.com\" للعربية، سينتج عنه مسارات "
+"على الشكل \"http://example.de/node\" و \"http://ar.example.com/node\" على "
+"التوالي.</em>"
+
+#: includes/locale.inc:277
+msgid "Direction that text in this language is presented."
+msgstr "اتجاه الكتابة المستخدم في هذه اللغة."
+
+#: includes/locale.inc:291
+msgid "The language %language (%code) already exists."
+msgstr "اللغة %language ‏(%code) موجودة سلفا."
+
+#: includes/locale.inc:298
+msgid "Invalid language code."
+msgstr "رمز اللغة غير سليم."
+
+#: includes/locale.inc:315;321
+msgid ""
+"The language %language has been created and can now be used. More "
+"information is available on the <a href=\"@locale-help\">help screen</a>."
+msgstr ""
+"تم إنشاء اللغة %language، ويمكن استخدامها الآن. لمزيد من المعلومات، طالع <a "
+"href=\"@locale-help\">صفحة المساعدة</a>."
+
+#: includes/locale.inc:339
+msgid "Domain and path prefix values should not be set at the same time."
+msgstr "يجب عدم تحديد قيم النطاق وسابقة المسار في ذات الوقت."
+
+#: includes/locale.inc:342
+msgid "The domain (%domain) is already tied to a language (%language)."
+msgstr "النطاق (%domain) مرتبط بلغة أخرى (%language)."
+
+#: includes/locale.inc:345
+msgid "Only the default language can have both the domain and prefix empty."
+msgstr "في اللغة المبدئية فقط يمكن أن يكون النطاق والسابقة خاليين."
+
+#: includes/locale.inc:348
+msgid "The prefix (%prefix) is already tied to a language (%language)."
+msgstr "السابقة (%prefix) مربوطة بلغة أخرى (%language)."
+
+#: includes/locale.inc:386
+msgid "The English language cannot be deleted."
+msgstr "لا يمكن حذف اللغة الإنجليزية."
+
+#: includes/locale.inc:391
+msgid "The default language cannot be deleted."
+msgstr "لا يمكن حذف اللغة المبدئية."
+
+#: includes/locale.inc:403
+msgid "Are you sure you want to delete the language %name?"
+msgstr "هل أنت متأكد من حذف لغة %name؟"
+
+#: includes/locale.inc:403
+msgid ""
+"Deleting a language will remove all interface translations associated with "
+"it, and posts in this language will be set to be language neutral. This "
+"action cannot be undone."
+msgstr ""
+"حذف لغة سيحذف كل ترجمات الواجهة المرتبطة بها، وكل المواضيع المكتوبة بهذا "
+"اللغة ستجعل محايدة اللغة. هذا العمل لا يمكن التراجع عنه."
+
+#: includes/locale.inc:422;423
+msgid "The language %locale has been removed."
+msgstr "تم حذف لغة %locale."
+
+#: includes/locale.inc:446
+msgid "Language negotiation"
+msgstr "انتقاء اللغة"
+
+#: includes/locale.inc:449
+msgid "None."
+msgstr "لا شيء."
+
+#: includes/locale.inc:450
+msgid "Path prefix only."
+msgstr "سابقة المسار فقط."
+
+#: includes/locale.inc:451
+msgid "Path prefix with language fallback."
+msgstr "سابقة المسار واللغة الاحتياط."
+
+#: includes/locale.inc:452
+msgid "Domain name only."
+msgstr "اسم النطاق فقط."
+
+#: includes/locale.inc:454
+msgid ""
+"Select the mechanism used to determine your site's presentation language. "
+"<strong>Modifying this setting may break all incoming URLs and should be "
+"used with caution in a production environment.</strong>"
+msgstr ""
+"اختر طريقة تحديد لغة عرض موقعك. <strong>تغيير هذا الإعداد سيكسر كل المسارات "
+"الواردة ويجب استعماله بحذر في بيئة عمل.</strong>"
+
+#: includes/locale.inc:468
+msgid "Language negotiation configuration saved."
+msgstr "تم حفظ إعدادات الاختيار الانتقائي للغة."
+
+#: includes/locale.inc:501
+msgid "English (built-in)"
+msgstr "الإنجليزية (مدمجة)"
+
+#: includes/locale.inc:549
+msgid "String contains"
+msgstr "المقطع يحتوي"
+
+#: includes/locale.inc:551
+msgid "Leave blank to show all strings. The search is case sensitive."
+msgstr ""
+"اتركه خاليا لعرض جميع المقاطع. البحث حساس للحروف اللاتينية الكبيرة و الصغيرة."
+
+#: includes/locale.inc:559
+msgid "English (provided by Drupal)"
+msgstr "الإنجليزية (موفرة من دروبال)"
+
+#: includes/locale.inc:562
+msgid "Search in"
+msgstr "ابحث في"
+
+#: includes/locale.inc:564
+msgid "Both translated and untranslated strings"
+msgstr "كلا المقاطع المترجمة وغير المترجمة"
+
+#: includes/locale.inc:564
+msgid "Only translated strings"
+msgstr "فقط المقاطع المترجمة"
+
+#: includes/locale.inc:564
+msgid "Only untranslated strings"
+msgstr "فقط المقاطع غير المترجمة"
+
+#: includes/locale.inc:568
+msgid "Limit search to"
+msgstr "اقصر البحث على"
+
+#: includes/locale.inc:570
+msgid "All text groups"
+msgstr "كل مجموعات النصوص"
+
+#: includes/locale.inc:601
+msgid "Already added languages"
+msgstr "اللغات المضافة"
+
+#: includes/locale.inc:602
+msgid "Languages not yet added"
+msgstr "اللغات التي لم تُضف بعد"
+
+#: includes/locale.inc:609
+msgid "Import translation"
+msgstr "استورد ترجمة"
+
+#: includes/locale.inc:612
+msgid "Language file"
+msgstr "ملف اللغة"
+
+#: includes/locale.inc:614
+msgid "A Gettext Portable Object (<em>.po</em>) file."
+msgstr "ملف جتتكست (<em>‭‪.po‬‬</em>)."
+
+#: includes/locale.inc:617
+msgid "Import into"
+msgstr "استورد إلى"
+
+#: includes/locale.inc:620
+msgid ""
+"Choose the language you want to add strings into. If you choose a language "
+"which is not yet set up, it will be added."
+msgstr ""
+"اختر اللغة التي تريد إضافة الكلمات إليها. ستُضاف اللغة إذا لم تكن قد أُعدت من "
+"قبل."
+
+#: includes/locale.inc:623;716;735;2037
+msgid "Text group"
+msgstr "مجموعة النصوص"
+
+#: includes/locale.inc:626
+msgid "Imported translations will be added to this text group."
+msgstr "ستضاف الترجمات المستوردة إلى مجموعة النصوص هذه."
+
+#: includes/locale.inc:629
+msgid "Mode"
+msgstr "الوضع"
+
+#: includes/locale.inc:632
+msgid "Strings in the uploaded file replace existing ones, new ones are added"
+msgstr ""
+"المقاطع في الملف المرفوع ستحل محل نفس المقاطع الموجودة سلفا. المقاطع الجديدة "
+"ستضاف"
+
+#: includes/locale.inc:633
+msgid "Existing strings are kept, only new strings are added"
+msgstr "المقاطع الموجودة سلفا ستترك، وستضاف فقط المقاطع الجديدة"
+
+#: includes/locale.inc:655
+msgid "The language %language has been created."
+msgstr "تم إنشاء اللغة %language."
+
+#: includes/locale.inc:661;662
+msgid "The translation import of %filename failed."
+msgstr "فشلت عملية استيراد %filename."
+
+#: includes/locale.inc:666
+msgid "File to import not found."
+msgstr "الملف غير موجود."
+
+#: includes/locale.inc:707
+msgid "Export translation"
+msgstr "صدّر الترجمة"
+
+#: includes/locale.inc:713
+msgid ""
+"Select the language to export in Gettext Portable Object (<em>.po</em>) "
+"format."
+msgstr "اختر اللغة التي تود تصديرها إلى ملف جتتكست (<em>‭‪.po‬‬</em>)."
+
+#: includes/locale.inc:730
+msgid "Export template"
+msgstr "صدّر القالب"
+
+#: includes/locale.inc:732
+msgid ""
+"Generate a Gettext Portable Object Template (<em>.pot</em>) file with all "
+"strings from the Drupal locale database."
+msgstr ""
+"ولد ملف قالب جتتكست (<em>‭‪.pot‬‬</em>) بكامل إعدادات الواجهة من قاعدة بيانات "
+"محلية دروبال."
+
+#: includes/locale.inc:774
+msgid "String not found."
+msgstr "المقطع غير موجود."
+
+#: includes/locale.inc:782
+msgid "Original text"
+msgstr "النص الأصلى"
+
+#: includes/locale.inc:824
+msgid "Save translations"
+msgstr "احفظ الترجمات"
+
+#: includes/locale.inc:854
+msgid "The submitted string contains disallowed HTML: %string"
+msgstr "المقطع المُرسل يحتوي إتش.تي.إم.إل غير مسموح به: %string"
+
+#: includes/locale.inc:887
+msgid "The string has been saved."
+msgstr "تم حفظ المقطع."
+
+#: includes/locale.inc:922
+msgid "Are you sure you want to delete the string \"%source\"?"
+msgstr "أمتأكد أنك ترغب في حذف المقطع \"%source\"؟"
+
+#: includes/locale.inc:922
+msgid ""
+"Deleting the string will remove all translations of this string in all "
+"languages. This action cannot be undone."
+msgstr "حذف المقطع سيحذف كل ترجماته بكل اللغات. لا يمكن التراجع عن هذا الفعل."
+
+#: includes/locale.inc:934
+msgid "The string has been removed."
+msgstr "تم حذف المقطع."
+
+#: includes/locale.inc:1028
+msgid "The language selected for import is not supported."
+msgstr "اللغة التي اختيرت للاستيراد ليست مدعومة."
+
+#: includes/locale.inc:1043
+msgid ""
+"The translation file %filename appears to have a missing or malformed header."
+msgstr "يبدو أن ملف الترجمة %filename لا يحتوي على ترويسة سليمة."
+
+#: includes/locale.inc:1053
+msgid ""
+"The translation was successfully imported. There are %number newly created "
+"translated strings, %update strings were updated and %delete strings were "
+"removed."
+msgstr ""
+"تم استيراد الترجمة بنجاح. يوجد الآن %number مقطعا مترجما جديدا، و %update "
+"مقطعا تم تحديثه، و %delete مقطعا تم حذفه."
+
+#: includes/locale.inc:1441
+msgid ""
+"The translation file %filename contains an error: the plural formula could "
+"not be parsed."
+msgstr "ملف الترجمة %filename يحتوي على خطأ: تعذّر تحليل صيغة الجموع."
+
+#: includes/locale.inc:2037
+msgid "String"
+msgstr "المقطع"
+
+#: includes/locale.inc:2063
+msgid "No strings found for your search."
+msgstr "لم يُعثر على مقاطع في هذا البحث."
+
+#: (duplicate) includes/locale.inc:1081
+msgid ""
+"The translation import failed, because the file %filename could not be read."
+msgstr "استيراد الترجمة لم ينجح، لأن الملف %filename غير قابل للقراءة."
+
+#: (duplicate) includes/locale.inc:1110
+msgid ""
+"The translation file %filename contains an error: \"msgstr\" was expected "
+"but not found on line %line."
+msgstr ""
+"ملف الترجمة %filename يحتوي على خطأ: \"msgstr\" كان متوقعا، و لكن لم يوجد "
+"على السطر %line."
+
+#: (duplicate) includes/locale.inc:1116
+msgid ""
+"The translation file %filename contains an error: \"msgid_plural\" was "
+"expected but not found on line %line."
+msgstr ""
+"ملف الترجمة %filename يحتوي على الخطأ: \"msgid_plural\" كان متوقعا و لكن لم "
+"يوجد على السطر %line."
+
+#: (duplicate) includes/locale.inc:1122 ;1140 ;1152 ;1160 ;1174 ;1183
+msgid "The translation file %filename contains a syntax error on line %line."
+msgstr "ملف الترجمة %filename يحتوي على خطأ نحوي في السطر %line."
+
+#: (duplicate) includes/locale.inc:1134
+msgid ""
+"The translation file %filename contains an error: \"msgid\" is unexpected on "
+"line %line."
+msgstr ""
+"ملف الترجمة %filename يحتوي على خطأ: \"msgid\" غير متوقع في السطر %line."
+
+#: (duplicate) includes/locale.inc:1148
+msgid ""
+"The translation file %filename contains an error: \"msgstr[]\" is unexpected "
+"on line %line."
+msgstr ""
+"ملف الترجمة %filename يحتوي على خطأ: \"msgstr[]\" غير متوقع في السطر %line."
+
+#: (duplicate) includes/locale.inc:1168
+msgid ""
+"The translation file %filename contains an error: \"msgstr\" is unexpected "
+"on line %line."
+msgstr ""
+"ملف الترجمة %filename يحتوي على خطأ: \"msgstr\" غير متوقع في السطر %line."
+
+#: (duplicate) includes/locale.inc:1196
+msgid ""
+"The translation file %filename contains an error: there is an unexpected "
+"string on line %line."
+msgstr ""
+"ملف الترجمة %filename يحتوي على خطأ: هناك مقطع غير متوقع في السطر %line."
+
+#: (duplicate) includes/locale.inc:1207
+msgid "The translation file %filename ended unexpectedly at line %line."
+msgstr "ملف الترجمة %filename انتهى بغير توقع في السطر %line."
+
+#: (duplicate) includes/locale.inc:2581
+msgid "Importing interface translations"
+msgstr "يستورد ترجمة الواجهة"
+
+#: (duplicate) includes/locale.inc:2582
+msgid "Starting import"
+msgstr "يبدأ الاستيراد"
+
+#: (duplicate) includes/locale.inc:2583
+msgid "Error importing interface translations"
+msgstr "خطأ أثناء استيراد ترجمة الواجهة"
+
+#: includes/locale.inc:855
+msgid ""
+"Attempted submission of a translation string with disallowed HTML: %string"
+msgstr "محاولة لإرسال مقطع ترجمة يحتوي إتش.تي.إم.إل غير مسموح به: %string"
+
+#: includes/locale.inc:997
+msgid "The %language language (%code) has been created."
+msgstr "رمز اللغة %language ‏(%code) موجودة سلفا."
+
+#: includes/locale.inc:1054
+msgid ""
+"Imported %file into %locale: %number new strings added, %update updated and %"
+"delete removed."
+msgstr ""
+"تم استيراد %file إلى %locale: أضيف %number مقطعا جديدا و %update مقطعا تم "
+"تحديثها و %delete مقطعا تم حذفها."
+
+#: includes/locale.inc:1883
+msgid "Exported %locale translation file: %filename."
+msgstr "تم تصدير ملف ترجمة %locale و اسم الملف: %filename."
+
+#: includes/locale.inc:1887
+msgid "Exported translation file: %filename."
+msgstr "تم تصدير ملف الترجمة: %filename."
+
+#: includes/locale.inc:2228
+msgid "Updated JavaScript translation file for the language %language."
+msgstr "تم تحديث ملف ترجمة جافا سكربت للغة %language."
+
+#: includes/locale.inc:2231
+msgid "Created JavaScript translation file for the language %language."
+msgstr "تم إنشاء ملف ترجمة جافا سكربت للغة %language."
+
+#: includes/locale.inc:2234
+msgid ""
+"Removed JavaScript translation file for the language %language, because no "
+"translations currently exist for that language."
+msgstr ""
+"تم حذف ملف ترجمة جافا سكربت للغة %language لعدم وجود أي ترجمة حاليا لهذه "
+"اللغة."
+
+#: includes/locale.inc:2237
+msgid ""
+"An error occurred during creation of the JavaScript translation file for the "
+"language %language."
+msgstr "حدث خطأ أثناء إنشاء ملف ترجمة جافا سكربت للغة %language."
+
+#: includes/locale.inc:1056
+msgid "One translation string was skipped because it contains disallowed HTML."
+msgid_plural ""
+"@count translation strings were skipped because they contain disallowed HTML."
+msgstr[0] "تُخطّيت ترجمة واحدة لأنها تحتوي إتش.تي.إم.إل غير مسموح به."
+msgstr[1] "لم تتخطى أي ترجمة."
+msgstr[2] "تُخطّيت ترجمتين لأنهما تحتويان إتش.تي.إم.إل غير مسموح به."
+msgstr[3] "تُخطّيت @count ترجمات لأنها تحتوي إتش.تي.إم.إل غير مسموح به."
+msgstr[4] "تُخطّيت @count ترجمة لأنها تحتوي إتش.تي.إم.إل غير مسموح به."
+msgstr[5] "تُخطّيت @count ترجمة لأنها تحتوي إتش.تي.إم.إل غير مسموح به."
+
+#: includes/locale.inc:2621
+msgid "One translation file imported for the newly installed modules."
+msgid_plural ""
+"@count translation files imported for the newly installed modules."
+msgstr[0] "تم استيراد ملف ترجمة واحد للوحدة المنشئة حديثا."
+msgstr[1] "لم يتم استيراد أي ملفات ترجمة للوحدة المنشئة حديثا."
+msgstr[2] "تم استيراد ملفي ترجمة للوحدة المنشئة حديثا."
+msgstr[3] "تم استيراد @count ملفات ترجمة للوحدة المنشئة حديثا."
+msgstr[4] "تم استيراد @count ملف ترجمة للوحدة المنشئة حديثا."
+msgstr[5] "تم استيراد @count ملف ترجمة للوحدة المنشئة حديثا."
+
+#: includes/locale.inc:2631
+msgid "One translation file imported for the enabled modules."
+msgid_plural "@count translation files imported for the enabled modules."
+msgstr[0] "تم استيراد ملف ترجمة واحد للوحدات المفعّلة."
+msgstr[1] "لم يتم استيراد أي ملفات ترجمة للوحدات المفعّلة."
+msgstr[2] "تم استيراد ملفي ترجمة للوحدات المفعّلة."
+msgstr[3] "تم استيراد @count ملفات ترجمة للوحدات المفعّلة."
+msgstr[4] "تم استيراد @count ملف ترجمة للوحدات المفعّلة."
+msgstr[5] "تم استيراد @count ملف ترجمة للوحدات المفعّلة."
+
+#: includes/locale.inc:2303
+msgid "Afar"
+msgstr "أفارية"
+
+#: includes/locale.inc:2304
+msgid "Abkhazian"
+msgstr "أبخازية"
+
+#: includes/locale.inc:2305
+msgid "Avestan"
+msgstr "أفستانية"
+
+#: includes/locale.inc:2306
+msgid "Afrikaans"
+msgstr "أفريكانية"
+
+#: includes/locale.inc:2307
+msgid "Akan"
+msgstr "أقانية"
+
+#: includes/locale.inc:2308
+msgid "Amharic"
+msgstr "أمهرية"
+
+#: includes/locale.inc:2309
+msgid "Arabic"
+msgstr "عربية"
+
+#: includes/locale.inc:2310
+msgid "Assamese"
+msgstr "أسامية"
+
+#: includes/locale.inc:2311
+msgid "Avar"
+msgstr "عفارية"
+
+#: includes/locale.inc:2312
+msgid "Aymara"
+msgstr "أيمارية"
+
+#: includes/locale.inc:2313
+msgid "Azerbaijani"
+msgstr "أذرية"
+
+#: includes/locale.inc:2314
+msgid "Bashkir"
+msgstr "بشكيرية"
+
+#: includes/locale.inc:2315
+msgid "Belarusian"
+msgstr "بيلاروسية"
+
+#: includes/locale.inc:2316
+msgid "Bulgarian"
+msgstr "بلغارية"
+
+#: includes/locale.inc:2317
+msgid "Bihari"
+msgstr "بيهارية"
+
+#: includes/locale.inc:2318
+msgid "Bislama"
+msgstr "بيسلامية"
+
+#: includes/locale.inc:2319
+msgid "Bambara"
+msgstr "بمبارية"
+
+#: includes/locale.inc:2320
+msgid "Bengali"
+msgstr "بنغالية"
+
+#: includes/locale.inc:2321
+msgid "Tibetan"
+msgstr "تبتية"
+
+#: includes/locale.inc:2322
+msgid "Breton"
+msgstr "بريتونية"
+
+#: includes/locale.inc:2323
+msgid "Bosnian"
+msgstr "بوسنية"
+
+#: includes/locale.inc:2324
+msgid "Catalan"
+msgstr "كتلانية"
+
+#: includes/locale.inc:2325
+msgid "Chechen"
+msgstr "ششنية"
+
+#: includes/locale.inc:2326
+msgid "Chamorro"
+msgstr "شامورية"
+
+#: includes/locale.inc:2327
+msgid "Corsican"
+msgstr "كورسية"
+
+#: includes/locale.inc:2328
+msgid "Cree"
+msgstr "كيرية"
+
+#: includes/locale.inc:2329
+msgid "Czech"
+msgstr "تشيكية"
+
+#: includes/locale.inc:2330
+msgid "Old Slavonic"
+msgstr "سلافونية قديمة"
+
+#: includes/locale.inc:2331
+msgid "Chuvash"
+msgstr "تشوفاش"
+
+#: includes/locale.inc:2332
+msgid "Welsh"
+msgstr "ولزية"
+
+#: includes/locale.inc:2333
+msgid "Danish"
+msgstr "دنماركية"
+
+#: includes/locale.inc:2334
+msgid "German"
+msgstr "ألمانية"
+
+#: includes/locale.inc:2335
+msgid "Maldivian"
+msgstr "مالديفية"
+
+#: includes/locale.inc:2336
+msgid "Bhutani"
+msgstr "بوتانية"
+
+#: includes/locale.inc:2337
+msgid "Ewe"
+msgstr "إيوية"
+
+#: includes/locale.inc:2338
+msgid "Greek"
+msgstr "يونانية"
+
+#: includes/locale.inc:2339
+msgid "English"
+msgstr "إنجليزية"
+
+#: includes/locale.inc:2340
+msgid "Esperanto"
+msgstr "أسبيرية"
+
+#: includes/locale.inc:2341
+msgid "Spanish"
+msgstr "أسبانية"
+
+#: includes/locale.inc:2342
+msgid "Estonian"
+msgstr "إستونية"
+
+#: includes/locale.inc:2343
+msgid "Basque"
+msgstr "باسكية"
+
+#: includes/locale.inc:2344
+msgid "Persian"
+msgstr "فارسية"
+
+#: includes/locale.inc:2345
+msgid "Fulah"
+msgstr "فولية"
+
+#: includes/locale.inc:2346
+msgid "Finnish"
+msgstr "فنلندية"
+
+#: includes/locale.inc:2347
+msgid "Fiji"
+msgstr "فيجية"
+
+#: includes/locale.inc:2348
+msgid "Faeroese"
+msgstr "فايروسية"
+
+#: includes/locale.inc:2349
+msgid "French"
+msgstr "فرنسية"
+
+#: includes/locale.inc:2350
+msgid "Frisian"
+msgstr "فريزية"
+
+#: includes/locale.inc:2351
+msgid "Irish"
+msgstr "إيرلندية"
+
+#: includes/locale.inc:2352
+msgid "Scots Gaelic"
+msgstr "اسكوتلندية جيلية"
+
+#: includes/locale.inc:2353
+msgid "Galician"
+msgstr "جالية"
+
+#: includes/locale.inc:2354
+msgid "Guarani"
+msgstr "جوارانية"
+
+#: includes/locale.inc:2355
+msgid "Gujarati"
+msgstr "جوجاراتية"
+
+#: includes/locale.inc:2356
+msgid "Manx"
+msgstr "كانسية"
+
+#: includes/locale.inc:2357
+msgid "Hausa"
+msgstr "هاوسية"
+
+#: includes/locale.inc:2358
+msgid "Hebrew"
+msgstr "عبرية"
+
+#: includes/locale.inc:2359
+msgid "Hindi"
+msgstr "هندية"
+
+#: includes/locale.inc:2360
+msgid "Hiri Motu"
+msgstr "هيري موتية"
+
+#: includes/locale.inc:2361
+msgid "Croatian"
+msgstr "كرواتية"
+
+#: includes/locale.inc:2362
+msgid "Hungarian"
+msgstr "مجرية"
+
+#: includes/locale.inc:2363
+msgid "Armenian"
+msgstr "أرمنية"
+
+#: includes/locale.inc:2364
+msgid "Herero"
+msgstr "هيريرية"
+
+#: includes/locale.inc:2365
+msgid "Interlingua"
+msgstr "إنترلينجوة"
+
+#: includes/locale.inc:2366
+msgid "Indonesian"
+msgstr "إندونيسية"
+
+#: includes/locale.inc:2367
+msgid "Interlingue"
+msgstr "إنترلينجا"
+
+#: includes/locale.inc:2368
+msgid "Igbo"
+msgstr "إيغبو"
+
+#: includes/locale.inc:2369
+msgid "Inupiak"
+msgstr "إينوبياك"
+
+#: includes/locale.inc:2370
+msgid "Icelandic"
+msgstr "إيسلندية"
+
+#: includes/locale.inc:2371
+msgid "Italian"
+msgstr "إيطالية"
+
+#: includes/locale.inc:2372
+msgid "Inuktitut"
+msgstr "إينوكتيتو"
+
+#: includes/locale.inc:2373
+msgid "Japanese"
+msgstr "يابانية"
+
+#: includes/locale.inc:2374
+msgid "Javanese"
+msgstr "جافية"
+
+#: includes/locale.inc:2375
+msgid "Georgian"
+msgstr "جورجية"
+
+#: includes/locale.inc:2376
+msgid "Kongo"
+msgstr "كونجولية"
+
+#: includes/locale.inc:2377
+msgid "Kikuyu"
+msgstr "كيكويو"
+
+#: includes/locale.inc:2378
+msgid "Kwanyama"
+msgstr "كوانياما"
+
+#: includes/locale.inc:2379
+msgid "Kazakh"
+msgstr "كازاخية"
+
+#: includes/locale.inc:2380
+msgid "Greenlandic"
+msgstr "جرينلندية"
+
+#: includes/locale.inc:2381
+msgid "Cambodian"
+msgstr "كمبودية"
+
+#: includes/locale.inc:2382
+msgid "Kannada"
+msgstr "كندية"
+
+#: includes/locale.inc:2383
+msgid "Korean"
+msgstr "كورية"
+
+#: includes/locale.inc:2384
+msgid "Kanuri"
+msgstr "كانورية"
+
+#: includes/locale.inc:2385
+msgid "Kashmiri"
+msgstr "كشميرية"
+
+#: includes/locale.inc:2386
+msgid "Kurdish"
+msgstr "كردية"
+
+#: includes/locale.inc:2387
+msgid "Komi"
+msgstr "كومية"
+
+#: includes/locale.inc:2388
+msgid "Cornish"
+msgstr "كورنيشية"
+
+#: includes/locale.inc:2389
+msgid "Kirghiz"
+msgstr "قرغزية"
+
+#: includes/locale.inc:2390
+msgid "Latin"
+msgstr "لاتينية"
+
+#: includes/locale.inc:2391
+msgid "Luxembourgish"
+msgstr "لكسمبورجية"
+
+#: includes/locale.inc:2392
+msgid "Luganda"
+msgstr "موغندية"
+
+#: includes/locale.inc:2393
+msgid "Lingala"
+msgstr "لينغالية"
+
+#: includes/locale.inc:2394
+msgid "Laothian"
+msgstr "لوثانية"
+
+#: includes/locale.inc:2395
+msgid "Lithuanian"
+msgstr "ليتوانية"
+
+#: includes/locale.inc:2396
+msgid "Latvian"
+msgstr "لاتفية"
+
+#: includes/locale.inc:2397
+msgid "Malagasy"
+msgstr "مالاجية"
+
+#: includes/locale.inc:2398
+msgid "Marshallese"
+msgstr "مارشالية"
+
+#: includes/locale.inc:2399
+msgid "Maori"
+msgstr "ماورية"
+
+#: includes/locale.inc:2400
+msgid "Macedonian"
+msgstr "مقدونية"
+
+#: includes/locale.inc:2401
+msgid "Malayalam"
+msgstr "مالايالامية"
+
+#: includes/locale.inc:2402
+msgid "Mongolian"
+msgstr "منغولية"
+
+#: includes/locale.inc:2403
+msgid "Moldavian"
+msgstr "مولدوفية"
+
+#: includes/locale.inc:2404
+msgid "Marathi"
+msgstr "ماراتية"
+
+#: includes/locale.inc:2405
+msgid "Malay"
+msgstr "مالاية"
+
+#: includes/locale.inc:2406
+msgid "Maltese"
+msgstr "مالطية"
+
+#: includes/locale.inc:2407
+msgid "Burmese"
+msgstr "بورمية"
+
+#: includes/locale.inc:2408
+msgid "Nauru"
+msgstr "ناورو"
+
+#: includes/locale.inc:2409
+msgid "North Ndebele"
+msgstr "نيبيلية شمالية"
+
+#: includes/locale.inc:2410
+msgid "Nepali"
+msgstr "نيبالية"
+
+#: includes/locale.inc:2411
+msgid "Ndonga"
+msgstr "ندونغا"
+
+#: includes/locale.inc:2412
+msgid "Dutch"
+msgstr "هولندية"
+
+#: includes/locale.inc:2413
+msgid "Norwegian Bokmål"
+msgstr "نرويجية بوكمال"
+
+#: includes/locale.inc:2414
+msgid "Norwegian Nynorsk"
+msgstr "نرويجية نينورسك"
+
+#: includes/locale.inc:2415
+msgid "South Ndebele"
+msgstr "نيبيلية جنوبية"
+
+#: includes/locale.inc:2416
+msgid "Navajo"
+msgstr "نافاجية"
+
+#: includes/locale.inc:2417
+msgid "Chichewa"
+msgstr "شيشيوا"
+
+#: includes/locale.inc:2418
+msgid "Occitan"
+msgstr "أوسيتانية"
+
+#: includes/locale.inc:2419
+msgid "Oromo"
+msgstr "أورومية"
+
+#: includes/locale.inc:2420
+msgid "Oriya"
+msgstr "أورية"
+
+#: includes/locale.inc:2421
+msgid "Ossetian"
+msgstr "أوسيتانية"
+
+#: includes/locale.inc:2422
+msgid "Punjabi"
+msgstr "بنجابية"
+
+#: includes/locale.inc:2423
+msgid "Pali"
+msgstr "بالية"
+
+#: includes/locale.inc:2424
+msgid "Polish"
+msgstr "بولندية"
+
+#: includes/locale.inc:2425
+msgid "Pashto"
+msgstr "بشتية"
+
+#: includes/locale.inc:2426
+msgid "Portuguese, Portugal"
+msgstr "برتغالية، البرتغال"
+
+#: includes/locale.inc:2427
+msgid "Portuguese, Brazil"
+msgstr "برتغالية، البرازيل"
+
+#: includes/locale.inc:2428
+msgid "Quechua"
+msgstr "كيشوا"
+
+#: includes/locale.inc:2429
+msgid "Rhaeto-Romance"
+msgstr "رايتو-رومانس"
+
+#: includes/locale.inc:2430
+msgid "Kirundi"
+msgstr "كيروندية"
+
+#: includes/locale.inc:2431
+msgid "Romanian"
+msgstr "رومانية"
+
+#: includes/locale.inc:2432
+msgid "Russian"
+msgstr "روسية"
+
+#: includes/locale.inc:2433
+msgid "Kinyarwanda"
+msgstr "كينياروندية"
+
+#: includes/locale.inc:2434
+msgid "Sanskrit"
+msgstr "سنسيكريتية"
+
+#: includes/locale.inc:2435
+msgid "Sardinian"
+msgstr "سردينية"
+
+#: includes/locale.inc:2436
+msgid "Sindhi"
+msgstr "سينديهية"
+
+#: includes/locale.inc:2437
+msgid "Northern Sami"
+msgstr "سامية شمالية"
+
+#: includes/locale.inc:2438
+msgid "Sango"
+msgstr "سنغالية"
+
+#: includes/locale.inc:2439
+msgid "Serbo-Croatian"
+msgstr "صرب-كرواتية"
+
+#: includes/locale.inc:2440
+msgid "Sinhala"
+msgstr "صنهالا"
+
+#: includes/locale.inc:2441
+msgid "Slovak"
+msgstr "سلوفاكية"
+
+#: includes/locale.inc:2442
+msgid "Slovenian"
+msgstr "سلوفينية"
+
+#: includes/locale.inc:2443
+msgid "Samoan"
+msgstr "ساموية"
+
+#: includes/locale.inc:2444
+msgid "Shona"
+msgstr "شونا"
+
+#: includes/locale.inc:2445
+msgid "Somali"
+msgstr "صومالية"
+
+#: includes/locale.inc:2446
+msgid "Albanian"
+msgstr "ألبانية"
+
+#: includes/locale.inc:2447
+msgid "Serbian"
+msgstr "صربية"
+
+#: includes/locale.inc:2448
+msgid "Siswati"
+msgstr "سيسواتية"
+
+#: includes/locale.inc:2449
+msgid "Sesotho"
+msgstr "سيزوتو"
+
+#: includes/locale.inc:2450
+msgid "Sudanese"
+msgstr "سودانية"
+
+#: includes/locale.inc:2451
+msgid "Swedish"
+msgstr "سويدية"
+
+#: includes/locale.inc:2452
+msgid "Swahili"
+msgstr "سواحيلية"
+
+#: includes/locale.inc:2453
+msgid "Tamil"
+msgstr "تاميلية"
+
+#: includes/locale.inc:2454
+msgid "Telugu"
+msgstr "تيلوغية"
+
+#: includes/locale.inc:2455
+msgid "Tajik"
+msgstr "طاجيكية"
+
+#: includes/locale.inc:2456
+msgid "Thai"
+msgstr "تايلندية"
+
+#: includes/locale.inc:2457
+msgid "Tigrinya"
+msgstr "تيغيانية"
+
+#: includes/locale.inc:2458
+msgid "Turkmen"
+msgstr "تركمانية"
+
+#: includes/locale.inc:2459
+msgid "Tagalog"
+msgstr "تاجالية"
+
+#: includes/locale.inc:2460
+msgid "Setswana"
+msgstr "سيستوانية"
+
+#: includes/locale.inc:2461
+msgid "Tonga"
+msgstr "تونجا"
+
+#: includes/locale.inc:2462
+msgid "Turkish"
+msgstr "تركية"
+
+#: includes/locale.inc:2463
+msgid "Tsonga"
+msgstr "تسونغا"
+
+#: includes/locale.inc:2464
+msgid "Tatar"
+msgstr "تترية"
+
+#: includes/locale.inc:2465
+msgid "Twi"
+msgstr "توي"
+
+#: includes/locale.inc:2466
+msgid "Tahitian"
+msgstr "تاهيتية"
+
+#: includes/locale.inc:2467
+msgid "Uighur"
+msgstr "أيغورية"
+
+#: includes/locale.inc:2468
+msgid "Ukrainian"
+msgstr "أوكرانية"
+
+#: includes/locale.inc:2469
+msgid "Urdu"
+msgstr "أردية"
+
+#: includes/locale.inc:2470
+msgid "Uzbek"
+msgstr "أوزبكية"
+
+#: includes/locale.inc:2471
+msgid "Venda"
+msgstr "فندية"
+
+#: includes/locale.inc:2472
+msgid "Vietnamese"
+msgstr "فيتنامية"
+
+#: includes/locale.inc:2473
+msgid "Wolof"
+msgstr "ولوف"
+
+#: includes/locale.inc:2474
+msgid "Xhosa"
+msgstr "خوسية"
+
+#: includes/locale.inc:2475
+msgid "Yiddish"
+msgstr "يديشية"
+
+#: includes/locale.inc:2476
+msgid "Yoruba"
+msgstr "يوروبية"
+
+#: includes/locale.inc:2477
+msgid "Zhuang"
+msgstr "زوانجية"
+
+#: includes/locale.inc:2478
+msgid "Chinese, Simplified"
+msgstr "صينية مبسطة"
+
+#: includes/locale.inc:2479
+msgid "Chinese, Traditional"
+msgstr "صينية تقليدية"
+
+#: includes/locale.inc:2480
+msgid "Zulu"
+msgstr "زولووية"
+
+#: includes/mail.inc:135
+msgid ""
+"Unable to send e-mail. Please contact the site administrator if the problem "
+"persists."
+msgstr "تعذّر إرسال البريد. من فضلك راجع مدير الموقع إذا استمرت المشكلة."
+
+#: includes/mail.inc:134
+msgid "Error sending e-mail (from %from to %to)."
+msgstr "عطل في إرسال البريد (من %from إلى %to)."
+
+#: includes/menu.inc:2461
+msgid "Operating in off-line mode."
+msgstr "يعمل خارج الخط."
+
+#: includes/menu.inc:2322
+msgid "Menu router rebuild failed - some paths may not work correctly."
+msgstr "فشل إعادة بناء مسيّر القائمة - قد لا تعمل بعض المسارات كما ينبغي."
+
+#: includes/module.inc:200
+msgid ""
+"%module is part of a circular dependency. This is not supported and you will "
+"not be able to switch it on."
+msgstr "‏%module جزء من اعتمادية دائرية. هذا ليس مدعوما ولن تستطيع تفعيله."
+
+#: includes/pager.inc:145;395
+msgid "« first"
+msgstr "▸▸ الأولى"
+
+#: includes/pager.inc:146;396
+msgid "‹ previous"
+msgstr "▸ السابقة"
+
+#: includes/pager.inc:147;397
+msgid "next ›"
+msgstr "التالية ◂"
+
+#: includes/pager.inc:148;398
+msgid "last »"
+msgstr "الأخيرة ◂◂"
+
+#: includes/pager.inc:395
+msgid "Go to first page"
+msgstr "اذهب للصفحة الأولى"
+
+#: includes/pager.inc:398
+msgid "Go to last page"
+msgstr "اذهب للصفحة الأخيرة"
+
+#: includes/pager.inc:405
+msgid "Go to page @number"
+msgstr "اذهب لصفحة @number"
+
+#: includes/tablesort.inc:71
+msgid "sort by @s"
+msgstr "رتب حسب @s"
+
+#: includes/theme.inc:1398;1401
+msgid "sort icon"
+msgstr "رتب الأيقونات"
+
+#: includes/theme.inc:1398
+msgid "sort ascending"
+msgstr "رتب تصاعديا"
+
+#: includes/theme.inc:1401
+msgid "sort descending"
+msgstr "رتب تنازليا"
+
+#: includes/theme.inc:1439
+msgid "updated"
+msgstr "تم التحديث"
+
+#: includes/theme.inc:1511
+msgid "[<a href=\"@link\">more help...</a>]"
+msgstr "[<a href=\"@link\">مزيد من المساعدة...</a>]"
+
+#: includes/theme.inc:1524;1524
+msgid "XML feed"
+msgstr "تلقيمة إكس.إم.إل."
+
+#: includes/theme.inc:1538
+msgid "Syndicate content"
+msgstr "لَقِّم المحتوى"
+
+#: includes/theme.inc:1552
+msgid "<a href=\"@link\" title=\"@title\">more</a>"
+msgstr "<a href=\"@link\" title=\"@title\">المزيد</a>"
+
+#: includes/theme.inc:1632
+msgid "not verified"
+msgstr "لم يتم التحقق"
+
+#: (duplicate) includes/unicode.inc:48
+msgid ""
+"The PCRE library in your PHP installation is outdated. This will cause "
+"problems when handling Unicode text. If you are running PHP 4.3.3 or higher, "
+"make sure you are using the PCRE library supplied by PHP. Please refer to "
+"the <a href=\"@url\">PHP PCRE documentation</a> for more information."
+msgstr ""
+"مكتبة التعابير القياسية المتوافقة مع بيرل (PCRE) في إصدارة بي.إتش.بي التي "
+"تستخدمها قديمة. سيتسبب هذا في مشاكل عند التعامل مع نصوص تستخدم ترميز "
+"يونيكود. إذا كنت تستخدم الإصدارة 4.3.3 من بي.اتش.بي أو إصدارة أحدث، فتأكد من "
+"أنك تستخدم مكتبة التعابير القياسية المتوافقة مع بيرل التي تأتي مع بي.إتش.بي. "
+"لمزيد من المعلومات، من فضلك طالع <a href=\"@url\"> توثيق مكتبة التعابير "
+"القياسية المتوافقة مع بيرل لبي.إتش.بي</a>."
+
+#: (duplicate) includes/unicode.inc:53
+msgid ""
+"Operations on Unicode strings are emulated on a best-effort basis. Install "
+"the <a href=\"@url\">PHP mbstring extension</a> for improved Unicode support."
+msgstr ""
+"العمليات على مقاطع يونيكود تجرى على أساس أفضل جهد ممكن. ركب <a href=\"@url"
+"\">توسعة المقاطع متعددة البايتات في بي.إتش.بي</a> لتحسين دعم يونيكود."
+
+#: (duplicate) includes/unicode.inc:58
+msgid ""
+"Multibyte string function overloading in PHP is active and must be disabled. "
+"Check the php.ini <em>mbstring.func_overload</em> setting. Please refer to "
+"the <a href=\"@url\">PHP mbstring documentation</a> for more information."
+msgstr ""
+"التحميل الزائد لدوال المقاطع متعددة البايتات مفعل في بي.إتش.بي، و يجب أن يتم "
+"إيقافه. راجع إعداد <em>mbstring.func_overload</em> في ملف php.ini. لمزيد من "
+"المعلومات، من فضلك ارجع إلى <a href=\"@url\">توثيق المقاطع متعددة البايتات "
+"في بي.إتش.بي</a>."
+
+#: (duplicate) includes/unicode.inc:61
+msgid ""
+"Multibyte string input conversion in PHP is active and must be disabled. "
+"Check the php.ini <em>mbstring.encoding_translation</em> setting. Please "
+"refer to the <a href=\"@url\">PHP mbstring documentation</a> for more "
+"information."
+msgstr ""
+"تحويل مدخلات المقاطع متعددة البايتات مفعل في بي.إتش.بي و يجب إيقافه. راجع "
+"إعداد <em>mbstring.encoding_translation</em> في ملف php.ini. لمزيد من "
+"المعلومات، من فضلك راجع <a href=\"@url\">توثيق المقاطع متعددة البايتات في بي."
+"إتش.بي</a>."
+
+#: (duplicate) includes/unicode.inc:64
+msgid ""
+"Multibyte string input conversion in PHP is active and must be disabled. "
+"Check the php.ini <em>mbstring.http_input</em> setting. Please refer to the "
+"<a href=\"@url\">PHP mbstring documentation</a> for more information."
+msgstr ""
+"تحويل مدخلات المقاطع متعددة البايتات مفعل في بي.إتش.بي و يجب إيقافه. راجع "
+"إعداد <em>mbstring.encoding_input</em> في ملف php.ini. لمزيد من المعلومات، "
+"من فضلك راجع <a href=\"@url\">توثيق المقاطع متعددة البايتات في بي.إتش.بي</a>."
+
+#: (duplicate) includes/unicode.inc:67
+msgid ""
+"Multibyte string output conversion in PHP is active and must be disabled. "
+"Check the php.ini <em>mbstring.http_output</em> setting. Please refer to the "
+"<a href=\"@url\">PHP mbstring documentation</a> for more information."
+msgstr ""
+"تحويل مخرجات المقاطع متعددة البايتات مفعل في بي.إتش.بي ويجب إيقافه. راجع "
+"إعداد <em>mbstring.encoding_output</em> في ملف php.ini. لمزيد من المعلومات، "
+"من فضلك راجع <a href=\"@url\">توثيق المقاطع متعددة البايتات في بي.إتش.بي</a>."
+
+#: (duplicate) includes/unicode.inc:84
+msgid "Standard PHP"
+msgstr "بي.إتش.بي معياري"
+
+#: (duplicate) includes/unicode.inc:85
+msgid "PHP Mbstring Extension"
+msgstr "توسعة المقاطع المتعددة البايتات في بي.إتش.بي"
+
+#: (duplicate) includes/unicode.inc:96
+msgid "Unicode library"
+msgstr "مكتبة يونيكود"
+
+#: includes/unicode.inc:151
+msgid "Could not convert XML encoding %s to UTF-8."
+msgstr "تعذّر تحويل ترميز لغة النص الموسع '%s' إلى UTF-8."
+
+#: includes/unicode.inc:184
+msgid ""
+"Unsupported encoding %s. Please install iconv, GNU recode or mbstring for "
+"PHP."
+msgstr ""
+"الترميز '%s' غير مدعوم. من فضلك ركب iconv‏، GNU recode، أو مقاطع الأحرف "
+"متعددة البايتات (mbstring) في بي.إتش.بي."
+
+#: includes/xmlrpc.inc:454
+msgid "Parse error. Not well formed"
+msgstr "خطأ تحليلي. الصيغة غير صحيحة"
+
+#: includes/xmlrpcs.inc:62
+msgid "Parse error. Request not well formed."
+msgstr "خطأ تحليلي. الصيغة غير صحيحة."
+
+#: includes/xmlrpcs.inc:65
+msgid "Server error. Invalid XML-RPC. Request must be a methodCall."
+msgstr ""
+"خطأ في الخادوم. نداء إجراء بعيد للنص الموسع غير سليم و لا يتطابق مع "
+"المواصفات. الطلب يجب أن يكون methodCall."
+
+#: includes/xmlrpcs.inc:152;291
+msgid "Server error. Requested method @methodname not specified."
+msgstr "خطأ في الخادوم. الطريقة المطلوبة @methodname غير محددة."
+
+#: includes/xmlrpcs.inc:163
+msgid "Server error. Wrong number of method parameters."
+msgstr "خطأ في الخادوم. عدد غير صحيح من معاملات الطريقة."
+
+#: includes/xmlrpcs.inc:200
+msgid "Server error. Invalid method parameters."
+msgstr "خطأ في الخادوم. معاملات الطريقة غير مقبولة."
+
+#: includes/xmlrpcs.inc:206
+msgid "Server error. Requested function @method does not exist."
+msgstr "خطأ في الخادوم. الدالة المطلوبة @method غير موجودة."
+
+#: includes/xmlrpcs.inc:219
+msgid "Invalid syntax for system.multicall."
+msgstr "صيغة دالة نظام متعددة النداء غير مقبولة."
+
+#: includes/xmlrpcs.inc:225
+msgid "Recursive calls to system.multicall are forbidden."
+msgstr "لا يسمح بالنداء الذاتي لدوال النظام متعددة النداء."
+
+#: includes/xmlrpcs.inc:294
+msgid "Server error. Requested method @methodname signature not specified."
+msgstr "خطأ في الخادوم. توقيع الطريقة المطلوبة @methodname غير محدد."
+
+#~ msgid "The server can't issue HTTP requests"
+#~ msgstr "لا يستطيع الخادوم إصدار طلبات إتش.تي.تي.بي"
+
+#~ msgid "Singhalese"
+#~ msgstr "سنغالية"
+
+#~ msgid "emergency"
+#~ msgstr "طوارئ"
+
+#~ msgid "alert"
+#~ msgstr "تحذير"
+
+#~ msgid "critical"
+#~ msgstr "حساس"
+
+#~ msgid ""
+#~ "Validation error, please try again. If this error persists, please "
+#~ "contact the site administrator."
+#~ msgstr ""
+#~ "خطأ في التحقق من الصحة. حاول مرة أخرى. إذا استمرت المشكلة اتصل بإداري "
+#~ "الموقع."

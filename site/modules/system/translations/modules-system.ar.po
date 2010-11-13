@@ -1,0 +1,2300 @@
+# translation of general.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: general\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-02-18 23:47+0200\n"
+"Last-Translator: Alaa <alaa@manalaa.net>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Pootle 2.0.2\n"
+
+#: modules/system/system.admin.inc:22
+msgid ""
+"One or more problems were detected with your Drupal installation. Check the "
+"<a href=\"@status\">status report</a> for more information."
+msgstr ""
+"ظهرت مشكلة أو أكثر في نسخة دروبال المركبة. راجع <a href=\"@status\">تقرير "
+"الحالة</a> لمزيد من المعلومات."
+
+#: modules/system/system.admin.inc:58;79
+msgid "You do not have any administrative items."
+msgstr "ليس لديك أي عناصر إدارية."
+
+#: modules/system/system.admin.inc:118
+msgid "Get help"
+msgstr "احصل على مساعدة"
+
+#: modules/system/system.admin.inc:158
+msgid "System default"
+msgstr "الإعداد المبدئي للموقع"
+
+#: modules/system/system.admin.inc:166 modules/system/system.module:264
+msgid "Administration theme"
+msgstr "سمة الإدارة"
+
+#: modules/system/system.admin.inc:167
+msgid ""
+"Choose which theme the administration pages should display in. If you choose "
+"\"System default\" the administration pages will use the same theme as the "
+"rest of the site."
+msgstr ""
+"اختر السمة التي تستخدم في صفحات الإدارة. إذا اخترت \"المبدئي للنظام\" فإن "
+"صفحات الإدارة ستستخدم نفس سمة باقي الموقع."
+
+#: modules/system/system.admin.inc:173
+msgid "Use administration theme for content editing"
+msgstr "استخدم سمة الإدارة أثناء تحرير المحتوى"
+
+#: modules/system/system.admin.inc:174
+msgid ""
+"Use the administration theme when editing existing posts or creating new "
+"ones."
+msgstr "استخدم سمة الإدارة أثناء تحرير الرسائل الموجودة أو إنشاء رسائل جديدة."
+
+#: modules/system/system.admin.inc:209 modules/system/system.module:712
+msgid "Screenshot for %theme theme"
+msgstr "لقطة لسمة %theme"
+
+#: modules/system/system.admin.inc:209 modules/system/system.module:712
+msgid "no screenshot"
+msgstr "لا توجد لقطة"
+
+#: modules/system/system.admin.inc:288
+msgid ""
+"Please note that the <a href=\"!admin_theme_page\">administration theme</a> "
+"is still set to the %admin_theme theme; consequently, the theme on this page "
+"remains unchanged. All non-administrative sections of the site, however, "
+"will show the selected %selected_theme theme by default."
+msgstr ""
+"لاحظ أن <a href=\"!admin_theme_page\">سمة الإدارة</a> لا تزال مضبوطة على %"
+"admin_theme theme، و بالتالي فإن سمة هذا الصفحة لن تتغير. كل الصفحات غير "
+"الإدارية ستعرض سمة %selected_theme مبدئيا."
+
+#: modules/system/system.admin.inc:306;555;933
+#: modules/system/system.module:1062
+msgid "The configuration options have been saved."
+msgstr "تم حفظ خيارات الضبط."
+
+#: modules/system/system.admin.inc:377
+msgid "Logo"
+msgstr "الشعار"
+
+#: modules/system/system.admin.inc:378
+msgid "Site name"
+msgstr "اسم الموقع"
+
+#: modules/system/system.admin.inc:379
+msgid "Site slogan"
+msgstr "شعار الموقع"
+
+#: modules/system/system.admin.inc:380
+msgid "Mission statement"
+msgstr "مهمة الموقع"
+
+#: modules/system/system.admin.inc:381
+msgid "User pictures in posts"
+msgstr "صور المستخدمين في الرسائل"
+
+#: modules/system/system.admin.inc:382
+msgid "User pictures in comments"
+msgstr "صور المستخدمين في التعليقات"
+
+#: modules/system/system.admin.inc:383
+msgid "Search box"
+msgstr "مربع البحث"
+
+#: modules/system/system.admin.inc:384
+msgid "Shortcut icon"
+msgstr "رمز الاختصار"
+
+#: modules/system/system.admin.inc:401
+msgid "Toggle display"
+msgstr "غيِّر العرض"
+
+#: modules/system/system.admin.inc:402
+msgid "Enable or disable the display of certain page elements."
+msgstr "فعل أو عطل عرض عناصر معينة بالصفحة."
+
+#: modules/system/system.admin.inc:427
+msgid "Display post information on"
+msgstr "اعرض بيانات الرسالة على"
+
+#: modules/system/system.admin.inc:428
+msgid ""
+"Enable or disable the <em>submitted by Username on date</em> text when "
+"displaying posts of the following type."
+msgstr ""
+"فعل أو عطل نص \"<em>نشره .... في تاريخ</em>\" عند عرض المحتوى من الأنواع "
+"التالية."
+
+#: modules/system/system.admin.inc:447
+msgid "Logo image settings"
+msgstr "إعدادات صورة الشعار"
+
+#: modules/system/system.admin.inc:448
+msgid "If toggled on, the following logo will be displayed."
+msgstr "عند تفعيلها، يعرض الشعار التالي."
+
+#: modules/system/system.admin.inc:453
+msgid "Use the default logo"
+msgstr "استخدم الشعار المبدئي"
+
+#: modules/system/system.admin.inc:456
+msgid "Check here if you want the theme to use the logo supplied with it."
+msgstr "اختر هنا إذا أردت أن تستخدم السمة الشعار الذي صمم معها."
+
+#: modules/system/system.admin.inc:460
+msgid "Path to custom logo"
+msgstr "مسار الشعار الطيع"
+
+#: modules/system/system.admin.inc:462
+msgid ""
+"The path to the file you would like to use as your logo file instead of the "
+"default logo."
+msgstr "مسار الملف الذي تود استخدامه كشعار لك بدلا من الشعار المبدئي."
+
+#: modules/system/system.admin.inc:466
+msgid "Upload logo image"
+msgstr "ارفع صورة الشعار"
+
+#: modules/system/system.admin.inc:468
+msgid ""
+"If you don't have direct file access to the server, use this field to upload "
+"your logo."
+msgstr ""
+"استخدم هذا الحقل لرفع الشعار إذا لم تكن قادرا على الوصول مباشرة إلى الخادوم."
+
+#: modules/system/system.admin.inc:475
+msgid "Shortcut icon settings"
+msgstr "إعدادات أيقونة الاختصار"
+
+#: modules/system/system.admin.inc:476
+msgid ""
+"Your shortcut icon, or 'favicon', is displayed in the address bar and "
+"bookmarks of most browsers."
+msgstr ""
+"تظهر أيقونة الاختصار أو أيقونتك المفضلة في شريط العنوان وفي قائمة المواقع "
+"المفضلة في غالبية المتصفحات."
+
+#: modules/system/system.admin.inc:480
+msgid "Use the default shortcut icon."
+msgstr "استخدم أيقونة الاختصار المبدئية."
+
+#: modules/system/system.admin.inc:482
+msgid "Check here if you want the theme to use the default shortcut icon."
+msgstr "أشر هنا إذا أردت أن تستخدم السمة الأيقونة المبدئية."
+
+#: modules/system/system.admin.inc:486
+msgid "Path to custom icon"
+msgstr "مسار الأيقونة الطيعة"
+
+#: modules/system/system.admin.inc:488
+msgid ""
+"The path to the image file you would like to use as your custom shortcut "
+"icon."
+msgstr "مسار ملف الصورة الذي تود استخدامه كأيقونة اختصار."
+
+#: modules/system/system.admin.inc:493
+msgid "Upload icon image"
+msgstr "ارفع صورة الأيقونة"
+
+#: modules/system/system.admin.inc:494
+msgid ""
+"If you don't have direct file access to the server, use this field to upload "
+"your shortcut icon."
+msgstr ""
+"إذا لم بكن لديك وصول مباشر إلى الخادوم، استخدم هذا الحقل لرفع أيقونة "
+"الاختصار الخاصة بك."
+
+#: modules/system/system.admin.inc:515
+msgid "Theme-engine-specific settings"
+msgstr "إعدادات خاصة بمحرك السمة"
+
+#: modules/system/system.admin.inc:515
+msgid ""
+"These settings only exist for all the templates and styles based on the %"
+"engine theme engine."
+msgstr ""
+"لا تتوافر هذه الإعدادات إلا للقوالب والطرز المبنية على محرك السمات %engine."
+
+#: modules/system/system.admin.inc:527
+msgid "Theme-specific settings"
+msgstr "إعدادات خاصة بالسمة"
+
+#: modules/system/system.admin.inc:527
+msgid ""
+"These settings only exist for the %theme theme and all the styles based on "
+"it."
+msgstr "لا تتوفر هذه الإعدادات إلا للسمة %theme فقط وكل الطرز المبنية عليها."
+
+#: modules/system/system.admin.inc:549 modules/system/system.module:1059
+msgid "The configuration options have been reset to their default values."
+msgstr "تمت إعادة خيارات الضبط إلى قيمها المبدئية."
+
+#: modules/system/system.admin.inc:683;715
+msgid "@module (<span class=\"admin-disabled\">disabled</span>)"
+msgstr "@module (<span class=\"admin-disabled\">معطل</span>)"
+
+#: modules/system/system.admin.inc:686
+msgid "@module (<span class=\"admin-missing\">missing</span>)"
+msgstr "@module (<span class=\"admin-missing\">مفقود</span>)"
+
+#: modules/system/system.admin.inc:692;710
+msgid "@module (<span class=\"admin-enabled\">enabled</span>)"
+msgstr "@module (<span class=\"admin-enabled\">مُفَعَّل</span>)"
+
+#: modules/system/system.admin.inc:699
+msgid "Depends on: !dependencies"
+msgstr "يعتمد على: !dependencies"
+
+#: modules/system/system.admin.inc:722
+msgid "Required by: !required"
+msgstr "تتطلبه: !required"
+
+#: modules/system/system.admin.inc:841
+msgid "Some required modules must be enabled"
+msgstr "يجب تفعيل بعض الوحدات المطلوبة"
+
+#: modules/system/system.admin.inc:843
+msgid "Would you like to continue with enabling the above?"
+msgstr "هل ترغب في إكمال تفعيل ما سبق؟"
+
+#: modules/system/system.admin.inc:844
+msgid "Continue"
+msgstr "أكمل"
+
+#: modules/system/system.admin.inc:1036;1081;2106
+#: modules/system/system.module:330;336
+msgid "Uninstall"
+msgstr "أزل"
+
+#: modules/system/system.admin.inc:1075
+msgid ""
+"The following modules will be completely uninstalled from your site, and "
+"<em>all data from these modules will be lost</em>!"
+msgstr ""
+"ستزال هذه الوحدات من على موقعك بشكل كامل، <em>و ستلغى كل البيانات المرتبطة "
+"بها</em>!"
+
+#: modules/system/system.admin.inc:1078
+msgid "Confirm uninstall"
+msgstr "أكد الإزالة"
+
+#: modules/system/system.admin.inc:1080
+msgid "Would you like to continue with uninstalling the above?"
+msgstr "هل ترغب في إكمال إزالة ما سبق؟"
+
+#: modules/system/system.admin.inc:1093
+msgid "No modules selected."
+msgstr "لم يتم اختيار أي وحدات."
+
+#: modules/system/system.admin.inc:1110
+msgid "The selected modules have been uninstalled."
+msgstr "تمت إزالة الوحدات المؤشر عليها."
+
+#: modules/system/system.admin.inc:1131
+msgid "The name of this website."
+msgstr "﻿اسم هذا الموقع."
+
+#: modules/system/system.admin.inc:1138
+msgid ""
+"The <em>From</em> address in automated e-mails sent during registration and "
+"new password requests, and other notifications. (Use an address ending in "
+"your site's domain to help prevent this e-mail being flagged as spam.)"
+msgstr ""
+"حقل <em>من</em> في البريد الإلكتروني الآلي المرسل أثناء التسجيل وطلبات كلمات "
+"السر الجديدة والتنبيهات الأخرى. (استخدم عنوانا ينتهي بنطاق موقعك لتفادي "
+"اعتبار هذا البريد سخاما.)"
+
+#: modules/system/system.admin.inc:1143
+msgid "Slogan"
+msgstr "الشعار"
+
+#: modules/system/system.admin.inc:1145
+msgid ""
+"Your site's motto, tag line, or catchphrase (often displayed alongside the "
+"title of the site)."
+msgstr "شعار الموقع أو العبارة التي تميزه (عادة ما تعرض بجوار عنوان الموقع)."
+
+#: modules/system/system.admin.inc:1149
+msgid "Mission"
+msgstr "المهمة"
+
+#: modules/system/system.admin.inc:1151
+msgid ""
+"Your site's mission or focus statement (often prominently displayed on the "
+"front page)."
+msgstr ""
+"مهمة هذا الموقع أو الغرض منه (عادة ما تعرض بشكل بارز في الصفحة الرئيسية)."
+
+#: modules/system/system.admin.inc:1155
+msgid "Footer message"
+msgstr "التذييل"
+
+#: modules/system/system.admin.inc:1157
+msgid ""
+"This text will be displayed at the bottom of each page. Useful for adding a "
+"copyright notice to your pages."
+msgstr ""
+"يعرض هذا النص في أسفل كل صفحة، و هو يفيد في إضافة إعلان حقوق النشر للصفحات."
+
+#: modules/system/system.admin.inc:1161
+msgid "Anonymous user"
+msgstr "مستخدم مجهول"
+
+#: modules/system/system.admin.inc:1163
+msgid "The name used to indicate anonymous users."
+msgstr "الاسم المستخدم للإشارة إلى المستخدمين المجهولين."
+
+#: modules/system/system.admin.inc:1168
+msgid "Default front page"
+msgstr "الصفحة الأولى المبدئية"
+
+#: modules/system/system.admin.inc:1171
+msgid ""
+"The home page displays content from this relative URL. If unsure, specify "
+"\"node\"."
+msgstr ""
+"تعرض الصفحة الأولى المحتوى الموجود في هذا المسار النسبي. إذا كنت لا تستخدم "
+"المسارات النظيفة، أدخل الجزء بعد ?q=\". إذا لم تكن متأكدا، أدخل \"node\"."
+
+#: modules/system/system.admin.inc:1196
+msgid "The path '@path' is either invalid or you do not have access to it."
+msgstr "المسار '@path' إما غير صحيح أو لا تملك صلاحية الوصول إليه."
+
+#: modules/system/system.admin.inc:1210
+msgid "Default 403 (access denied) page"
+msgstr "صفحة 403 (الوصول ممنوع) المبدئية"
+
+#: modules/system/system.admin.inc:1213
+msgid ""
+"This page is displayed when the requested document is denied to the current "
+"user. If unsure, specify nothing."
+msgstr ""
+"تعرض هذه الصفحة عندما لايكون مسموحا للمستخدم الحالي عرض الصفحة المطلوبة. إذا "
+"كنت لا تستخدم مسارات نظيفة،, حدد الجزء الذى يلى \"?q=\". وإذا كنت غير متأكد، "
+"لا تدخل أي شيء."
+
+#: modules/system/system.admin.inc:1219
+msgid "Default 404 (not found) page"
+msgstr "صفحة 404 (غير موجود) المبدئية"
+
+#: modules/system/system.admin.inc:1222
+msgid ""
+"This page is displayed when no other content matches the requested document. "
+"If unsure, specify nothing."
+msgstr ""
+"تعرض هذه الصفحة عندما لا يوجد محتوى آخر مماثل للوثيقة المطلوبة. إذا كنت لا "
+"تستخدم المسارات النظيفة، أدخل الجزء الذى يلى \"?q=\"، و إذا كنت غير متأكد، "
+"لا تدخل أي شيء."
+
+#: modules/system/system.admin.inc:1227 modules/system/system.module:387
+msgid "Error reporting"
+msgstr "التبليغ بالأخطاء"
+
+#: modules/system/system.admin.inc:1228
+msgid "Write errors to the log"
+msgstr "اكتب الأخطاء في السجلات"
+
+#: modules/system/system.admin.inc:1228
+msgid "Write errors to the log and to the screen"
+msgstr "اكتب الأخطاء في السجلات و على الشاشة"
+
+#: modules/system/system.admin.inc:1229
+msgid ""
+"Specify where Drupal, PHP and SQL errors are logged. While it is recommended "
+"that a site running in a production environment write errors to the log "
+"only, in a development or testing environment it may be helpful to write "
+"errors both to the log and to the screen."
+msgstr ""
+"مكان تسجيل أخطاء دروبال، و بي.اتش.بي، و إس.كيو.إل. بينما ينصح في بيئات "
+"الاستخدام الفعلي كتابة الأخطاء في السجلات فقط، قد يكون من المفيد عرض الأخطاء "
+"على الشاشة في بيئات التطوير أو التجريب."
+
+#: modules/system/system.admin.inc:1255
+msgid ""
+"The normal cache mode is suitable for most sites and does not cause any side "
+"effects. The aggressive cache mode causes Drupal to skip the loading (boot) "
+"and unloading (exit) of enabled modules when serving a cached page. This "
+"results in an additional performance boost but can cause unwanted side "
+"effects."
+msgstr ""
+"يناسب وضع التخزين المؤقت العادي معظم المواقع، ولا يسبب أي أعراض جانبية. يسبب "
+"الوضع العنيف أن يهمل دروبال تحميل (boot) و تنزيل (exit) الوحدات المفعلة عند "
+"تقديم صفحة مخزنة. ينتج هذا دفعة إضافية في الأداء، و لكنه قد يسبب أعراضا "
+"جانبية غير مرغوب فيها."
+
+#: modules/system/system.admin.inc:1261
+msgid ""
+"<strong class=\"error\">The following enabled modules are incompatible with "
+"aggressive mode caching and will not function properly: %modules</strong>"
+msgstr ""
+"<strong class=\"error\">الوحدات المفعلة التالية غير متوافقة مع التخزين "
+"المؤقت العنيف، و بالتالي لن تعمل بشكل سليم: %modules</strong>"
+
+#: modules/system/system.admin.inc:1264
+msgid ""
+"<strong class=\"ok\">Currently, all enabled modules are compatible with the "
+"aggressive caching policy.</strong> Please note, if you use aggressive "
+"caching and enable new modules, you will need to check this page again to "
+"ensure compatibility."
+msgstr ""
+"<strong class=\"ok\">حاليا، كل الوحدات متوافقة مع سياسة التخزين المؤقت "
+"العنيف.</strong> لاحظ أنك إن استعملت التخزين المؤقت العنيف و فَعَّلْت بعدها "
+"وحدات جديدة، سيتعين عليك مراجعة هذه الصفحة ثانية لتتأكد من توافقها."
+
+#: modules/system/system.admin.inc:1268
+msgid "Page cache"
+msgstr "مخزن الصفحات"
+
+#: modules/system/system.admin.inc:1269
+msgid ""
+"Enabling the page cache will offer a significant performance boost. Drupal "
+"can store and send compressed cached pages requested by <em>anonymous</em> "
+"users. By caching a web page, Drupal does not have to construct the page "
+"each time it is viewed."
+msgstr ""
+"يوفر تفعيل تخزين الصفحات المؤقت تحسنا ملحوظا في الأداء. بإمكان دروبال تخزين "
+"و إرسال صفحات مضغوطة عندما يطلبها المستخدمون <em>المجهولون</em>. مع التخزين "
+"المؤقت للصفحات، لن يضطر دروبال إلى إنشاءها كل مرة يطلب أحدهم عرضها."
+
+#: modules/system/system.admin.inc:1274
+msgid "Caching mode"
+msgstr "وضع التخزين المؤقت"
+
+#: modules/system/system.admin.inc:1276
+msgid "Normal (recommended for production sites, no side effects)"
+msgstr "عادي (موصى به للمواقع العاملة، لا أعراض جانبية)"
+
+#: modules/system/system.admin.inc:1276
+msgid "Aggressive (experts only, possible side effects)"
+msgstr "عنيف (للخبراء فقط، أعراض جانبية محتملة)"
+
+#: modules/system/system.admin.inc:1284
+msgid "Minimum cache lifetime"
+msgstr "الحد الأدنى لزمن بقاء المخزن المؤقت"
+
+#: modules/system/system.admin.inc:1287
+msgid ""
+"On high-traffic sites, it may be necessary to enforce a minimum cache "
+"lifetime. The minimum cache lifetime is the minimum amount of time that will "
+"elapse before the cache is emptied and recreated, and is applied to both "
+"page and block caches. A larger minimum cache lifetime offers better "
+"performance, but users will not see new content for a longer period of time."
+msgstr ""
+"بالنسبة للمواقع كثيفة المرور، فإنه من الضروري تحديد زمن أدنى للتخزين المؤقت. "
+"زمن التخزين الأدنى هو أقل مقدار من الوقت سيمضي قبل تفريغ الذاكرة المؤقتة و "
+"إعادة إنشائها. القيم الكبيرة تعطي أداء أفضل و لكن لن يرى الزوار المحتويات "
+"الجديدة لفترة زمنية أطول."
+
+#: modules/system/system.admin.inc:1291
+msgid "Page compression"
+msgstr "ضغط الصفحات"
+
+#: modules/system/system.admin.inc:1294
+msgid ""
+"By default, Drupal compresses the pages it caches in order to save bandwidth "
+"and improve download times. This option should be disabled when using a "
+"webserver that performs compression."
+msgstr ""
+"مبدئيا، يضغط دروبال الصفحات التي يخزنها لتقليل وقت التنزيل. يفضل تعطيل هذا "
+"الخيار عند استخدام خادوم وب يقوم بالضغط."
+
+#: modules/system/system.admin.inc:1299;1305
+msgid "Block cache"
+msgstr "مخزن الصناديق"
+
+#: modules/system/system.admin.inc:1300
+msgid ""
+"Enabling the block cache can offer a performance increase for all users by "
+"preventing blocks from being reconstructed on each page load. If the page "
+"cache is also enabled, performance increases from enabling the block cache "
+"will mainly benefit authenticated users."
+msgstr ""
+"تفعيل التخزين المؤقت للصناديق سيفر تحسنا في الأداء لكل المستخدمين عبر منع "
+"إعادة بناء الصناديق مع كل تحميل لصفحة. إذا كان التخزين المؤقت للصفحات مفعلا "
+"فستكون الاستفادة من تحسن الأداء هنا بشكل أساسي للمستخدمين المسجلين."
+
+#: modules/system/system.admin.inc:1307
+msgid "Enabled (recommended)"
+msgstr "مفعّل (ينصح به)"
+
+#: modules/system/system.admin.inc:1309
+msgid ""
+"Note that block caching is inactive when modules defining content access "
+"restrictions are enabled."
+msgstr ""
+"لاحظ أن التخزين المؤقت لن يعمل عند تفعيل وحدات تحدد قيود للوصول إلى المحتوى."
+
+#: modules/system/system.admin.inc:1314
+msgid "Bandwidth optimizations"
+msgstr "أمثلة عرض النطاق"
+
+#: modules/system/system.admin.inc:1315
+msgid ""
+"<p>Drupal can automatically optimize external resources like CSS and "
+"JavaScript, which can reduce both the size and number of requests made to "
+"your website. CSS files can be aggregated and compressed into a single file, "
+"while JavaScript files are aggregated (but not compressed). These optional "
+"optimizations may reduce server load, bandwidth requirements, and page "
+"loading times.</p><p>These options are disabled if you have not set up your "
+"files directory, or if your download method is set to private.</p>"
+msgstr ""
+"<p>يستطيع دروبال أمثَلة الموارد الخارجية -مثل سي.إس.إس و جافاسكربت- تلقائيا، "
+"مما قد يقلل من حجم وعدد الطلبات على موقعك. يمكن تجميع ملفات سي.إس.إس في ملف "
+"واحد وضغطها، بينما تُجمع ملفات جافاسكربت فقط (لكن لا تُضغط). قد يقلل هذا من "
+"حِمل الخادوم، ووقت تحميل الصفحات.</p><p>تُعطّل هذا الخيارات ما لم تُعد دليل "
+"الملفات، أو إذا اخترت طريقة التنزيل الخاصة.</p>"
+
+#: modules/system/system.admin.inc:1322
+msgid "Optimize CSS files"
+msgstr "أمثل ملفات سي.إس.إس"
+
+#: modules/system/system.admin.inc:1326
+msgid ""
+"This option can interfere with theme development and should only be enabled "
+"in a production environment."
+msgstr ""
+"قد يتعارض هذا الخيار مع تطوير السمات ويجب تفعيله في البيئات العاملة فقط."
+
+#: modules/system/system.admin.inc:1330
+msgid "Optimize JavaScript files"
+msgstr "أمثل ملفات حافاسكربت"
+
+#: modules/system/system.admin.inc:1334
+msgid ""
+"This option can interfere with module development and should only be enabled "
+"in a production environment."
+msgstr ""
+"قد يتعارض هذا الخيار مع تطوير الوحدات ويجب تفعيله في البيئات العاملة فقط."
+
+#: modules/system/system.admin.inc:1339;1345
+msgid "Clear cached data"
+msgstr "امسح البيانات المخزنة"
+
+#: modules/system/system.admin.inc:1340
+msgid ""
+"Caching data improves performance, but may cause problems while "
+"troubleshooting new modules, themes, or translations, if outdated "
+"information has been cached. To refresh all cached data on your site, click "
+"the button below. <em>Warning: high-traffic sites will experience "
+"performance slowdowns while cached data is rebuilt.</em>"
+msgstr ""
+"التخزين المؤقت للبيانات يحسن الأداء ولكن قد يسبب مشاكل أثناء تتبع الأخطاء في "
+"الوحدات أو السمات أو الترجمات الجديدة، إذا خزنت بيانات قديمة. لتحديث كل "
+"البيانات المخزنة مؤقتا على موقعك، انقر الزر أدناه. <em>تحذير: المواقع كثيفة "
+"المرور ستعاني من بطء في الأداء أثناء إعادة بناء البيانات المخزنة.</em>"
+
+#: modules/system/system.admin.inc:1362
+msgid "Caches cleared."
+msgstr "مُسحت البيانات المخزنة."
+
+#: modules/system/system.admin.inc:1375
+msgid "File system path"
+msgstr "مسار نظام الملفات"
+
+#: modules/system/system.admin.inc:1378
+msgid ""
+"A file system path where the files will be stored. This directory must exist "
+"and be writable by Drupal. If the download method is set to public, this "
+"directory must be relative to the Drupal installation directory and be "
+"accessible over the web. If the download method is set to private, this "
+"directory should not be accessible over the web. Changing this location will "
+"modify all download paths and may cause unexpected problems on an existing "
+"site."
+msgstr ""
+"مسار في نظام الملفات حيث تحفظ الملفات. يجب أن يكون هذا الدليل موجودا، ويجب "
+"أن يتمكن دروبال من الكتابة فيه. في حال ضبط طريقة التنزيل على \"عام\"، فيجب "
+"أن تدخل مسار هذا الدليل بالنسبة إلى مسار تركيب دروبال، و يجب أن يسمح بالوصول "
+"إليه من وب. أما عند ضبط طريقة التنزيل على \"خاص\"، فلا يجب السماح بالوصول "
+"إلى الدليل من وب. تغيير موضع هذا الدليل بعد بدء استخدام الموقع قد يسبب مشاكل "
+"غير متوقعة."
+
+#: modules/system/system.admin.inc:1384
+msgid "Temporary directory"
+msgstr "الدليل المؤقت"
+
+#: modules/system/system.admin.inc:1387
+msgid "A file system path where uploaded files will be stored during previews."
+msgstr "مسار في نظام الملفات حيث تخزن الملفات المرفوعة أثناء معاينتها."
+
+#: modules/system/system.admin.inc:1393
+msgid "Download method"
+msgstr "طريقة التنزيل"
+
+#: modules/system/system.admin.inc:1395
+msgid "Public - files are available using HTTP directly."
+msgstr "عام - الملفات متاحة باستخدام إتش. تي.تي.بي مباشرة."
+
+#: modules/system/system.admin.inc:1395
+msgid "Private - files are transferred by Drupal."
+msgstr "خاص - ينقل دروبال الملفات."
+
+#: modules/system/system.admin.inc:1396
+msgid ""
+"Choose the <em>Public download</em> method unless you wish to enforce fine-"
+"grained access controls over file downloads. Changing the download method "
+"will modify all download paths and may cause unexpected problems on an "
+"existing site."
+msgstr ""
+"اختر طريقة <em>التنزيل العام</em> إلا إذا كنت تريد تحكما تفصيليا في تنزيل "
+"الملفات. تغيير طريقة التنزيل يغيّر كل مسارات التنزيل وقد يسبب مشاكل غير "
+"متوقعة إذا تغير بعد بدء استخدام الموقع."
+
+#: modules/system/system.admin.inc:1413
+msgid "Select an image processing toolkit"
+msgstr "اختر أداة التعامل مع الصور"
+
+#: modules/system/system.admin.inc:1437
+msgid "Number of items in each feed"
+msgstr "عدد العناصر في كل تلقيمة"
+
+#: modules/system/system.admin.inc:1440
+msgid "Default number of items to include in each feed."
+msgstr "العدد المبدئي للعناصر التي ستحتويها التلقيمة."
+
+#: modules/system/system.admin.inc:1444
+msgid "Feed content"
+msgstr "محتوى التلقيمات"
+
+#: modules/system/system.admin.inc:1446
+msgid "Titles only"
+msgstr "العناوين فقط"
+
+#: modules/system/system.admin.inc:1446
+msgid "Titles plus teaser"
+msgstr "العناوين بالإضافة للمقتطف"
+
+#: modules/system/system.admin.inc:1446
+msgid "Full text"
+msgstr "كامل المتن"
+
+#: modules/system/system.admin.inc:1447
+msgid "Global setting for the default display of content items in each feed."
+msgstr "الإعدادات العامة للعرض المبدئي لعناصر المحتوى في كل تلقيمة."
+
+#: modules/system/system.admin.inc:1490
+msgid "Custom format"
+msgstr "نسق خاص"
+
+#: modules/system/system.admin.inc:1494 modules/system/system.module:558
+msgid "Locale settings"
+msgstr "إعدادات المحلية"
+
+#: modules/system/system.admin.inc:1499
+msgid "Default time zone"
+msgstr "التوقيت المبدئي"
+
+#: modules/system/system.admin.inc:1502
+msgid "Select the default site time zone."
+msgstr "اختر النطاق الزمني المبدئي."
+
+#: modules/system/system.admin.inc:1507
+msgid "User-configurable time zones"
+msgstr "مناطق زمنية يمكن للمستخدم ضبطها"
+
+#: modules/system/system.admin.inc:1510
+msgid ""
+"When enabled, users can set their own time zone and dates will be displayed "
+"accordingly."
+msgstr ""
+"عند تفعيل هذا الخيار يستطيع المستخدمون تحديد منطقتهم الزمنية وستعرض التواريخ "
+"طبقا لها."
+
+#: modules/system/system.admin.inc:1515
+msgid "First day of week"
+msgstr "أول يوم في الأسبوع"
+
+#: modules/system/system.admin.inc:1518
+msgid "The first day of the week for calendar views."
+msgstr "أول أيام الأسبوع عرضا في التقويم."
+
+#: modules/system/system.admin.inc:1523
+msgid "Formatting"
+msgstr "التنسيق"
+
+#: modules/system/system.admin.inc:1531
+msgid "Short date format"
+msgstr "الصيغة القصيرة للتاريخ"
+
+#: modules/system/system.admin.inc:1535
+msgid "The short format of date display."
+msgstr "الصيغة القصيرة لعرض التاريخ."
+
+#: modules/system/system.admin.inc:1543
+msgid "Custom short date format"
+msgstr "الصيغة القصيرة الخاصة للتاريخ"
+
+#: modules/system/system.admin.inc:1546
+msgid ""
+"A user-defined short date format. See the <a href=\"@url\">PHP manual</a> "
+"for available options. This format is currently set to display as <span>%"
+"date</span>."
+msgstr ""
+"صيغة التاريخ القصيرة التي يحددها المستخدم. راجع <a href=\"@url\">كتيّب بي.إتش."
+"بي</a> لمعرفة الخيارات المتاحة. الصيغة الحالية تظهر <span>%date</span>."
+
+#: modules/system/system.admin.inc:1554
+msgid "Medium date format"
+msgstr "الصيغة المتوسطة للتاريخ"
+
+#: modules/system/system.admin.inc:1558
+msgid "The medium sized date display."
+msgstr "الصيغة المتوسطة لعرض التاريخ."
+
+#: modules/system/system.admin.inc:1566
+msgid "Custom medium date format"
+msgstr "الصيغة المتوسطة الخاصة للتاريخ"
+
+#: modules/system/system.admin.inc:1569
+msgid ""
+"A user-defined medium date format. See the <a href=\"@url\">PHP manual</a> "
+"for available options. This format is currently set to display as <span>%"
+"date</span>."
+msgstr ""
+"صيغة التاريخ المتوسطة التي يحددها المستخدم. راجع <a href=\"@url\">كتيّب بي."
+"إتش.بي</a> لمعرفة الخيارات المتاحة. الصيغة الحالية تظهر <span>%date</span>."
+
+#: modules/system/system.admin.inc:1577
+msgid "Long date format"
+msgstr "الصيغة الطويلة للتاريخ"
+
+#: modules/system/system.admin.inc:1581
+msgid "Longer date format used for detailed display."
+msgstr "صيغة أطول لعرض مفصل للتاريخ."
+
+#: modules/system/system.admin.inc:1589
+msgid "Custom long date format"
+msgstr "الصيغة الطويلة الخاصة للتاريخ"
+
+#: modules/system/system.admin.inc:1592
+msgid ""
+"A user-defined long date format. See the <a href=\"@url\">PHP manual</a> for "
+"available options. This format is currently set to display as <span>%date</"
+"span>."
+msgstr ""
+"صيغة التاريخ الطويلة التي يحددها المستخدم. راجع <a href=\"@url\">كتيّب بي.إتش."
+"بي</a> لمعرفة الخيارات المتاحة. الصيغة الحالية تظهر <span>%date</span>."
+
+#: modules/system/system.admin.inc:1636
+msgid "Site status"
+msgstr "حالة الموقع"
+
+#: modules/system/system.admin.inc:1638
+msgid "Online"
+msgstr "عالخط"
+
+#: modules/system/system.admin.inc:1638
+msgid "Off-line"
+msgstr "خارج الخط"
+
+#: modules/system/system.admin.inc:1639
+msgid ""
+"When set to \"Online\", all visitors will be able to browse your site "
+"normally. When set to \"Off-line\", only users with the \"administer site "
+"configuration\" permission will be able to access your site to perform "
+"maintenance; all other visitors will see the site off-line message "
+"configured below. Authorized users can log in during \"Off-line\" mode "
+"directly via the <a href=\"@user-login\">user login</a> page."
+msgstr ""
+"عند الوضع \"عالخط\" سيكون بمقدور كل الزوار تصفح الموقع بطريقة طبيعية. عند "
+"الوضع \"خارج الخط\" لن يتمكن من الوصول للموقع إلا المستخدمين أصحاب صلاحية "
+"\"إدارة إعدادات الموقع\"، و ذلك لعمل الصيانة اللازمة. بقية الزوار سيرون "
+"رسالة الموقع خارج الخط التي يمكن تهيئتها في الأسفل. باستطاعة الأشخاص المسموح "
+"لهم الولوج أثناء الوضع \"خارج الخط\" مباشرة في <a href=\"@user-login\">صفحة "
+"ولوج المستخدمين</a>."
+
+#: modules/system/system.admin.inc:1644
+msgid "Site off-line message"
+msgstr "رسالة وضع خارج الخط"
+
+#: modules/system/system.admin.inc:1646
+msgid "Message to show visitors when the site is in off-line mode."
+msgstr "الرسالة التي ستعرض للزوار عندما يكون الموقع خارج الخط."
+
+#: modules/system/system.admin.inc:1661 modules/system/system.module:457
+msgid "Clean URLs"
+msgstr "المسارات النظيفة"
+
+#: modules/system/system.admin.inc:1664
+msgid ""
+"This option makes Drupal emit \"clean\" URLs (i.e. without <code>?q=</code> "
+"in the URL)."
+msgstr ""
+"يجعل هذا الخيار دروبال يستخدم مسارات \"نظيفة\" (بدون <code>?q=</code> في "
+"المسار)."
+
+#: modules/system/system.admin.inc:1671
+msgid ""
+"Before enabling clean URLs, you must perform a test to determine if your "
+"server is properly configured. If you are able to see this page again after "
+"clicking the \"Run the clean URL test\" link, the test has succeeded and the "
+"radio buttons above will be available. If instead you are directed to a "
+"\"Page not found\" error, you will need to change the configuration of your "
+"server. The <a href=\"@handbook\">handbook page on Clean URLs</a> has "
+"additional troubleshooting information."
+msgstr ""
+"قبل تفعيل المسارات النظيفة، يتعين عليك تنفيذ اختبار لتحدد إن كان خادومك "
+"مضبوطا بشكل سليم. إذا استطعت أن ترى هذه الصفحة ثانية بعد النقر على رابط "
+"\"أجر اختبار المسارات النظيفة\"، فإن الاختبار نجح، و ستظهر أزرار الراديو "
+"أعلاه. أما إذا نُقلت إلى خطأ \"الصفحة غير موجودة\"، فستحتاج إلى ضبط خادومك. "
+"في <a href=\"@handbook\">صفحة المسارات النظيفة</a> المزيد من المعلومات عن "
+"تصحيح الخطأ."
+
+#: modules/system/system.admin.inc:1675
+msgid "<a href=\"@clean_url\">Run the clean url test</a>."
+msgstr "<a href=\"@clean_url\">شغل اختبار المسارات النظيفة</a>."
+
+#: modules/system/system.admin.inc:1678 modules/system/system.js:0
+msgid "Your server has been successfully tested to support this feature."
+msgstr "نجح اختبار دعم خادومك لهذه الخاصية."
+
+#: modules/system/system.admin.inc:1716
+msgid "Cron ran successfully."
+msgstr "تم تشغيل الدورية بنجاح."
+
+#: modules/system/system.admin.inc:1719
+msgid "Cron run failed."
+msgstr "فشلت الدورية."
+
+#: modules/system/system.admin.inc:1751
+msgid "Variable"
+msgstr "متغير"
+
+#: modules/system/system.admin.inc:1751
+msgid "Value"
+msgstr "القيمة"
+
+#: modules/system/system.admin.inc:1766
+msgid "Command counters"
+msgstr "عدادات الأوامر"
+
+#: modules/system/system.admin.inc:1768
+msgid "The number of <code>SELECT</code>-statements."
+msgstr "عدد بيانات <code>SELECT</code>."
+
+#: modules/system/system.admin.inc:1769
+msgid "The number of <code>INSERT</code>-statements."
+msgstr "عدد بيانات <code>INSERT</code>."
+
+#: modules/system/system.admin.inc:1770
+msgid "The number of <code>UPDATE</code>-statements."
+msgstr "عدد تعليمات <code>UPDATE</code>."
+
+#: modules/system/system.admin.inc:1771
+msgid "The number of <code>DELETE</code>-statements."
+msgstr "عدد تعليمات <code>DELETE</code>."
+
+#: modules/system/system.admin.inc:1772
+msgid "The number of table locks."
+msgstr "عدد أقفال الجدول."
+
+#: modules/system/system.admin.inc:1773
+msgid "The number of table unlocks."
+msgstr "عدد فك الأقفال في الجدول."
+
+#: modules/system/system.admin.inc:1776
+msgid "Query performance"
+msgstr "أداء الاستعلامات"
+
+#: modules/system/system.admin.inc:1778
+msgid "The number of joins without an index; should be zero."
+msgstr "عدد مرات الانضمام بلا فهرس. ينبغي أن يكون صفرا."
+
+#: modules/system/system.admin.inc:1779
+msgid ""
+"The number of joins without keys that check for key usage after each row; "
+"should be zero."
+msgstr ""
+"عدد مرات الانضمام بلا مفتاح التي تفحص استخدام المفتاح بع كل صف. ينبغي أن "
+"يكون صفرا."
+
+#: modules/system/system.admin.inc:1780
+msgid "The number of sorts done without using an index; should be zero."
+msgstr "عدد مرات الترتيب التي أجريب بدون استخدام الفهرس. ينبغي أن يكون صفرا."
+
+#: modules/system/system.admin.inc:1781
+msgid "The number of times a lock could be acquired immediately."
+msgstr "عدد المرات التي أمكن فيها القفل فوا."
+
+#: modules/system/system.admin.inc:1782
+msgid "The number of times the server had to wait for a lock."
+msgstr "عدد المرات التي اضطر فيها الخادوم انتظار حدوث القفل."
+
+#: modules/system/system.admin.inc:1785
+msgid "Query cache information"
+msgstr "معلومات التخزين المؤقت للاستعلامات"
+
+#: modules/system/system.admin.inc:1786
+msgid ""
+"The MySQL query cache can improve performance of your site by storing the "
+"result of queries. Then, if an identical query is received later, the MySQL "
+"server retrieves the result from the query cache rather than parsing and "
+"executing the statement again."
+msgstr ""
+"بإمكان التخزين المؤقت لاستعلامات ماي.إس.كيو.إل أن يحسن أداء موقعك بتحزين "
+"نتائج الاستعلامات. في هذه الحالة، إذا تلقى خادوم ماي.إس.كيو.إل استعلاما "
+"مطابقا في وقت لاحق فسيسترجع نتائج الاستعلام المخزنة بدلا من تنفيذ الطلب من "
+"جديد."
+
+#: modules/system/system.admin.inc:1788
+msgid "The number of queries in the query cache."
+msgstr "عدد الاستعلامات المخزنة مؤقتا."
+
+#: modules/system/system.admin.inc:1789
+msgid "The number of times MySQL found previous results in the cache."
+msgstr "عدد المرات التي وجد فيها ماي.إس.كيو.إل نتائج مخزنة مسبقا."
+
+#: modules/system/system.admin.inc:1790
+msgid "The number of times MySQL added a query to the cache (misses)."
+msgstr ""
+"عدد المرات التي أضاف فيها ماي.إس.كيو.إل استعلاما إلى التخزين المؤقت "
+"(الأخطاء)."
+
+#: modules/system/system.admin.inc:1791
+msgid ""
+"The number of times MySQL had to remove queries from the cache because it "
+"ran out of memory. Ideally should be zero."
+msgstr ""
+"عدد المرات التي اضطر فيها ماي.إس.كيو.إلى إلى حذف الاستعلامات من التخزين "
+"المؤقت بسبب امتلاء الذاكرة. الأمثل أن يكون صفرا."
+
+#: modules/system/system.admin.inc:1904
+msgid "Show descriptions"
+msgstr "اعرض الأوصاف"
+
+#: modules/system/system.admin.inc:1904
+msgid "Expand layout to include descriptions."
+msgstr "مدد النسق ليتضمن الأوصاف."
+
+#: modules/system/system.admin.inc:1907
+msgid "Hide descriptions"
+msgstr "أخف الأوصاف"
+
+#: modules/system/system.admin.inc:1907
+msgid "Compress layout by hiding descriptions."
+msgstr "اضغط النسق بإخفاء الأوصاف."
+
+#: modules/system/system.admin.inc:2023;2207
+msgid "Version"
+msgstr "النسخة"
+
+#: modules/system/system.admin.inc:2030
+msgid "Other"
+msgstr "آخر"
+
+#: modules/system/system.admin.inc:2045;2050;2175;2180
+msgid "incompatible"
+msgstr "غير متوافق"
+
+#: modules/system/system.admin.inc:2045;2175
+msgid "Incompatible with this version of Drupal core"
+msgstr "غير متوافق مع نسخة قلب دروبال"
+
+#: modules/system/system.admin.inc:2046;2176
+msgid ""
+"This version is incompatible with the !core_version version of Drupal core."
+msgstr "لا تتوافق هذه النسخة مع النسخة !core_version من قلب دروبال."
+
+#: modules/system/system.admin.inc:2050;2180
+msgid "Incompatible with this version of PHP"
+msgstr "غير متوافق مع نسخة بي.إتش.بي"
+
+#: modules/system/system.admin.inc:2055
+msgid ""
+"This module requires PHP version @php_required and is incompatible with PHP "
+"version !php_version."
+msgstr ""
+"تتطلب هذه الوحدة النسخة @php_required من بي.إتش.بي ولا تتوافق مع النسخة !"
+"php_version منها."
+
+#: modules/system/system.admin.inc:2123
+msgid "No modules are available to uninstall."
+msgstr "لا توجد وحدات يمكن إزالتها."
+
+#: modules/system/system.admin.inc:2149;2207
+msgid "Screenshot"
+msgstr "اللقطة"
+
+#: modules/system/system.admin.inc:2185
+msgid ""
+"This theme requires PHP version @php_required and is incompatible with PHP "
+"version !php_version."
+msgstr ""
+"تتطلب هذه السمة النسخة @php_required من بي.إتش.بي ولا تتوافق مع النسخة !"
+"php_version منها."
+
+#: modules/system/system.admin.inc:833
+msgid "You must enable the @dependencies module to install @module."
+msgid_plural "You must enable the @dependencies modules to install @module."
+msgstr[0] "ينبغي عليك أن تفعل وحدة واحدة كي تركب وحدة @module."
+msgstr[1] "لا ينبغي عليك أن تفعل أي وحدات كي تركب وحدة @module."
+msgstr[2] "ينبغي عليك أن تفعل وحدتين كي تركب وحدة @module."
+msgstr[3] "ينبغي عليك أن تفعل @dependencies وحدات كي تركب وحدة @module."
+msgstr[4] "ينبغي عليك أن تفعل @dependencies وحدة كي تركب وحدة @module."
+msgstr[5] "ينبغي عليك أن تفعل @dependencies وحدة كي تركب وحدة @module."
+
+#: modules/system/system.module:52
+msgid ""
+"The system module is at the foundation of your Drupal website, and provides "
+"basic but extensible functionality for use by other modules and themes. Some "
+"integral elements of Drupal are contained in and managed by the system "
+"module, including caching, enabling or disabling of modules and themes, "
+"preparing and displaying the administrative page, and configuring "
+"fundamental site settings. A number of key system maintenance operations are "
+"also part of the system module."
+msgstr ""
+"وحدة النظام هي أساسات موقع دروبال وتوفر وظائف أساسية -لكن قابلة للتمديد- "
+"لتستخدمها الوحدات والسمات الأخرى. بعض من مكونات دروبال الأساسية موجودة في "
+"وحدة النظام، شاملة التخزين المؤقت، وتفعيل/تعطيل الوحدات والسمات، وإعداد وعرض "
+"صفحة الإدارة، وضبط إعدادات الموقع الأساسية. أيضا بعض من عمليات إدارة النظام "
+"الأساسية جزء من وحدة النظام."
+
+#: modules/system/system.module:53
+msgid "The system module provides:"
+msgstr "توفر وحدة النظام:"
+
+#: modules/system/system.module:54
+msgid ""
+"support for enabling and disabling <a href=\"@modules\">modules</a>. Drupal "
+"comes packaged with a number of core modules; each module provides a "
+"discrete set of features and may be enabled depending on the needs of your "
+"site. A wide array of additional modules contributed by members of the "
+"Drupal community are available for download at the <a href=\"@drupal-modules"
+"\">Drupal.org module page</a>."
+msgstr ""
+"دعم تفعيل وتعطيل <a href=\"@modules\">الوحدات</a>. يأتي دروبال مع عدد من "
+"وحدات القلب؛ كل وحدة توفر جملة من الخصائص المستقلة ويمكن تفعيلها حسب "
+"احتياجات موقعك. كما يساهم مجتمع دروبال بطيف واسع من الوحدات الإضافية التي "
+"تتوفر للتنزيل من <a href=\"@drupal-modules\">صفحة الوحدات في Drupal.org</a>."
+
+#: modules/system/system.module:55
+msgid ""
+"support for enabling and disabling <a href=\"@themes\">themes</a>, which "
+"determine the design and presentation of your site. Drupal comes packaged "
+"with several core themes and additional contributed themes are available at "
+"the <a href=\"@drupal-themes\">Drupal.org theme page</a>."
+msgstr ""
+"دعم تفعيل وتعطيل <a href=\"@themes\">السمات</a> التي تحدد تصميم وطلّة موقعك. "
+"يأتي دروبال مع العديد من سمات القلب كما تتوفر سمات إضافية من <a href="
+"\"@drupal-themes\">صفحة السمات في Drupal.org</a>."
+
+#: modules/system/system.module:56
+msgid ""
+"a robust <a href=\"@cache-settings\">caching system</a> that allows the "
+"efficient re-use of previously-constructed web pages and web page "
+"components. Drupal stores the pages requested by anonymous users in a "
+"compressed format; depending on your site configuration and the amount of "
+"your web traffic tied to anonymous visitors, Drupal's caching system may "
+"significantly increase the speed of your site."
+msgstr ""
+"نظام <a href=\"@cache-settings\">تخزين مؤقت</a> قوي يتيح إعادة استخدام فعالة "
+"للصفحات السابق تكوينها ومكونات صفحات الوب. يخزن دروبال الصفحات التي يطلبها "
+"المستخدمين المجهولين بنسق مضغوط. على حسب إعدادات موقعك وكمية مرور الوب الذي "
+"يستخدمه المستخدمون المجهولون لموقعك، فقد يرفع نظام التخزين المؤقت في دروبال "
+"السرعة بشكل ملحوظ."
+
+#: modules/system/system.module:57
+msgid ""
+"a set of routine administrative operations that rely on a correctly-"
+"configured <a href=\"@cron\">cron maintenance task</a> to run automatically. "
+"A number of other modules, including the feed aggregator, ping module and "
+"search also rely on <a href=\"@cron\">cron maintenance tasks</a>. For more "
+"information, see the online handbook entry for <a href=\"@handbook"
+"\">configuring cron jobs</a>."
+msgstr ""
+"مجموعة من العمليات الإدارية التي تعتمد على <a href=\"@cron\">مهمة دورية</a> "
+"معدة بشكل سليم لتعمل آليا. عدد من الوحدات الأخرى -شاملة مجمّع الأخبار ووحدة "
+"الإشارات والبحث- تعتمد على <a href=\"@cron\">مهمة الدورية</a>. لمزيد من "
+"المعلومات، راجع قسم <a href=\"@handbook\">ضبط مهام الدورية</a> في دليل "
+"الاستخدام."
+
+#: modules/system/system.module:58
+msgid ""
+"basic configuration options for your site, including <a href=\"@date-settings"
+"\">date and time settings</a>, <a href=\"@file-system\">file system "
+"settings</a>, <a href=\"@clean-url\">clean URL support</a>, <a href=\"@site-"
+"info\">site name and other information</a>, and a <a href=\"@site-maintenance"
+"\">site maintenance</a> function for taking your site temporarily off-line."
+msgstr ""
+"خيارات الضبط الأساسية لموقعك، شاملة <a href=\"@date-settings\">إعدادات الوقت "
+"والتاريخ</a>، و<a href=\"@file-system\">إعدادات نظام الملفات</a>، و<a href="
+"\"@clean-url\">دعم المسارات النظيفة</a>، و<a href=\"@site-info\">اسم الموقع "
+"والمعلومات الأخرى</a>، وخاصية <a href=\"@site-maintenance\">صيانة الموقع</a> "
+"لرفع موقعك مؤقتا من على الشبكة."
+
+#: modules/system/system.module:59
+msgid ""
+"For more information, see the online handbook entry for <a href=\"@system"
+"\">System module</a>."
+msgstr ""
+"لمزيد من المعلومات، من فضلك طالع <a href=\"@system\">وحدة النظام</a> في دليل "
+"الاستخدام."
+
+#: modules/system/system.module:62
+msgid ""
+"Welcome to the administration section. Here you may control how your site "
+"functions."
+msgstr "مرحبا بك في قسم الإدارة. بإمكانك هنا التحكم في وظائف موقعك."
+
+#: modules/system/system.module:64
+msgid "This page shows you all available administration tasks for each module."
+msgstr "تظهر لك هذه الصفحة كل المهام الإدارية الممكنة لكل وحدة."
+
+#: modules/system/system.module:66
+msgid ""
+"Select which themes are available to your users and specify the default "
+"theme. To configure site-wide display settings, click the \"configure\" task "
+"above. Alternatively, to override these settings in a specific theme, click "
+"the \"configure\" link for that theme. Note that different themes may have "
+"different regions available for displaying content; for consistency in "
+"presentation, you may wish to enable only one theme."
+msgstr ""
+"اختر السمات المتوفرة لمستخدميك و حدد السمة المبدئية. لضبط إعدادات العرض على "
+"مستوى الموقع، انقر على \"اضبط\" أعلاه. أو لتجاوز تلك الإعدادات لسمة معينة، "
+"انقر على رابط \"اضبط\" المقابل لتلك السمة. لاحظ أن السمات المختلفة قد تعرض "
+"المحتوى (كالصناديق مثلا) في مواضع مختلفة. إذا كنت ترغب في المحافظة على ثبات "
+"ما يشاهده المستخدمون، فربما عليك أن تفعل سمة واحدة فقط."
+
+#: modules/system/system.module:67
+msgid ""
+"To change the appearance of your site, a number of <a href=\"@themes"
+"\">contributed themes</a> are available."
+msgstr ""
+"لتغيير مظهر موقعك، يتوفر عدد من <a href=\"@themes\">السمات الإضافية</a>."
+
+#: modules/system/system.module:72
+msgid ""
+"These options control the display settings for the <code>%template</code> "
+"theme. When your site is displayed using this theme, these settings will be "
+"used. By clicking \"Reset to defaults,\" you can choose to use the <a href="
+"\"@global\">global settings</a> for this theme."
+msgstr ""
+"تتحكم هذه الخيارات في عرض سمة <code>%template</code>. تستخدم هذه الإعدادات "
+"عندما يعرض موقعك هذه السمة. يمكنك استخدام <a href=\"@global\">الإعدادات "
+"العامة</a> بالنقر على \"أعد الضبط\"."
+
+#: modules/system/system.module:74
+msgid ""
+"These options control the default display settings for your entire site, "
+"across all themes. Unless they have been overridden by a specific theme, "
+"these settings will be used."
+msgstr ""
+"تتحكم هذه الخيارات في العرض المبدئي للموقع بأكمله بغض النظر عن السمة "
+"المستخدمة. تستخدم هذه الإعدادات طالما لم يتم تجاوزها في سمة بعينها."
+
+#: modules/system/system.module:76
+msgid ""
+"Modules are plugins that extend Drupal's core functionality. Enable modules "
+"by selecting the <em>Enabled</em> checkboxes below and clicking the <em>Save "
+"configuration</em> button. Once a module is enabled, new <a href="
+"\"@permissions\">permissions</a> may be available. To reduce server load, "
+"modules with their <em>Throttle</em> checkbox selected are temporarily "
+"disabled when your site becomes extremely busy. (Note that the <em>Throttle</"
+"em> checkbox is only available if the Throttle module is enabled.)"
+msgstr ""
+"الوحدات هي ملحقات تمدد وظائف قلب دروبال. فعّل الوحدات بالتأشير <em>مفعّل</em> "
+"أدناه ثم نقر زر <em>احفظ الإعدادات</em>. بعد تفعيل الوحدة، قد تتوفر <a href="
+"\"@permissions\">صلاحيات</a> جديدة. لتقليل الحمل على الخادوم ستعطّل مؤقتا "
+"الوحدات المؤشر على <em>الصمام</em> أمامها عندما يزيد الضغط على موقعك. (لاحظ "
+"أن مربع اختيار <em>الصمام</em> لا يتوفر إلا بعد تفعيل وحدة الصمام.)"
+
+#: modules/system/system.module:78
+msgid ""
+"The auto-throttle functionality must be enabled on the <a href=\"@throttle"
+"\">throttle configuration page</a> after having enabled the throttle module."
+msgstr ""
+"يجب تفعيل خاصية الصمام الآلي من <a href=\"@throttle\">ضبط الصمام</a> بعد "
+"تفعيل وحدة الصمام."
+
+#: modules/system/system.module:81
+msgid ""
+"It is important that <a href=\"@update-php\">update.php</a> is run every "
+"time a module is updated to a newer version."
+msgstr ""
+"من المهم تشغيل <a href=\"@update-php\">update.php</a> بعد كل تحديث لوحدة إلى "
+"نسخة جديدة."
+
+#: modules/system/system.module:82
+msgid ""
+"You can find all administration tasks belonging to a particular module on "
+"the <a href=\"@by-module\">administration by module page</a>."
+msgstr ""
+"تستطيع الوصول إلى كل المهام الإدارية المرتبطة بوحدة ما في <a href=\"@by-"
+"module\">صفحة الإدارة حسب الوحدة</a>."
+
+#: modules/system/system.module:83
+msgid ""
+"To extend the functionality of your site, a number of <a href=\"@modules"
+"\">contributed modules</a> are available."
+msgstr ""
+"لتمديد وظائف موقعك، يتوفر عدد من <a href=\"@modules\">الوحدات الإضافية</a>."
+
+#: modules/system/system.module:86
+msgid ""
+"The uninstall process removes all data related to a module. To uninstall a "
+"module, you must first disable it. Not all modules support this feature."
+msgstr ""
+"تحذف عملية الإزالة كل البيانات المتعلقة بالوحدة المزالة. كي تزيل وحدة "
+"ما، عليك أن تعطلها أولا. لا تدعم كل الوحدات إمكانية الإزالة."
+
+#: modules/system/system.module:89
+msgid ""
+"The <em>Powered by Drupal</em> block is an optional link to the home page of "
+"the Drupal project. While there is absolutely no requirement that sites "
+"feature this link, it may be used to show support for Drupal."
+msgstr ""
+"يوفر صندوق <em>يستخدم دروبال</em> وصلة اختيارية إلى صفحة مشروع دروبال. مع أن "
+"إضافة وصلة كهذه ليس مطلبا على الإطلاق، إلا أنه يمكن استخدامه لإظهار الدعم "
+"لمشروع دروبال."
+
+#: modules/system/system.module:94
+msgid ""
+"Actions are individual tasks that the system can do, such as unpublishing a "
+"piece of content or banning a user. Modules, such as the trigger module, can "
+"fire these actions when certain system events happen; for example, when a "
+"new post is added or when a user logs in. Modules may also provide "
+"additional actions."
+msgstr ""
+"الإجراءات هي المهام المفردة التي يستطيع النظام تأديتها، مثل رفع محتوى منشور "
+"أو منع أحد المستخدمين. تستطيع الوحدات -مثل وحدة المُطْلق- إطلاق هذه الإجراءات "
+"عند حدوث أحد أحداث النظام، مثلا: عند إضافة موضوع جديد أو عند ولوج مستخدم. "
+"كما تستطيع الوحدات توفير إجراءات إضافية."
+
+#: modules/system/system.module:95
+msgid ""
+"There are two types of actions: simple and advanced. Simple actions do not "
+"require any additional configuration, and are listed here automatically. "
+"Advanced actions can do more than simple actions; for example, send an e-"
+"mail to a specified address, or check for certain words within a piece of "
+"content. These actions need to be created and configured first before they "
+"may be used. To create an advanced action, select the action from the drop-"
+"down below and click the <em>Create</em> button."
+msgstr ""
+"الإجراءات نوعان: بسيطة ومتقدمة. الإجراءات البسيطة لا تتطلب أي إعدادات إضافية "
+"وتظهر هنا تلقائيا. الإجراءات المتقدمة تستطيع أكثر مما تستطيعه الإجراءات "
+"البسيطة، مثل إرسال رسالة إلى بريد إلكتروني معيّن، أو التماس وجود كلمات معينة "
+"في محتوى ما. يتعين إنشاء هذه الإجراءات وضبطها قبل استخدامها. لإنشاء إجراء "
+"متقدم اختره من القائمة المنسدلة أدناه ثم انقر زر <em>أنشئ</em>."
+
+#: modules/system/system.module:97
+msgid ""
+"You may proceed to the <a href=\"@url\">Triggers</a> page to assign these "
+"actions to system events."
+msgstr ""
+"ربما تريد الذهاب إلى صفحة <a href=\"@url\">المُطلقات</a> لربط هذه الإجراءات "
+"بأحداث النظام."
+
+#: modules/system/system.module:101
+msgid ""
+"An advanced action offers additional configuration options which may be "
+"filled out below. Changing the <em>Description</em> field is recommended, in "
+"order to better identify the precise action taking place. This description "
+"will be displayed in modules such as the trigger module when assigning "
+"actions to system events, so it is best if it is as descriptive as possible "
+"(for example, \"Send e-mail to Moderation Team\" rather than simply \"Send e-"
+"mail\")."
+msgstr ""
+"يوفر الإجراء المتقدم خيارات ضبط إضافية يمكن ملؤها أدناه. يُنصح بتغيير خانة "
+"<em>الوصف</em> ليسها التعرف على الإجراء بدقة. سيظهر هذا الوصف في الوحدات مثل "
+"وحدة المُطلِق عند ربط الإجراءات بأحداث النظام، لذا يُستحسن أن يكون واضحا قدر "
+"الإمكان (مثلا، \"أرسل بريدا إلى فريق الإشراف\" بدلا من مجرد \"أرسل بريدا\")."
+
+#: modules/system/system.module:103
+msgid ""
+"Here you can find a short overview of your site's parameters as well as any "
+"problems detected with your installation. It may be useful to copy and paste "
+"this information into support requests filed on drupal.org's support forums "
+"and project issue queues."
+msgstr ""
+"تجد هنا عرضا عاما لمؤشرات موقعك بالإضافة إلى أي مشاكل في نسختك المركبة من "
+"دروبال. من المفيد أن تقص/تلصق هذه المعلومات في طلبات الدعم التي تملؤها في "
+"منتديات دعم drupal.org وغيرها."
+
+#: modules/system/system.module:552
+msgid "Selecting a different theme will change the look and feel of the site."
+msgstr "اختيار سمة مختلفة سيغير من شكل الموقع."
+
+#: modules/system/system.module:564
+msgid "Time zone"
+msgstr "النطاق الزمني"
+
+#: modules/system/system.module:567
+msgid ""
+"Select your current local time. Dates and times throughout this site will be "
+"displayed using this time zone."
+msgstr ""
+"حدد النطاق الزمني. تعرض التواريخ و التوقيتات في الموقع كله باستخدام هذا "
+"النطاق الزمني."
+
+#: modules/system/system.module:584
+msgid "Powered by Drupal"
+msgstr "يستخدم دروبال"
+
+#: modules/system/system.module:594
+msgid "Badge color"
+msgstr "لون الشارة"
+
+#: modules/system/system.module:596
+msgid "Black"
+msgstr "أسود"
+
+#: modules/system/system.module:596
+msgid "Blue"
+msgstr "أزرق"
+
+#: modules/system/system.module:596
+msgid "Gray"
+msgstr "رمادي"
+
+#: modules/system/system.module:600
+msgid "Badge size"
+msgstr "حجم الشارة"
+
+#: modules/system/system.module:602
+msgid "Small"
+msgstr "صغير"
+
+#: modules/system/system.module:602
+msgid "Large"
+msgstr "كبير"
+
+#: modules/system/system.module:692
+msgid "Theme configuration"
+msgstr "ضبط السمة"
+
+#: modules/system/system.module:715
+msgid "(site default theme)"
+msgstr "(سمة الموقع المبدئية)"
+
+#: modules/system/system.module:1028
+msgid "The settings have not been saved because of the errors."
+msgstr "لم يتم حفظ الإعدادات بسبب الأخطاء."
+
+#: modules/system/system.module:1199
+msgid "Configure permissions"
+msgstr "اضبط الصلاحيات"
+
+#: modules/system/system.module:1253
+msgid "When cron runs"
+msgstr "عند تشغيل الدورية"
+
+#: modules/system/system.module:1267
+msgid "Display a message to the user"
+msgstr "اعرض رسالة للمستخدم"
+
+#: modules/system/system.module:1288
+msgid "Redirect to URL"
+msgstr "وجّه إلى مسار"
+
+#: modules/system/system.module:1308
+msgid "Choose an advanced action"
+msgstr "اختر إجراء متقدما"
+
+#: modules/system/system.module:1323
+msgid "Action type"
+msgstr "نوع الإجراء"
+
+#: modules/system/system.module:1343
+msgid "Actions available to Drupal:"
+msgstr "الإجراءات المتاحة في دروبال:"
+
+#: modules/system/system.module:1369
+msgid "Make a new advanced action available"
+msgstr "أضف إجراء متقدما جديدا"
+
+#: modules/system/system.module:1381
+msgid "Create"
+msgstr "أنشئ"
+
+#: modules/system/system.module:1448
+msgid ""
+"A unique description for this advanced action. This description will be "
+"displayed in the interface of modules that integrate with actions, such as "
+"Trigger module."
+msgstr ""
+"وصف فريد لهذا الإجراء المتقدم. سيظهر هذا الوصف في واجهات الوحدات التي تتعامل "
+"مع الإجراءات، مثل وحدة المُطلِق."
+
+#: modules/system/system.module:1504
+msgid "The action has been successfully saved."
+msgstr "حُفِظ المقطع بنجاح."
+
+#: modules/system/system.module:1522
+msgid "Are you sure you want to delete the action %action?"
+msgstr "أمتأكد أنك ترغب في حذف الإجراء %action؟"
+
+#: modules/system/system.module:1524
+msgid "This cannot be undone."
+msgstr "لا يمكن التراجع عن هذا."
+
+#: modules/system/system.module:1540
+msgid "Action %action was deleted"
+msgstr "حُذف الإجراء %action"
+
+#: modules/system/system.module:1552
+msgid "Deleted orphaned action (%action)."
+msgstr "حذف إجراء يتيم (%action)."
+
+#: modules/system/system.module:1588
+msgid "Recipient"
+msgstr "المتسلم"
+
+#: modules/system/system.module:1591
+msgid ""
+"The email address to which the message should be sent OR enter %author if "
+"you would like to send an e-mail to the author of the original post."
+msgstr ""
+"عنوان البريد الإلكتروني الذي ستُرسل إليه الرسالة، أو أدخل %author إذا كنت "
+"تريد إرسالها إلى مؤلف الموضوع الأصلي."
+
+#: modules/system/system.module:1598
+msgid "The subject of the message."
+msgstr "موضوع الرسالة."
+
+#: modules/system/system.module:1606
+msgid ""
+"The message that should be sent. You may include the following variables: %"
+"site_name, %username, %node_url, %node_type, %title, %teaser, %body. Not all "
+"variables will be available in all contexts."
+msgstr ""
+"الرسالة التي ستُرسل. يمكنك أن تستخدم المتغيرات التالية: %site_name و %"
+"username و %node_url و %node_type و %title و %teaser و %body. لكن لاحظ أن "
+"بعض المتغيرات لا تتوفر في كل السياقات."
+
+#: modules/system/system.module:1619
+msgid "Please enter a valid email address or %author."
+msgstr "من فضلك أدخل بريدا إلكترونيا سليما أو %author."
+
+#: modules/system/system.module:1752
+msgid ""
+"The message to be displayed to the current user. You may include the "
+"following variables: %site_name, %username, %node_url, %node_type, %title, %"
+"teaser, %body. Not all variables will be available in all contexts."
+msgstr ""
+"الرسالة التي ستُعرض للمستخدم الحالي. يمكنك أن تستخدم المتغيرات التالية: %"
+"site_name و %username و %node_url و %node_type و %title و %teaser و %body. "
+"لكن لاحظ أن بعض المتغيرات لا تتوفر في كل السياقات."
+
+#: modules/system/system.module:1825
+msgid ""
+"The URL to which the user should be redirected. This can be an internal URL "
+"like node/1234 or an external URL like http://drupal.org."
+msgstr ""
+"المسار الذي سيُوجّه إليه المستخدم. يمكن أن يكون مسارا داخليا مثل node/1234 أو "
+"مسارا خارجيا مثل http://drupal.org."
+
+#: modules/system/system.module:1882;1882
+msgid "Powered by Drupal, an open source content management system"
+msgstr "يستخدم دروبال، نظام إدارة محتوى مفتوح المصدر"
+
+#: modules/system/system.module:1232
+msgid "Could not delete temporary file \"%path\" during garbage collection"
+msgstr "تعذّر حذف الملف المؤقت \"%path\" أثناء جمع القمامة"
+
+#: modules/system/system.module:1539
+msgid "Deleted action %aid (%action)"
+msgstr "إجراء محذوف %aid‏ (%action)"
+
+#: modules/system/system.module:1666
+msgid "Cannot use %author token in this context."
+msgstr "لا يمكن استخدام %author في هذا السياق."
+
+#: modules/system/system.module:1697
+msgid "Sent email to %recipient"
+msgstr "أُرسل البريد إلى %recipient"
+
+#: modules/system/system.module:1700
+msgid "Unable to send email to %recipient"
+msgstr "تعذّر إرسال البريد إلى %recipient"
+
+#: modules/system/system.module:158
+msgid "administer site configuration"
+msgstr "يدير إعدادات الموقع"
+
+#: modules/system/system.module:158
+msgid "access administration pages"
+msgstr "يصل إلى صفحات الإدارة"
+
+#: modules/system/system.module:158
+msgid "administer actions"
+msgstr "يدير الإجراءات"
+
+#: modules/system/system.module:158
+msgid "access site reports"
+msgstr "يصل إلى تقارير الموقع"
+
+#: modules/system/system.module:158
+msgid "select different theme"
+msgstr "يختار سمة أخرى"
+
+#: modules/system/system.module:158
+msgid "administer files"
+msgstr "يدير الملفات"
+
+#: modules/system/system.module:200
+msgid "File download"
+msgstr "تنزيل الملف"
+
+#: modules/system/system.module:206
+msgid "Administer"
+msgstr "أدر"
+
+#: modules/system/system.module:213
+msgid "Compact mode"
+msgstr "الوضع المصغر"
+
+#: modules/system/system.module:220
+msgid "By task"
+msgstr "حسب المهمة"
+
+#: modules/system/system.module:227
+msgid "By module"
+msgstr "حسب الوحدة"
+
+#: modules/system/system.module:235
+msgid "Content management"
+msgstr "إدارة المحتوى"
+
+#: modules/system/system.module:236
+msgid "Manage your site's content."
+msgstr "أدر محتوى موقعك."
+
+#: modules/system/system.module:246
+msgid "Site configuration"
+msgstr "ضبط الموقع"
+
+#: modules/system/system.module:247
+msgid "Adjust basic site configuration options."
+msgstr "اضبط الخيارات الأساسية لضبط الموقع."
+
+#: modules/system/system.module:255
+msgid "Site building"
+msgstr "بناء الموقع"
+
+#: modules/system/system.module:256
+msgid "Control how your site looks and feels."
+msgstr "تحكم في شكل موقعك."
+
+#: modules/system/system.module:265
+msgid "Settings for how your administrative pages should look."
+msgstr "إعدادات تضبط شكل صفحات الإدارة."
+
+#: modules/system/system.module:276
+msgid "Change which theme your site uses or allows users to set."
+msgstr "حدد السمات التي يمكن لمستخدمي الموقع اختيارها."
+
+#: modules/system/system.module:284
+msgid "Select the default theme."
+msgstr "اختر السمة المبدئية."
+
+#: modules/system/system.module:296
+msgid "Global settings"
+msgstr "إعدادات عامة"
+
+#: modules/system/system.module:314
+msgid "Enable or disable add-on modules for your site."
+msgstr "فَعِّل أو عَطِّل الوحدات على موقعك."
+
+#: modules/system/system.module:343
+msgid "Actions"
+msgstr "الإجراءات"
+
+#: modules/system/system.module:344;350
+msgid "Manage the actions defined for your site."
+msgstr "أدِر الإجراءات المعرّفة على موقعك."
+
+#: modules/system/system.module:349
+msgid "Manage actions"
+msgstr "أدر الإجراءات"
+
+#: modules/system/system.module:356
+msgid "Configure an advanced action"
+msgstr "اضبط إجراء متقدما"
+
+#: modules/system/system.module:363
+msgid "Delete action"
+msgstr "احذف الإجراء"
+
+#: modules/system/system.module:364
+msgid "Delete an action."
+msgstr "احذف إجراء."
+
+#: modules/system/system.module:371
+msgid "Remove orphans"
+msgstr "احذف الأيتام"
+
+#: modules/system/system.module:379
+msgid "Site information"
+msgstr "معلومات الموقع"
+
+#: modules/system/system.module:380
+msgid ""
+"Change basic site information, such as the site name, slogan, e-mail "
+"address, mission, front page and more."
+msgstr ""
+"حدد معلومات الموقع الأساسية، كاسمه و شعاره، و عنوان بريده الإلكتروني، و "
+"مهمته، و صفحته الأولى، و أشياء أخرى."
+
+#: modules/system/system.module:388
+msgid ""
+"Control how Drupal deals with errors including 403/404 errors as well as PHP "
+"error reporting."
+msgstr ""
+"تحكم في كيفية تعامل دروبال مع الأخطاء، بما فيها أخطاء 403/404، بالإضافة إلى "
+"التقرير عن أخطاء بي.إتش.بي."
+
+#: modules/system/system.module:395
+msgid "Logging and alerts"
+msgstr "التسجيل والإنذارات"
+
+#: modules/system/system.module:396
+msgid ""
+"Settings for logging and alerts modules. Various modules can route Drupal's "
+"system events to different destination, such as syslog, database, email, ..."
+"etc."
+msgstr ""
+"إعدادات سجلات وإنذارات الوحدات. تستطيع الوحدات المختلفة توجيه أحداث نظام "
+"دروبال إلى وجهات مختلفة، مثل سجل النظام أو قاعدة البيانات أو البريد "
+"الإلكتروني إلخ."
+
+#: modules/system/system.module:402
+msgid "Performance"
+msgstr "الأداء"
+
+#: modules/system/system.module:403
+msgid ""
+"Enable or disable page caching for anonymous users and set CSS and JS "
+"bandwidth optimization options."
+msgstr ""
+"فَعِّل أو عَطِّل التخزين المؤقت للصفحات للمستخدمين المجهولين، و اضبط خيارات أمثَلة "
+"سي.إس.إس وجافا سكربت."
+
+#: (duplicate) modules/system/system.module:410
+#: modules/system/system.install:184
+msgid "File system"
+msgstr "نظام الملفات"
+
+#: modules/system/system.module:411
+msgid "Tell Drupal where to store uploaded files and how they are accessed."
+msgstr "أخبر دروبال عن مكان تخزين الملفات المرفوعة، و عن كيفية الوصول إليها."
+
+#: modules/system/system.module:418
+msgid "Image toolkit"
+msgstr "عدة الصور"
+
+#: modules/system/system.module:419
+msgid ""
+"Choose which image toolkit to use if you have installed optional toolkits."
+msgstr "اختر عدة الصور التي ترغب في استخدامها، إذا كنت قد ركبت عددا اختيارية."
+
+#: modules/system/system.module:426
+msgid "RSS publishing"
+msgstr "التلقيم"
+
+#: modules/system/system.module:427
+msgid ""
+"Configure the number of items per feed and whether feeds should be titles/"
+"teasers/full-text."
+msgstr ""
+"اضبط عدد العناصر في التلقيمة، و التلقيمات التي تحتوى على عناوين أو مقتطفات "
+"أو النصوص الكاملة."
+
+#: modules/system/system.module:434
+msgid "Date and time"
+msgstr "التاريخ والتوقيت"
+
+#: modules/system/system.module:435
+msgid ""
+"Settings for how Drupal displays date and time, as well as the system's "
+"default timezone."
+msgstr ""
+"إعدادات عرض دروبال للتاريخ و التوقيت، بالإضافة إلى النطاق الزمني المبدئي "
+"للنظام."
+
+#: modules/system/system.module:442
+msgid "Date and time lookup"
+msgstr "عرض التاريخ والتوقيت"
+
+#: modules/system/system.module:449
+msgid "Site maintenance"
+msgstr "صيانة الموقع"
+
+#: modules/system/system.module:450
+msgid "Take the site off-line for maintenance or bring it back online."
+msgstr "ارفع الموقع خارج الخط للصيانة، أو أعده للخدمة عالخط."
+
+#: modules/system/system.module:458
+msgid "Enable or disable clean URLs for your site."
+msgstr "فَعِّل أو عَطِّل المسارات النظيفة في موقعك."
+
+#: modules/system/system.module:465
+msgid "Clean URL check"
+msgstr "فحص المسارات النظيفة"
+
+#: modules/system/system.module:474
+msgid "Reports"
+msgstr "التقارير"
+
+#: modules/system/system.module:475
+msgid "View reports from system logs and other status information."
+msgstr "اعرض تقارير سجلات النظام و معلومات الحالة الأخرى."
+
+#: modules/system/system.module:483
+msgid "Status report"
+msgstr "تقرير الحالة"
+
+#: modules/system/system.module:484
+msgid ""
+"Get a status report about your site's operation and any detected problems."
+msgstr "احصل على تقرير حالة عن عمليات موقعك، و عن أي مشكلات تم تشخيصها."
+
+#: modules/system/system.module:491
+msgid "Run cron"
+msgstr "شَغِّل دورية"
+
+#: (duplicate) modules/system/system.module:498
+#: modules/system/system.install:36
+msgid "PHP"
+msgstr "بي.إتش.بي"
+
+#: modules/system/system.module:505
+msgid "SQL"
+msgstr "إس.كيو.إل"
+
+#: modules/system/system.module:0
+msgid "Footer"
+msgstr "التذييل"
+
+#: modules/system/system.install:67
+msgid "-1 (Unlimited)"
+msgstr "-1 (غير محدود)"
+
+#: modules/system/system.install:497
+msgid ""
+"Stores details about batches (processes that run in multiple HTTP requests)."
+msgstr "يسجل تفاصيل الدفعات (العمليات التي تشتغل في عدة طلبات إتش.تي.تي.بي)."
+
+#: (duplicate) modules/system/system.install:20
+msgid "Drupal"
+msgstr "دروبال"
+
+#: (duplicate) modules/system/system.install:30
+msgid "Web server"
+msgstr "خادوم وب"
+
+#: (duplicate) modules/system/system.install:40
+msgid ""
+"Your PHP installation is too old. Drupal requires at least PHP %version."
+msgstr ""
+"نسخة بي.إتش.بي قديمة جدا. يتطلب دروبال على الأقل نسخة بي.إتش.بي %version."
+
+#: (duplicate) modules/system/system.install:46
+msgid "PHP register globals"
+msgstr "PHP register globals"
+
+#: (duplicate) modules/system/system.install:55
+msgid ""
+"<em>register_globals</em> is enabled. Drupal requires this configuration "
+"directive to be disabled. Your site may not be secure when "
+"<em>register_globals</em> is enabled. The PHP manual has instructions for <a "
+"href=\"http://php.net/configuration.changes\">how to change configuration "
+"settings</a>."
+msgstr ""
+"‏<em>register_globals</em> مُفعّل. يتطلب دروبال تعطيل خيار التضبيط هذا. قد لا "
+"يكون موقعك آمنا عند تفعيل <em>register_globals</em>. يحتوي كتيّب بي.إتش.بي "
+"على <a href=\"http://php.net/configuration.changes\">تعليمات لتعطيل هذا "
+"التضبيط.</a>."
+
+#: (duplicate) modules/system/system.install:57
+msgid "Enabled ('@value')"
+msgstr "مُفعّل ('@value')"
+
+#: (duplicate) modules/system/system.install:66
+msgid "PHP memory limit"
+msgstr "حد ذاكرة بي اتش بي"
+
+#: (duplicate) modules/system/system.install:73
+msgid ""
+"Consider increasing your PHP memory limit to %memory_minimum_limit to help "
+"prevent errors in the installation process."
+msgstr ""
+"قد ترغب في زيادة حد ذاكرة بي.إتش.بي إلى %memory_minimum_limit لتفادي الأخطاء "
+"أثناء التركيب."
+
+#: (duplicate) modules/system/system.install:76
+msgid ""
+"Consider increasing your PHP memory limit to %memory_minimum_limit to help "
+"prevent errors in the update process."
+msgstr ""
+"قد ترغب في زيادة حد ذاكرة بي.إتش.بي إلى %memory_minimum_limit لتفادي الأخطاء "
+"أثناء التحديث."
+
+#: (duplicate) modules/system/system.install:79
+msgid ""
+"Depending on your configuration, Drupal can run with a %memory_limit PHP "
+"memory limit. However, a %memory_minimum_limit PHP memory limit or above is "
+"recommended, especially if your site uses additional custom or contributed "
+"modules."
+msgstr ""
+"حسب تضبيطاتك، يستطيع دروبال العمل مع حد ذاكرة بي.إتش.بي %memory_limit. مع "
+"هذا يُنصح بحد ذاكرة يساوي %memory_minimum_limit أو أكثر، خاصة إذا كان موقعة "
+"يستخدم وحدات إضافية."
+
+#: (duplicate) modules/system/system.install:84
+msgid ""
+"Increase the memory limit by editing the memory_limit parameter in the file %"
+"configuration-file and then restart your web server (or contact your system "
+"administrator or hosting provider for assistance)."
+msgstr ""
+"ارفع حد الذاكرة بتغيير قيمة المعامل memory_limit في الملف %configuration-"
+"file ثم أعد تشغيل خادوم الوب (أو راجع مدير النظام أو مقدم خدمة الاستضافة)."
+
+#: (duplicate) modules/system/system.install:87
+msgid ""
+"Contact your system administrator or hosting provider for assistance with "
+"increasing your PHP memory limit."
+msgstr ""
+"راجع مدير النظام أو مزود خدمة الاستضافة لمساعدتك في زيادة حد ذاكرة بي.إتش.بي."
+
+#: (duplicate) modules/system/system.install:90
+msgid "See the <a href=\"@url\">Drupal requirements</a> for more information."
+msgstr "راجع <a href=\"@url\">متطلبات دروبال</a> لمزيد من المعلومات."
+
+#: (duplicate) modules/system/system.install:107 ;254
+msgid "Not protected"
+msgstr "غير مَحْمي"
+
+#: (duplicate) modules/system/system.install:112
+msgid ""
+"The directory %file is not protected from modifications and poses a security "
+"risk. You must change the directory's permissions to be non-writable. "
+msgstr ""
+"المجلد %file غير محمي من التعديلات و قد يشكل خطورة على الأمان. ينبغي عليك "
+"تغيير صلاحيات الملف كي لا يقبل الكتابة فيه. "
+
+#: (duplicate) modules/system/system.install:115
+msgid ""
+"The file %file is not protected from modifications and poses a security "
+"risk. You must change the file's permissions to be non-writable."
+msgstr ""
+"الملف %file غير محم من التعديلات و قد يشكل خطورة على الأمان. ينبغي عليك "
+"تغيير صلاحيات الملف كي لا يقبل الكتابة فيه."
+
+#: (duplicate) modules/system/system.install:120 ;261
+msgid "Protected"
+msgstr "محمي"
+
+#: (duplicate) modules/system/system.install:123
+msgid "Configuration file"
+msgstr "ملف الإعدادات"
+
+#: (duplicate) modules/system/system.install:133
+msgid ""
+"For more information, see the online handbook entry for <a href=\"@cron-"
+"handbook\">configuring cron jobs</a>."
+msgstr ""
+"لمزيد من المعلومات، يمكنك الرجوع إلى كتيب الاستخدام على الشبكة عن <a href="
+"\"@cron-handbook\">إعداد وظائف الدورية</a>."
+
+#: (duplicate) modules/system/system.install:157
+msgid ""
+"Cron has not run. Please visit the <a href=\"@status\">status report</a> for "
+"more information."
+msgstr ""
+"لم يتم تشغيل الدورية. لمزيد من المعلومات، الرجاء زيارة <a href=\"@status"
+"\">تقرير الحالة </a>."
+
+#: (duplicate) modules/system/system.install:162
+msgid "Never run"
+msgstr "لم تشتغل أبدا"
+
+#: (duplicate) modules/system/system.install:163
+msgid "Cron has not run."
+msgstr "لم يتم تشغيل الدورية."
+
+#: (duplicate) modules/system/system.install:166
+msgid "Last run !time ago"
+msgstr "آخر تشغيلة منذ !time"
+
+#: (duplicate) modules/system/system.install:169
+msgid "Cron has not run recently."
+msgstr "لم يتم تشغيل الدورية مؤخرا."
+
+#: (duplicate) modules/system/system.install:174
+msgid "Cron maintenance tasks"
+msgstr "مهام صيانة الدورية"
+
+#: (duplicate) modules/system/system.install:177
+msgid "You can <a href=\"@cron\">run cron manually</a>."
+msgstr "بإمكانك <a href=\"@cron\">تشغيل الدورية يدويا</a>."
+
+#: (duplicate) modules/system/system.install:196
+msgid "Not writable"
+msgstr "غير قابل للكتابة عليه"
+
+#: (duplicate) modules/system/system.install:201
+msgid "The directory %directory is not writable."
+msgstr "لا يمكن الكتابة في الدليل %directory."
+
+#: (duplicate) modules/system/system.install:205
+msgid ""
+"You may need to set the correct directory at the <a href=\"@admin-file-system"
+"\">file system settings page</a> or change the current directory's "
+"permissions so that it is writable."
+msgstr ""
+"تحتاج إلى ضبط الدليل في <a href=\"@admin-file-system\">صفحة إعدادات نظام "
+"الملفات</a>، أو إلى أن تغير صلاحيات الدليل الحالي ليقبل الكتابة فيه."
+
+#: (duplicate) modules/system/system.install:210
+msgid ""
+"An automated attempt to create this directory failed, possibly due to a "
+"permissions problem. To proceed with the installation, either create the "
+"directory and modify its permissions manually, or ensure that the installer "
+"has the permissions to create it automatically. For more information, please "
+"see INSTALL.txt or the <a href=\"@handbook_url\">on-line handbook</a>."
+msgstr ""
+"فشلت محاولة لإنشاء هذا الدليل، غالبا بسبب مشكلة صلاحيات. لإكمال التركيب عليك "
+"إما إنشاء الدليل أو تغيير صلاحياته يدويا، أو التأكد من أن للمركّب الصلاحيات "
+"اللازمة. لمزيد من المعلومات راجع ملف INSTALL.txt أو <a href=\"@handbook_url"
+"\">كتيب الاستخدام</a>."
+
+#: (duplicate) modules/system/system.install:220
+msgid "Writable (<em>public</em> download method)"
+msgstr "قابل للكتابة (طريقة تنزيل <em>عمومية</em>)"
+
+#: (duplicate) modules/system/system.install:223
+msgid "Writable (<em>private</em> download method)"
+msgstr "قابل للكتابة (طريقة تنزيل <em>خاصة</em>)"
+
+#: (duplicate) modules/system/system.install:230
+msgid "Database updates"
+msgstr "تحديثات قاعدة البيانات"
+
+#: (duplicate) modules/system/system.install:243
+msgid ""
+"Some modules have database schema updates to install. You should run the <a "
+"href=\"@update\">database update script</a> immediately."
+msgstr ""
+"تتطلب بعض الوحدات تركيب مخطط جديد في قاعدة البيانات. ينبغي عليك تشغيل <a "
+"href=\"@update\">برمجية تحديث قاعدة البيانات</a> حالا."
+
+#: (duplicate) modules/system/system.install:256
+msgid ""
+"The update.php script is accessible to everyone without authentication "
+"check, which is a security risk. You must change the $update_free_access "
+"value in your settings.php back to FALSE."
+msgstr ""
+"يستطيع أي شخص الوصول إلى update.php دون استيثاق، ما يمثل خطرا أمنيا. يجب أن "
+"تُعيد قيمة $update_free_access في ملف settings.php إلى FALSE."
+
+#: (duplicate) modules/system/system.install:264
+msgid "Access to update.php"
+msgstr "الوصول إلى update.php"
+
+#: (duplicate) modules/system/system.install:275
+msgid "Not enabled"
+msgstr "غير مُفعّل"
+
+#: (duplicate) modules/system/system.install:277
+msgid ""
+"Update notifications are not enabled. It is <strong>highly recommended</"
+"strong> that you enable the update status module from the <a href=\"@module"
+"\">module administration page</a> in order to stay up-to-date on new "
+"releases. For more information please read the <a href=\"@update\">Update "
+"status handbook page</a>."
+msgstr ""
+"تنبيهات التحديثات غير مفعلّة. <strong>يُنصح بشدة</strong> تفعيل وحدة حالة "
+"التحديثات من <a href=\"@module\">صفحة إدارة الوحدات</a> لتبقى على علم "
+"بالتحديثات والنسخ الجديدة. لمزيد من المعلومات طالع <a href=\"@update\">صفحة "
+"حالة التحديثات في الكتيب</a>."
+
+#: (duplicate) modules/system/system.install:285
+msgid "Update notifications"
+msgstr "تنبيهات التحديثات"
+
+#: (duplicate) modules/system/system.install:290
+msgid "HTTP request status"
+msgstr "حالة طلب HTTP"
+
+#: (duplicate) modules/system/system.install:291
+msgid "Fails"
+msgstr "تفشل"
+
+#: (duplicate) modules/system/system.install:293
+msgid ""
+"Your system or network configuration does not allow Drupal to access web "
+"pages, resulting in reduced functionality. This could be due to your "
+"webserver configuration or PHP settings, and should be resolved in order to "
+"download information about available updates, fetch aggregator feeds, sign "
+"in via OpenID, or use other network-dependent services."
+msgstr ""
+"تضبيطات نظامك أو شبكتك لا تسمح لدروبال بالوصول إلى صفحات الوب، مؤدية إلى "
+"قصور في الوظيفة. قد يكون هذا بسبب إعدادات خادوم الوب أو بي.إتش.بي، ويجب حلها "
+"ليُتاح جلب المعلومات عن التحديثات المتاحة، أو جلب التلقيمات، أو التسجيل عبر "
+"OpenID أو استخدام أي من الخدمات الأخرى المعتمدة على الشبكة."
+
+#: modules/system/system.js:0
+msgid "Testing clean URLs..."
+msgstr "يفحص المسارات النظيفة..."
+
+#: modules/system/system.js:0
+msgid ""
+"Your system configuration does not currently support this feature. The <a "
+"href=\"http://drupal.org/node/15365\">handbook page on Clean URLs</a> has "
+"additional troubleshooting information."
+msgstr ""
+"لا تدعم تضبيطات نظامك هذه الخاصية. تحتوي <a href=\"http://drupal.org/"
+"node/15365\">صفحة الكتيب عن المسارات النظيفة</a> معلومات إضافية لتتبع "
+"المشكلة."
+
+#: system.admin.inc:393
+msgid "Secondary links"
+msgstr "الروابط الثانوية"
+
+#: system.module:1204
+msgid "Confirm"
+msgstr "تأكيد"
+
+#: system.admin.inc:2156
+msgid "Selected"
+msgstr "محدد"
+
+#: system.info:0
+msgid "System"
+msgstr "النظام"
+
+#: system.admin.inc:1524
+msgid "Thursday"
+msgstr "الخميس"
+
+#: system.module:0
+msgid "Content"
+msgstr "المحتوى"
+
+#: system.admin.inc:1524
+msgid "Sunday"
+msgstr "الأحد"
+
+#: system.admin.inc:1652
+msgid ""
+"@site is currently under maintenance. We should be back shortly. Thank you "
+"for your patience."
+msgstr "@site حاليًا تحت الصيانة. يعود قريبا. شكرا على صبرك."
+
+#: system.module:1523
+msgid "Save"
+msgstr "احفظ"
+
+#: system.admin.inc:259;283;771 system.module:1073
+msgid "Save configuration"
+msgstr "احفظ الإعدادات"
+
+#: (duplicate) system.admin.inc:1283;1300;1314;1332;1340;1516;1670
+#: system.install:60
+msgid "Disabled"
+msgstr "معطل"
+
+#: system.module:0
+msgid "Left sidebar"
+msgstr "الشريط الجانبي الايسر"
+
+#: system.module:290
+msgid "Configure"
+msgstr "الضبط"
+
+#: system.module:1326
+msgid "Send e-mail"
+msgstr "إرسال البريد"
+
+#: system.admin.inc:1524
+msgid "Friday"
+msgstr "الجمعة"
+
+#: system.admin.inc:392
+msgid "Primary links"
+msgstr "الروابط الأساسية"
+
+#: system.module:1873
+msgid "URL"
+msgstr "URL"
+
+#: system.module:1281
+msgid "file system"
+msgstr "نظام الملفات"
+
+#: (duplicate) system.admin.inc:1300;1332;1340;1516;1670;2025;2214
+#: system.install:282
+msgid "Enabled"
+msgstr "مفعل"
+
+#: system.module:603
+msgid "Medium"
+msgstr "متوسط"
+
+#: system.admin.inc:1169 system.module:1817
+msgid "Anonymous"
+msgstr "مجهول"
+
+#: system.info:0
+msgid "Handles general site configuration for administrators."
+msgstr "تتعامل مع ضبط الموقع العام للإداريين."
+
+#: system.module:84
+msgid ""
+"To clear all caches, click the button on the <a href=\"@performance"
+"\">Performance page</a>."
+msgstr ""
+"لحذف كل التخزين المؤقت، اضغط زر الحذف في <a href=\"@performance\">صفحة "
+"الأداء</a>."
+
+#: system.admin.inc:1199
+msgid ""
+"The menu system stores system paths only, but will use the URL alias for "
+"display. %link_path has been stored as %normal_path"
+msgstr ""
+"يخزن نظام القوائم مسارات النظام فقط، لكن سيستخدم المسار البديل للعرض. تم "
+"تخزين %link_path على الصورة %normal_path"
+
+#: system.admin.inc:263;554 system.module:1074;1097;1107
+msgid "Reset to defaults"
+msgstr "صفّر إلى المبدئيات"
+
+#: system.admin.inc:2027
+msgid "Throttle"
+msgstr "الصمام"
+
+#: system.admin.inc:225 system.module:1382
+msgid "configure"
+msgstr "اضبط"
+
+#: system.admin.inc:2214
+msgid "Default"
+msgstr "مبدئي"
+
+#: system.info:0
+msgid "Core - required"
+msgstr "القلب - ضروري"
+
+#: system.module:284;322;326
+msgid "List"
+msgstr "القائمة"
+
+#: system.admin.inc:1524
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+#: system.admin.inc:848;1089 system.module:1192;1574
+msgid "Cancel"
+msgstr "ألغِ"
+
+#: system.module:0
+msgid "Right sidebar"
+msgstr "الشريط الجانبي الأيمن"
+
+#: system.module:1588
+msgid "user"
+msgstr "مستخدم"
+
+#: (duplicate) system.install:242
+msgid "Out of date"
+msgstr "غير محدث"
+
+#: system.module:314
+msgid "Modules"
+msgstr "الوحدات"
+
+#: system.module:1651;1797
+msgid "Message"
+msgstr "رسالة"
+
+#: system.module:1574
+msgid "Delete"
+msgstr "احذف"
+
+#: system.admin.inc:2214 system.module:1374
+msgid "Operations"
+msgstr "العمليات"
+
+#: system.admin.inc:1143
+msgid "E-mail address"
+msgstr "عنوان البريد الإلكتروني"
+
+#: system.admin.inc:1288
+msgid "none"
+msgstr "لا يوجد"
+
+#: (duplicate) system.install:198
+msgid "The directory %directory does not exist."
+msgstr "الدليل %directory غير موجود."
+
+#: system.admin.inc:1524
+msgid "Monday"
+msgstr "الاثنين"
+
+#: system.admin.inc:1524
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#: (duplicate) system.install:232
+msgid "Up to date"
+msgstr "محَدَّث"
+
+#: system.module:1183
+msgid "This action cannot be undone."
+msgstr "لا يمكن التراجع عن هذا الفعل."
+
+#: system.admin.inc:1758;2031;2115 system.module:1373;1494
+msgid "Description"
+msgstr "الوصف"
+
+#: system.module:276
+msgid "Themes"
+msgstr "السمات"
+
+#: system.module:0
+msgid "Header"
+msgstr "الترويسة"
+
+#: system.module:1715;1749
+msgid "error"
+msgstr "خطأ"
+
+#: system.module:1746
+msgid "action"
+msgstr "إجراء"
+
+#: maintenance-page.tpl.php:34;35;42 page.tpl.php:95;96;103
+msgid "Home"
+msgstr "الصفحة الرئيسية"
+
+#: system.admin.inc:1136;2029;2114;2156;2214
+msgid "Name"
+msgstr "الاسم"
+
+#: system.module:1383
+msgid "delete"
+msgstr "حذف"
+
+#: system.admin.inc:1524
+msgid "Saturday"
+msgstr "السبت"
+
+#: system.module:1644
+msgid "Subject"
+msgstr "الموضوع"
+
+#~ msgid "system"
+#~ msgstr "نظام"

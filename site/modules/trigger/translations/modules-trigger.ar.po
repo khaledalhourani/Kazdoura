@@ -1,0 +1,174 @@
+# translation of general.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: general\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-02-12 20:52+0300\n"
+"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.5.2\n"
+
+#: modules/trigger/trigger.admin.inc:74
+msgid "Are you sure you want to unassign the action %title?"
+msgstr "أمتأكد من رغبتك في إلغاء ربط الإجراء %title؟"
+
+#: modules/trigger/trigger.admin.inc:76
+msgid "You can assign it again later if you wish."
+msgstr "تستطيع ربطه لاحقا إذا أردت."
+
+#: modules/trigger/trigger.admin.inc:77 modules/trigger/trigger.module:114
+msgid "Unassign"
+msgstr "ألغ الربط"
+
+#: modules/trigger/trigger.admin.inc:88;87
+msgid "Action %action has been unassigned."
+msgstr "أُلغي ربط الإجراء %action."
+
+#: modules/trigger/trigger.admin.inc:144
+msgid "Trigger: "
+msgstr "المُطلِق: "
+
+#: modules/trigger/trigger.admin.inc:154
+msgid "unassign"
+msgstr "ألغ الربط"
+
+#: modules/trigger/trigger.admin.inc:164 modules/trigger/trigger.module:415
+msgid "Choose an action"
+msgstr "اختر إجراءً"
+
+#: modules/trigger/trigger.admin.inc:171
+msgid "Assign"
+msgstr "اربط"
+
+#: modules/trigger/trigger.admin.inc:176
+msgid "No available actions for this trigger."
+msgstr "لا يتوفر أي إجراء لهذا المُطلِق."
+
+#: modules/trigger/trigger.admin.inc:192
+msgid "The action you chose is already assigned to that trigger."
+msgstr "الإجراء الذي اخترته مربوط بالفعل بهذا المُطلِق."
+
+#: modules/trigger/trigger.admin.inc:218
+msgid ""
+"You have added an action that changes a the property of a post. A Save post "
+"action has been added so that the property change will be saved."
+msgstr ""
+"لقد أضفت إجراء يغير أحد خواص الموضوع. أضيف إجراء \"حفظ\" لهذه الخاصية حتى "
+"يُحفظ تغيّر الخاصية."
+
+#: modules/trigger/trigger.admin.inc:238
+msgid "Operation"
+msgstr "عملية"
+
+#: modules/trigger/trigger.module:14
+msgid ""
+"Triggers are system events, such as when new content is added or when a user "
+"logs in. Trigger module combines these triggers with actions (functional "
+"tasks), such as unpublishing content or e-mailing an administrator. The <a "
+"href=\"@url\">Actions settings page</a> contains a list of existing actions "
+"and provides the ability to create and configure additional actions."
+msgstr ""
+"المُطلِقات هي أحداث النظام مثل إضافة محتوى جديد أو ولوج مستخدم. تربط وحدة "
+"المُطلِق بين هذه المطلقات وإجراءات (مهام وظيفية)، مثل رفع محتوى منشور أو إرسال "
+"بريد إلى إداري. تحتوي <a href=\"@url\">صفحة إعدادات الإجراءات</a> على قائمة "
+"بالإجراءات الموجودة وتوفر إمكانية إنشاء وضبط إجراءات إضافية."
+
+#: modules/trigger/trigger.module:17
+msgid ""
+"Below you can assign actions to run when certain comment-related triggers "
+"happen. For example, you could promote a post to the front page when a "
+"comment is added."
+msgstr ""
+"أدناه يمكنك ربط إجراءات بالمُطلقات المتعلقة بالتعليقات. يمكنك مثلا ترقية "
+"موضوع إلى الصفحة الرئيسية عندما يُضاف تعليق."
+
+#: modules/trigger/trigger.module:19
+msgid ""
+"Below you can assign actions to run when certain content-related triggers "
+"happen. For example, you could send an e-mail to an administrator when a "
+"post is created or updated."
+msgstr ""
+"أدناه يمكنك ربط إجراءات بالمُطلقات المتعلقة بالمحتوى. يمكنك مثلا إرسال بريد "
+"إلى إداري عند إنشاء أو تحديث موضوع."
+
+#: modules/trigger/trigger.module:21
+msgid ""
+"Below you can assign actions to run during each pass of a <a href=\"@cron"
+"\">cron maintenance task</a>."
+msgstr "أدناه يمكنك ربط إجراءات <a href=\"@cron\">بهمة الدورية</a>."
+
+#: modules/trigger/trigger.module:23
+msgid ""
+"Below you can assign actions to run when certain taxonomy-related triggers "
+"happen. For example, you could send an e-mail to an administrator when a "
+"term is deleted."
+msgstr ""
+"أدناه يمكنك ربط إجراءات بالمُطلقات المتعلقة بالتصنيفات. يمكنك مثلا إرسال بريد "
+"إلى إداري عند حذف مفردة."
+
+#: modules/trigger/trigger.module:25
+msgid ""
+"Below you can assign actions to run when certain user-related triggers "
+"happen. For example, you could send an e-mail to an administrator when a "
+"user account is deleted."
+msgstr ""
+"أدناه يمكنك ربط إجراءات بالمُطلقات المتعلقة بالمستخدمين. يمكنك مثلا إرسال "
+"بريد إلى إداري عند حذف حساب مستخدم."
+
+#: modules/trigger/trigger.module:27
+msgid ""
+"The Trigger module provides the ability to trigger <a href=\"@actions"
+"\">actions</a> upon system events, such as when new content is added or when "
+"a user logs in."
+msgstr ""
+"توفر وحدة المُطلِق إمكانية إطلاق <a href=\"@actions\">إجراءات</a> استجابة "
+"أحداث النظام، مثل إضافة محتوى أو ولوج مستخدم."
+
+#: modules/trigger/trigger.module:28
+msgid ""
+"The combination of actions and triggers can perform many useful tasks, such "
+"as e-mailing an administrator if a user account is deleted, or automatically "
+"unpublishing comments that contain certain words. By default, there are five "
+"\"contexts\" of events (Comments, Content, Cron, Taxonomy, and Users), but "
+"more may be added by additional modules."
+msgstr ""
+"ربط الإجراءات بالمُطلِقات يمكن أن يؤدي مهام قيمة، مثل إرسال برد إلى إداري عند "
+"حذف حساب مستخدم، أو رفع التعليقات المنشورة تلقائيا إذا كانت تحتوي كلمات "
+"معينة. مبدئيا تتوفر خمسة سياقات من الأحداث (التعليقات، المحتوى، الدورية، "
+"التصنيف، المستخدمين)، لكن يمكن أن تضيف الوحدات الإضافية المزيد منها."
+
+#: modules/trigger/trigger.module:29
+msgid ""
+"For more information, see the online handbook entry for <a href=\"@trigger"
+"\">Trigger module</a>."
+msgstr ""
+"لمزيد من المعلومات، من فضلك طالع صفحة <a href=\"@trigger\">وحدة المُطلِق</a> "
+"في كتيب الاستخدام."
+
+#: modules/trigger/trigger.module:39
+msgid "Triggers"
+msgstr "المُطلِقات"
+
+#: modules/trigger/trigger.module:40
+msgid "Tell Drupal when to execute actions."
+msgstr "أخبر دروبال متى يُنفذ الإجراءات."
+
+#: modules/trigger/trigger.module:85
+msgid "Cron"
+msgstr "الدورية"
+
+#: modules/trigger/trigger.module:115
+msgid "Unassign an action from a trigger."
+msgstr "ألغِ ربط إجراء بمُطلِق."

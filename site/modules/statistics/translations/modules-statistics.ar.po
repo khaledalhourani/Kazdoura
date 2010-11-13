@@ -1,0 +1,394 @@
+# translation of general.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: general\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-02-18 23:45+0200\n"
+"Last-Translator: Alaa <alaa@manalaa.net>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Pootle 2.0.2\n"
+
+#: modules/statistics/statistics.admin.inc:14
+#: modules/statistics/statistics.pages.inc:46
+msgid "Timestamp"
+msgstr "الختم الزمني"
+
+#: modules/statistics/statistics.admin.inc:15;51
+#: modules/statistics/statistics.pages.inc:47
+msgid "Page"
+msgstr "الصفحة"
+
+#: modules/statistics/statistics.admin.inc:29
+#: modules/statistics/statistics.pages.inc:25;56
+msgid "details"
+msgstr "تفاصيل"
+
+#: modules/statistics/statistics.admin.inc:33;64;97;129
+#: modules/statistics/statistics.pages.inc:29;60
+msgid "No statistics available."
+msgstr "لا توجد إحصائيات متوفرة."
+
+#: modules/statistics/statistics.admin.inc:50;79;115
+msgid "Hits"
+msgstr "الطلبات"
+
+#: modules/statistics/statistics.admin.inc:52
+msgid "Average page generation time"
+msgstr "متوسط زمن توليد الصفحة"
+
+#: modules/statistics/statistics.admin.inc:53;81
+msgid "Total page generation time"
+msgstr "زمن توليد الصفحة الكلي"
+
+#: modules/statistics/statistics.admin.inc:60
+msgid "%time ms"
+msgstr "%time ملي ثانية"
+
+#: modules/statistics/statistics.admin.inc:67
+msgid "Top pages in the past %interval"
+msgstr "أشهر الصفحات في آخر %interval"
+
+#: modules/statistics/statistics.admin.inc:92
+msgid "unban"
+msgstr "ألغِ الحجب"
+
+#: modules/statistics/statistics.admin.inc:92
+msgid "ban"
+msgstr "احجب"
+
+#: modules/statistics/statistics.admin.inc:100
+msgid "Top visitors in the past %interval"
+msgstr "أهم الزوار في آخر %interval"
+
+#: modules/statistics/statistics.admin.inc:112
+msgid "Top referrers in the past %interval"
+msgstr "أكثر من يربط للموقع في آخر %interval"
+
+#: modules/statistics/statistics.admin.inc:116
+msgid "Url"
+msgstr "المسار"
+
+#: modules/statistics/statistics.admin.inc:117
+msgid "Last visit"
+msgstr "آخر زيارة"
+
+#: modules/statistics/statistics.admin.inc:188
+#: modules/statistics/statistics.module:136
+msgid "Access log settings"
+msgstr "إعدادات سجل الوصول"
+
+#: modules/statistics/statistics.admin.inc:191
+msgid "Enable access log"
+msgstr "فعّل سجل الوصول"
+
+#: modules/statistics/statistics.admin.inc:194
+msgid "Log each page access. Required for referrer statistics."
+msgstr "سجل الوصول إلى كل صفحة. ضروري لإحصاء من يربط إلى الموقع."
+
+#: modules/statistics/statistics.admin.inc:198
+msgid "Discard access logs older than"
+msgstr "أهمل سجلات الوصول الأقدم من"
+
+#: modules/statistics/statistics.admin.inc:201
+msgid ""
+"Older access log entries (including referrer statistics) will be "
+"automatically discarded. (Requires a correctly configured <a href=\"@cron"
+"\">cron maintenance task</a>.)"
+msgstr ""
+"سجلات الدخول القديمة (متضمنة لإحصائيات الزيارات المحولة للموقع) سوف يتم "
+"تجاهلها تلقائيا. (تحتاج إلى <a href=\"@cron\">وظيفة دورية</a> تعمل.)"
+
+#: modules/statistics/statistics.admin.inc:206
+msgid "Content viewing counter settings"
+msgstr "إعدادات عداد عرض المحتوى"
+
+#: modules/statistics/statistics.admin.inc:209
+msgid "Count content views"
+msgstr "عدد مرات عرض المحتوى"
+
+#: modules/statistics/statistics.admin.inc:212
+msgid "Increment a counter each time content is viewed."
+msgstr "عد كل مرة يعرض فيها المحتوى."
+
+#: modules/statistics/statistics.module:15
+msgid ""
+"The statistics module keeps track of numerous site usage statistics, "
+"including the number of times, and from where, each of your posts is viewed. "
+"These statistics are useful in determining how users are interacting with "
+"each other and with your site, and are required for the display of some "
+"Drupal blocks."
+msgstr ""
+"تتابع وحدة الإحصاء العديد من الإحصائيات حول استخدام الموقع. من ضمنها عدد "
+"المرات التي تم عرض أي محتوى أو من أي صفحة وصل المستخدم إليه. هذه الإحصائيات "
+"مفيدة لتحديد كيف يتعامل المستخدمين مع موقعك و هي ضرورية لعرض بعض صناديق "
+"دروبال."
+
+#: modules/statistics/statistics.module:16
+msgid "The statistics module provides:"
+msgstr "توفر وحدة الإحصاء:"
+
+#: modules/statistics/statistics.module:17
+msgid ""
+"a counter for each post on your site that increments each time the post is "
+"viewed. (Enable <em>Count content views</em> on the <a href=\"@accesslog"
+"\">access log settings page</a>, and determine if the post access counters "
+"should be visible to any user roles on the <a href=\"@permissions"
+"\">permissions page</a>.)"
+msgstr ""
+"عداد زوار لكل صفحة في موقعك. (قم بتفعيل <em>عد مرات العرض</em> في صفحة <a "
+"href=\"@accesslog\">إعدادات سجل الدخول</a>، و حدد ما إذا كان عداد الزوار سوف "
+"يظهر لأي دور مستخدم في صفحة <a href=\"@permissions\">الصلاحيات</a>.)"
+
+#: modules/statistics/statistics.module:18
+msgid ""
+"a <a href=\"@recent-hits\">recent hits</a> log that displays information "
+"about the latest activity on your site, including the URL and title of the "
+"page accessed, the user name (if available) and IP address of the accessing "
+"party."
+msgstr ""
+"سجل <a href=\"@recent-hits\">الزيارات الحديثة</a> يعرض بيانات عن آخر "
+"العمليات التي تمت بالموقع، من ضمنها الصفحات التي تم فتحها و عناوينها، اسم "
+"المستخدم (إذا كان متوفرا)، و رقم الإنترنت للذي زار هذه الصفحة."
+
+#: modules/statistics/statistics.module:19
+msgid ""
+"a <a href=\"@top-referrers\">top referrers</a> log that displays the "
+"referring parties for your site visits (where your visitors came from)."
+msgstr ""
+"سجل <a href=\"@top-referrers\">أكثر الروابط الواردة</a> يعرض المواقع التي "
+"يصل زوارك من خلالها للموقع."
+
+#: modules/statistics/statistics.module:20
+msgid ""
+"a <a href=\"@top-pages\">top pages</a> log that displays site content in "
+"descending order by number of views."
+msgstr ""
+"سجل <a href=\"@top-pages\">الأكثر زيارة</a> يعرض محتويات موقعك بالترتيب حسب "
+"الأكثر زيارة."
+
+#: modules/statistics/statistics.module:21
+msgid ""
+"a <a href=\"@top-visitors\">top visitors</a> log that displays the most "
+"active users on your site."
+msgstr ""
+"سجل <a href=\"@top-visitors\">أكثر زوار</a> يعرض قائمة بالمستخدمين الأكثر "
+"نشاطا على موقعك."
+
+#: modules/statistics/statistics.module:22
+msgid ""
+"a <em>Popular content</em> block that displays the day's most viewed "
+"content, the all-time most viewed content, and the last content viewed. "
+"(Enable the <em>Popular content</em> block on the <a href=\"@blocks\">blocks "
+"administration page</a>.)"
+msgstr ""
+"صندوق <em>محتوى شائع</em> يقوم بعرض المحتويات الأكثر عرضا بهذا اليوم، الأكثر "
+"عرضا عموما، و آخر محتوى تم عرضه. (قم بتفعيل صندوق <em>المحتوى الشائع</em> من "
+"صفحة <a href=\"@blocks\">إدارة الصناديق</a>.)"
+
+#: modules/statistics/statistics.module:23
+msgid "Configuring the statistics module"
+msgstr "ضبط وحدة الإحصاء"
+
+#: modules/statistics/statistics.module:24
+msgid ""
+"When the <em>Enable access log</em> setting on the <a href=\"@accesslog"
+"\">access log settings page</a> is enabled, data about every page accessed "
+"(including the remote host's IP address, referrer, node accessed, and user "
+"name) is stored in the access log. The access log must be enabled for the <a "
+"href=\"@recent-hits\">recent hits</a>, <a href=\"@top-referrers\">top "
+"referrers</a>, <a href=\"@top-pages\">top pages</a>, and <a href=\"@top-"
+"visitors\">top visitors</a> log pages to function. Enabling the access log "
+"adds one additional database call per page displayed by Drupal."
+msgstr ""
+"عند اختيار <em>فعل سجل الدخول</em> في صفحة <a href=\"@accesslog\">إعدادات "
+"سجل الدخول</a>، يتم جمع بيانات عن الصفحات التي تم الدخول إليها (مثل عنوان IP "
+"صاحب الزيارة، الصفحة القادم منها، الصفحة التي قام بالدخول إليها، و اسم "
+"المستخدم). يجب أن يتم تفعيل سجل الدخول لكي تعمل سجلات <a href=\"@recent-hits"
+"\">الزيارات الحديثة</a>، <a href=\"@top-referrers\">أكثر الروابط الواردة</"
+"a>، <a href=\"@top-pages\">الأكثر زيارة</a> ، و <a href=\"@top-visitors"
+"\">أكثر زوار</a>. تفعيل سجل الدخول سوف يسبب حدوث عملية زائدة بقاعدة البيانات "
+"عند عرض كل صفحة في دروبال."
+
+#: modules/statistics/statistics.module:25
+msgid ""
+"The <em>Discard access logs older than</em> setting on the <a href="
+"\"@accesslog\">access log settings page</a> specifies the length of time "
+"entries are retained in the access log before they are deleted. Automatic "
+"access log entry deletion requires a correctly configured <a href=\"@cron"
+"\">cron maintenance task</a>."
+msgstr ""
+"خيار <em>تجاهل سجلات الدخول الأقدم من </em> في صفحة <a href=\"@accesslog"
+"\">إعدادات سجل الدخول</a> يحدد المدة التي يجب أن تمر قبل أن يتم حذف أي "
+"إحصائيات تم تسجيلها. حذف الإحصائيات تلقائيا يحتاج إلى عمل <a href=\"@cron"
+"\">الوظيفة الدورية</a>."
+
+#: modules/statistics/statistics.module:26
+msgid ""
+"The <em>Count content views</em> setting on the <a href=\"@accesslog"
+"\">access log settings page</a> enables a counter for each post on your site "
+"that increments each time the post is viewed. This option must be enabled to "
+"provide post-specific access counts. Enabling this option adds one "
+"additional database call per each post displayed by Drupal."
+msgstr ""
+"خيار <em>عد مرات العرض</em> في صفحة <a href=\"@accesslog\">إعدادات سجل "
+"الدخول</a> يقوم بتفعيل عداد للزوار لكل صفحة في موقعك. يجب أن يتم تفعيل هذا "
+"الاختيار لكي يتوفر عدد المرات التي تم عرض الصفحة بها. تفعيل هذا الاختيار سوف "
+"يسبب حدوث عملية زائدة بقاعدة البيانات عند عرض كل صفحة في دروبال."
+
+#: modules/statistics/statistics.module:27
+msgid ""
+"For more information, see the online handbook entry for <a href=\"@statistics"
+"\">Statistics module</a>."
+msgstr ""
+"لمزيد من المعلومات، من فضلك طالع صفحة <a href=\"@statistics\">وحدة الإحصاء</"
+"a> في كتيب الاستخدام."
+
+#: modules/statistics/statistics.module:30
+msgid ""
+"Settings for the statistical information that Drupal will keep about the "
+"site. See <a href=\"@statistics\">site statistics</a> for the actual "
+"information."
+msgstr ""
+"إعدادات المعلومات الإحصائية التي سيقوم دروبال بحفظها عن الموقع.طالع <a href="
+"\"@statistics\"> إحصائيات الموقع</a> للمعلومات الفعلية."
+
+#: modules/statistics/statistics.module:32
+msgid "This page displays the site's most recent hits."
+msgstr "تظهر هذه الصفحة أحدث الزيارات للموقع."
+
+#: modules/statistics/statistics.module:34
+msgid ""
+"This page displays all external referrers, or external references to your "
+"website."
+msgstr ""
+"تظهر هذه الصفحة الروابط الواردة التي يصل منها الزوار لموقعك أو المواقع التي "
+"تذكر موقعك."
+
+#: modules/statistics/statistics.module:36
+msgid ""
+"When you ban a visitor, you prevent the visitor's IP address from accessing "
+"your site. Unlike blocking a user, banning a visitor works even for "
+"anonymous users. This is most commonly used to block resource-intensive bots "
+"or web crawlers."
+msgstr ""
+"عندما تحجب زائرا، فأنت تمنع أي وصول إلى موقعك من عنوان IP الخاص به. بعكس "
+"إيقاف مستخدم ما فإن حجب زائر يعمل حتى وإن كان مستخدما مجهولا. الاستخدام "
+"الأكثر شيوعا لهذه الميزة هو في حجب آليات محركات البحث التي تستنفذ موارد "
+"النظام."
+
+#: modules/statistics/statistics.module:246;288
+msgid "Popular content"
+msgstr "المحتوى المشهور"
+
+#: modules/statistics/statistics.module:256
+msgid "Number of day's top views to display"
+msgstr "عدد أشهر ما عرض اليوم"
+
+#: modules/statistics/statistics.module:256
+msgid "How many content items to display in \"day\" list."
+msgstr "عدد العناصر التي ستعرض في قائمة \"اليوم\"."
+
+#: modules/statistics/statistics.module:257
+msgid "Number of all time views to display"
+msgstr "عدد أشهر ما عرض في عمر الموقع"
+
+#: modules/statistics/statistics.module:257
+msgid "How many content items to display in \"all time\" list."
+msgstr "عدد العناصر التي ستعرض في قائمة \"في عمر الموقع\"."
+
+#: modules/statistics/statistics.module:258
+msgid "Number of most recent views to display"
+msgstr "عدد أحدث ما عرض"
+
+#: modules/statistics/statistics.module:258
+msgid "How many content items to display in \"recently viewed\" list."
+msgstr "عدد العناصر التي ستعرض في قائمة \"المعروض حديثا\"."
+
+#: modules/statistics/statistics.module:272
+msgid "Today's:"
+msgstr "اليوم:"
+
+#: modules/statistics/statistics.module:277
+msgid "All time:"
+msgstr "في عمر الموقع:"
+
+#: modules/statistics/statistics.module:282
+msgid "Last viewed:"
+msgstr "آخر ما عرض:"
+
+#: modules/statistics/statistics.module:85
+msgid "1 read"
+msgid_plural "@count reads"
+msgstr[0] "قرأت مرة واحدة"
+msgstr[1] "لم تقرأ"
+msgstr[2] "قرأت مرتين"
+msgstr[3] "قرأت @count مرات"
+msgstr[4] "قرأت @count مرة"
+msgstr[5] "قرأت @count مرة"
+
+#: modules/statistics/statistics.module:72
+msgid "access statistics"
+msgstr "يصل للإحصائيات"
+
+#: modules/statistics/statistics.module:72
+msgid "view post access counter"
+msgstr "يعرض عدد مرات الوصول إلى الموضوع"
+
+#: modules/statistics/statistics.module:97
+msgid "Recent hits"
+msgstr "الطلبات الحديثة"
+
+#: modules/statistics/statistics.module:98
+msgid "View pages that have recently been visited."
+msgstr "اعرض الصفحات التي طلبت مؤخرا."
+
+#: modules/statistics/statistics.module:104
+msgid "Top pages"
+msgstr "أشهر الصفحات"
+
+#: modules/statistics/statistics.module:105
+msgid "View pages that have been hit frequently."
+msgstr "اعرض الصفحات التي تطلب كثيرا."
+
+#: modules/statistics/statistics.module:112
+msgid "Top visitors"
+msgstr "أهم الزوار"
+
+#: modules/statistics/statistics.module:113
+msgid "View visitors that hit many pages."
+msgstr "اعرض الزوار الذين يطلبون صفحات كثيرة."
+
+#: modules/statistics/statistics.module:120
+msgid "Top referrers"
+msgstr "أصحاب الروابط الواردة"
+
+#: modules/statistics/statistics.module:121
+msgid "View top referrers."
+msgstr "اعرض أكثر من يربط إلى الموقع"
+
+#: modules/statistics/statistics.module:128
+msgid "View access log."
+msgstr "اعرض سجل الوصول."
+
+#: modules/statistics/statistics.module:137
+msgid "Control details about what and how your site logs."
+msgstr "اضبط تفاصيل عن ما يسجله موقعك و كيف."
+
+#: modules/statistics/statistics.module:146
+msgid "Track page visits"
+msgstr "تابع زيارات الصفحات"
+
+#~ msgid "statistics"
+#~ msgstr "إحصائيات"

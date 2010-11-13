@@ -1,0 +1,127 @@
+# translation of general.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: general\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-02-18 22:33+0200\n"
+"Last-Translator: Alaa <alaa@manalaa.net>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Pootle 2.0.2\n"
+
+#: modules/syslog/syslog.module:22
+msgid ""
+"The syslog module enables Drupal to send messages to the operating system's "
+"logging facility."
+msgstr ""
+"تتيح وحدة سجل النظام لدروبال إرسال رسائل إلى أداة السجل في نظام التشغيل."
+
+#: modules/syslog/syslog.module:23
+msgid ""
+"Syslog is an operating system administrative logging tool, and provides "
+"valuable information for use in system management and security auditing. "
+"Most suited to medium and large sites, syslog provides filtering tools that "
+"allow messages to be routed by type and severity. On UNIX/Linux systems, the "
+"file /etc/syslog.conf defines this routing configuration; on Microsoft "
+"Windows, all messages are sent to the Event Log. For more information on "
+"syslog facilities, severity levels, and how to set up a syslog.conf file, "
+"see <a href=\"@syslog_conf\">UNIX/Linux syslog.conf</a> and PHP's <a href="
+"\"@php_openlog\">openlog</a> and <a href=\"@php_syslog\">syslog</a> "
+"functions."
+msgstr ""
+"وحدة سجل النظام عبارة عن أداة إدارية لنظام التشغيل تقدم معلومات قيمة تستخدم "
+"في إدارة النظام وتدقيق الحماية. وهي تناسب أكثر المواقع المتوسطة والكبيرة، "
+"كما تقدم أدوات ترشيح لفرز الرسائل حسب نوعيتها وخطورتها. في أنظمة يونكس"
+"\\لينكس يحدد الملف ‪/etc/syslog.conf‬ ضبط هذه المراقبة، وفي ميكروسوفت ويندوز "
+"كل الرسائل ترسل إلى سجل الأحداث. لمزيد من المعلومات حول وسائل ومستويات "
+"وكيفية ضبط الملف syslog.conf طالع وظائف <a href=\"@syslog_conf\">يونكس/لينكس "
+"syslog.conf</a> و بي.إتش.بي <a href=\"@php_openlog\">openlog</a> و <a href="
+"\"@php_syslog\">syslog</a>."
+
+#: modules/syslog/syslog.module:24
+msgid ""
+"For more information, see the online handbook entry for <a href=\"@syslog"
+"\">Syslog module</a>."
+msgstr ""
+"لمزيد من المعلومات، من فضلك طالع <a href=\"@syslog\">وحدة سجل النظام</a> في "
+"كتيب الاستخدام."
+
+#: modules/syslog/syslog.module:43
+msgid "Send events to this syslog facility"
+msgstr "أرسل الأحداث إلى أداة سجل النظام هذه"
+
+#: modules/syslog/syslog.module:46
+msgid ""
+"Select the syslog facility code under which Drupal's messages should be "
+"sent. On UNIX/Linux systems, Drupal can flag its messages with the code "
+"LOG_LOCAL0 through LOG_LOCAL7; for Microsoft Windows, all messages are "
+"flagged with the code LOG_USER. Depending on the system configuration, "
+"syslog and other logging tools use this code to identify or filter Drupal "
+"messages from within the entire system log. For more information on syslog, "
+"see <a href=\"@syslog_help\">Syslog help</a>."
+msgstr ""
+"اختر رمز أداة سجل النظام التي ستُرسل تحته رسائل دروبال، يستطع دروبال تأشير "
+"رسائله بالرموز LOG_LOCAL0 حتى LOG_LOCAL7 على أنظمة يونكس/لينكس، على "
+"ميكروسوفت وندوز ك الرسائل تأشر بالرمز LOG_USER. على حسب إعدادا النظام "
+"سيستخدم سجل النظام وأدوات التسجيل الأخرى هذا الرمز للتعرف على رسائل دروبال "
+"وترشيحها من باقي سجل النظام. لمزيد من المعلومات عن سجل النظام، راجع <a href="
+"\"@syslog_help\">مساعدة سجل النظام</a>."
+
+#: modules/syslog/syslog.module:54
+msgid "LOG_USER - User level messages. Use this for Windows."
+msgstr "‏LOG_USER - رسائل على مستوى المستخدم. استخدم هذا مع وندوز."
+
+#: modules/syslog/syslog.module:58
+msgid "LOG_LOCAL0 - Local 0"
+msgstr "‏LOG_LOCAL0 - محلي 0"
+
+#: modules/syslog/syslog.module:59
+msgid "LOG_LOCAL1 - Local 1"
+msgstr "‏LOG_LOCAL1 - محلي 1"
+
+#: modules/syslog/syslog.module:60
+msgid "LOG_LOCAL2 - Local 2"
+msgstr "‏LOG_LOCAL2 - محلي 2"
+
+#: modules/syslog/syslog.module:61
+msgid "LOG_LOCAL3 - Local 3"
+msgstr "‏LOG_LOCAL3 - محلي 3"
+
+#: modules/syslog/syslog.module:62
+msgid "LOG_LOCAL4 - Local 4"
+msgstr "‏LOG_LOCAL4 - محلي 4"
+
+#: modules/syslog/syslog.module:63
+msgid "LOG_LOCAL5 - Local 5"
+msgstr "‏LOG_LOCAL5 - محلي 5"
+
+#: modules/syslog/syslog.module:64
+msgid "LOG_LOCAL6 - Local 6"
+msgstr "‏LOG_LOCAL6 - محلي 6"
+
+#: modules/syslog/syslog.module:65
+msgid "LOG_LOCAL7 - Local 7"
+msgstr "‏LOG_LOCAL7 - محلي 7"
+
+#: modules/syslog/syslog.module:32
+msgid ""
+"Settings for syslog logging. Syslog is an operating system administrative "
+"logging tool used in systems management and security auditing. Most suited "
+"to medium and large sites, syslog provides filtering tools that allow "
+"messages to be routed by type and severity."
+msgstr ""
+"إعدادات التسجيل في سجل النظام. وحدة سجل النظام عبارة عن أداة إدارية لنظام "
+"التشغيل تقدم معلومات قيمة تستخدم في إدارة النظام وتدقيق الحماية. وهي تناسب "
+"أكثر المواقع المتوسطة والكبيرة، كما تقدم أدوات ترشيح لفرز الرسائل حسب "
+"نوعيتها وخطورتها."

@@ -1,0 +1,251 @@
+# translation of general.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Alaa Abd El Fattah <alaa@manalaa.net>, 2010.
+# Khaled Hosny <khaledhosny@eglug.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: general\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-02-18 23:42+0200\n"
+"Last-Translator: Alaa <alaa@manalaa.net>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Pootle 2.0.2\n"
+
+#: modules/poll/poll-bar.tpl.php:25 modules/poll/poll.pages.inc:20
+msgid "1 vote"
+msgid_plural "@count votes"
+msgstr[0] "صوت واحد"
+msgstr[1] "لا أصوات"
+msgstr[2] "صوتان"
+msgstr[3] "@count أصوات"
+msgstr[4] "@count صوتا"
+msgstr[5] "@count صوت"
+
+#: modules/poll/poll-results-block.tpl.php:26
+#: modules/poll/poll-results.tpl.php:24
+msgid "Total votes: @votes"
+msgstr "مجموع الأصوات : @votes"
+
+#: modules/poll/poll.pages.inc:20
+msgid "open"
+msgstr "مفتوح"
+
+#: modules/poll/poll.pages.inc:20
+msgid "closed"
+msgstr "مغلق"
+
+#: modules/poll/poll.pages.inc:32
+msgid ""
+"This table lists all the recorded votes for this poll. If anonymous users "
+"are allowed to vote, they will be identified by the IP address of the "
+"computer they used when they voted."
+msgstr ""
+"يسرد هذا الجدول كل الأصوات المسجلة لاستطلاع الرأي هذا. في حال السماح "
+"للمستخدمين المجهولين بالتصويت، سيسجلوا بعنوان إنترنت للحواسيب التي استخدموها "
+"للتصويت."
+
+#: modules/poll/poll.pages.inc:35 modules/poll/poll.module:566
+msgid "Vote"
+msgstr "صوّت"
+
+#: modules/poll/poll.module:16
+msgid ""
+"The poll module can be used to create simple polls for site users. A poll is "
+"a simple, multiple choice questionnaire which displays the cumulative "
+"results of the answers to the poll. Having polls on the site is a good way "
+"to receive feedback from community members."
+msgstr ""
+"يمكن استخدام وحدة استطلاع الرأي لإجراء استطلاعات بسيطة لمستخدمي الموقع. "
+"الاستطلاعات هي استمارة استبيان بسيطة فيها اختيارات متعددة كأجوبة على سؤال، و "
+"تعرض فيه النتائج التراكمية للإجابات على الاستطلاع. تعتبر الاستطلاعات من "
+"الطرق الجيدة للحصول على ردود أفعال أعضاء في مجتمع."
+
+#: modules/poll/poll.module:17
+msgid ""
+"When creating a poll, enter the question being posed, as well as the "
+"potential choices (and beginning vote counts for each choice). The status "
+"and duration (length of time the poll remains active for new votes) can also "
+"be specified. Use the <a href=\"@poll\">poll</a> menu item to view all "
+"current polls. To vote in or view the results of a specific poll, click on "
+"the poll itself."
+msgstr ""
+"عند إنشاء استطلاع ادخل السؤال المطروح و كافة الاختيارات المتاحة (يمكن اضافة "
+"عدد أصوات مبدأي لكل اختيار). حدد أيضا حالة الاستطلاع و مدته (الفترة الزمنية "
+"التي يسمح بالتصويت خلالها). رابط <a href=\"@poll\">استطلاع رأي</a> في "
+"القائمة يعرض استطلاعات الرأي الفاعلة، للمشاركة في أو عرض نتائج أي استطلاع "
+"انقر على رابط الاستطلاع نفسه."
+
+#: modules/poll/poll.module:18
+msgid ""
+"For more information, see the online handbook entry for <a href=\"@poll"
+"\">Poll module</a>."
+msgstr ""
+"لمزيد من المعلومات؛ من فضلك طالع صفحة <a href=\"@poll\">وحدة استطلاع الرأي</"
+"a> في كتيب الاستخدام."
+
+#: modules/poll/poll.module:133
+msgid "Most recent poll"
+msgstr "أحدث استطلاع رأي"
+
+#: modules/poll/poll.module:174
+msgid ""
+"A <em>poll</em> is a question with a set of possible responses. A <em>poll</"
+"em>, once created, automatically provides a simple running count of the "
+"number of votes received for each response."
+msgstr ""
+"<em>استطلاع الرأي</em> عبارة عن سؤال مرفق بمجموعة من الخيارات. يتابع استطلاع "
+"الرأي عدد الأصوات التي حصل عليها كل اختيار."
+
+#: modules/poll/poll.module:175
+msgid "Question"
+msgstr "السؤال"
+
+#: modules/poll/poll.module:237
+msgid "More choices"
+msgstr "المزيد من الخيارات"
+
+#: modules/poll/poll.module:238
+msgid ""
+"If the amount of boxes above isn't enough, click here to add more choices."
+msgstr ""
+"إذا كانت عدد الخيارات بالأعلى غير كاف، أشر على هذا المربع، ثم انقر زر \"عرض "
+"مسبق\" في الأسفل لإضافة المزيد من الخيارات."
+
+#: modules/poll/poll.module:251
+msgid "Closed"
+msgstr "مغلق"
+
+#: modules/poll/poll.module:257
+msgid "Poll settings"
+msgstr "إعدادات استطلاعات الرأي"
+
+#: modules/poll/poll.module:263
+msgid "Poll status"
+msgstr "حالة استطلاع الرأي"
+
+#: modules/poll/poll.module:266
+msgid "When a poll is closed, visitors can no longer vote for it."
+msgstr "لا يمكن للزائرين التصويت بعد إغلاق الاستطلاع."
+
+#: modules/poll/poll.module:271
+msgid "Poll duration"
+msgstr "مدة استطلاع الرأي"
+
+#: modules/poll/poll.module:274
+msgid "After this period, the poll will be closed automatically."
+msgstr "يغلق استطلاع الرأي بعد هذه الفترة بشكل آلي."
+
+#: modules/poll/poll.module:307
+msgid "Choice @n"
+msgstr "اختيار @n"
+
+#: modules/poll/poll.module:315
+msgid "Votes for choice @n"
+msgstr "أصوات للاختيار @n"
+
+#: modules/poll/poll.module:380
+msgid "Negative values are not allowed."
+msgstr "غير مسموح بالقيم السالبة."
+
+#: modules/poll/poll.module:385
+msgid "You must fill in at least two choices."
+msgstr "يجب أن تملأ اختيارين على الأقل."
+
+#: modules/poll/poll.module:506
+msgid "Older polls"
+msgstr "استطلاعات الرأي الأقدم"
+
+#: modules/poll/poll.module:506
+msgid "View the list of polls on this site."
+msgstr "يعرض قائمة استطلاعات الرأي الموجودة على هذا الموقع."
+
+#: modules/poll/poll.module:508;98
+msgid "Results"
+msgstr "النتائج"
+
+#: modules/poll/poll.module:508
+msgid "View the current poll results."
+msgstr "اعرض نتائج الاستطلاع الحالية."
+
+#: modules/poll/poll.module:588
+msgid ""
+"Your vote could not be recorded because you did not select any of the "
+"choices."
+msgstr "تعذّر تسجيل صوتك لأنك لم تختر أي من الخيارات المتاحة."
+
+#: modules/poll/poll.module:611
+msgid "Your vote was recorded."
+msgstr "سُجّل صوتك."
+
+#: modules/poll/poll.module:667
+msgid "Add another choice"
+msgstr "أضف اختيارا آخر"
+
+#: modules/poll/poll.module:671
+msgid "Choice"
+msgstr "اختيار"
+
+#: modules/poll/poll.module:672
+msgid "Vote count"
+msgstr "عدد الأصوات"
+
+#: modules/poll/poll.module:754
+msgid "Cancel your vote"
+msgstr "الغ صوتك"
+
+#: modules/poll/poll.module:57
+msgid "create poll content"
+msgstr "ينشئ استطلاعات"
+
+#: modules/poll/poll.module:57
+msgid "delete own poll content"
+msgstr "يحذف استطلاعاته"
+
+#: modules/poll/poll.module:57
+msgid "delete any poll content"
+msgstr "يحذف أي استطلاع"
+
+#: modules/poll/poll.module:57
+msgid "edit any poll content"
+msgstr "يحرر أي استطلاع"
+
+#: modules/poll/poll.module:57
+msgid "edit own poll content"
+msgstr "يحرر استطلاعاته"
+
+#: modules/poll/poll.module:57
+msgid "vote on polls"
+msgstr "يصوت على استطلاعات الرأي"
+
+#: modules/poll/poll.module:57
+msgid "cancel own vote"
+msgstr "يلغي صوته"
+
+#: modules/poll/poll.module:57
+msgid "inspect all votes"
+msgstr "يفحص جميع الأصوات"
+
+#: modules/poll/poll.module:79
+msgid "Polls"
+msgstr "استطلاعات الرأي"
+
+#: modules/poll/poll.module:87
+msgid "Votes"
+msgstr "الأصوات"
+
+#: modules/poll/poll.module:109
+msgid "Javascript Choice Form"
+msgstr "استمارة اختيارات جافا سكربت"
+
+#~ msgid "poll"
+#~ msgstr "استطلاع رأي"

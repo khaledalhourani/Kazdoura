@@ -1,0 +1,424 @@
+# translation of general.po to Arabic
+# Abdel Rahman Ghareeb <king_abdo@yahoo.com>, 2004.
+# Sameh Sabry <samehsabry@linuxmail.org>, 2004.
+# Manal Hassan <manal@manalaa.net>, 2004.
+# Amr Gharbeia <amr@gharbeia.net>, 2005, 2006, 2007.
+# Khaled Hosny <khaledhosny@eglug.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: general\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 11:04+0200\n"
+"PO-Revision-Date: 2010-02-18 23:38+0200\n"
+"Last-Translator: Alaa <alaa@manalaa.net>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Pootle 2.0.2\n"
+
+#: modules/menu/menu.admin.inc:54
+msgid "There are no menu items yet."
+msgstr "لا روابط في القائمة."
+
+#: modules/menu/menu.admin.inc:72 modules/menu/menu.module:245
+msgid "disabled"
+msgstr "مُعَطَّلة"
+
+#: modules/menu/menu.admin.inc:104
+msgid "reset"
+msgstr "أعد الضبط"
+
+#: modules/menu/menu.admin.inc:175
+msgid "Menu item"
+msgstr "رابط"
+
+#: modules/menu/menu.admin.inc:177;299
+msgid "Expanded"
+msgstr "موسع"
+
+#: modules/menu/menu.admin.inc:230 modules/menu/menu.module:367
+msgid "Menu settings"
+msgstr "إعدادات القائمة"
+
+#: modules/menu/menu.admin.inc:260
+msgid ""
+"The path this menu item links to. This can be an internal Drupal path such "
+"as %add-node or an external URL such as %drupal. Enter %front to link to the "
+"front page."
+msgstr ""
+"المسار الذي يقود إليه عنصر القائمة. يمكن أن يكون مسار دروبال محلي مثل %add-"
+"node، أو مسار خارجي مثل %drupal. للربط بالصفحة الرئيسية اكتب %front."
+
+#: modules/menu/menu.admin.inc:279 modules/menu/menu.module:394
+msgid "Menu link title"
+msgstr "عنوان رابط القائمة"
+
+#: modules/menu/menu.admin.inc:281
+msgid ""
+"The link text corresponding to this item that should appear in the menu."
+msgstr "نص الرابط التي ستمثل هذا العنصر في القائمة."
+
+#: modules/menu/menu.admin.inc:289
+msgid "The description displayed when hovering over a menu item."
+msgstr "الوصف الذي سيظهر عندما يقف مؤشر الفأرة على الرابط."
+
+#: modules/menu/menu.admin.inc:295
+msgid "Menu items that are not enabled will not be listed in any menu."
+msgstr "عناصر القائمة غير المفعلة لن توضع في أي قوائم."
+
+#: modules/menu/menu.admin.inc:301
+msgid ""
+"If selected and this menu item has children, the menu will always appear "
+"expanded."
+msgstr ""
+"إذا فعل هذا الاختيار، و كان لهذا الرابط أبناء، فستظهر القائمة موسعة دائما."
+
+#: modules/menu/menu.admin.inc:315 modules/menu/menu.module:410
+msgid ""
+"The maximum depth for an item and all its children is fixed at !maxdepth. "
+"Some menu items may not be available as parents if selecting them would "
+"exceed this limit."
+msgstr ""
+"أقصى عمق قد يصل إليه أي عنصر و العناصر المدرجة تحته مثبت عند !maxdepth. بعض "
+"عناصر القوائم قد لا يمكن إدراجها كعنصر أم لإن استخدامها سوف يؤدي إلى تخطي "
+"هذا العمق."
+
+#: modules/menu/menu.admin.inc:323 modules/menu/menu.module:420
+msgid ""
+"Optional. In the menu, the heavier items will sink and the lighter items "
+"will be positioned nearer the top."
+msgstr "اختياري. في كل قائمة، تترتب الروابط ابتداء بالأخف وانتهاء بالأثقل."
+
+#: modules/menu/menu.admin.inc:379 modules/menu/menu.module:311
+msgid "There was an error saving the menu link."
+msgstr "خطأ أثناء حفظ رابط القائمة."
+
+#: modules/menu/menu.admin.inc:403
+msgid "Menu name"
+msgstr "اسم القائمة"
+
+#: modules/menu/menu.admin.inc:405
+msgid ""
+"The machine-readable name of this menu. This text will be used for "
+"constructing the URL of the <em>menu overview</em> page for this menu. This "
+"name must contain only lowercase letters, numbers, and hyphens, and must be "
+"unique."
+msgstr ""
+"الاسم الآلي لهذه القائمة. سوف يستخدم هذا النص في تكوين المسار الخاص بصفحة "
+"<em>معلومات القائمة</em> الخاصة بهذه القائمة. يجب أن يحتوي هذا الاسم على "
+"أرقام، حروف الصغيرة، خطوط سفلية فقط، و يجب أن يكون مميزا."
+
+#: modules/menu/menu.admin.inc:460
+msgid "Are you sure you want to delete the custom menu %title?"
+msgstr "هل أنت متأكد أنك راغب في حذف القائمة %title؟"
+
+#: modules/menu/menu.admin.inc:492
+msgid "The custom menu %title has been deleted."
+msgstr "تم حذف القائمة %title."
+
+#: modules/menu/menu.admin.inc:502
+msgid ""
+"The menu name may only consist of lowercase letters, numbers, and hyphens."
+msgstr "اسم القائمة يجب أن يحتوي على أرقام، حروف، و خطوط سفلية فقط."
+
+#: modules/menu/menu.admin.inc:512
+msgid "The menu already exists."
+msgstr "القائمة موجودة بالفعل."
+
+#: modules/menu/menu.admin.inc:564
+msgid "Are you sure you want to delete the custom menu item %item?"
+msgstr "هل أنت متأكد أنك راغب في حذف الرابط %item؟"
+
+#: modules/menu/menu.admin.inc:574
+msgid "The menu item %title has been deleted."
+msgstr "تم حذف الرابط %title."
+
+#: modules/menu/menu.admin.inc:584
+msgid "Are you sure you want to reset the item %item to its default values?"
+msgstr "هل أنت متأكد أنك راغب في إعادة ضبط رابط %item؟"
+
+#: modules/menu/menu.admin.inc:584
+msgid "Any customizations will be lost. This action cannot be undone."
+msgstr "أي تعديلات ستحذف. لا يمكن الرجوع عن هذا الفعل."
+
+#: modules/menu/menu.admin.inc:593
+msgid "The menu item was reset to its default settings."
+msgstr "أعد ضبط الرابط إلى إعداداته المبدئية."
+
+#: modules/menu/menu.admin.inc:603
+msgid ""
+"The menu module allows on-the-fly creation of menu links in the content "
+"authoring forms. The following option sets the default menu in which a new "
+"link will be added."
+msgstr ""
+"تسمح وحدة القائمة بإنشاء روابط قائمة بسهولة و يسر في استمارة نشر المحتوى. "
+"تحد الخيارات التالية القوائم التي يمكن إضافة رابط جديد إليها. على سبيل "
+"المثال، يمكن استخدام هذه الخيارات لإنشاء روابط جديدة في قائمة الروابط "
+"الأساسية، أو لإخفاء روابط قائمة الإدارة."
+
+#: modules/menu/menu.admin.inc:609
+msgid "Default menu for content"
+msgstr "قائمة مبدئية للمحتوى"
+
+#: modules/menu/menu.admin.inc:612
+msgid ""
+"Choose the menu to be the default in the menu options in the content "
+"authoring form."
+msgstr ""
+"اختر القائمة التي ستصبح القائمة المبدئية في خيار القائمة باستمارة إضافة "
+"المحتوى."
+
+#: modules/menu/menu.admin.inc:616
+msgid "No primary links"
+msgstr "لا روابط أساسية"
+
+#: modules/menu/menu.admin.inc:619
+msgid "Source for the primary links"
+msgstr "مصدر الروابط الأساسية"
+
+#: modules/menu/menu.admin.inc:623
+msgid "Select what should be displayed as the primary links."
+msgstr "اختر ما يجب أن يعرض كروابط أساسية."
+
+#: modules/menu/menu.admin.inc:626
+msgid "No secondary links"
+msgstr "لا روابط ثانوية"
+
+#: modules/menu/menu.admin.inc:629
+msgid "Source for the secondary links"
+msgstr "مصدر الروابط الثانوية"
+
+#: modules/menu/menu.admin.inc:633
+msgid ""
+"Select what should be displayed as the secondary links. You can choose the "
+"same menu for secondary links as for primary links (currently %primary). If "
+"you do this, the children of the active primary menu link will be displayed "
+"as secondary links."
+msgstr ""
+"احتر ما الذي سيعرض كروابط ثانوية. يمكنك اختيار نفس القائمة التي اخترتها "
+"للروابط الأساسية (حاليا هي %primary). إذا فعلت ذلك فإن أبناء الرابط الفعال "
+"حاليا من الروابط الأساسية سوف يظهرون في مكان الروابط الثانوية."
+
+#: modules/menu/menu.admin.inc:493
+msgid "Deleted custom menu %title and all its menu items."
+msgstr "حُذفت القائمة %title و كل عناصرها."
+
+#: modules/menu/menu.admin.inc:575
+msgid "Deleted menu item %title."
+msgstr "حُذف الرابط %title."
+
+#: modules/menu/menu.admin.inc:457
+msgid ""
+"<strong>Warning:</strong> There is currently 1 menu item in %title. It will "
+"be deleted (system-defined items will be reset)."
+msgid_plural ""
+"<strong>Warning:</strong> There are currently @count menu items in %title. "
+"They will be deleted (system-defined items will be reset)."
+msgstr[0] ""
+"<strong>تحذير:</strong> يوجد حاليا عنصر واحد في %title. سيُحذف. (ستعاد "
+"العناصر من المعرفة النظام إلى حالتها الأساسية)."
+msgstr[1] "<strong>تحذير:</strong> لا يوجد حاليا أي عناصر في %title. ستُحذف."
+msgstr[2] ""
+"<strong>تحذير:</strong> يوجد حاليا عنصران في %title. ستُحذف. (ستعاد العناصر "
+"المعرفة من النظام إلى حالتها الأساسية)."
+msgstr[3] ""
+"<strong>تحذير:</strong> يوجد حاليا @count عناصر في %title. ستُحذف. (ستعاد "
+"العناصر المعرفة من النظام إلى حالتها الأساسية)."
+msgstr[4] ""
+"<strong>تحذير:</strong> يوجد حاليا @count عنصرا في %title. ستُحذف. (ستعاد "
+"العناصر المعرفة من النظام إلى حالتها الأساسية)."
+msgstr[5] ""
+"<strong>تحذير:</strong> يوجد حاليا @count عنصر في %title. ستُحذف. (ستعاد "
+"العناصر المعرفة من النظام إلى حالتها الأساسية)."
+
+#: modules/menu/menu.admin.inc:505
+msgid "The menu name can't be longer than 1 character."
+msgid_plural "The menu name can't be longer than @count characters."
+msgstr[0] "لا يمكن أن يكون اسم القائمة أطول من حرف واحد."
+msgstr[1] "لا يمكن أن يكون اسم القائمة أطول من @count حروف."
+msgstr[2] "لا يمكن أن يكون اسم القائمة أطول من حرفين."
+msgstr[3] "لا يمكن أن يكون اسم القائمة أطول من @count حروف."
+msgstr[4] "لا يمكن أن يكون اسم القائمة أطول من @count حرفا."
+msgstr[5] "لا يمكن أن يكون اسم القائمة أطول من @count حرف."
+
+#: modules/menu/menu.module:21
+msgid ""
+"The menu module provides an interface to control and customize Drupal's "
+"powerful menu system. Menus are a hierarchical collection of links, or menu "
+"items, used to navigate a website, and are positioned and displayed using "
+"Drupal's flexible block system. By default, three menus are created during "
+"installation: <em>Navigation</em>, <em>Primary links</em>, and <em>Secondary "
+"links</em>. The <em>Navigation</em> menu contains most links necessary for "
+"working with and navigating your site, and is often displayed in either the "
+"left or right sidebar. Most Drupal themes also provide support for "
+"<em>Primary links</em> and <em>Secondary links</em>, by displaying them in "
+"either the header or footer of each page. By default, <em>Primary links</em> "
+"and <em>Secondary links</em> contain no menu items but may be configured to "
+"contain custom menu items specific to your site."
+msgstr ""
+"توفر وحدة القوائم واجهة للتحكم و تطويع نظام القوائم في دروبال. القوائم هي "
+"مجموعة من الروابط هرمية الترتيب تستخدم لتصفح الموقع. و يتم عرضها و تحديد "
+"أماكنها باستخدام نظام الصناديق في دروبال. يتم إنشاء ثلاثة قوائم مبدئية أثناء "
+"تثبيت دروبال: <em>التصفح</em>، <em>روابط أساسية</em>، و <em>روابط ثانوية</"
+"em>. قائمة <em>التصفح</em> تحتوي على معظم الروابط الضرورية للعمل و لتصفح "
+"موقعك و عادة ما تعرض في الشريط الجانبي الأيسر أو الأيمن. معظم سمات دروبال "
+"تدعم <em>الوصلات الأساسية</em> و <em>الوصلات الثانوية</em> بعرضهم في ترويسة "
+"أو ذيل كل صفحة. مبدئيا لا تحتوي قوائم <em>الوصلات الأساسية</em> و "
+"<em>الوصلات الثانوية</em> على أي عناصر حتى تقوم أنت بإضافة روابط لهم."
+
+#: modules/menu/menu.module:22
+msgid ""
+"The <a href=\"@menu\">menus page</a> displays all menus currently available "
+"on your site. Select a menu from this list to add or edit a menu item, or to "
+"rearrange items within the menu. Create new menus using the <a href=\"@add-"
+"menu\">add menu page</a> (the block containing a new menu must also be "
+"enabled on the <a href=\"@blocks\">blocks administration page</a>)."
+msgstr ""
+"<a href=\"@menu\">صفحة القوائم</a> تعرض كل القوائم المتاحة بموقعك. اختر "
+"قائمة من القوائم لتعديلها بإضافة أو إزالة روابط منها أو لإعادة ترتيب الروابط "
+"بها. أنشئ قائمة جديدة باستخدام صفحة <a href=\"@add-menu\">أضف قائمة</a> (يجب "
+"أن تفعّل الصندوق الذي سيحتوي على القائمة الجديدة من <a href=\"@blocks\">صفحة "
+"إدارة الصناديق</a>)."
+
+#: modules/menu/menu.module:23
+msgid ""
+"For more information, see the online handbook entry for <a href=\"@menu"
+"\">Menu module</a>."
+msgstr ""
+"لمزيد من المعلومات، من فضلك طالع صفحة <a href=\"@menu\">وحدة القوائم</a> في "
+"كتيب الاستخدام."
+
+#: modules/menu/menu.module:26
+msgid ""
+"Menus are a collection of links (menu items) used to navigate a website. The "
+"menus currently available on your site are displayed below. Select a menu "
+"from this list to manage its menu items."
+msgstr ""
+"القوائم عبارة عن مجموعة من الروابط (عناصر القائمة) تستخدم في الإبحار عبر "
+"الموقع. القوائم المتوفرة حاليا بموقعك معروضة أدناه. اختر أي قائمة لتعديل "
+"عناصرها."
+
+#: modules/menu/menu.module:28
+msgid ""
+"Enter the name for your new menu. Remember to enable the newly created block "
+"in the <a href=\"@blocks\">blocks administration page</a>."
+msgstr ""
+"أدخل اسم القائمة الجديدة. تذكر أن تفعل الصندوق الجديد الذي سيُنشأ من <a href="
+"\"@blocks\">صفحة إدارة الصناديق</a>."
+
+#: modules/menu/menu.module:30
+msgid ""
+"To rearrange menu items, grab a drag-and-drop handle under the <em>Menu "
+"item</em> column and drag the items (or group of items) to a new location in "
+"the list. (Grab a handle by clicking and holding the mouse while hovering "
+"over a handle icon.) Remember that your changes will not be saved until you "
+"click the <em>Save configuration</em> button at the bottom of the page."
+msgstr ""
+"لبترتيب الروابط في القائمة اسحب العلامة المقابلة <em>للرابط</em> واسحبه إلى "
+"مكانه الجديد بالقائمة. تذكر أن أي تعديل في الترتيب بالقائمة لن يُحفظ إلا بعد "
+"الضغط على زر <em>احفظ الإعدادات</em> في أسفل الصفحة."
+
+#: modules/menu/menu.module:32
+msgid "Enter the title and path for your new menu item."
+msgstr "أدخل عنوان الرابط الجديد و مساره."
+
+#: modules/menu/menu.module:381
+msgid "Delete this menu item."
+msgstr "احذف رابط القائمة هذا."
+
+#: modules/menu/menu.module:396
+msgid ""
+"The link text corresponding to this item that should appear in the menu. "
+"Leave blank if you do not wish to add this post to the menu."
+msgstr ""
+"النص الذي سيظهر في رابط هذا العنصر في القائمة. اتركه فارغا إذا لم ترد إضافة "
+"هذه الرسالة إلى القائمة."
+
+#: modules/menu/menu.module:40
+msgid "administer menu"
+msgstr "يدير القوائم"
+
+#: modules/menu/menu.module:48
+msgid "Menus"
+msgstr "القوائم"
+
+#: modules/menu/menu.module:49
+msgid ""
+"Control your site's navigation menu, primary links and secondary links. as "
+"well as rename and reorganize menu items."
+msgstr ""
+"تحكم في قائمة تصفح الموقع، و الروابط الأساسية و الثانوية، بالإضافة إلى تغيير "
+"تسمية و ترتيب الروابط في القوائم."
+
+#: modules/menu/menu.module:57
+msgid "List menus"
+msgstr "اعرض القوائم"
+
+#: modules/menu/menu.module:63
+msgid "Add menu"
+msgstr "أضف قائمة"
+
+#: modules/menu/menu.module:80
+msgid "Customize menu"
+msgstr "تطويع قائمة"
+
+#: modules/menu/menu.module:90
+msgid "List items"
+msgstr "اعرض عناصر القائمة"
+
+#: modules/menu/menu.module:96
+msgid "Add item"
+msgstr "أضف رابطا"
+
+#: modules/menu/menu.module:104
+msgid "Edit menu"
+msgstr "حرر القائمة"
+
+#: modules/menu/menu.module:112
+msgid "Delete menu"
+msgstr "احذف القائمة"
+
+#: modules/menu/menu.module:120
+msgid "Edit menu item"
+msgstr "حرر رابطا في قائمة"
+
+#: modules/menu/menu.module:128
+msgid "Reset menu item"
+msgstr "أعد ضبط رابط في قائمة"
+
+#: modules/menu/menu.module:136
+msgid "Delete menu item"
+msgstr "احذف رابطا في قائمة"
+
+#: (duplicate) modules/menu/menu.install:12
+msgid ""
+"The navigation menu is provided by Drupal and is the main interactive menu "
+"for any site. It is usually the only menu that contains personalized links "
+"for authenticated users, and is often not even visible to anonymous users."
+msgstr ""
+"يوفر دروبال قائمة التصفح و هي القائمة الأساسية للتعامل مع أي موقع. عادة ما "
+"تكون هذه القائمة هي الوحيدة التي بها عناصر معدة لكي تظهر فقط للمستخدمين "
+"المسجلين و عادة لا تظهر القائمة للمستخدمين المجهولين."
+
+#: (duplicate) modules/menu/menu.install:13
+msgid ""
+"Primary links are often used at the theme layer to show the major sections "
+"of a site. A typical representation for primary links would be tabs along "
+"the top."
+msgstr ""
+"الروابط الأساسية تستخدم عادة في طبقة السمة لعرض الأقسام الرئيسية للموقع. "
+"العرض المعتاد للروابط الأساسية يكون على شكل قائمة بأعلى الصفحات."
+
+#: (duplicate) modules/menu/menu.install:14
+msgid ""
+"Secondary links are often used for pages like legal notices, contact "
+"details, and other secondary navigation items that play a lesser role than "
+"primary links"
+msgstr ""
+"الروابط الثانوية تستخدم عادة لصفحات مثل البيانات القانونية، معلومات الاتصال "
+"بإدارة الموقع، و عناصر ثانوية أخرى لصفحات أقل أهمية بالموقع من صفحات الوصلات "
+"الأساسية."
