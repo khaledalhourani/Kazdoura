@@ -1441,40 +1441,10 @@ function views_ui_standard_cancel($form, &$form_state) {
   $form_state['redirect'] = 'admin/build/views/edit/' . $form_state['view']->name;
 }
 
-/**
- * Builds and return a list of all views UI forms.
- *
- * @return Nested array of forms, grouped by button.
- */
-function views_ui_ajax_forms_builder($key) {
-  $forms = null;
-  // Get forms identifiers from all mdoules.
-  foreach (module_implements('views_ui_ajax_form') as $module) {
-    $function = $module . '_views_ui_ajax_form';
-    $result = $function();
-    if (!is_array($result)) {
-      continue;
-    }
+// --------------------------------------------------------------------------
+// Various subforms for editing the pieces of a view.
 
-    foreach ($result as $button => $info) {
-      // `form_id` is an essentiall component of any button
-      if (array_key_exists('form_id', $result[$button])) {
-	$forms[$button] = $result[$button];
-      }
-    }
-  }
-
-  if ($key) {
-    return !empty($forms[$key]) ? $forms[$key] : NULL;
-  }
-
-  return $forms;
-}
-
-/**
- * Implementation of hook_views_ui_ajax_form()
- */
-function views_views_ui_ajax_form($key = NULL) {
+function views_ui_ajax_forms($key = NULL) {
   $forms = array(
     'display' => array(
       'form_id' => 'views_ui_edit_display_form',
@@ -1514,19 +1484,20 @@ function views_views_ui_ajax_form($key = NULL) {
     ),
   );
 
+  if ($key) {
+    return !empty($forms[$key]) ? $forms[$key] : NULL;
+  }
+
   return $forms;
 }
-
-// --------------------------------------------------------------------------
-// Various subforms for editing the pieces of a view.
 
 /**
  * Build a form identifier that we can use to see if one form
  * is the same as another. Since the arguments differ slightly
- * we do a lot of spiffy concentration here.
+ * we do a lot of spiffy concenation here.
  */
 function views_ui_build_identifier($key, $view, $display_id, $args) {
-  $form = views_ui_ajax_forms_builder($key);
+  $form = views_ui_ajax_forms($key);
   $identifier = implode('-', array($key, $view->name, $display_id));
 
   foreach ($form['args'] as $id) {
@@ -1541,7 +1512,7 @@ function views_ui_build_identifier($key, $view, $display_id, $args) {
  * based on known information about a form.
  */
 function views_ui_build_form_state($js, $key, &$view, $display_id, $args) {
-  $form = views_ui_ajax_forms_builder($key);
+  $form = views_ui_ajax_forms($key);
   // Build up form state
   $form_state = array(
     'form_key' => $key,
@@ -1564,7 +1535,7 @@ function views_ui_build_form_state($js, $key, &$view, $display_id, $args) {
  * information about the form.
  */
 function views_ui_build_form_url($form_state) {
-  $form = views_ui_ajax_forms_builder($form_state['form_key']);
+  $form = views_ui_ajax_forms($form_state['form_key']);
   $ajax = empty($form_state['ajax']) ? 'nojs' : 'ajax';
   $name = $form_state['view']->name;
   $url = "admin/build/views/$ajax/$form_state[form_key]/$name/$form_state[display_id]";
@@ -1601,7 +1572,7 @@ function views_ui_add_form_to_stack($key, &$view, $display_id, $args, $top = FAL
  * use with this system.
  */
 function views_ui_ajax_form($js, $key, $view, $display_id) {
-  $form = views_ui_ajax_forms_builder($key);
+  $form = views_ui_ajax_forms($key);
   if (empty($form)) {
     return drupal_not_found();
   }
