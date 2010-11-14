@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://a9.com/-/spec/opensearch/1.1/">
+    <title>كزدورة</title>	
+	
+	<!-- Meta tags -->
+	<meta http-equiv="content-language" content="en-us" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />	
+	<meta http-equiv="window-target" content="_top" /> <!-- skip frames -->
+	<meta name="robots" content="index,follow" />
+	<meta name="keywords" content="booking, hotel, hotels, reservations" />
+	<meta name="description" content="Online Booking" />
+	
+	<!-- Favicons --> 
+	<link href="img/favicon.png" rel="shortcut icon" type="image/png" />
+	<link href="img/favicon.png" rel="icon" type="image/png" />
+	
+	<!-- Main Stylesheets -->
+	<link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="css/extensions.css" media="screen" rel="stylesheet" type="text/css" /> <!-- browser specific extensions / remove it if you want to validate this document -->
+	<link href="css/print.css" media="print" rel="stylesheet" type="text/css" /> <!-- for printing -->
+	<!-- Alternate stylesheets/themes -->
+	<link href="css/orange.css" media="screen" rel="alternate stylesheet" type="text/css" title="orange" />
+	<link href="css/pink.css" media="screen" rel="alternate stylesheet" type="text/css" title="pink" />
+	<link href="css/red.css" media="screen" rel="alternate stylesheet" type="text/css" title="red" />
+	<link href="css/blue.css" media="screen" rel="alternate stylesheet" type="text/css" title="blue" />
+	<link href="css/brown.css" media="screen" rel="alternate stylesheet" type="text/css" title="brown" />
+	<link href="css/cyan.css" media="screen" rel="alternate stylesheet" type="text/css" title="cyan" />
+	<link href="css/purple.css" media="screen" rel="alternate stylesheet" type="text/css" title="purple" />
+	<!-- Your Custom Stylesheet --> 
+	<link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />	
+	<link rel="stylesheet" type="text/css" media="all" href="css/ie.css"/>
+		<style type="text/css">
+.style1 {
+	color: #CCCCCC;
+}
+</style>
+</head>
+
+<body>
+	
+<div class="container container_12">
+	<!-- Header -->
+	<div class="grid_12" >
+		<!-- Logo container -->
+		<div id="logo"></div>
+		
+		
+		<!-- Main navigation -->
+		<div class="radius" id="navigation">
+			<ul id="nav">
+				<li class="current_page_item"><a href="#" title="Home">الرئيسية</a></li>
+				<li class=""><a title="Hotel Guides" href="#">كزدورة جديدة</a></li>
+				<li class="separator">&nbsp;</li>	
+				<li class=""><a title="Vacation Ideas" href="#">ابحث عن اصدقاء</a></li>
+				<li class="separator">&nbsp;</li>	
+			</ul><!-- /#nav -->
+		</div>
+		<!-- End of Main navigation -->
+		
+	</div>
+	<!-- End of Header -->
+
+	<!-- Map -->
+	<div class='grid_4' style="left: 0px; top: 0px; width: 620px">
+		<div class="carousel">
+		</div>
+	</div>
+	<!-- End of Map -->
+
+	<!-- Search form -->
+	<div class='grid_4'>
+		<div class="box radius fixheight">
+			<div class="padded">
+				<h2 class="headline radius"><b>البحث</b></h2>
+				 <form name="booking" method="get" action="">
+					<!-- calendar image container -->
+					<span style="display:none;"><img class="trigger" id="trigger" alt="" src="img/blank.gif" /></span>
+					<fieldset class="radius">
+						<p>
+							<label class="" for="destination">مكان ( مدينة، موقع، ...)</label><br/>
+							<input type="text" id="destination" class="full" value="" name="destination"/>
+						</p>
+						<hr class="thin" />
+						<p>
+							<label class="" for="sortOrder">ترتيب النتائج</label><br/>
+							<select id="sortOrder" name="sortOrder">
+							    <option title="Sort by guest rating" value="GUEST_RATING_ASC">التقييم</option>
+								<option title="Sort by star rating - low to high" value="STAR_RATING_ASC">الاحدث</option>
+							</select>
+						</p>
+						<input type="submit" class="btn btn-custom radius fr" value="بحث &raquo;" />
+					</fieldset>
+				</form>
+  
+			</div>
+		</div>
+	</div>
+	<!-- End of Search form -->	
+		
+	<div class="grid_12">&nbsp;</div>
+ 	
+	<!-- Info boxes -->
+		<div class='grid_4' style="width:930px">
+		<div class="box radius">
+			<div class="padded tc">
+				<h2 class="gray radius">شارك رحلتك مع اصدقاءك</h2>
+			</div>
+		</div>
+	</div>
+	<!-- End of Info boxes -->
+
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<div class="clear">&nbsp;</div>	
+</div>
+<!-- Footer -->
+<div id="footer">
+	<div class="container_12 padded">
+		<div class="grid_3">
+			<h3><span lang="ar-sa">تواصل معنا</span></h3>
+			<p class="small"><span lang="ar-sa">كازدورة جميع الحقوق محفوظة 2010- 
+			2020 .</span></p>
+			<p class="small">&nbsp;</p>
+			<a href="https://twitter.com/KazdoraCom"><img src="img/social/twitter.png" alt="twitter" /></a> 
+			<a href="#"><img src="img/social/facebook.png" alt="facebook" /></a> 
+			<a href="#"><img src="img/social/flickr.png" alt="flickr" /></a>
+			<a href="#"><img src="img/social/youtube.png" alt="YouTube" /></a>
+			<a href="#"><img src="img/social/rss.png" alt="RSS" /></a>
+			</div>
+		<div class='grid_3'>
+			<h3><span lang="ar-sy">شارك</span></h3>
+			<ul>
+				<li><span lang="ar-sy"><a href="#">أ<span class="style1">ضف 
+				كزدورة</span></a></span></li>
+				<li><span lang="ar-sy"><a href="#">ا<span class="style1">بحث عن 
+				اصدقاءك</span></a></span></li>
+				<li><a href="#">برامج كزدورة</a></li>
+			</ul>
+		</div>
+		<div class='grid_3'>
+			<h3><span lang="ar-sy">كازدورة</span></h3>
+			<ul>
+				<li><a href="#">من نحن</a></li>
+				<li><a href="#">شركاؤنا</a></li>
+				<li><a href="#">س & ج </a></li>
+				<li><a href="#">السياسات و الأحكام</a></li>
+			</ul>
+		</div>
+		<div class='grid_3'>
+			<h3><span lang="ar-sy">تسجيل الدخول</span></h3>
+			<form name="login" action="">
+				<p>
+					<span lang="ar-sy">البريد الإلكتروني</span><br/>
+					<input type="text" id="email" class="full" value="" name="email"/>
+				</p>
+				<p>
+					<span lang="ar-sy">
+					<label class="" for="password">كلمة السر</label></span><br/>
+					<input type="password" id="password" class="full" value="" name="password"/>
+				</p>
+				<p>
+					<input type="checkbox" id="remember" class="" value="1" name="remember" />
+					<span lang="ar-sa">تذكرني</span>
+				</p>
+				<input type="submit" class="btn radius fr" value="Sign in &raquo;" />
+			</form>
+		</div>
+		<div class="clear">&nbsp;</div>
+	</div>
+</div>
+<!-- End of Footer -->
+
+<!-- Scroll to top link -->
+<a href="#" id="totop" class="radius" title="back to top"><img src="img/top.png" alt="back to top" /></a>
+
+<!-- Hotel array data -->
+<script type="text/javascript" src="js/hotels/amsterdam.js"></script>
+<script type="text/javascript" src="js/hotels/bahamas.js"></script>
+<script type="text/javascript" src="js/hotels/budapest.js"></script>
+<script type="text/javascript" src="js/hotels/cairo.js"></script>
+<script type="text/javascript" src="js/hotels/caymanislands.js"></script>
+<script type="text/javascript" src="js/hotels/corfu.js"></script>
+<script type="text/javascript" src="js/hotels/dubai.js"></script>
+<script type="text/javascript" src="js/hotels/honolulu.js"></script>
+<script type="text/javascript" src="js/hotels/lasvegas.js"></script>
+<script type="text/javascript" src="js/hotels/london.js"></script>
+<script type="text/javascript" src="js/hotels/miami.js"></script>
+<script type="text/javascript" src="js/hotels/newguinea.js"></script>
+<script type="text/javascript" src="js/hotels/newyork.js"></script>
+<script type="text/javascript" src="js/hotels/moscow.js"></script>
+<script type="text/javascript" src="js/hotels/paris.js"></script>
+<script type="text/javascript" src="js/hotels/phillipines.js"></script>
+<script type="text/javascript" src="js/hotels/prague.js"></script>
+<script type="text/javascript" src="js/hotels/rome.js"></script>
+<script type="text/javascript" src="js/hotels/singapore.js"></script>
+<script type="text/javascript" src="js/hotels/sydney.js"></script>
+<script type="text/javascript" src="js/hotels/tokyo.js"></script>
+
+</body>
+</html>
