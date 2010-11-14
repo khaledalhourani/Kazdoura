@@ -1,0 +1,299 @@
+--- gmap_plugin_style_gmap.inc	5 Nov 2010 19:15:44 -0000	1.11.2.6
++++ gmap_plugin_style_gmap.inc	5 Nov 2010 21:13:01 -0000
+@@ -135,116 +136,175 @@
+     // Render each group separately and concatenate.  Plugins may override this
+     // method if they wish some other way of handling grouping.
+     $output = '';
+-    foreach ($sets as $title => $records) {
+-      $markers = array();
+-      $offsets = array();
+-      $center_lat = null;
+-      $center_lon = null;
+-      $center_nid = null;
+-      $highlight_nid = null;
+-
+-      // We search nid argument used to center map
+-      if ($this->options['center_on_nodearg'] && $nodehandler = $this->view->display_handler->get_handler('argument', $this->options['center_on_nodearg_arg'])) {
+-        $center_nid = $nodehandler->get_value();
+-      }
+-      if ($this->options['highlight_nodearg'] && $nodehandler = $this->view->display_handler->get_handler('argument', $this->options['highlight_nodearg_arg'])) {
+-        $highlight_nid = $nodehandler->get_value();
+-      }
+ 
+-      foreach ($records as $row_index => $row) {
+-        $this->view->row_index = $row_index;
+-        $lat = (float)$row->{$lat_field};
+-        $lon = (float)$row->{$lon_field};
+-
+-        // $row->nid is present in node views, views without node as the base table must include the nid field,
+-        // which will be in $row->node_nid if present.
+-        // If nid for a row is required use $row_nid.
+-        $row_nid = isset($row->nid) ? $row->nid : (isset($row->node_nid) ? $row->node_nid : NULL);
+-
+-        // If this row will be used as center map then we keep its lon/lat
+-        // If there are multiple points on a single node take the first match
+-        if (!empty($center_nid) && !empty($row_nid) && $center_nid == $row_nid && ($center_lon === NULL || $center_lat === NULL)) {
+-          $center_lon = $lon;
+-          $center_lat = $lat;
++    // Handle polygons differently to markers
++    if ($this->options['markers'] == 'polygon') {
++      $shapes = array();
++      foreach ($sets as $title => $records) {
++        // Skip any polygons with less than 3 side as they won't display anyway.
++        if (count($records) < 3) {
++          continue;
+         }
+-
+-        if (!empty($lat) && !empty($lon)) {
+-          if ($this->options['markers'] == 'nodetype') {
+-            if (isset($markertypes[$row->gmap_node_type])) {
+-              $markername = $markertypes[$row->gmap_node_type];
+-            }
++        $points = array();
++        foreach ($records as $row_index => $row) {
++          $this->view->row_index = $row_index;
++          $lat = (float)$row->{$lat_field};
++          $lon = (float)$row->{$lon_field};
++          if (!empty($lat) && !empty($lon)) {
++            $points[] = array($lat, $lon);
+           }
+-          else if ($this->options['markers'] == 'taxonomy') {
+-            if (!empty($row->gmap_node_marker)) {
+-              $markername = $row->gmap_node_marker;
+-            }
+-          }
+-          else if ($this->options['markers'] == 'userrole') {
+-            if (!empty($row->gmap_role_marker)) {
+-              $markername = $markertypes[DRUPAL_AUTHENTICATED_RID];
+-              if (isset($markertypes[$row->gmap_role_marker])) {
+-                $markername = $markertypes[$row->gmap_role_marker];
+-              }
+-            }
+-          }
+-          else if ($this->options['markers'] == 'field') {
+-            if (!empty($row->{$marker_field})) {
+-              $markername = $row->{$marker_field};
+-            }
+-          }
+-          if (!isset($offsets[$markername])) {
+-            $offsets[$markername] = 0;
+-          }
+-
+-          $tooltip = "";
+-          if ($this->options['tooltipenabled'] && $row->$tooltip_field) {
+-            $tooltip = $row->$tooltip_field;
+-          }
+-
+-          $marker = array(
+-            'latitude' => $lat,
+-            'longitude' => $lon,
+-            'markername' => $markername,
+-            'offset' => $offsets[$markername],
+-            'opts' => array(
+-              'title' => $tooltip,
+-              'highlight' => (!empty($highlight_nid) && !empty($row_nid) && $highlight_nid == $row_nid) ? 1 : 0,
+-              'highlightcolor' => $this->options['highlight_nodearg_color'],
+-            ),
++        }
++        // Make the last point the same as the first to join up the polygon.
++        if (!empty($points) && isset($points[0])) {
++          $points[] = $points[0];
++          $shape = array(
++            'type' => 'polygon',
++            'style' => 'poly_default',
++            'points' => $points,
++            'text' => $this->row_plugin->render($row),
+           );
+-          // RMT mode.
+           if ($this->options['enablermt']) {
+-            $marker['rmt'] = $row->{$rmt_field};
++            $shape['rmt'] = $row->{$rmt_field};
+           }
+           else {
+-            // Marker mode: popup.
+-            if ($defaults['markermode'] == 1) {
+-              $marker['text'] = $this->row_plugin->render($row);
+-            }
+-            // Marker mode: link.
+-            else if ($defaults['markermode'] == 2) {
+-              $marker['link'] = url('node/' . $row_nid);
+-            }
++            $shape['text'] = $this->row_plugin->render($row);
+           }
+-          $markers[] = $marker;
+-
+-          $offsets[$markername]++;
++          $shapes[] = $shape;
++        }
++        if ($this->options['polygroup'] == 'seperate' && !empty($shapes)) {
++          $map = gmap_parse_macro($this->options['macro']);
++          $map['shapes'] = $shapes;
++          $map['behavior']['clickableshapes'] = TRUE;
++          $shapes = array();
++          if ($this->options['enablermt']) {
++            $map['rmtcallback'] = $this->options['rmtcallback'];
++          }
++          $output .= theme($this->theme_functions(), $this->view, $this->options, $map, $title);
+         }
+       }
+-      if (!empty($markers)) { // Don't draw empty maps.
++      if ($this->options['polygroup'] == 'single' && !empty($shapes)) {
+         $map = gmap_parse_macro($this->options['macro']);
++        $map['shapes'] = $shapes;
++        $map['behavior']['clickableshapes'] = TRUE;
+         if ($this->options['enablermt']) {
+           $map['rmtcallback'] = $this->options['rmtcallback'];
+         }
++        $output .= theme($this->theme_functions(), $this->view, $this->options, $map, '');
++      }
++    }
++    // markers != polygon
++    else {
++      foreach ($sets as $title => $records) {
++        $markers = array();
++        $offsets = array();
++        $center_lat = null;
++        $center_lon = null;
++        $center_nid = null;
++        $highlight_nid = null;
++
++        // We search nid argument used to center map
++        if ($this->options['center_on_nodearg'] && $nodehandler = $this->view->display_handler->get_handler('argument', $this->options['center_on_nodearg_arg'])) {
++          $center_nid = $nodehandler->get_value();
++        }
++        if ($this->options['highlight_nodearg'] && $nodehandler = $this->view->display_handler->get_handler('argument', $this->options['highlight_nodearg_arg'])) {
++          $highlight_nid = $nodehandler->get_value();
++        }
+ 
+-        // If center lon/lat are not empty they are used to center map
+-        if (!empty($center_lon) && !empty($center_lat)) {
+-          $map['longitude'] = $center_lon;
+-          $map['latitude'] = $center_lat;
++        foreach ($records as $row_index => $row) {
++          $this->view->row_index = $row_index;
++          $lat = (float)$row->{$lat_field};
++          $lon = (float)$row->{$lon_field};
++
++          // $row->nid is present in node views, views without node as the base table must include the nid field,
++          // which will be in $row->node_nid if present.
++          // If nid for a row is required use $row_nid.
++          $row_nid = isset($row->nid) ? $row->nid : (isset($row->node_nid) ? $row->node_nid : NULL);
++
++          // If this row will be used as center map then we keep its lon/lat
++          // If there are multiple points on a single node take the first match
++          if (!empty($center_nid) && !empty($row_nid) && $center_nid == $row_nid && ($center_lon === NULL || $center_lat === NULL)) {
++            $center_lon = $lon;
++            $center_lat = $lat;
++          }
++
++          if (!empty($lat) && !empty($lon)) {
++            if ($this->options['markers'] == 'nodetype') {
++              if (isset($markertypes[$row->gmap_node_type])) {
++                $markername = $markertypes[$row->gmap_node_type];
++              }
++            }
++            else if ($this->options['markers'] == 'taxonomy') {
++              if (!empty($row->gmap_node_marker)) {
++                $markername = $row->gmap_node_marker;
++              }
++            }
++            else if ($this->options['markers'] == 'userrole') {
++              if (!empty($row->gmap_role_marker)) {
++                $markername = $markertypes[DRUPAL_AUTHENTICATED_RID];
++                if (isset($markertypes[$row->gmap_role_marker])) {
++                  $markername = $markertypes[$row->gmap_role_marker];
++                }
++              }
++            }
++            else if ($this->options['markers'] == 'field') {
++              if (!empty($row->{$marker_field})) {
++                $markername = $row->{$marker_field};
++              }
++            }
++            if (!isset($offsets[$markername])) {
++              $offsets[$markername] = 0;
++            }
++
++            $tooltip = "";
++            if ($this->options['tooltipenabled'] && $row->$tooltip_field) {
++              $tooltip = $row->$tooltip_field;
++            }
++
++            $marker = array(
++              'latitude' => $lat,
++              'longitude' => $lon,
++              'markername' => $markername,
++              'offset' => $offsets[$markername],
++              'opts' => array(
++                'title' => $tooltip,
++                'highlight' => (!empty($highlight_nid) && !empty($row_nid) && $highlight_nid == $row_nid) ? 1 : 0,
++                'highlightcolor' => $this->options['highlight_nodearg_color'],
++              ),
++            );
++            // RMT mode.
++            if ($this->options['enablermt']) {
++              $marker['rmt'] = $row->{$rmt_field};
++            }
++            else {
++              // Marker mode: popup.
++              if ($defaults['markermode'] == 1) {
++                $marker['text'] = $this->row_plugin->render($row);
++              }
++              // Marker mode: link.
++              else if ($defaults['markermode'] == 2) {
++                $marker['link'] = url('node/' . $row_nid);
++              }
++            }
++            $markers[] = $marker;
++
++            $offsets[$markername]++;
++          }
+         }
++        if (!empty($markers)) { // Don't draw empty maps.
++          $map = gmap_parse_macro($this->options['macro']);
++          if ($this->options['enablermt']) {
++            $map['rmtcallback'] = $this->options['rmtcallback'];
++          }
++
++          // If center lon/lat are not empty they are used to center map
++          if (!empty($center_lon) && !empty($center_lat)) {
++            $map['longitude'] = $center_lon;
++            $map['latitude'] = $center_lat;
++          }
+ 
+-        $map['markers'] = $markers;
+-        $output .= theme($this->theme_functions(), $this->view, $this->options, $map, $title);
++          $map['markers'] = $markers;
++          $output .= theme($this->theme_functions(), $this->view, $this->options, $map, $title);
++        }
+       }
+     }
+ 
+@@ -319,6 +379,7 @@
+         'userrole' => t('By user role (for user views)'),
+         'field' => t('Use marker field'),
+         'static' => t('Use single marker type'),
++        'polygon' => t('Use polygon of points'),
+       ),
+       '#default_value' => $this->options['markers'],
+     );
+@@ -333,6 +394,19 @@
+       '#dependency' => array('edit-style-options-markers' => array('field')),
+     );
+ 
++    $form['polygroup'] = array(
++      '#type' => 'select',
++      '#title' => t('Polygon grouping'),
++      '#description' => t('Each grouping of locations is a polygon.  You can have each polygon on a separate map or all on one map.'),
++      '#options' => array(
++        'single' => t('All polygons on a single map.'),
++        'separate' => t('Each polygon on its own map.'),
++      ),
++      '#default_value' => $this->options['polygroup'],
++      '#process' => array('views_process_dependency'),
++      '#dependency' => array('edit-style-options-markers' => array('polygon')),
++    );
++
+     $form['enablermt'] = array(
+       '#type' => 'checkbox',
+       '#title' => t('Enable GMap RMT for markers'),

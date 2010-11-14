@@ -152,7 +152,19 @@ function gmap_gmap($op, &$map) {
         drupal_add_js($path . $mm . '_marker.js');
       }
       if (isset($map['behavior']['locpick']) && $map['behavior']['locpick']) {
-        drupal_add_js($path . 'locpick.js');
+        if (function_exists('location_use_single_map')) {
+          $singlemap = location_use_single_map();
+        }
+        else {
+          $singlemap = FALSE;
+        }
+
+        if ($singlemap) {
+          drupal_add_js($path . 'locpick_single_map.js');
+        }
+        else {
+          drupal_add_js($path . 'locpick_multi_map.js');
+        }
       }
       if (!empty($map['markers']) || !empty($map['lines'])) {
         drupal_add_js($path . 'markerloader_static.js');
@@ -1241,6 +1253,15 @@ function gmap_get_key() {
     $key = keys_get_key('google_maps');
   }
   return $key;
+}
+
+/**
+ * Implementation of hook_views_api().
+ */
+function gmap_views_api() {
+  return array(
+    'api' => 2,
+  );
 }
 
 /**

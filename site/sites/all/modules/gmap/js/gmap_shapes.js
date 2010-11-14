@@ -116,6 +116,18 @@ Drupal.gmap.addHandler('gmap', function (elem) {
         shape.shape = GPolygon.fromEncoded(shape);
         break;
     }
+
+    // Event handling for mouse movement and clicking
+    var s = shape.shape;
+    GEvent.addListener(s, 'click', function(point){
+      obj.map.openInfoWindowHtml(point, shape.text);
+    });
+    GEvent.addListener(s,'mouseover',function() {
+      obj.change('mouseovermarker',-1,shape);
+    });
+    GEvent.addListener(s,'mouseout',function() {
+      obj.change('mouseoutmarker',-1,shape);
+    });
   });
 
   obj.bind('addshape', function (shape) {
@@ -124,11 +136,71 @@ Drupal.gmap.addHandler('gmap', function (elem) {
     }
     obj.vars.shapes.push(shape);
     obj.map.addOverlay(shape.shape);
+    var s = shape.shape;
 
     if (obj.vars.behavior.clickableshapes) {
-      GEvent.addListener(shape.shape, 'click', function () {
+      GEvent.addListener(s, 'click', function (coord) {
+        shape.lastclickcoord = coord;
         obj.change('clickshape', -1, shape);
       });
+      if (obj.vars.behavior.extramarkerevents) {
+        GEvent.addListener(s, 'mouseover', function() {
+          obj.change('mouseovershape', -1, shape);
+        });
+        GEvent.addListeneer(s, 'mouseout', function() {
+          obj.change('mouseoutshape', -1, shape);
+        });
+      }
+    }
+  });
+
+  // Default shape actions.
+  obj.bind('clickshape', function (shape) {
+    // Local/stored content
+    if (shape.text) {
+      obj.map.openInfoWindowHtml(shape.lastclickcoord, shape.text);
+    }
+    // AJAX content
+    if (shape.rmt) {
+      obj.rmtcache = obj.rmtcache || {};
+      
+      // Cached RMT.
+      if (obj.rmtcache[shape.rmt]) {
+        obj.map.openInfoWindowHtml(shape.lastclickcoord, obj.rmtcache[shape.rmt]);
+      }
+      else {
+        var uri = shape.rmt;
+        // If there was a callback, prefix that.
+        // (If there wasn't, shape.rmt was the FULL path.)
+        if (obj.vars.rmtcallback) {
+          uri = obj.vars.rmtcallback + '/' + shape.rmt;
+        }
+        // @Bevan: I think it makes more sense to do it in this order.
+        // @Bevan: I don't like your choice of variable btw, seems to me like
+        // @Bevan: it belongs in the map object, or at *least* somewhere in
+        // @Bevan: the gmap settings proper...
+        //if (!shape.text && Drupal.settings.loadingImage) {
+        //  shape.shape.openInfoWindowHtml(Drupal.settings.loadingImage);
+        //}
+        $.get(uri, {}, function (data) {
+          obj.rmtcache[shape.rmt] = data;
+          obj.map.openInfoWindowHtml(shape.lastclickcoord, data);
+        });
+      }
+    }
+    // Tabbed content
+    else if (shape.tabs) {
+      var infoWinTabs = [];
+      for (var m in shape.tabs) {
+        if (shape.tabs.hasOwnProperty(m)) {
+          infoWinTabs.push(new GInfoWindowTab(m, shape.tabs[m]));
+        }
+      }
+      obj.map.openInfoWindowTabsHtml(shape.lastclickcoord, infoWinTabs);
+    }
+    // No content -- shape is a link
+    else if (shape.link) {
+      open(shape.link, '_self');
     }
   });
 
