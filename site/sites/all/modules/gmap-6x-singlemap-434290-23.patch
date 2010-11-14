@@ -1,0 +1,579 @@
+diff -rupN gmap/gmap.module gmap_new/gmap.module
+--- gmap/gmap.module	2010-06-09 03:40:59.000000000 +1000
++++ gmap.module	2010-07-17 11:54:27.000000000 +1000
+@@ -152,7 +152,19 @@ function gmap_gmap($op, &$map) {
+         drupal_add_js($path . $mm . '_marker.js');
+       }
+       if (isset($map['behavior']['locpick']) && $map['behavior']['locpick']) {
+-        drupal_add_js($path . 'locpick.js');
++        if (function_exists('location_use_single_map')) {
++          $singlemap = location_use_single_map();
++        }
++        else {
++          $singlemap = FALSE;
++        }
++
++        if ($singlemap) {
++          drupal_add_js($path . 'locpick_single_map.js');
++        }
++        else {
++          drupal_add_js($path . 'locpick_multi_map.js');
++        }
+       }
+       if (!empty($map['markers']) || !empty($map['lines'])) {
+         drupal_add_js($path . 'markerloader_static.js');
+diff -rupN gmap/js/locpick.js gmap_new/js/locpick.js
+--- gmap/js/locpick.js	2010-04-02 00:26:27.000000000 +1100
++++ js/locpick.js	1970-01-01 10:00:00.000000000 +1000
+@@ -1,142 +0,0 @@
+-/* $Id: locpick.js,v 1.4.2.1 2010/04/01 13:26:27 rooby Exp $ */
+-
+-/**
+- * @file
+- * Location chooser interface.
+- */
+-
+-/*global $, Drupal, GEvent, GLatLng, GMarker */
+-
+-Drupal.gmap.addHandler('gmap', function (elem) {
+-  var obj = this;
+-
+-  var binding = obj.bind("locpickchange", function () {
+-    if (obj.locpick_coord) {
+-      GEvent.trigger(obj.map, "click", null, obj.locpick_coord);
+-    }
+-  });
+-
+-  obj.bind("locpickremove", function () {
+-    obj.map.removeOverlay(obj.locpick_point);
+-    obj.locpick_coord = null;
+-    obj.change('locpickchange', -1);
+-  });
+-
+-  obj.bind("init", function () {
+-    if (obj.vars.behavior.locpick) {
+-      obj.locpick_coord = new GLatLng(obj.vars.latitude, obj.vars.longitude);
+-
+-      GEvent.addListener(obj.map, "click", function (overlay, point) {
+-        obj.map.checkResize();
+-        if (!overlay) {
+-          if (!obj.locpick_point) {
+-            obj.map.addOverlay(obj.locpick_point = new GMarker(point, {draggable: true}));
+-          }
+-          obj.locpick_point.setLatLng(point);
+-          GEvent.addListener(obj.locpick_point, 'drag', function () {
+-            obj.locpick_coord = obj.locpick_point.getLatLng();
+-            obj.change('locpickchange', binding);
+-          });
+-          GEvent.addListener(obj.locpick_point, 'dragend', function () {
+-            obj.locpick_coord = obj.locpick_point.getLatLng();
+-            obj.change('locpickchange', binding);
+-          });
+-          obj.locpick_coord = point;
+-          obj.map.panTo(point);
+-          obj.change('locpickchange', binding);
+-        }
+-        else {
+-          // Unsetting the location
+-          obj.change('locpickremove', -1);
+-        }
+-      });
+-    }
+-  });
+-
+-  obj.bind("ready", function () {
+-    // Fake a click to set the initial point, if one was set.
+-    if (obj.vars.behavior.locpick) {
+-      if (!obj.locpick_invalid) {
+-        obj.change('locpickchange', -1);
+-      }
+-    }
+-  });
+-
+-});
+-
+-Drupal.gmap.addHandler('locpick_latitude', function (elem) {
+-  var obj = this;
+-
+-  obj.bind("init", function () {
+-    if (elem.value !== '') {
+-      obj.vars.latitude = Number(elem.value);
+-      obj.locpick_coord = new GLatLng(obj.vars.latitude, obj.vars.longitude);
+-    }
+-    else {
+-      obj.locpick_coord = null;
+-      obj.locpick_invalid = true;
+-    }
+-  });
+-
+-  var binding = obj.bind("locpickchange", function () {
+-    if (obj.locpick_coord) {
+-      elem.value = obj.locpick_coord.lat();
+-    }
+-    else {
+-      elem.value = '';
+-    }
+-  });
+-
+-  $(elem).change(function () {
+-    if (elem.value !== '') {
+-      if (obj.locpick_coord) {
+-        obj.locpick_coord = new GLatLng(Number(elem.value), obj.locpick_coord.lng());
+-        obj.change('locpickchange', binding);
+-      }
+-      else {
+-        obj.locpick_coord = new GLatLng(Number(elem.value), 0.0);
+-      }
+-    }
+-    else {
+-      obj.change('locpickremove', -1);
+-    }
+-  });
+-});
+-
+-Drupal.gmap.addHandler('locpick_longitude', function (elem) {
+-  var obj = this;
+-
+-  obj.bind("init", function () {
+-    if (elem.value !== '') {
+-      obj.vars.longitude = Number(elem.value);
+-      obj.locpick_coord = new GLatLng(obj.vars.latitude, obj.vars.longitude);
+-    }
+-    else {
+-      obj.locpick_invalid = true;
+-    }
+-  });
+-
+-  var binding = obj.bind("locpickchange", function () {
+-    if (obj.locpick_coord) {
+-      elem.value = obj.locpick_coord.lng();
+-    }
+-    else {
+-      elem.value = '';
+-    }
+-  });
+-
+-  $(elem).change(function () {
+-    if (elem.value !== '') {
+-      if (obj.locpick_coord) {
+-        obj.locpick_coord = new GLatLng(obj.locpick_coord.lat(), Number(elem.value));
+-        obj.change('locpickchange', binding);
+-      }
+-      else {
+-        obj.locpick_coord = new GLatLng(0.0, Number(elem.value));
+-      }
+-    }
+-    else {
+-      obj.change('locpickremove', -1);
+-    }
+-  });
+-});
+diff -rupN gmap/js/locpick_multi_map.js gmap_new/js/locpick_multi_map.js
+--- gmap/js/locpick_multi_map.js	1970-01-01 10:00:00.000000000 +1000
++++ js/locpick_multi_map.js	2010-07-17 11:49:07.000000000 +1000
+@@ -0,0 +1,146 @@
++/* $Id: locpick.js,v 1.4 2009/04/06 17:28:00 bdragon Exp $ */
++
++/**
++ * @file
++ * Location chooser interface.
++ */
++
++/*global $, Drupal, GEvent, GLatLng, GMarker */
++
++Drupal.gmap.addHandler('gmap', function (elem) {
++  var obj = this;
++
++  var binding = obj.bind("locpickchange", function () {
++    if (obj.locpick_coord) {
++      GEvent.trigger(obj.map, "click", null, obj.locpick_coord);
++    }
++  });
++
++  obj.bind("locpickremove", function () {
++    obj.map.removeOverlay(obj.locpick_point);
++    obj.locpick_coord = null;
++    obj.change('locpickchange', -1);
++  });
++
++  obj.bind("init", function () {
++    if (obj.vars.behavior.locpick) {
++      obj.locpick_coord = new GLatLng(obj.vars.latitude, obj.vars.longitude);
++
++      GEvent.addListener(obj.map, "click", function (overlay, point) {
++        obj.map.checkResize();
++        if (!overlay) {
++          if (!obj.locpick_point) {
++            obj.map.addOverlay(obj.locpick_point = new GMarker(point, {draggable: true}));
++          }
++          obj.locpick_point.setLatLng(point);
++          obj.map.zoomIn(point, true, true);
++          obj.map.zoomIn(point, true, true);
++          GEvent.addListener(obj.locpick_point, 'drag', function () {
++            obj.locpick_coord = obj.locpick_point.getLatLng();
++            obj.change('locpickchange', binding);
++          });
++          GEvent.addListener(obj.locpick_point, 'dragend', function () {
++            obj.locpick_coord = obj.locpick_point.getLatLng();
++            obj.map.zoomIn(obj.locpick_coord, true, true);
++            obj.map.zoomIn(obj.locpick_coord, true, true);
++            obj.change('locpickchange', binding);
++          });
++          obj.locpick_coord = point;
++          obj.map.panTo(point);
++          obj.change('locpickchange', binding);
++        }
++        else {
++          // Unsetting the location
++          obj.change('locpickremove', -1);
++        }
++      });
++    }
++  });
++
++  obj.bind("ready", function () {
++    // Fake a click to set the initial point, if one was set.
++    if (obj.vars.behavior.locpick) {
++      if (!obj.locpick_invalid) {
++        obj.change('locpickchange', -1);
++      }
++    }
++  });
++
++});
++
++Drupal.gmap.addHandler('locpick_latitude', function (elem) {
++  var obj = this;
++
++  obj.bind("init", function () {
++    if (elem.value !== '') {
++      obj.vars.latitude = Number(elem.value);
++      obj.locpick_coord = new GLatLng(obj.vars.latitude, obj.vars.longitude);
++    }
++    else {
++      obj.locpick_coord = null;
++      obj.locpick_invalid = true;
++    }
++  });
++
++  var binding = obj.bind("locpickchange", function () {
++    if (obj.locpick_coord) {
++      elem.value = obj.locpick_coord.lat();
++    }
++    else {
++      elem.value = '';
++    }
++  });
++
++  $(elem).change(function () {
++    if (elem.value !== '') {
++      if (obj.locpick_coord) {
++        obj.locpick_coord = new GLatLng(Number(elem.value), obj.locpick_coord.lng());
++        obj.change('locpickchange', binding);
++      }
++      else {
++        obj.locpick_coord = new GLatLng(Number(elem.value), 0.0);
++      }
++    }
++    else {
++      obj.change('locpickremove', -1);
++    }
++  });
++});
++
++Drupal.gmap.addHandler('locpick_longitude', function (elem) {
++  var obj = this;
++
++  obj.bind("init", function () {
++    if (elem.value !== '') {
++      obj.vars.longitude = Number(elem.value);
++      obj.locpick_coord = new GLatLng(obj.vars.latitude, obj.vars.longitude);
++    }
++    else {
++      obj.locpick_invalid = true;
++    }
++  });
++
++  var binding = obj.bind("locpickchange", function () {
++    if (obj.locpick_coord) {
++      elem.value = obj.locpick_coord.lng();
++    }
++    else {
++      elem.value = '';
++    }
++  });
++
++  $(elem).change(function () {
++    if (elem.value !== '') {
++      if (obj.locpick_coord) {
++        obj.locpick_coord = new GLatLng(obj.locpick_coord.lat(), Number(elem.value));
++        obj.change('locpickchange', binding);
++      }
++      else {
++        obj.locpick_coord = new GLatLng(0.0, Number(elem.value));
++      }
++    }
++    else {
++      obj.change('locpickremove', -1);
++    }
++  });
++});
+diff -rupN gmap/js/locpick_single_map.js gmap_new/js/locpick_single_map.js
+--- gmap/js/locpick_single_map.js	1970-01-01 10:00:00.000000000 +1000
++++ js/locpick_single_map.js	2010-07-17 11:49:07.000000000 +1000
+@@ -0,0 +1,255 @@
++/* $Id: locpick.js,v 1.4 2009/04/06 17:28:00 bdragon Exp $ */
++
++/**
++ * @file
++ * Location chooser interface.
++ */
++
++/*global $, Drupal, GEvent, GLatLng, GMarker */
++
++Drupal.gmap.addHandler('gmap', function (elem) {
++  var obj = this;
++
++  var binding = obj.bind("locpickchange", function () {
++    if (obj.locpick_coord[obj.current_locpick]) {
++      GEvent.trigger(obj.map, "click", null, obj.locpick_coord[obj.current_locpick]);
++    }
++  });
++
++  obj.bind("locpickremove", function () {
++    obj.map.removeOverlay(obj.locpick_point[obj.current_locpick]);
++    obj.locpick_coord[obj.current_locpick] = null;
++    obj.change('locpickchange', -1, obj.current_locpick);
++  });
++
++  obj.bind("init", function () {
++    if (obj.vars.behavior.locpick) {
++      obj.locpick_coord = [];
++      obj.locpick_point = [];
++      obj.locpick_invalid = [];
++      var i = 0;
++      obj.current_locpick = -1;
++
++      GEvent.addListener(obj.map, "click", function (overlay, point) {
++        obj.map.checkResize();
++        if (!overlay) {
++   //       if (!obj.locpick_point) {
++   //         obj.map.addOverlay(obj.locpick_point[obj.current_locpick] = new GMarker(point, {draggable: true}));
++   //       }
++          // obj.locpick count is the number of locpicks available so only allow that many markers
++          // If this is the initial loading then use the obj.current_locpick that is already set.
++          obj.full = true;
++          for (i = 0; i < obj.locpick_count; i++) {
++            if (obj.locpick_coord[i] == null || obj.locpick_point[i] == null) {
++              obj.full = false;
++            }
++          }
++          if (obj.full == false) {
++            if (obj.locpick_set == false) {
++              obj.current_locpick = -1;
++              for (i = 0; i < obj.locpick_coord.length; i++) {
++                if (obj.locpick_coord[i] == null) {
++                  if (obj.current_locpick == -1) {
++                    obj.current_locpick = i;
++                  }
++                }
++              }
++            }
++            if (obj.current_locpick == -1) {
++              obj.current_locpick = obj.locpick_coord.length;
++            }
++
++            if (obj.current_locpick != null) {
++              obj.locpick_coord[obj.current_locpick] = new GLatLng(obj.vars.latitude, obj.vars.longitude);
++            }
++
++            obj.map.addOverlay(obj.locpick_point[obj.current_locpick] = new GMarker(point, {draggable: true}));
++
++            GEvent.addListener(obj.locpick_point[obj.current_locpick], 'dragstart', function() {
++              // Get the current marker.
++              obj.current_locpick = -1;
++              for (i = 0; i < obj.locpick_coord.length; i++) {
++                if (obj.locpick_coord[i] == this.getLatLng()) {
++                  if (obj.current_locpick == -1) {
++                    obj.current_locpick = i;
++                  }
++                }
++              }
++            });
++
++            obj.locpick_point[obj.current_locpick].setLatLng(point);
++            GEvent.addListener(obj.locpick_point[obj.current_locpick], 'drag', function () {
++              obj.locpick_coord[obj.current_locpick] = obj.locpick_point[obj.current_locpick].getLatLng();
++              obj.change('locpickchange', binding);
++            });
++            GEvent.addListener(obj.locpick_point[obj.current_locpick], 'dragend', function () {
++              obj.locpick_coord[obj.current_locpick] = obj.locpick_point[obj.current_locpick].getLatLng();
++              obj.map.panTo(obj.locpick_coord[obj.current_locpick]);
++              obj.change('locpickchange', binding);
++            });
++
++            obj.locpick_coord[obj.current_locpick] = point;
++            obj.map.panTo(point);
++            obj.change('locpickchange', binding);
++          }
++        }
++        else {
++          if (overlay instanceof GMarker) {
++            obj.current_locpick = -1;
++            for (i = 0; i < obj.locpick_coord.length; i++) {
++             if (obj.locpick_coord[i] == overlay.getLatLng()) {
++                if (obj.current_locpick == -1) {
++                  obj.current_locpick = i;
++                }
++              }
++            }
++          }
++          // Unsetting the location
++          obj.change('locpickremove', -1);
++        }
++      });
++    }
++  });
++
++  obj.bind("ready", function () {
++    // Fake a click to set the initial point, if one was set.
++    if (obj.vars.behavior.locpick) {
++      obj.locpick_set = true;
++      for (i = 0; i < obj.locpick_count; i++) {
++        obj.current_locpick = i;
++        if (!obj.locpick_invalid[obj.current_locpick]) {
++          if (obj.locpick_coord[obj.current_locpick] != null) {
++            obj.change('locpickchange', -1);
++          }
++        }
++      }
++      obj.locpick_set = false;
++//      if (!obj.locpick_invalid) {
++//        obj.change('locpickchange', -1);
++//      }
++    }
++  });
++
++});
++
++Drupal.gmap.addHandler('locpick_latitude',function(elem) {
++  var obj = this;
++  if (isNaN(elem.id.substring(elem.id.length - 3)) == false) {
++    var locpick_lat_id = elem.id.substring(elem.id.length - 3) * 1;
++  }
++  else if (isNaN(elem.id.substring(elem.id.length - 2)) == false) {
++    var locpick_lat_id = elem.id.substring(elem.id.length - 2) * 1;
++  }
++  else {
++    var locpick_lat_id = elem.id.substring(elem.id.length - 1) * 1;
++  }
++
++  if (!obj.locpick_count || obj.locpick_count < (locpick_lat_id + 1)){
++    obj.locpick_count = (locpick_lat_id + 1);
++  }
++
++  obj.bind("init", function() {
++    if (elem.value != '') {
++      obj.vars.latitude = Number(elem.value);
++      if (obj.locpick_coord[locpick_lat_id]) {
++        obj.locpick_coord[locpick_lat_id] = new GLatLng(obj.vars.latitude, obj.locpick_coord[locpick_lat_id].lng());
++      }
++      else {
++        obj.locpick_coord[locpick_lat_id] = new GLatLng(obj.vars.latitude, obj.vars.longitude);
++      }
++      obj.locpick_invalid[locpick_lat_id] = false;
++    }
++    else {
++      obj.locpick_coord[locpick_lat_id] = null;
++      obj.locpick_invalid[locpick_lat_id] = true;
++    }
++  });
++
++  var binding = obj.bind("locpickchange", function() {
++    if (obj.locpick_coord[locpick_lat_id]) {
++      elem.value = obj.locpick_coord[locpick_lat_id].lat();
++    }
++    else {
++      elem.value = '';
++    }
++  });
++
++  $(elem).change(function() {
++    obj.current_locpick = locpick_lat_id;
++    if (elem.value != '') {
++      if (obj.locpick_coord[locpick_lat_id]) {
++        obj.locpick_coord[locpick_lat_id] = new GLatLng(Number(elem.value), obj.locpick_coord[locpick_lat_id].lng());
++        obj.locpick_set = true;
++        obj.change('locpickchange', binding);
++        obj.locpick_set = false;
++      }
++      else {
++        obj.locpick_coord[locpick_lat_id] = new GLatLng(Number(elem.value), 0.0);
++      }
++    }
++    else {
++      obj.change('locpickremove', -1);
++    }
++  });
++});
++
++Drupal.gmap.addHandler('locpick_longitude', function(elem) {
++  var obj = this;
++
++  if (isNaN(elem.id.substring(elem.id.length - 3)) == false) {
++    var locpick_lng_id = elem.id.substring(elem.id.length - 3) * 1;
++  }
++  else if (isNaN(elem.id.substring(elem.id.length - 2)) == false) {
++    var locpick_lng_id = elem.id.substring(elem.id.length - 2) * 1;
++  }
++  else {
++    var locpick_lng_id = elem.id.substring(elem.id.length - 1) * 1;
++  }
++
++  if (!obj.locpick_count || obj.locpick_count < (locpick_lng_id + 1)) {
++    obj.locpick_count = (locpick_lng_id + 1);
++  }
++
++  obj.bind("init", function() {
++    if (elem.value != '') {
++      obj.vars.longitude = Number(elem.value);
++      if (obj.locpick_coord[locpick_lng_id]) {
++        obj.locpick_coord[locpick_lng_id] = new GLatLng(obj.locpick_coord[locpick_lng_id].lat(), obj.vars.longitude);
++      }
++      else {
++        obj.locpick_coord[locpick_lng_id] = new GLatLng(obj.vars.latitude, obj.vars.longitude);
++      }
++      obj.locpick_invalid[locpick_lng_id] = false;
++    }
++    else {
++      obj.locpick_invalid[locpick_lng_id] = true;
++    }
++  });
++
++  var binding = obj.bind("locpickchange", function() {
++    if (obj.locpick_coord[locpick_lng_id]) {
++      elem.value = obj.locpick_coord[locpick_lng_id].lng();
++    }
++    else {
++      elem.value = '';
++    }
++  });
++
++  $(elem).change(function() {
++    obj.current_locpick = locpick_lng_id;
++    if (elem.value != '') {
++      if (obj.locpick_coord[locpick_lng_id]) {
++        obj.locpick_coord[locpick_lng_id] = new GLatLng(obj.locpick_coord[locpick_lng_id].lat(), Number(elem.value));
++        obj.locpick_set = true;
++        obj.change('locpickchange', binding);
++        obj.locpick_set = false;
++      }
++      else {
++        obj.locpick_coord[locpick_lng_id] = new GLatLng(0.0, Number(elem.value));
++      }
++    }
++    else {
++      obj.change('locpickremove', -1);
++    }
++  });
++});

@@ -1,0 +1,294 @@
+diff -rupN location/location.admin.inc location_new/location.admin.inc
+--- location/location.admin.inc	2010-05-28 00:48:13.000000000 +1000
++++ location.admin.inc	2010-07-17 11:59:16.000000000 +1000
+@@ -67,6 +67,13 @@ function location_admin_settings() {
+     '#description' => t('If you would like to change the macro used to generate the location chooser map, you can do so here. Note: Behaviors <em>locpick</em> and <em>collapsehack</em> are forced to be enabled and cannot be changed.'),
+   );
+ 
++  $form['location_copy_on_write'] = array(
++    '#type' => 'checkbox',
++    '#title' => t('Updating a location creates a new location'),
++    '#default_value' => variable_get('location_copy_on_write', TRUE),
++    '#description' => t('If checked, when you modify a location it will be created as a new location.  If unckecked, modifications to a location will be made to the existing location.  Uncheck this if the order of your locations is important otherwise when you update a location it will then become the last location on your node.  This is very important if your locations will be used as points on a polygon.  It also makes things a bit easier when dealing with a large number of locations on a single node or user.'),
++  );
++
+   $form['location_jit_geocoding'] = array(
+     '#type' => 'checkbox',
+     '#title' => t('Enable JIT geocoding'),
+diff -rupN location/location.module location_new/location.module
+--- location/location.module	2010-07-04 22:27:36.000000000 +1000
++++ location.module	2010-07-17 11:59:16.000000000 +1000
+@@ -207,6 +207,36 @@ function location_ctools_plugin_director
+ }
+ 
+ /**
++ * Checks whether or not to use a single map
++ */
++function location_use_single_map() {
++  // For node locations
++  if (arg(0) == 'node') {
++    // If viewing/editing the node
++    if (is_numeric(arg(1))) {
++      $node = node_load(arg(1));
++      $nodetype = $node->type;
++    }
++    // If adding a node
++    else if (arg(1) == 'add') {
++      $nodetype = arg(2);
++    }
++    // This is in case you're using the og_user_roles module
++    else if (arg(1) == 'ognodeadd') {
++      $nodetype = $_GET['type'];
++    }
++    // Replace hyphens of url with underscores of content type name
++    $nodetype = str_replace('-', '_', $nodetype);
++    $location_settings = variable_get('location_settings_node_'. $nodetype, array());
++  }
++  // For user locations
++  else if (arg(0) == 'user') {
++    $location_settings = variable_get('location_settings_user', array());
++  }
++  return isset($location_settings['multiple']['single_map']) ? $location_settings['multiple']['single_map'] : 0;
++}
++
++/**
+  * Process a location element.
+  */
+ function _location_expand_location($element) {
+@@ -341,48 +371,53 @@ function _location_expand_location($elem
+       '#suffix' => '</div>',
+       );
+     if (function_exists('gmap_get_auto_mapid') && variable_get('location_usegmap', FALSE)) {
+-      $mapid = gmap_get_auto_mapid();
+-      $map = gmap_parse_macro(variable_get('location_locpick_macro', '[gmap]'));
+-      $map['id'] = $mapid;
+-      $map['points'] = array();
+-      $map['pointsOverlays'] = array();
+-      $map['lines'] = array();
+-
+-      $map['behavior']['locpick'] = TRUE;
+-      $map['behavior']['collapsehack'] = TRUE;
+-      // Use previous coordinates to center the map.
+-      if (location_has_coordinates($defaults, FALSE)) {
+-        $map['latitude'] = (float)$defaults['latitude'];
+-        $map['longitude'] = (float)$defaults['longitude'];
+-
+-        $map['markers'][] = array(
+-          'latitude' => $defaults['latitude'],
+-          'longitude' => $defaults['longitude'],
+-          'markername' => 'small gray', // @@@ Settable?
+-          'offset' => 0,
+-          'opts' => array(
+-            'clickable' => FALSE,
+-          ),
++      if (!location_use_single_map()) {
++        $mapid = gmap_get_auto_mapid();
++        $map = gmap_parse_macro(variable_get('location_locpick_macro', '[gmap]'));
++        $map['id'] = $mapid;
++        $map['points'] = array();
++        $map['pointsOverlays'] = array();
++        $map['lines'] = array();
++
++        $map['behavior']['locpick'] = TRUE;
++        $map['behavior']['collapsehack'] = TRUE;
++        // Use previous coordinates to center the map.
++        if (location_has_coordinates($defaults, FALSE)) {
++          $map['latitude'] = (float)$defaults['latitude'];
++          $map['longitude'] = (float)$defaults['longitude'];
++
++          $map['markers'][] = array(
++            'latitude' => $defaults['latitude'],
++            'longitude' => $defaults['longitude'],
++            'markername' => 'small gray', // @@@ Settable?
++            'offset' => 0,
++            'opts' => array(
++              'clickable' => FALSE,
++            ),
++          );
++        }
++
++        $element['locpick']['map'] = array(
++          '#type' => 'gmap',
++          '#weight' => -1,
++          '#map' => $mapid,
++          '#settings' => $map,
+         );
++        $element['locpick']['map_instructions'] = array(
++          '#type' => 'markup',
++          '#weight' => 2,
++          '#prefix' => '<div class=\'description\'>',
++          '#value' => t('You may set the location by clicking on the map, or dragging the location marker.  To clear the location and cause it to be recalculated, click on the marker.'),
++          '#suffix' => '</div>',
++        );
++      }
++      else {
++        $mapid = 'singlemap';
+       }
+       $element['locpick']['user_latitude']['#map'] = $mapid;
+       gmap_widget_setup($element['locpick']['user_latitude'], 'locpick_latitude');
+       $element['locpick']['user_longitude']['#map'] = $mapid;
+       gmap_widget_setup($element['locpick']['user_longitude'], 'locpick_longitude');
+-
+-      $element['locpick']['map'] = array(
+-        '#type' => 'gmap',
+-        '#weight' => -1,
+-        '#map' => $mapid,
+-        '#settings' => $map,
+-      );
+-      $element['locpick']['map_instructions'] = array(
+-        '#type' => 'markup',
+-        '#weight' => 2,
+-        '#prefix' => '<div class=\'description\'>',
+-        '#value' => t('You may set the location by clicking on the map, or dragging the location marker.  To clear the location and cause it to be recalculated, click on the marker.'),
+-        '#suffix' => '</div>',
+-      );
+     }
+   }
+ 
+@@ -776,10 +811,10 @@ function location_load_locations($id, $k
+     return array();
+   }
+   if ($key == 'genid') {
+-    $result = db_query('SELECT lid FROM {location_instance} WHERE '. db_escape_table($key) ." = '%s'", $id);
++    $result = db_query('SELECT lid FROM {location_instance} WHERE '. db_escape_table($key) ." = '%s' ORDER BY lid", $id);
+   }
+   else {
+-    $result = db_query('SELECT lid FROM {location_instance} WHERE '. db_escape_table($key) .' = %d', $id);
++    $result = db_query('SELECT lid FROM {location_instance} WHERE '. db_escape_table($key) .' = %d ORDER BY lid', $id);
+   }
+   $locations = array();
+   while ($lid = db_fetch_object($result)) {
+@@ -801,8 +836,10 @@ function location_load_locations($id, $k
+  */
+ function location_save_locations(&$locations, $criteria) {
+   if (isset($locations) && is_array($locations) && !empty($criteria) && is_array($criteria)) {
++    $cow = variable_get('location_copy_on_write', 1);
++
+     foreach (array_keys($locations) as $key) {
+-      location_save($locations[$key], TRUE, $criteria);
++      location_save($locations[$key], $cow, $criteria);
+     }
+     $columns = array();
+     $placeholders = array();
+@@ -1022,12 +1059,18 @@ function _location_patch_locpick(&$locat
+     $location['locpick']['user_longitude'] = trim($location['locpick']['user_longitude']);
+   }
+   // If the user location was set, convert it into lat / lon.
++  // Otherwise it was not set or was unset so make sure lon / lat is unset too.
+   if (!empty($location['locpick']['user_latitude']) && !empty($location['locpick']['user_longitude'])) {
+     $location['source'] = LOCATION_LATLON_USER_SUBMITTED;
+     $location['latitude'] = $location['locpick']['user_latitude'];
+     $location['longitude'] = $location['locpick']['user_longitude'];
+     $inhibit_geocode = TRUE;
+   }
++  else {
++    $location['source'] = LOCATION_LATLON_UNDEFINED;
++    $location['latitude'] = 0;
++    $location['longitude'] = 0;
++  }
+   return $inhibit_geocode;
+ }
+ 
+@@ -1599,6 +1642,13 @@ function location_settings($old = FALSE)
+     '#default_value' => isset($old['multiple']['add']) ? $old['multiple']['add'] : 1,
+     '#description' => t('The number of empty location forms to show when editing.'),
+   );
++  $form['multiple']['single_map'] = array(
++    '#type'           => 'checkbox',
++    '#title'          => t('Single map'),
++    '#default_value' => isset($old['multiple']['single_map']) ? $old['multiple']['single_map'] : FALSE,
++    '#description'    => t('This setting controls whether you have one map on the screen or multiple.  If this option is checked, the multiple locations will display on one map, otherwise you will get a map for each location.')
++  );
++
+   // Thought: What about prefilled names and fixed locations that way?
+   // Then again, CCK would be cleaner.
+ 
+@@ -1696,6 +1746,29 @@ function location_form($settings, $locat
+     $form['#type'] = 'markup';
+   }
+ 
++  // If the single map option has been chosen make the map
++  if ($settings['multiple']['single_map'] && function_exists('gmap_get_auto_mapid') && variable_get('location_usegmap', FALSE)) {
++    $defaults = location_empty_location($settings);
++    if (!empty($locations)) {
++      $defaults = location_load_location($locations[0]['lid']);
++    }
++
++    $mapid = 'singlemap';
++    $map = gmap_parse_macro(variable_get('location_locpick_macro', '[gmap]'));
++    $map['id'] = $mapid;
++    $map['points'] = array();
++    $map['pointsOverlays'] = array();
++    $map['lines'] = array();
++
++    $map['behavior']['locpick'] = TRUE;
++    $map['behavior']['collapsehack'] = TRUE;
++    // Use previous coordinates to center the map.
++    if (location_has_coordinates($defaults, FALSE)) {
++      $map['latitude'] = (float)$defaults['latitude'];
++      $map['longitude'] = (float)$defaults['longitude'];
++    }
++  }
++
+   for ($i = 0; $i < $numforms; $i++) {
+     $required = FALSE;
+     // Check if this is a required location.
+@@ -1709,6 +1782,18 @@ function location_form($settings, $locat
+       '#location_settings' => $settings,
+       '#required' => $required,
+     );
++
++    if (isset($map)) {
++      $map['markers'][$i] = array(
++        'latitude' => $locations[$i]['latitude'],
++        'longitude' => $locations[$i]['longitude'],
++        'markername' => 'small gray', // @@@ Settable?
++        'offset' => 0,
++        'opts' => array(
++          'clickable' => FALSE,
++        ),
++      );
++    }
+   }
+ 
+   // Tidy up the form in the single location case.
+@@ -1718,6 +1803,39 @@ function location_form($settings, $locat
+     // the collapsible / collapsed settings.
+     $form[0]['#collapsible'] = $form['#collapsible'];
+     $form[0]['#collapsed'] = $form['#collapsed'];
++
++    if (isset($map)) {
++      $form[0]['map'] = array(
++        '#type' => 'gmap',
++        '#weight' => -1,
++        '#map' => $mapid,
++        '#settings' => $map,
++      );
++      $form[0]['map_instructions'] = array(
++        '#type' => 'markup',
++        '#weight' => 2,
++        '#prefix' => '<div class=\'description\'>',
++        '#value' => t('You may set the location by clicking on the map, or dragging the location marker.  To clear the location and cause it to be recalculated, click on the marker.'),
++        '#suffix' => '</div>',
++      );
++    }
++  }
++  else {
++    if (isset($map)) {
++      $form['map'] = array(
++        '#type' => 'gmap',
++        '#weight' => -1,
++        '#map' => $mapid,
++        '#settings' => $map,
++      );
++      $form['map_instructions'] = array(
++        '#type' => 'markup',
++        '#weight' => 2,
++        '#prefix' => '<div class=\'description\'>',
++        '#value' => t('You may set the location by clicking on the map, or dragging the location marker.  To clear the location and cause it to be recalculated, click on the marker.'),
++        '#suffix' => '</div>',
++      );
++    }
+   }
+ 
+   return $form;

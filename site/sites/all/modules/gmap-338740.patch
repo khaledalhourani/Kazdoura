@@ -1,0 +1,343 @@
+? gmap.views_default.inc
+Index: gmap.module
+===================================================================
+RCS file: /cvs/drupal-contrib/contributions/modules/gmap/gmap.module,v
+retrieving revision 1.104.2.6
+diff -u -p -r1.104.2.6 gmap.module
+--- gmap.module	8 Jun 2010 17:40:59 -0000	1.104.2.6
++++ gmap.module	5 Aug 2010 03:32:59 -0000
+@@ -1244,6 +1244,15 @@ function gmap_get_key() {
+ }
+ 
+ /**
++ * Implementation of hook_views_api().
++ */
++function gmap_views_api() {
++  return array(
++    'api' => 2,
++  );
++}
++
++/**
+  * Implementation of hook_views_plugins().
+  */
+ function gmap_views_plugins() {
+Index: gmap_plugin_style_gmap.inc
+===================================================================
+RCS file: /cvs/drupal-contrib/contributions/modules/gmap/gmap_plugin_style_gmap.inc,v
+retrieving revision 1.11.2.3
+diff -u -p -r1.11.2.3 gmap_plugin_style_gmap.inc
+--- gmap_plugin_style_gmap.inc	4 Jul 2010 11:17:47 -0000	1.11.2.3
++++ gmap_plugin_style_gmap.inc	5 Aug 2010 03:32:59 -0000
+@@ -123,102 +123,173 @@ class gmap_plugin_style_gmap extends vie
+     // Render each group separately and concatenate.  Plugins may override this
+     // method if they wish some other way of handling grouping.
+     $output = '';
+-    foreach ($sets as $title => $records) {
+-      $markers = array();
+-      $offsets = array();
+-      $center_lat = null;
+-      $center_lon = null;
+-      $center_nid = null;
+-      $highlight_nid = null;
+-
+-      // We search nid argument used to center map
+-      if ($this->options['center_on_nodearg'] && $nodehandler = $this->view->display_handler->get_handler('argument', $this->options['center_on_nodearg_arg'])) {
+-        $center_nid = $nodehandler->get_value();
+-      }
+-      if ($this->options['highlight_nodearg'] && $nodehandler = $this->view->display_handler->get_handler('argument', $this->options['highlight_nodearg_arg'])) {
+-        $highlight_nid = $nodehandler->get_value();
+-      }
+-
+-      foreach ($records as $row_index => $row) {
+-        $this->view->row_index = $row_index;
+-        $lat = (float)$row->{$lat_field};
+-        $lon = (float)$row->{$lon_field};
+-
+-        // $row->nid is present in node views, views without node as the base table must include the nid field,
+-        // which will be in $row->node_nid if present.
+-        // If nid for a row is required use $row_nid.
+-        $row_nid = isset($row->nid) ? $row->nid : (isset($row->node_nid) ? $row->node_nid : NULL);
+-
+-        // If this row will be used as center map then we keep its lon/lat
+-        // If there are multiple points on a single node take the first match
+-        if (!empty($center_nid) && !empty($row_nid) && $center_nid == $row_nid && ($center_lon === NULL || $center_lat === NULL)) {
+-          $center_lon = $lon;
+-          $center_lat = $lat;
+-        }
+-
+-        if (!empty($lat) && !empty($lon)) {
+-          if ($this->options['markers'] == 'nodetype') {
+-            if (isset($markertypes[$row->gmap_node_type])) {
+-              $markername = $markertypes[$row->gmap_node_type];
+-            }
++    // Handle polygons differently to markers
++    if ($this->options['markers'] == 'polygon') {
++      $gmap_defaults = gmap_defaults();
++      if ($this->options['polygroup'] == 'single') {
++        $shapes = array();
++        foreach ($sets as $title => $records) {
++          // Skip any polygons with less than 3 side as they won't display anyway.
++          if (count($records) < 3) {
++            continue;
+           }
+-          else if ($this->options['markers'] == 'taxonomy') {
+-            if (!empty($row->gmap_node_marker)) {
+-              $markername = $row->gmap_node_marker;
+-            }
++          $points = array();
++          foreach ($records as $label => $row) {
++            $lat = (float)$row->{$lat_field};
++            $lon = (float)$row->{$lon_field};
++            if (!empty($lat) && !empty($lon)) {
++              $points[] = array($lat, $lon);
++             }
++           }
++          // Make the last point the same as the first to join up the polygon.
++          if (!empty($points) && isset($points[0])) {
++            $points[] = $points[0];
++            $shapes[] = array(
++              'type' => 'polygon',
++              'style' => $gmap_defaults['styles']['poly_default'],
++              'points' => $points,
++              'text' => $this->row_plugin->render($row),
++            );
+           }
+-          else if ($this->options['markers'] == 'userrole') {
+-            if (!empty($row->gmap_role_marker)) {
+-              $markername = $markertypes[DRUPAL_AUTHENTICATED_RID];
+-              if (isset($markertypes[$row->gmap_role_marker])) {
+-                $markername = $markertypes[$row->gmap_role_marker];
+-              }
+-            }
++        }
++        // Multiple polygons on a single map so you don't want the last title
++        $title = '';
++        if (!empty($shapes)) { // Don't draw empty maps.
++          $map = gmap_parse_macro($this->options['macro']);
++          $map['shapes'] = $shapes;
++          $output .= theme($this->theme_functions(), $this->view, $this->options, $map, $title);
++         }
++       }
++      else {
++        foreach ($sets as $title => $records) {
++          // Skip any polygons with less than 3 side as they won't display anyway.
++          if (count($records) < 3) {
++            continue;
+           }
+-          else if ($this->options['markers'] == 'field') {
+-            if (!empty($row->{$marker_field})) {
+-              $markername = $row->{$marker_field};
++          $shapes = array();
++          $points = array();
++          foreach ($records as $label => $row) {
++            $lat = (float)$row->{$lat_field};
++            $lon = (float)$row->{$lon_field};
++            if (!empty($lat) && !empty($lon)) {
++              $points[] = array($lat, $lon);
+             }
+           }
+-          if (!isset($offsets[$markername])) {
+-            $offsets[$markername] = 0;
++          // Make the last point the same as the first to join up the polygon.
++          if (!empty($points) && isset($points[0])) {
++            $points[] = $points[0];
++            $shapes[] = array(
++              'type' => 'polygon',
++              'style' => $gmap_defaults['styles']['poly_default'],
++              'points' => $points,
++              'text' => $this->row_plugin->render($row),
++            );
+           }
+-
+-          $tooltip = "";
+-          if ($this->options['tooltipenabled'] && $row->$tooltip_field) {
+-            $tooltip = $row->$tooltip_field;
++          if (!empty($shapes)) { // Don't draw empty maps.
++            $map = gmap_parse_macro($this->options['macro']);
++            $map['shapes'] = $shapes;
++            $output .= theme($this->theme_functions(), $this->view, $this->options, $map, $title);
+           }
+-
+-          $markers[] = array(
+-            'latitude' => $lat,
+-            'longitude' => $lon,
+-            'markername' => $markername,
+-            'offset' => $offsets[$markername],
+-            'text' => $this->row_plugin->render($row),
+-            'opts' => array(
+-              'title' => $tooltip,
+-              'highlight' => (!empty($highlight_nid) && !empty($row_nid) && $highlight_nid == $row_nid) ? 1 : 0,
+-              'highlightcolor' => $this->options['highlight_nodearg_color'],
+-            ),
+-          );
+-
+-          $offsets[$markername]++;
+         }
+       }
+-      if (!empty($markers)) { // Don't draw empty maps.
+-        $map = gmap_parse_macro($this->options['macro']);
+-
+-        // If center lon/lat are not empty they are used to center map
+-        if (!empty($center_lon) && !empty($center_lat)) {
+-          $map['longitude'] = $center_lon;
+-          $map['latitude'] = $center_lat;
++    }
++    else {
++      foreach ($sets as $title => $records) {
++        $markers = array();
++        $offsets = array();
++        $center_lat = null;
++        $center_lon = null;
++        $center_nid = null;
++        $highlight_nid = null;
++  
++        // We search nid argument used to center map
++        if ($this->options['center_on_nodearg'] && $nodehandler = $this->view->display_handler->get_handler('argument', $this->options['center_on_nodearg_arg'])) {
++          $center_nid = $nodehandler->get_value();
++        }
++        if ($this->options['highlight_nodearg'] && $nodehandler = $this->view->display_handler->get_handler('argument', $this->options['highlight_nodearg_arg'])) {
++          $highlight_nid = $nodehandler->get_value();
++        }
++  
++        foreach ($records as $row_index => $row) {
++          $this->view->row_index = $row_index;
++          $lat = (float)$row->{$lat_field};
++          $lon = (float)$row->{$lon_field};
++  
++          // $row->nid is present in node views, views without node as the base table must include the nid field,
++          // which will be in $row->node_nid if present.
++          // If nid for a row is required use $row_nid.
++          $row_nid = isset($row->nid) ? $row->nid : (isset($row->node_nid) ? $row->node_nid : NULL);
++  
++          // If this row will be used as center map then we keep its lon/lat
++          // If there are multiple points on a single node take the first match
++          if (!empty($center_nid) && !empty($row_nid) && $center_nid == $row_nid && ($center_lon === NULL || $center_lat === NULL)) {
++            $center_lon = $lon;
++            $center_lat = $lat;
++          }
++  
++          if (!empty($lat) && !empty($lon)) {
++            if ($this->options['markers'] == 'nodetype') {
++              if (isset($markertypes[$row->gmap_node_type])) {
++                $markername = $markertypes[$row->gmap_node_type];
++              }
++            }
++            else if ($this->options['markers'] == 'taxonomy') {
++              if (!empty($row->gmap_node_marker)) {
++                $markername = $row->gmap_node_marker;
++              }
++            }
++            else if ($this->options['markers'] == 'userrole') {
++              if (!empty($row->gmap_role_marker)) {
++                $markername = $markertypes[DRUPAL_AUTHENTICATED_RID];
++                if (isset($markertypes[$row->gmap_role_marker])) {
++                  $markername = $markertypes[$row->gmap_role_marker];
++                }
++              }
++            }
++            else if ($this->options['markers'] == 'field') {
++              if (!empty($row->{$marker_field})) {
++                $markername = $row->{$marker_field};
++              }
++            }
++            if (!isset($offsets[$markername])) {
++              $offsets[$markername] = 0;
++            }
++  
++            $tooltip = "";
++            if ($this->options['tooltipenabled'] && $row->$tooltip_field) {
++              $tooltip = $row->$tooltip_field;
++            }
++  
++            $markers[] = array(
++              'latitude' => $lat,
++              'longitude' => $lon,
++              'markername' => $markername,
++              'offset' => $offsets[$markername],
++              'text' => $this->row_plugin->render($row),
++              'opts' => array(
++                'title' => $tooltip,
++                'highlight' => (!empty($highlight_nid) && !empty($row_nid) && $highlight_nid == $row_nid) ? 1 : 0,
++                'highlightcolor' => $this->options['highlight_nodearg_color'],
++              ),
++            );
++  
++            $offsets[$markername]++;
++          }
++        }
++        if (!empty($markers)) { // Don't draw empty maps.
++          $map = gmap_parse_macro($this->options['macro']);
++  
++          // If center lon/lat are not empty they are used to center map
++          if (!empty($center_lon) && !empty($center_lat)) {
++            $map['longitude'] = $center_lon;
++            $map['latitude'] = $center_lat;
++          }
++  
++          $map['markers'] = $markers;
++          $output .= theme($this->theme_functions(), $this->view, $this->options, $map, $title);
+         }
+-
+-        $map['markers'] = $markers;
+-        $output .= theme($this->theme_functions(), $this->view, $this->options, $map, $title);
+       }
+     }
+-
+     unset($this->view->row_index);
+     return $output;
+   }
+@@ -288,6 +359,7 @@ class gmap_plugin_style_gmap extends vie
+         'userrole' => t('By user role (for user views)'),
+         'field' => t('Use marker field'),
+         'static' => t('Use single marker type'),
++        'polygon' => t('Use polygon of points'),
+       ),
+       '#default_value' => $this->options['markers'],
+     );
+@@ -301,6 +373,19 @@ class gmap_plugin_style_gmap extends vie
+       '#dependency' => array('edit-style-options-markers' => array('field')),
+     );
+ 
++    $form['polygroup'] = array(
++      '#type' => 'select',
++      '#title' => t('Polygon grouping'),
++      '#description' => t('Each grouping of locations is a polygon.  You can have each polygon on a separate map or all on one map.'),
++      '#options' => array(
++        'single' => t('All polygons on a single map.'),
++        'separate' => t('Each polygon on it\'s own map.'),
++      ),
++      '#default_value' => $this->options['polygroup'],
++      '#process' => array('views_process_dependency'),
++      '#dependency' => array('edit-style-options-markers' => array('polygon')),
++    );
++
+     // Hide the taxonomy handling if gmap_taxonomy.module isn't installed.
+     if (!module_exists('gmap_taxonomy')) {
+       unset($form['markers']['#options']['taxonomy']);
+Index: js/gmap_shapes.js
+===================================================================
+RCS file: /cvs/drupal-contrib/contributions/modules/gmap/js/gmap_shapes.js,v
+retrieving revision 1.7.2.1
+diff -u -p -r1.7.2.1 gmap_shapes.js
+--- js/gmap_shapes.js	3 Jul 2010 00:35:46 -0000	1.7.2.1
++++ js/gmap_shapes.js	5 Aug 2010 03:32:59 -0000
+@@ -116,6 +116,18 @@ Drupal.gmap.addHandler('gmap', function 
+         shape.shape = GPolygon.fromEncoded(shape);
+         break;
+     }
++
++    // Event handling for mouse movement and clicking
++    var s = shape.shape;
++    GEvent.addListener(s, 'click', function(point){
++      obj.map.openInfoWindowHtml(point, shape.text);
++    });
++    GEvent.addListener(s,'mouseover',function() {
++      obj.change('mouseovermarker',-1,shape);
++    });
++    GEvent.addListener(s,'mouseout',function() {
++      obj.change('mouseoutmarker',-1,shape);
++    });
+   });
+ 
+   obj.bind('addshape', function (shape) {
